@@ -9,7 +9,7 @@
     },
     {
         "label": "文档列表",
-        "route": "/docs/sdk"
+        "uri": "/docs/sdk/guide"
     },
     {
         "label": "SDK插件",
