@@ -3,14 +3,17 @@
 **目录 documents 为文档源目录**
 
 `documents/index.block.html` 为网站首页内容
+
 `documents/menus.config.json` 为网站菜单栏配置
 
 
 `documents/sdk` 目录目前为SDK接入说明
+
 `documents/sdk/menus.json` 目录菜单配置
 
 
 `documents/plugins` 目录目前为插件接入说明
+
 `documents/plugins/menus.json` 目录菜单配置
 
 
