@@ -1,5 +1,7 @@
 # 巨人移动文档系统文档源
 
+文档首页: http://docs.mztgame.com
+
 **目录 documents 为文档源目录**
 
 `documents/index.block.html` 为网站首页内容
