@@ -12,3 +12,8 @@
 
 `documents/plugins` 目录目前为插件接入说明
 `documents/plugins/menus.json` 目录菜单配置
+
+
+### MD 文件命名说明
+
+MD 文件命名限制格式:  `/^[a-z0-9_\+\-\.]*$/i`
