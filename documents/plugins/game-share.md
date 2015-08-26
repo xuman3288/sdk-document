@@ -25,3 +25,4 @@
 | code    | int    | 响应码, 0: 正常返回; 大于0: 错误, error 字段为错误信息  |
 | error   | string | 错误消息           |
 | count   | int    | 分享者带来的账号数 |
+| inviters | array | 分享者带来的账号 |
