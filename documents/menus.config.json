@@ -4,6 +4,10 @@
         "uri": "/docs/download"
     },
     {
+        "label": "运维相关文档",
+        "uri": "/docs/ops"
+    },
+    {
         "label": "渠道支持说明",
         "uri": "/docs/channels"
     },
