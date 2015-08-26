@@ -1,0 +1,40 @@
+[
+    {
+        "label": "SDK相关下载",
+        "uri": "/docs/download"
+    },
+    {
+        "label": "渠道支持说明",
+        "uri": "/docs/channels"
+    },
+    {
+        "label": "文档列表",
+        "route": "/docs/sdk"
+    },
+    {
+        "label": "SDK插件",
+        "uri": "/docs/plugins",
+        "pages": [
+            {
+                "label": "游戏激活码插件",
+                "uri": "/docs/plugins\/game-cdkey"
+            },
+            {
+                "label": "游戏公告消息插件",
+                "uri": "/docs/plugins\/game-notice"
+            },
+            {
+                "label": "游戏Android 通知栏推送插件",
+                "uri": "/docs/plugins\/game-push-on-bar-android"
+            },
+            {
+                "label": "游戏IOS 通知栏推送插件",
+                "uri": "/docs/plugins\/game-push-on-bar-ios"
+            },
+            {
+                "label": "游戏分享链接插件",
+                "uri": "/docs/plugins\/game-share"
+            }
+        ]
+    }
+]
