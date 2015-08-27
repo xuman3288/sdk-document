@@ -12,8 +12,12 @@
                 "uri": "/docs/ops\/vpn_shterm"
             },
             {
-                "label": "游戏公告消息插件",
-                "uri": "/docs/plugins\/game-notice"
+                "label": "巨人-动态令牌时间同步",
+                "uri": "/docs/ops\/dynamic_code"
+            },
+            {
+                "label": "帝联CDN文件发布操作说明",
+                "uri": "/docs/ops\/cdn_publish"
             }
 		]
     },
