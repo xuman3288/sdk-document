@@ -13,7 +13,7 @@
 
 > **Note 2**：
 > 
-> In `AndroidManifest.xml` File, all `android:name` properties needs to be set JAVA package full name. 
+> In `AndroidManifest.xml` file, all `android:name` properties needs to be set JAVA package full name. 
 
 
 > **Note 3**：
@@ -36,6 +36,7 @@ Add theirs to IDE libraries.
 
 ### Step 1: Init ZTgameFramework at `MainActivity`
 
+#### Example:
 ~~~java
 package com.example;
 
@@ -48,17 +49,64 @@ public class MainActivity extends Activity {
 
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
-
 		//Game init ...
 
 		//Init
 		IZTLibBase.newInstance(MainActivity.this);
 		IZTLibBase.getInstance().initZTGame("5012","Game Name", false, mListener);
 	}
+
+	private IZTListener mListener = new IZTListener() {
+		@Override
+		public void onFinished(int what, int errcode, JSONObject json_obj) {
+
+			switch (what) {
+			case ZTConsts.ZTGAME_LOGIN:
+				if (errcode == 0) {
+					//Todo login success
+					IZTLibBase.getInstance().loginOkZTGame("roleId", "roleName", "roleLevel", "zoneId", "zoneName");
+				} else {
+					//Todo login failed
+				}
+				break;
+			case ZTConsts.ZTGAME_INIT:
+				if (errcode == 0) {
+					//Todo initialized.
+				} else {
+					//Todo failed
+				}
+				break;
+			case ZTConsts.ZTGAME_PAY:
+				if(errcode == 0){
+					//Todo success
+				}else{
+					//Todo failed
+				}
+				break;
+			case ZTConsts.ZTGAME_QUIT:
+				if(errcode == 0){
+				} else {
+				}
+				break;
+			case ZTConsts.ZTGAME_LOGOUT:
+				if(!IZTLibBase.getInstance().isLogined()){
+					IZTLibBase.getInstance().loginZTGame("1", "Game area", true);
+				}
+				break;
+			case ZTConsts.ZTGAME_QQGROUP: //Tencent QQGroup library
+				if(errcode == 0){
+					joinQQButton.setVisibility(View.VISIBLE);
+				}
+				break;
+			}
+		}
+	};
 }
 ~~~
 
-#### com.ztgame.ztgameframework.initZTGame description
+#### Method descriptions
+
+##### `com.ztgame.mobileappsdk.common.IZTLibBase.initZTGame` description
 
 ~~~java
 /**
@@ -74,14 +122,14 @@ public class MainActivity extends Activity {
  * @param listener  When something event was finished call it.
  */
 @Override
-public void initZTGame(String gameId,String appName, boolean isLandScape, IZTListener listener) {}
+public void initZTGame(String gameId, String appName, boolean isLandScape, IZTListener listener) {}
 ~~~
 
-#### com.ztgame.mobileappsdk.common.IZTListener description
+##### `com.ztgame.mobileappsdk.common.IZTListener` description
 
 ~~~java
 /**
- * When something ztgameframework event was finished call it.
+ * When something ztgameframework event was finished to call it.
  */
 public interface IZTListener {
 
@@ -98,115 +146,155 @@ public interface IZTListener {
 }
 ~~~
 
-**Parameter `What` values:**
+##### Parameter `what`
+
+Values:
 
 | Consts                   | Descriptions |
 |--------------------------|--------------|
-| ZTConsts.ZTGAME_INIT     |Game was initialized. |
-| ZTConsts.ZTGAME_LOGIN    |Account was logined.|
-| ZTConsts.ZTGAME_PAY      | |
-| ZTConsts.ZTGAME_QUIT     |Account was quit|
-| ZTConsts.ZTGAME_LOGOUT   | |
-| ZTConsts.ZTGAME_QQGROUP  |Tencent QQGroup|
+| ZTConsts.ZTGAME_INIT     | SDK initialized. |
+| ZTConsts.ZTGAME_LOGIN    | When account was logined. Todo submit `accid` and `token` to game server, and game server todo [CheckToken](http://docs.mztgame.com/docs/sdk/server_doc "CheckToken") |
+| ZTConsts.ZTGAME_PAY      | Payment finished event. If the `errorcode` is equal to 0 mean success, else mean failed. Player add gold/coin/point to see [Server payment guide](http://docs.mztgame.com/docs/sdk/server_doc) |
+| ZTConsts.ZTGAME_QUIT     | Provider opened exit dialog. Call it when players touch confirm button. |
+| ZTConsts.ZTGAME_LOGOUT   | When palyer trigger logout. (Player may be to do switch account) |
+| ZTConsts.ZTGAME_QQGROUP  | If your app use Tencent QQGroup library. Call it when players click "Join QQGroup" button.|
+| ZTConsts.ZTGAME_TENCENT_QUERY  | When the provider is Tencent, and call [query API](#) finished.|
+| ZTConsts.ZTGAME_CREATE_ORDER  | Call it when players touch some product and ZTgameframework call create order finished. |
 
 
-**Parameter `json_obj` example:**
+##### ZTGAME_LOGIN event
 
-When `what == ZTConsts.ZTGAME_LOGIN` and `errcode == 0`, the `json_obj` returns:
+**Parameter `what` case `ZTConsts.ZTGAME_LOGIN`:**
+
+When `what == ZTConsts.ZTGAME_LOGIN` and `errcode == 0` mean login successed. `json_obj` returns:
+
 ~~~json
 {
-"mobile_type":"xxxxxx",
-"token":"c814684cbf4f17e2dd0c169db997db7f",
-"accid":"1-123456",
-"imei":"xxxxxx",
-"action":"login",
-"account":"默认账号",
-"mac":"xxxxxx",
-"channel":1,
-"ip":"xxxxxx"
+	"mobile_type":"xxxxxx",
+	"token":"c814684cbf4f17e2dd0c169db997db7f",
+	"accid":"1-123456",
+	"imei":"xxxxxx",
+	"action":"login",
+	"account":"xxxxxx",
+	"mac":"xxxxxx",
+	"channel":1,
+	"ip":"xxxxxx"
 }
 ~~~
 
-接收到ZTGAME_LOGIN消息用于登录成功。其中accid和account 分别为：用户标示和账号,其中帐号统一处理为“默认帐号”。
-	
-   	  
-  *	#####ZTGAME_INIT  
-	ZTGAME_INIT是SDK初始化完成的通知，所有接口都需要在INIT成功完成之后才能开始调用  
-  	
-  * #####ZTGAME_LOGIN  
-    ZTGAME_LOGIN需要处理登录返回的json_obj参数，交给游戏服务器进行效验
-    
-  * #####ZTGAME_PAY   
-    ZTGAME_PAY只需要判断errcode为0成功还是-1失败，但是是否到账要以服务器通知为准
-    
-  * #####ZTGAME_QUIT
-  	ZTGAME_QUIT是游戏进行销毁操作的地方，玩家在第三方退出框点击确认后会收到此回调
-  		
-  *	#####ZTGAME_LOGOUT
-  	ZTGAME_LOGOUT是游戏进行登出操作/切换账号操作的地方，需要返回到游戏登录界面等待用户再次登录
-		
-  *	#####ZTGAME_QQGROUP
-  	ZTGAME_QQGROUP是游戏中一键增加QQ群的消息，游戏收到该消息后，当errcode为0表示有一键加QQ功能，其他表示没有该功能
+> **Note:**
+> 
+> `accid` is unique identify. GiantMobile server mean `openid`.
+> `account` may be empty string.
 
-  *	#####ZTGAME_TENCENT_QUERY
-  	ZTGAME_TENCENT_QUERY是腾讯游戏点查询接口的消息，游戏收到该消息后，当errcode为0表示有查询成功，需要游戏端根据查询金额判断是否补单
+##### ZTGAME_LOGOUT event
 
-  *	#####ZTGAME_CREATE_ORDER
-  	ZTGAME_CREATE_ORDER是创建订单成功的消息，返回的order_id参数
+> **Note:**
+> 
+> Ensure player is logined before call `IZTLibBase.getInstance().loginZTGame()`.
 
-  	**`注：在游戏接收ZTGAME_LOGOUT后，调用登录接口之前前，建议调用isLogin接口做一次用户登录状态判断，如果true则不调用登录接口，否则调用。增加判断可防止多次弹出登录界面。`**
-    		
- - ###1.2 登录接口（必接）
-		public void loginZTGame(final String zoneId, final String zoneName, final boolean isAutoLogin)		
+### Step 2. Login
 
-	**`参数:`**  
-	`zoneId` : 服务器分区ID（建议大于0）  
-	`zoneName` : 服务器分区名称  
-	`isAutoLogin` : 是否自动登录，传true即可
-	
-	**调用方式：**	
+#### Method description
 
-		YourActivity.runOnUiThread(new Runnable() {
-				public void run() {			
-						 IZTLibBase.getInstance().loginZTGame("1", "zoneName"", true);
+~~~java
+package com.ztgame.ztgameframework;
+
+import com.ztgame.mobileappsdk.common.IZTLibBase;
+
+public class ZTgameFramework extends IZTLibBase {
+	/**
+	 * 
+	 * @param zoneId   Game zone ID
+	 * @param zoneName Game zone name
+	 * @param isAutoLogin Player auto login. Always set true.
+	 */
+	public void loginZTGame(String zoneId, String zoneName, boolean isAutoLogin) {}
+}
+~~~
+
+
+**For example：**	
+
+~~~java
+	YourActivity.runOnUiThread(new Runnable() {
+			public void run() {			
+					 IZTLibBase.getInstance().loginZTGame("1", "zoneName"", true);
+			}
+	});
+~~~
+
+
+### Step 3. Payment
+
+When player touch buy product button to call `IZTLibBase.getInstance().payZTGame(ZTPayInfo payInfo)`
+
+#### For example 
+
+~~~java
+package com.example;
+
+import android.app.Activity;
+import android.view.View;
+import android.widget.Toast;
+
+import com.ztgame.mobileappsdk.common.IZTLibBase;
+import com.ztgame.mobileappsdk.common.ZTConsts;
+import com.ztgame.mobileappsdk.common.ZTPayInfo;
+
+public class MainActivity extends Activity {
+	@Override
+	public void onClick(View v) {
+		//Player touch buy product button
+		switch (v.getId()) {
+			case R.id.buyButton:
+				if(IZTLibBase.getInstance().isLogined()){
+					ZTPayInfo payInfo = new ZTPayInfo();
+					payInfo.setAmount(100);  //Set RMB
+					payInfo.setProductName("test item"); // Set product name.
+					payInfo.setProductId("1001"); // Set product id.
+					payInfo.setExtra("1"); // Set developer payload.
+					IZTLibBase.getInstance().payZTGame(payInfo);
+				} else {
+					Toast.makeText(MainActivity.this, "Please login.", Toast.LENGTH_SHORT).show();
 				}
-		});
- - ###1.3 支付接口（必接）
- 		final synchronized public boolean payZTGame(ZTPayInfo payInfo)
-	** 	payInfo详细描述参见如下	**
-	#####ZTPayInfo支付信息说明：  
-  		
-  			ZTPayInfo payInfo = new ZTPayInfo();
-	        payInfo.setAmount(100);
-	        payInfo.setProductName("钻石*10");
-	        payInfo.setMoneyName("钻石");
-	        payInfo.setExchangeRatio(10);
-	        payInfo.setProductId("123");
-	        payInfo.setExtra("1");         // 扩展信息，需要回传游戏服务器的请设置这个字段
-	        payInfo.setMonthCard(true);    //Base4.4.1以上版本需要设置此参数用来表示是否为月卡
-	        IZTLibBase.getInstance().payZTGame(payInfo);
-	        
-	        
-   	**`说明`**  
-   			`setAmount(int amount):`设置支付的价格，单位为分（若游戏中价格为元，请转换成分后在传入）；  
-   			`setProductName(String)`:设置商品名称，如果是钻石就设置为`“钻石*数量”`，如果是月卡就设置为`月卡`,（特殊：华为渠道，支付时不能带*及其他特殊符号）；  
-   			`payInfo.setMoneyName(String)`:设置游戏货币名称，如果是钻石就设置为`钻石`;  
-   			`payInfo.setExchangeRatio(int)`:设置游戏兑换比率，1元对应多少游戏币，1：10就设置为10  
-   			`setExtra(String)`:设置额外参数  
-   			`payZTGame（ZTPayInfo payInfo）`:支付。   
-   			`setProductId(String)` :部分运营商需要提供计费点通过此接口传入计费点。  
-			`payInfo.setMonthCard(true);`:部分渠道需要得知是否道具是月卡
-	#####ZTPayInfo支付信息接口：
-
-		public void setProductName(String productName)	//设置商品名称
-		public void setExtra(String extra)	//设置额外信息
-		public void setAmount(int amount)	//设置商品价格，单位为分
-		public void setProductName(String productName)	//设置商品名称
-		public void setMoneyName(String moneyName)	//设置货币名称
-		public void setExchangeRatio(int exchangeRatio)	//设置汇率比例
+				break;
+			//...
+		}
+	}
+}
+~~~
 
 
-- ###1.4 登录完成数据统计接口（建议接入）
+#### Method description
+
+~~~
+package com.ztgame.mobileappsdk.common;
+
+public abstract class IZTLibBase {
+	/**
+     * Call payment information.
+     * 
+     * @param payInfo Init product payment information.
+     */
+	final public boolean payZTGame(ZTPayInfo payInfo) {}
+}
+~~~
+
+##### `com.ztgame.mobileappsdk.common.ZTPayInfo` method description
+
+| Method | Required / Optional / Deprecated | Description |
+|--------|----------------------------------|----------------------------|
+| setAmount | Required  | Set product amount (RMB). |
+| setExchangeRatio | Deprecated  | ... |
+| setExtra | Required | Set developer payload.  |
+| setMoneyName | Deprecated | Set game coin name.  |
+| setMonthCard | Deprecated | ...  |
+| setProductName | Optional  | Set product name. |
+| setProductId | Optional  | Set product id. |
+
+
+### 1.4 登录完成数据统计接口（建议接入）
 	登录流程结束后调用
 
 		public void loginOkZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName)
@@ -217,7 +305,7 @@ When `what == ZTConsts.ZTGAME_LOGIN` and `errcode == 0`, the `json_obj` returns:
 	`zoneId`:服务器ID;  
 	`zoneName`:服务器名称
 	
-- ###1.5 创建角色数据统计接口（建议接入）
+### 1.5 创建角色数据统计接口（建议接入）
 	创建角色后调用数据统计接口
 
  			public void createRoleZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName)
@@ -228,7 +316,7 @@ When `what == ZTConsts.ZTGAME_LOGIN` and `errcode == 0`, the `json_obj` returns:
 	`zoneId`:服务器ID;  
 	`zoneName`:服务器名称	
 
-- ###1.6 角色等级升级信息接口
+### 1.6 角色等级升级信息接口
 
 		public void roleLevelUpZTGame(String roleId,String roleName,String zoneId,String zoneName,int level)
 
@@ -239,24 +327,24 @@ When `what == ZTConsts.ZTGAME_LOGIN` and `errcode == 0`, the `json_obj` returns:
 	`zoneId`:服务器ID;  
 	`zoneName`:服务器名称	
 
-- ###1.7 是否需要切换账号按钮接口
+### 1.7 是否需要切换账号按钮接口
 			public boolean isHasSwitchAccountZTGame()
 以上接口返回true则游戏需要添加一个切换账号按钮以方便用户切换账号，点击此按钮后调用switchAccountZTGame()  
 
-- ###1.8 切换账号操作
+### 1.8 切换账号操作
 			public void switchAccountZTGame()	
 	以上为切换账号接口功能，调用此接口执行切换账号操作，调用此接口后，会发送ZTGAME_LOGOUT消息。
 
-- ###1.9 是否需要用户中心按钮接口
+### 1.9 是否需要用户中心按钮接口
 			public boolean isHasCenterZTGame()
 			
 	以上为某些渠道判断是否存在用户中心按钮倘若返回false不作处理，倘若返回true需要显示用户中心按钮，点击此按钮后调用enterCenterZTGame()
 
-- ###1.10 用户中心操作
+### 1.10 用户中心操作
 			public void enterCenterZTGame()
 以上为用户中心接口功能，调用此接口弹去渠道方的用户中心界面
 
-- ###1.11 是否需要调用第三方推出框接口
+### 1.11 是否需要调用第三方推出框接口
 
 			public void isHasQuitDialog()
 			
