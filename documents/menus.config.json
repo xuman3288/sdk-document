@@ -5,7 +5,17 @@
     },
     {
         "label": "运维相关文档",
-        "uri": "/docs/ops"
+        "uri": "/docs/ops",
+		"pages": [
+			{
+                "label": "使用SHTERM访问巨人运维网",
+                "uri": "/docs/ops\/vpn_shterm"
+            },
+            {
+                "label": "游戏公告消息插件",
+                "uri": "/docs/plugins\/game-notice"
+            }
+		]
     },
     {
         "label": "渠道支持说明",
