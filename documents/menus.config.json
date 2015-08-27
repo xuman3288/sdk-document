@@ -5,21 +5,7 @@
     },
     {
         "label": "运维相关文档",
-        "uri": "/docs/ops",
-		"pages": [
-			{
-                "label": "使用SHTERM访问巨人运维网",
-                "uri": "/docs/ops\/vpn_shterm"
-            },
-            {
-                "label": "巨人-动态令牌时间同步",
-                "uri": "/docs/ops\/dynamic_code"
-            },
-            {
-                "label": "帝联CDN文件发布操作说明",
-                "uri": "/docs/ops\/cdn_publish"
-            }
-		]
+        "uri": "/docs/ops
     },
     {
         "label": "渠道支持说明",
