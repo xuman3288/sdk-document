@@ -1,0 +1,14 @@
+[
+    {
+        "label": "Downdloads",
+        "uri": "/docs/download"
+    },
+    {
+        "label": "Vendor supports",
+        "uri": "/docs/channels"
+    },
+    {
+        "label": "SDK documents",
+        "uri": "/docs/sdk/guide"
+    }
+]
