@@ -212,12 +212,12 @@ Values:
 | Consts                   | Descriptions |
 |--------------------------|--------------|
 | ZTConsts.ZTGAME_INIT     | SDK initialized. |
-| ZTConsts.ZTGAME_LOGIN    | When account was logined. Todo submit `accid` and `token` to game server, and game server todo [CheckToken](http://docs.mztgame.com/docs/sdk/server_doc "CheckToken") |
-| ZTConsts.ZTGAME_PAY      | Payment finished event. If the `errorcode` is equal to 0 mean success, else mean failed. Player add gold/coin/point to see [Server payment guide](http://docs.mztgame.com/docs/sdk/server_doc) |
+| ZTConsts.ZTGAME_LOGIN    | When account was logined. Todo submit `accid` and `token` to game server, and game server todo [CheckToken](http://docs.mztgame.com/docs/sdk/server_guide#__2 "CheckToken") |
+| ZTConsts.ZTGAME_PAY      | Payment finished event. If the `errorcode` is equal to 0 mean success, else mean failed. Player add gold/coin/point to see [Server payment guide](http://docs.mztgame.com/docs/sdk/server_guide#__7) |
 | ZTConsts.ZTGAME_QUIT     | Provider opened exit dialog. Call it when players touch confirm button. |
 | ZTConsts.ZTGAME_LOGOUT   | When palyer trigger logout. (Player may be to do switch account) |
 | ZTConsts.ZTGAME_QQGROUP  | If your app use Tencent QQGroup library. Call it when players click "Join QQGroup" button.|
-| ZTConsts.ZTGAME_TENCENT_QUERY  | When the provider is Tencent, and call [query API](#) finished.|
+| ZTConsts.ZTGAME_TENCENT_QUERY  | When the provider is Tencent, and call `queryTencentGamePoint` finished.|
 | ZTConsts.ZTGAME_CREATE_ORDER  | Call it when players touch some product and ZTgameframework call create order finished. |
 
 
@@ -639,7 +639,9 @@ public class MainActivity extends Activity {
     	return CHANNEL_SDKVERSION;
     }
 
-	//	获取当前框架版本号
+    /**
+     * Get current framework version
+     */
     public String getFrameworkVersion(){
     	return FRAMEWORK_VERSION;
     }
