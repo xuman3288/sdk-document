@@ -1,24 +1,15 @@
-巨人移动SDK文档接入说明
+GiantMobile SDK documents
 ==========================
 
-##相关文档
+## Documents
 
-* [服务端接口文档](/docs/sdk/server_doc)
-* [安卓SDK接入文档](/docs/sdk/easysdktoolsfaq)
-* [IOS接入文档](/docs/sdk/iosdoc)
+* [SDK Server](/docs/sdk/server_guide)
+* [Android SDK Guide](/docs/sdk/easysdkframework)
+* [IOS SDK Guide](/docs/sdk/iosdoc)
 
+## Downloads
 
-##相关下载
-
-* android
-* IOS
-* 自动打包工具
-
-##相关接入文档
-
-**服务端接口文档**
-XXXXXXXXXXX
-
+* [RSA Examples](http://docs.mztgame.com/files/rsa_examples.zip)
 
 
 
