@@ -79,7 +79,7 @@ Giant SDK  For  iOS
 
 You need to ensure the code is exactly the same with the sample, especially for
 
-~~~objectc
+~~~objectivec
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [ZTLibBase instance];
@@ -120,13 +120,13 @@ You need to ensure the code is exactly the same with the sample, especially for
 
 initialization
 
-~~~objectc
+~~~objectivec
  [[ZTLibBase instance] initZTGameWithID:@"5010" gameName:@"MLGB" delegate:gameListenerDelegate];
 ~~~
 
 login function，the parameters is YES
 
-~~~objectc
+~~~objectivec
 [[ZTLibBase instance] loginZTGame:YES];
 ~~~
 
@@ -315,7 +315,7 @@ NSString extra; // Extended information, this parameters can be set by game，SD
 
 * If you want to test, configure pushDebug in the configuration file(ztsdk_config.plist，State is 1 for debug and 0 for the release version, the default is for the release .
 
-~~~objectc
+~~~objectivec
 - (void)application:(UIApplication )application didRegisterForRemoteNotificationsWithDeviceToken:(NSData )deviceToken {
 	[ZTServicePush registerDeviceToken:deviceToken];
 }
@@ -324,7 +324,7 @@ NSString extra; // Extended information, this parameters can be set by game，SD
 Quick Add QQ Group Function
 Please inform us the qqGroup number，We will configuration in server.
 
-~~~objectc
+~~~objectivec
  if([[ZTLibBase getInstance] isHasQQGroup])
 {
      [[ZTLibBase getInstance] joinQQGroup];
