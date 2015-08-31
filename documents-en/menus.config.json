@@ -10,5 +10,31 @@
     {
         "label": "SDK documents",
         "uri": "/docs/sdk/guide"
+    },
+    {
+        "label": "SDK game plugins",
+        "uri": "/docs/plugins",
+        "pages": [
+            {
+                "label": "Game cdkey",
+                "uri": "/docs/plugins\/game-cdkey"
+            },
+            {
+                "label": "Game notice dialog",
+                "uri": "/docs/plugins\/game-notice"
+            },
+            {
+                "label": "Game push message(Android)",
+                "uri": "/docs/plugins\/game-push-on-bar-android"
+            },
+            {
+                "label": "Game push message(IOS)",
+                "uri": "/docs/plugins\/game-push-on-bar-ios"
+            },
+            {
+                "label": "Share app download link",
+                "uri": "/docs/plugins\/game-share"
+            }
+        ]
     }
 ]

@@ -1,6 +1,6 @@
 {
   "guide": "接入指南",
-  "server_doc": "服务端接口文档",
+  "server_guide": "服务端接口文档",
   "easysdkfaq": "自动打包工具FAQ",
   "easysdkframework": "安卓SDK接入文档",
   "iosdoc": "IOS接入文档",
