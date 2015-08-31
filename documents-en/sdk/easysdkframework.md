@@ -458,7 +458,13 @@ public class MainActivity extends Activity {
             	IZTLibBase.getInstance().loginZTGame("1", "ZoneName", true);
 				break;
 			case R.id.exitButton:
-				IZTLibBase.getInstance().quitZTGame();
+				//exit ui of channels'
+				if(IZTLibBase.getInstance().isHasQuitDialog()){
+					IZTLibBase.getInstance().quitZTGame();
+				}else{
+					//The exit ui of game's.
+				}
+				
 				break;
 			case R.id.accountCenterButton:
 				IZTLibBase.getInstance().enterCenterZTGame();
