@@ -9,7 +9,7 @@ GiantMobile SDK4.0 server guide
 
 1.	When a user login, get a token.
 2.	Game client gets `token` and `openid` from GiantMobileSDK, and submit to the game server. 
-3.	Game server to [verify the token](#__7). If is valid , then todo enter the game.
+3.	Game server to [verify the token](#__2). If is valid , then todo enter the game.
 
 
 ### Token verification API
@@ -34,7 +34,7 @@ GiantMobile SDK4.0 server guide
 > **Generation method:**
 > Md5(game_id+openid+time+token+key) <br>
 > 
-> The key get from GiantMobile Server programmer
+> **PS:** The key get from GiantMobile Server programmer
 
 #### Response
 
@@ -49,9 +49,9 @@ GiantMobile SDK4.0 server guide
 
 > `entity.openid` note:
 > 
-> Example: 1-1234 , 26-5678
-> Before “-“ is vendor’s NO. 
-> After “-“ is vendor’s UID.
+> Example: 1-1234 , 26-5678; <br>
+> Before “-“ is vendor’s NO.; <br>
+> After “-“ is vendor’s UID.; <br>
 
 #### Request example
 
@@ -79,7 +79,7 @@ http://passport.mobileztgame.com/service/check-token?game_id=5012&openid=1-1234&
 
 ### Payment guide
 
-Request from GiantMobile payment server. Server IPs [see payment server IP list](#__17)
+Request from GiantMobile payment server. Server IPs [see payment server IP list](#__14)
 
 ![Payment chart](http://i.imgur.com/3KrkhIl.png)
 
@@ -121,7 +121,7 @@ If the connection or protocol is broken. Request will try again.
 
 
 
-#### RSA verify example
+### RSA verify example
 
 **Request params:**
 
