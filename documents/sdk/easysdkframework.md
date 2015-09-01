@@ -1,384 +1,688 @@
-##Giant Android 自动打包工具文档
+巨人移动Android母包接入文档
 ================================
 
-*SDK版本： Ver 4.4.5   
-时间：2015-7-16
+**SDK版本：** Ver 4.4.6   
+**时间：** 2015/8/31
 
-烦请cp方仔细阅读文档，每次更新的修改在文档最下方  
-`特别注意`  
-**`所有文档中的接口均为必须接入，请游戏方自行核查,强烈建议在生成apk包时使用SDK build-tools的19.1版本`**
------------------------------------------------
-### 接入ZTgameFramework  
+## 相关类说明
+
+### 类 `com.ztgame.mobileappsdk.common.IZTLibBase` 说明
 
 
-`注意事项`：
+~~~java
+package com.ztgame.mobileappsdk.common;
 
-	在androidManifest.xml中需要将所有的activity service等android:name字段写上对应的java包名的全称
+public abstract class IZTLibBase {
 
-  
- 
- - 请将`base.jar`, `ztgameframework.jar` 添加到工程的库依赖中。  
- - 在`assets`目录下添加`ztsdk_config.properties`文件确保文件中有以下内容:
- 
- 		config.sdk.class=com.ztgame.ztgameframework.ZTgameFramework
- 						
- - ###1.1 初始化Android SDK（必接）：
- 
- 		IZTLibBase.newInstance(LoginActivity.this);
-	    IZTLibBase.getInstance().initZTGame("5000","乱炖英雄", false, mListener);
-	    
-   *`函数原型`*
-   
-   		synchronized static public boolean newInstance(Activity ac);
-   		
-   		public void initZTGame(String gameId,String appName, boolean isLandScape, IZTListener listener)
+	/**
+	* 初始化IZTLibBase实例(必接)
+	* 
+	* @param ac Activity类的一个实例
+	**/
+	@Override
+	static public boolean newInstance(Activity ac){}
 
-   	**`说明:`**  
-    首先调用IZTLibBase 的newInstance方法，传入你的Activity。然后调用getInstance()方法的initZTGame初始化游戏信息。  
-   	**`参数:`**  
-   	`Activiy`:传入的Activity 。e.g. LoginActivity.this;  
-   	`gameId`:传入的游戏ID。 e.g. 5010;  
-   	`appName`:传入的游戏名称。 e.g. 乱炖英雄。  
-   	`isLandScape`:是否为横版。 e.g. true;  
-   	`listener`:用于响应回调事件的监听接口。 e.g. mListener.  
-   	
- - #####IZTListener SDK事件回调接口
-   该接口必须实现onFinished方法  
-   *`函数原型`*： 
-   		
-		public void onFinished(int what, int errcode, JSONObject json_obj);
-   	
-   	**`参数`**: 
- 
-   	`what`:返回事件的类型。 e.g. ZTConsts.ZTGAME_LOGIN, ZTConsts.ZTGAME_PAY etc.  
-   	`errcode`:返回事件的错误码. 成功:0,失败:-1.e.g. ""  
-   	`json_obj`:返回的Json数据对象。e.g.  
+	/**
+	 * 初始化Android SDK（必接） 
+	 *
+	 * 首先调用IZTLibBase 的newInstance方法，传入你的Activity。然后调用getInstance()方法的initZTGame初始化游戏信息。
+	 * 
+	 * @param gameId   游戏ID
+	 * @param appName  游戏名称
+	 * @param isLandScape 游戏横竖屏.  
+	 *     - true  : 横版
+	 *     - false : 竖版
+	 * @param listener  用于响应回调事件的监听接口
+	 */
+	@Override
+	public void initZTGame(String gameId, String appName, boolean isLandScape, IZTListener listener) {}
 
-		{"mobile_type":"xxxxxx","token":"c814684cbf4f17e2dd0c169db997db7f","accid":"1-123456","imei":"xxxxxx",
-		"action":"login","account":"默认账号","mac":"xxxxxx","channel":1,"ip":"xxxxxx"}
+	/**
+	 * 登录接口（必接）
+	 * 
+	 * @param zoneId   游戏区ID（Int, 大于0）
+	 * @param zoneName 游戏区名称
+	 * @param isAutoLogin 是否自动登录，传true即可
+	 */
+	public void loginZTGame(String zoneId, String zoneName, boolean isAutoLogin) {}
 
-   	`注：`该Json可以作为测试登录进入游戏的测试参数。接收到ZTGAME_LOGIN消息用于登录成功。其中accid和account 分别为：用户标示和账号,其中帐号统一处理为“默认帐号”。
-   		
-   	**what参数枚举**：
-   	  
-  *	#####ZTGAME_INIT  
-	ZTGAME_INIT是SDK初始化完成的通知，所有接口都需要在INIT成功完成之后才能开始调用  
-  	
-  * #####ZTGAME_LOGIN  
-    ZTGAME_LOGIN需要处理登录返回的json_obj参数，交给游戏服务器进行效验
-    
-  * #####ZTGAME_PAY   
-    ZTGAME_PAY只需要判断errcode为0成功还是-1失败，但是是否到账要以服务器通知为准
-    
-  * #####ZTGAME_QUIT
-  	ZTGAME_QUIT是游戏进行销毁操作的地方，玩家在第三方退出框点击确认后会收到此回调
-  		
-  *	#####ZTGAME_LOGOUT
-  	ZTGAME_LOGOUT是游戏进行登出操作/切换账号操作的地方，需要返回到游戏登录界面等待用户再次登录
-		
-  *	#####ZTGAME_QQGROUP
-  	ZTGAME_QQGROUP是游戏中一键增加QQ群的消息，游戏收到该消息后，当errcode为0表示有一键加QQ功能，其他表示没有该功能
+	/**
+     * 支付接口（必接）
+     * 
+     * @param payInfo 实例化 ZTPayInfo 信息 
+     */
+	final public boolean payZTGame(ZTPayInfo payInfo) {}
 
-  *	#####ZTGAME_TENCENT_QUERY
-  	ZTGAME_TENCENT_QUERY是腾讯游戏点查询接口的消息，游戏收到该消息后，当errcode为0表示有查询成功，需要游戏端根据查询金额判断是否补单
 
-  *	#####ZTGAME_CREATE_ORDER
-  	ZTGAME_CREATE_ORDER是创建订单成功的消息，返回的order_id参数
+	/**
+     * 是否需要切换账号按钮接口
+     * 以上接口返回true则游戏需要添加一个切换账号按钮以方便用户切换账号.
+     * 点击此按钮后调用switchAccountZTGame()
+     */
+    public boolean isHasSwitchAccountZTGame() {}
 
-  	**`注：在游戏接收ZTGAME_LOGOUT后，调用登录接口之前前，建议调用isLogin接口做一次用户登录状态判断，如果true则不调用登录接口，否则调用。增加判断可防止多次弹出登录界面。`**
-    		
- - ###1.2 登录接口（必接）
-		public void loginZTGame(final String zoneId, final String zoneName, final boolean isAutoLogin)		
+	/**
+     * 切换账号操作
+     * 
+     * 以上为切换账号接口功能，调用此接口执行切换账号操作，调用此接口后，会发送ZTGAME_LOGOUT消息。
+     */
+	public void switchAccountZTGame(){}
 
-	**`参数:`**  
-	`zoneId` : 服务器分区ID（建议大于0）  
-	`zoneName` : 服务器分区名称  
-	`isAutoLogin` : 是否自动登录，传true即可
-	
-	**调用方式：**	
+    /**
+     * 是否需要用户中心按钮接口
+     * 
+     * 以上为某些渠道判断是否存在用户中心按钮倘若返回false不作处理，倘若返回true需要显示用户中心按钮，点击此按钮后调用enterCenterZTGame()
+     */
+	public boolean isHasCenterZTGame(){}
 
-		YourActivity.runOnUiThread(new Runnable() {
-				public void run() {			
-						 IZTLibBase.getInstance().loginZTGame("1", "zoneName"", true);
+
+	/**
+     * 用户中心操作, 调用此接口弹去渠道方的用户中心界面
+     */
+	public void enterCenterZTGame(){}
+
+
+	/**
+     * 是否有第三方渠道的退出确认弹出框
+	 *  
+	 * 如果此函数返回true，请游戏不要弹出游戏自身的退出确认弹出框而是直接调用quitZTGame来弹出第三方的退出弹出框，在ZTGame_Quit回调内处理游戏的退出操作
+	 * （销毁代码，而不是再次弹出退出确认对话框。返回false则按照游戏自己的退出流程处理即可。)
+     */
+	public void isHasQuitDialog(){}
+
+    /**
+     * 弹出第三方退出弹出确认框接口
+     */
+	public void quitZTGame(){}
+
+
+	/**
+     * 开启日志输出接口
+     * 游戏上线前需要注释该行代码以关闭日志输出
+     */
+	public void enableDebugMode(){}
+
+	/**
+     * 获取渠道id
+     * 
+     * 渠道id以及游戏id可以统一从此wiki链接查询.
+     * @see http://wiki.mztgame.com/index.php/%E6%B8%A0%E9%81%93%E4%BF%A1%E6%81%AF%E5%88%97%E8%A1%A8
+     */
+    public int getPlatform(){}
+
+
+	/**
+     * 更新服务器id
+     * 玩家切换服务器后需要调用此方法更新当前服务器id
+     */
+	public void setZoneId(final String zoneId){}
+
+	/**
+     * 更新当前活动Activity
+     * 如果游戏当前Activity变更，需要更新activity到SDK
+     */
+	public void setActivity(Activity activity){}
+
+	/**
+     * 是否已经登录
+     */
+	public boolean isLogined(){}
+
+
+	/**
+     * 是否有一键加QQ群功能接口
+     * 
+     * 注: 接入此接口时，游戏会收到ZTGAME_QQGROUP消息，当errcode为0表示有一键加QQ功能，-1表示没有该功能
+     */
+	public void isHasJoinQQGroup(){}
+
+	/**
+     * 一键加QQ群接口
+     * 
+     * 注：接入此接口时，需提供QQ群对应的key，key由QQ官方申请。
+     * 接入次接口前，请务必调用 `isHasJoinQQGroup()` 接口，并且在收到ZTGAME_QQGROUP消息后，errcode为0的情况下调用。
+     * 
+     * @example:
+     * <code>
+     * if(IZTLibBase.getInstance().isHasJoinQQGroup()){
+     *     IZTLibBase.getInstance().joinQQGroup();
+     * }
+     * </code>
+     */
+	public void joinQQGroup(){}
+
+
+	/**
+	 * 登录完成数据统计接口
+	 * 
+	 * 角色进入游戏后调用
+	 * 
+	 * @param roleId     角色ID
+	 * @param roleName   角色名称
+	 * @param roleLevel  角色等级
+	 * @param zoneId     游戏区ID 
+	 * @param zoneName   游戏区名称
+	 */
+	public void loginOkZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName) {}
+
+	/**
+	 * 创建角色数据统计接口（建议接入）
+	 * 
+	 * 玩家创建角色后调用.
+	 * 
+	 * @param roleId     角色ID
+	 * @param roleName   角色名称
+	 * @param roleLevel  角色等级
+	 * @param zoneId     游戏区ID 
+	 * @param zoneName   游戏区名称
+	 */
+	public void createRoleZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName) {}
+
+	/**
+     * 角色等级升级信息接口
+     * 
+	 * @param roleId     角色ID
+	 * @param roleName   角色名称
+	 * @param zoneId     游戏区ID 
+	 * @param zoneName   游戏区名称
+     * @param level      角色等级
+     */
+    public void roleLevelUpZTGame(String roleId,String roleName,String zoneId,String zoneName,int level){}
+}
+~~~
+
+### 接口 `com.ztgame.mobileappsdk.common.IZTListener` 说明
+
+~~~java
+/**
+ * 完成事件回调接口
+ */
+public interface IZTListener {
+
+	/**
+	 * 当某事件执行后触发
+	 * 
+	 * @param what Finished events type
+     * @param errcode Error code.
+     * If equal to 0 Success, then error.
+     * 
+	 * @param json_obj Finished callback info.
+	 */
+	public void onFinished(int what, int errcode, JSONObject json_obj);
+}
+~~~
+
+
+##### 参数 `what` 说明
+
+| 出现值                   | 描述 |
+|--------------------------|--------------|
+| ZTConsts.ZTGAME_INIT     | 是SDK初始化完成的通知，所有接口都需要在INIT成功完成之后才能开始调用 |
+| ZTConsts.ZTGAME_LOGIN    | 需要处理登录返回的json_obj参数，交给游戏服务器[进行效验](http://docs.mztgame.com/docs/sdk/server_guide#__2) |
+| ZTConsts.ZTGAME_PAY      | 只需要判断errcode为0成功还是-1失败，但是是否到账要以[服务器通知为准](http://docs.mztgame.com/docs/sdk/server_guide#__7) |
+| ZTConsts.ZTGAME_QUIT     | 是游戏进行销毁操作的地方，玩家在第三方退出框点击确认后会收到此回调 |
+| ZTConsts.ZTGAME_LOGOUT   | 是游戏进行登出操作/切换账号操作的地方，需要返回到游戏登录界面等待用户再次登录 |
+| ZTConsts.ZTGAME_QQGROUP  | 是游戏中一键增加QQ群的消息，游戏收到该消息后，当errcode为0表示有一键加QQ功能，其他表示没有该功能 |
+| ZTConsts.ZTGAME_TENCENT_QUERY  | 是腾讯游戏点查询接口的消息，游戏收到该消息后，当errcode为0表示有查询成功，需要游戏端根据查询金额判断是否补单|
+| ZTConsts.ZTGAME_CREATE_ORDER  | 是创建订单成功的消息，返回的order_id参数 |
+
+###### 当 `what` 值为 `ZTConsts.ZTGAME_LOGIN`, `json_obj` 出现值:
+
+~~~json
+{
+	"mobile_type":"xxxxxx",
+	"token":"c814684cbf4f17e2dd0c169db997db7f",
+	"accid":"1-123456",
+	"imei":"xxxxxx",
+	"action":"login",
+	"account":"xxxxxx",
+	"mac":"xxxxxx",
+	"channel":1,
+	"ip":"xxxxxx"
+}
+~~~
+
+> **注:**
+> 
+> `accid` 为账号唯一身份标识, 即服务端的 `openid`;
+> `account` 可能为空;
+
+###### 当 `what` 值为 `ZTConsts.ZTGAME_TENCENT_QUERY`, `json_obj` 出现值:
+
+~~~json
+{
+	"code": 0,
+	"error":"Error message.",
+	"balance":"0",
+	"auto_consumed":false
+}
+~~~
+
+| 参数     |  类型         |  说明                            |
+|----------|---------------|----------------------------------|
+| code     | int           | 返回结果编号; 0 正确; 其它为错误 |
+| error    | string / null | 错误消息                         |
+| balance  | string        | 腾讯账号余额, 单位元. (无法被消耗的余额, 需要游戏创建订单处理)  |
+| auto_consumed | boolean   | 是否自动查询消费       |
+
+
+###### 当 `what` 值为 `ZTConsts.ZTGAME_LOGOUT`, `json_obj` 出现值:
+
+> **注:**
+> 
+> 在游戏接收ZTGAME_LOGOUT后，调用登录接口之前前，建议调用isLogin接口做一次用户登录状态判断，如果true则不调用登录接口，否则调用。增加判断可防止多次弹出登录界面。
+
+#### 类 `com.ztgame.mobileappsdk.common.ZTPayInfo`'s 方法说明:
+
+| Method | Required / Optional / Deprecated | Description |
+|--------|----------------------------------|----------------------------|
+| setAmount | 必填  | 设置商品金额(RMB). 单位(分) |
+| setExtra | 必填 | 设置游戏订单扩展信息(游戏订单号等等)  |
+| setMoneyName | 可选设置 | 设置货币单位名称  |
+| setMonthCard | 可选设置 | 设置是否为月卡  |
+| setExchangeRatio | 可选设置  | 设置价格比率 |
+| setProductName | 可选设置  | 设置商品名称 |
+| setProductId | 可选设置  | 设置商品ID |
+
+
+## 开始接入 ZTgameFramework 
+
+### Step 1. 环境说明
+
+
+* 导入库(`base.jar`, `ztgameframework.jar`) 和资源文件到你的项目
+* 项目中给 `Androidmenifest.xml` 添加权限设定 :
+
+
+~~~XML
+<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+<uses-permission android:name="android.permission.RECORD_AUDIO" />
+<uses-permission android:name="android.permission.CALL_PHONE" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+<uses-permission android:name="android.permission.GET_TASKS" />
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.SEND_SMS" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+<uses-permission android:name="android.permission.RECEIVE_SMS" />
+<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+~~~
+
+
+* 添加属性至你的 `<application />` 标签中
+
+~~~
+android:name="com.ztgame.ztgameframework.ZTApplication"
+~~~
+
+* 在demo中, 复制 asserts 文件夹到你的游戏项目. ztsdk_config.properties 文件范例:
+
+~~~
+config.sdk.class=com.ztgame.mobileappsdk.ga.ZTLibGA
+config.domain.passport.legacy=http://passport.mztgame.com
+config.domain.passport=http://passport.mobileztgame.com
+config.domain.pay=http://pay.mobileztgame.com
+config.ui.transparentbg=1
+config.ui.hidemibaolingpwd=0
+config.ui.hidechangepwd=0
+config.ui.hidefindpwd=0
+config.ui.hideregpwd=0
+config.ui.hideloginpwd=0
+#config.ui.css=
+#config.ui.css=.close{display:none;} .header{display:none !important;}
+config.ui.css=#login_close{display:none;}
+config.pay.version=1.0.4
+config.appid=5016 ###5016
+config.paykey=p0emh5SFwBvpDbT ###your own payKey
+config.paypid=10 ###your own paypid
+config.channel_id=1
+#config.ad_id=10000000000
+~~~
+
+> **注 1**：
+> 
+> 在 `androidManifest.xml` 中需要将所有的activity service等标签 `android:name` 字段写上对应的java包名的全称
+
+> **注 2**：
+> 
+> 在assets目录下添加 ztsdk_config.properties 文件确保文件中有以下内容:
+> ~~~
+> config.sdk.class=com.ztgame.ztgameframework.ZTgameFramework
+> ~~~
+
+> **注 3**：
+> 
+> 如果你的工程里存在 Application 需要继承改Application 并且在 `onCreate()` 函数中添加 `super.onCreate()`
+
+
+### Step 2. 初始化 `MainActivity`
+
+#### 代码范例:
+
+~~~java
+package com.example;
+
+import android.app.Activity;
+import android.os.Bundle;
+import com.ztgame.mobileappsdk.common.IZTLibBase;
+import com.ztgame.mobileappsdk.common.IZTListener;
+
+public class MainActivity extends Activity {
+
+	@Override
+    protected void onCreate(Bundle savedInstanceState) {
+		//游戏其它事项初始化代码...
+
+		//IZTLibBase 初始化
+		IZTLibBase.newInstance(MainActivity.this);
+		IZTLibBase.getInstance().initZTGame("5012","Game Name", false, mListener);
+	}
+
+	//事件监听
+	private IZTListener mListener = new IZTListener() {
+		@Override
+		public void onFinished(int what, int errcode, JSONObject json_obj) {
+
+			switch (what) {
+			case ZTConsts.ZTGAME_LOGIN:
+				if (errcode == 0) {
+					//游戏完成事件, 设置角色信息
+					IZTLibBase.getInstance().loginOkZTGame("roleId", "roleName", "roleLevel", "zoneId", "zoneName");
+				} else {
+					//登录失败
 				}
-		});
- - ###1.3 支付接口（必接）
- 		final synchronized public boolean payZTGame(ZTPayInfo payInfo)
-	** 	payInfo详细描述参见如下	**
-	#####ZTPayInfo支付信息说明：  
-  		
-  			ZTPayInfo payInfo = new ZTPayInfo();
-	        payInfo.setAmount(100);
-	        payInfo.setProductName("钻石*10");
-	        payInfo.setMoneyName("钻石");
-	        payInfo.setExchangeRatio(10);
-	        payInfo.setProductId("123");
-	        payInfo.setExtra("1");         // 扩展信息，需要回传游戏服务器的请设置这个字段
-	        payInfo.setMonthCard(true);    //Base4.4.1以上版本需要设置此参数用来表示是否为月卡
-	        IZTLibBase.getInstance().payZTGame(payInfo);
-	        
-	        
-   	**`说明`**  
-   			`setAmount(int amount):`设置支付的价格，单位为分（若游戏中价格为元，请转换成分后在传入）；  
-   			`setProductName(String)`:设置商品名称，如果是钻石就设置为`“钻石*数量”`，如果是月卡就设置为`月卡`,（特殊：华为渠道，支付时不能带*及其他特殊符号）；  
-   			`payInfo.setMoneyName(String)`:设置游戏货币名称，如果是钻石就设置为`钻石`;  
-   			`payInfo.setExchangeRatio(int)`:设置游戏兑换比率，1元对应多少游戏币，1：10就设置为10  
-   			`setExtra(String)`:设置额外参数  
-   			`payZTGame（ZTPayInfo payInfo）`:支付。   
-   			`setProductId(String)` :部分运营商需要提供计费点通过此接口传入计费点。  
-			`payInfo.setMonthCard(true);`:部分渠道需要得知是否道具是月卡
-	#####ZTPayInfo支付信息接口：
-
-		public void setProductName(String productName)	//设置商品名称
-		public void setExtra(String extra)	//设置额外信息
-		public void setAmount(int amount)	//设置商品价格，单位为分
-		public void setProductName(String productName)	//设置商品名称
-		public void setMoneyName(String moneyName)	//设置货币名称
-		public void setExchangeRatio(int exchangeRatio)	//设置汇率比例
-
-
-- ###1.4 登录完成数据统计接口（建议接入）
-	登录流程结束后调用
-
-		public void loginOkZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName)
-	**`参数说明：`**  
-	`roleId`:角色ID;  
-	`roleName`:角色名称;  
-	`roleLevel`:角色等级;   
-	`zoneId`:服务器ID;  
-	`zoneName`:服务器名称
-	
-- ###1.5 创建角色数据统计接口（建议接入）
-	创建角色后调用数据统计接口
-
- 			public void createRoleZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName)
- 	**`参数说明：`**  
-	`roleId`:角色ID;  
-	`roleName`:角色名称;  
-	`roleLevel`:角色等级;   
-	`zoneId`:服务器ID;  
-	`zoneName`:服务器名称	
-
-- ###1.6 角色等级升级信息接口
-
-		public void roleLevelUpZTGame(String roleId,String roleName,String zoneId,String zoneName,int level)
-
-	**`参数说明：`**  
-	`roleId`:角色ID;  
-	`roleName`:角色名称;  
-	`level`:角色等级;   
-	`zoneId`:服务器ID;  
-	`zoneName`:服务器名称	
-
-- ###1.7 是否需要切换账号按钮接口
-			public boolean isHasSwitchAccountZTGame()
-以上接口返回true则游戏需要添加一个切换账号按钮以方便用户切换账号，点击此按钮后调用switchAccountZTGame()  
-
-- ###1.8 切换账号操作
-			public void switchAccountZTGame()	
-	以上为切换账号接口功能，调用此接口执行切换账号操作，调用此接口后，会发送ZTGAME_LOGOUT消息。
-
-- ###1.9 是否需要用户中心按钮接口
-			public boolean isHasCenterZTGame()
-			
-	以上为某些渠道判断是否存在用户中心按钮倘若返回false不作处理，倘若返回true需要显示用户中心按钮，点击此按钮后调用enterCenterZTGame()
-
-- ###1.10 用户中心操作
-			public void enterCenterZTGame()
-以上为用户中心接口功能，调用此接口弹去渠道方的用户中心界面
-
-- ###1.11 是否需要调用第三方推出框接口
-
-			public void isHasQuitDialog()
-			
-	以上为是否有第三方渠道的退出确认弹出框，如果此函数返回true，请游戏不要弹出游戏自身的退出确认弹出框而是直接调用quitZTGame来弹出第三方的退出弹出框，在ZTGame_Quit回调内处理游戏的退出操作（销毁代码，而不是再次弹出退出确认对话框。返回false则按照游戏自己的退出流程处理即可。  
-	
-- ###1.12 弹出第三方退出弹出确认框接口
-					
-			public void quitZTGame()  
-						
-	以上为弹出第三方渠道的退出框的函数			
-
-- ###1.13 开启日志输出接口
-		public void enableDebugMode()
-	游戏上线前需要注释该行代码以关闭日志输出
-
-- ###1.14 获取渠道id
-		public int getPlatform();
-	渠道id以及游戏id可以统一从此wiki链接查询
-[http://wiki.mztgame.com/index.php/%E6%B8%A0%E9%81%93%E4%BF%A1%E6%81%AF%E5%88%97%E8%A1%A8](http://wiki.mztgame.com/index.php/%E6%B8%A0%E9%81%93%E4%BF%A1%E6%81%AF%E5%88%97%E8%A1%A8)
-
-- ###1.15 更新服务器id
-		public void setZoneId(final String zoneId)
-	玩家切换服务器后需要调用此方法更新当前服务器id
-	
-- ###1.16 更新当前活动Activity
-		public void setActivity(Activity activity)
-	如果游戏当前Activity变更，需要更新activity到SDK
-	
-- ###1.17 是否已经登录
-		public boolean isLogined()
-- ###1.18 是否有一键加QQ群功能接口
-		public void isHasJoinQQGroup()	
-	调用实例：  
-	IZTLibBase.getInstance().isHasJoinQQGroup();  
-	`注：`接入此接口时，游戏会收到ZTGAME_QQGROUP消息，当errcode为0表示有一键加QQ功能，-1表示没有该功能。
-- ###1.19 一键加QQ群接口
-		public void joinQQGroup()	
-
-	调用实例：  
-
-		IZTLibBase.getInstance().joinQQGroup();  
-
-	`注：`接入此接口时，需提供QQ群对应的key，key由QQ官方申请。`接入次接口前，请务必调用isHasJoinQQGroup()接口，并且在收到ZTGAME_QQGROUP消息后，errcode为0的情况下调用。`
-##需要调用的Android生命周期接口
-
-
-			@Override
-   			 protected void onPause() {
-        		super.onPause();
-        		IZTLibBase.getInstance().onPauseZTGame();
-  		  	}
-
-  			@Override
-		    protected void onStop() {
-        		super.onStop();
-        		IZTLibBase.getInstance().onStopZTGame();
-    		}
-
-    		@Override
-    		protected void onResume() {
-        		super.onResume();
-        		IZTLibBase.getInstance().onResumeZTGame();
-    		}
-
-    		@Override
-		    protected void onDestroy() {
-        		super.onDestroy();
-        		IZTLibBase.getInstance().destroyZTGame();
-        		IZTLibBase.delInstance();
-    		}
-    
-    		@Override
-    		protected void onStart() {
-    			super.onStart();
-    			IZTLibBase.getInstance().onStartZTGame();
-    		}
-    
-    		@Override
-    		protected void onRestart() {
-		    	super.onRestart();
-    			IZTLibBase.getInstance().onRestartZTGame();
-    		}
-    		@Override
-			public void onConfigurationChanged(Configuration newConfig) {
-				super.onConfigurationChanged(newConfig);
-				IZTLibBase.getInstance().onConfigurationChangedZTGame(newConfig);
+				break;
+			case ZTConsts.ZTGAME_INIT:
+				if (errcode == 0) {
+					//初始化完成
+				} else {
+					//初始化失败
+				}
+				break;
+			case ZTConsts.ZTGAME_PAY:
+				if(errcode == 0){
+					//支付完成
+				}else{
+					//支付失败
+				}
+				break;
+			case ZTConsts.ZTGAME_QUIT:
+				if(errcode == 0){
+					//游戏退出
+				} else {
+				}
+				break;
+			case ZTConsts.ZTGAME_LOGOUT:
+				//玩家退出处理
+				if(!IZTLibBase.getInstance().isLogined()){
+					IZTLibBase.getInstance().loginZTGame("1", "Game area", true);
+				}
+				break;
+			case ZTConsts.ZTGAME_QQGROUP: //腾讯QQ一键加群
+				if(errcode == 0){
+					joinQQButton.setVisibility(View.VISIBLE);
+				}
+				break;
 			}
-			
-			@Override
-			protected void onNewIntent(Intent intent) {
-				super.onNewIntent(intent);
-				IZTLibBase.getInstance().onNewIntentZTGame(intent);
-			}
-			
-			@Override
-			protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-				super.onActivityResult(requestCode, resultCode, data);
-				IZTLibBase.getInstance().onActivityResultZTGame(requestCode, resultCode, data);
-			}
-			
-			
-			@Override
-			public void onSaveInstanceState(Bundle outState) {
-    			super.onSaveInstanceState(outState);
-    			IZTLibBase.getInstance().onSaveInstanceState(outState);
-    		}
- 
-####***以上为渠道需要在游戏主Activity中调用的生命周期函数。***####
-
-------------------------------------------------------------
-###Base 4.1.0 更新注意事项###
-
-需要在AndroidManifest.xml中添加Application的节点属性。
-
-	android:name="com.ztgame.ztgameframework.ZTApplication"
-	
-***如果你的工程里存在Application需要继承改Application 并且在onCreate函数中添加super.onCreate***
-
-------------------------------------------------------------------
-###Base 4.4.0 新增接口###
-- 部分渠道需要支付回调结果接口
-
-
-		public void payNotify(String amount, String order, String description) {
-    		//Log.d("giant", "Pay Notify called" +  amount + order + description);
-	    }
-
-
-###Base 4.4.5 新增接口###
-- 是否有一键加qq群功能接口
-
-		public void isHasJoinQQGroup()
-
-- 一键加QQ群接口
-
-		public void joinQQGroup()
-
-- 增加版本标识接口
-
-		//获取SDK Version
-		public String getSDKVersion() {
-			return mSDKVersionName;
 		}
-	
-		/**
-		 * 
-		 * @return
-		 */
-		public long getSDKVersionCode(){
-			return mSDKVersionCode;
+	};
+}
+~~~
+
+
+### Step 3. 登录接入
+
+UI在"进入游戏"界面.
+
+**代码范例：**
+
+~~~java
+package com.example;
+
+import android.app.Activity;
+import android.view.View;
+
+import com.ztgame.mobileappsdk.common.IZTLibBase;
+import com.ztgame.mobileappsdk.common.ZTConsts;
+
+public class MainActivity extends Activity {
+
+	//...
+
+	@Override
+	public void onClick(View v) {
+		
+		switch (v.getId()) {
+			case R.id.enterGameWorldButton: //玩家点击"进入游戏" 
+            	IZTLibBase.getInstance().loginZTGame("1", "ZoneName", true);
+				break;
+			case R.id.exitButton:
+				//玩家点击退出
+				if(IZTLibBase.getInstance().isHasQuitDialog()){ //渠道是否有退出框确认
+					IZTLibBase.getInstance().quitZTGame();
+				}else{
+					//游戏自己的退出框代码
+				}
+				
+				break;
+			case R.id.accountCenterButton: //进入用户中心
+				IZTLibBase.getInstance().enterCenterZTGame();
+				break;
+			case R.id.switchAccountButton: //切换账号
+				IZTLibBase.getInstance().switchAccountZTGame();
+				break;
+			//...
 		}
-		
-		//	获取渠道sdk版本号
-	    public String getChannelSDKVersion(){
-	    	return CHANNEL_SDKVERSION;
-	    }
-		//	获取当前框架版本号
-	    public String getFrameworkVersion(){
-	    	return FRAMEWORK_VERSION;
-	    }
+	}
+
+	//...
+}
+~~~
+
+或者通过主线程调用方式:
+
+~~~java
+	YourActivity.runOnUiThread(new Runnable() {
+			public void run() {			
+					 IZTLibBase.getInstance().loginZTGame("1", "zoneName"", true);
+			}
+	});
+~~~
 
 
-###Base 4.4.6 新增接口###
-- 设置腾讯登录类型
+### Step 4. 充值接入
 
-    	public void setTencentLoginType(int tencentLoginType)
-		
-	tencentLoginType：
+当用户点击充值商品时调用 `IZTLibBase.getInstance().payZTGame(ZTPayInfo payInfo)`
 
-		ZTConsts.TencentLoginType.QQ  //qq登录
-		ZTConsts.TencentLoginType.WECHAT //微信登录
+#### 代码范例: 
 
-- 腾讯游戏点查询接口
+~~~java
+package com.example;
 
-    	public void queryTencentGamePoint()
+import android.app.Activity;
+import android.view.View;
+import android.widget.Toast;
 
-   	查询成功会收到ZTGAME_TENCENT_QUERY消息
+import com.ztgame.mobileappsdk.common.IZTLibBase;
+import com.ztgame.mobileappsdk.common.ZTConsts;
+import com.ztgame.mobileappsdk.common.ZTPayInfo;
 
-	返回的Json数据说明：	
+public class MainActivity extends Activity {
+	@Override
+	public void onClick(View v) {
+		//玩家点击购买商品按键
+		switch (v.getId()) {
+			case R.id.buyButton:
+				if(IZTLibBase.getInstance().isLogined()){
+					ZTPayInfo payInfo = new ZTPayInfo();
+					payInfo.setAmount(100);  //设置金额, 单位(分)
+					payInfo.setProductName("test item"); //设置商品名称
+					payInfo.setProductId("1001"); // 设置商品ID
+					payInfo.setExtra("1"); //设置游戏订单扩展信息
+					IZTLibBase.getInstance().payZTGame(payInfo);
+				} else {
+					Toast.makeText(MainActivity.this, "Please login.", Toast.LENGTH_SHORT).show();
+				}
+				break;
+			//...
+		}
+	}
+}
+~~~
+
+### Step 5. 需要调用的Android生命周期接口
+
+~~~java
+package com.example;
+
+import android.app.Activity;
+import com.ztgame.mobileappsdk.common.IZTLibBase;
+
+public class MainActivity extends Activity {
+	@Override
+	protected void onPause() {
+		super.onPause();
+		IZTLibBase.getInstance().onPauseZTGame();
+	}
+
+	@Override
+    protected void onStop() {
+		super.onStop();
+		IZTLibBase.getInstance().onStopZTGame();
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		IZTLibBase.getInstance().onResumeZTGame();
+	}
+
+	@Override
+    protected void onDestroy() {
+		super.onDestroy();
+		IZTLibBase.getInstance().destroyZTGame();
+		IZTLibBase.delInstance();
+	}
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+		IZTLibBase.getInstance().onStartZTGame();
+	}
+
+	@Override
+	protected void onRestart() {
+    	super.onRestart();
+		IZTLibBase.getInstance().onRestartZTGame();
+	}
+	@Override
+	public void onConfigurationChanged(Configuration newConfig) {
+		super.onConfigurationChanged(newConfig);
+		IZTLibBase.getInstance().onConfigurationChangedZTGame(newConfig);
+	}
 	
+	@Override
+	protected void onNewIntent(Intent intent) {
+		super.onNewIntent(intent);
+		IZTLibBase.getInstance().onNewIntentZTGame(intent);
+	}
 	
-> code	int	返回结果编号; 0 正确; 其它为错误	0
-> 
-> error	string / null	错误消息	
-> 
-> balance	string	腾讯账号余额, 单位元. (无法被消耗的余额, 需要游戏创建订单处理)	
-> 
-> auto_consumed	boolean	是否自动查询消费
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		IZTLibBase.getInstance().onActivityResultZTGame(requestCode, resultCode, data);
+	}
+	
+	@Override
+	public void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		IZTLibBase.getInstance().onSaveInstanceState(outState);
+	}
+}
+~~~
 
--  补单接口
 
-		public boolean createOrderZTGame(ZTPayInfo payInfo)
+## 更新日志
 
- 	payInfo详细描述参见1.3
+### 4.4.0
+
+* 增加 `payNotify()` 方法
+
+~~~java
+	public void payNotify(String amount, String order, String description) {
+		Log.d("giant", "Pay Notify called" +  amount + order + description);
+    }
+~~~
+
+### 4.4.5
+
+* 增加腾讯一键加群功能
+
+~~~java
+	public void isHasJoinQQGroup();
+	public void joinQQGroup();
+~~~
+
+* 增加 `getSDKVersion()` 方法
+
+~~~java
+	/**
+     * 获取SDK 版本号
+     */
+	public String getSDKVersion() {
+		return mSDKVersionName;
+	}
+
+	public long getSDKVersionCode(){
+		return mSDKVersionCode;
+	}
+	
+	/**
+     * 获取第三方SDK版本号
+     */
+    public String getChannelSDKVersion(){
+    	return CHANNEL_SDKVERSION;
+    }
+
+    /**
+     * 获取当前框架版本号
+     */
+    public String getFrameworkVersion(){
+    	return FRAMEWORK_VERSION;
+    }
+~~~
+
+### 4.4.6
+
+* 设置腾讯登录类型
+
+~~~java
+	public void setTencentLoginType(int tencentLoginType)
+~~~
+
+Login types:
+
+~~~java
+	ZTConsts.TencentLoginType.QQ;
+	ZTConsts.TencentLoginType.WECHAT;
+~~~
+
+* 腾讯游戏点 接入功能
+
+~~~java
+    /**
+     * 腾讯游戏点查询接口
+     */
+	public void queryTencentGamePoint()
+
+    /**
+     * 腾讯补单接口
+     */
+	public boolean createOrderZTGame(ZTPayInfo payInfo)
+~~~
