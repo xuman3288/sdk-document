@@ -13,6 +13,15 @@
 package com.ztgame.mobileappsdk.common;
 
 public abstract class IZTLibBase {
+
+	/**
+	* 初始化IZTLibBase实例
+	* 
+	* @param ac Activity类的一个实例
+	**/
+	@Override
+	static public boolean newInstance(Activity ac){}
+
 	/**
 	 * 初始化Android SDK（必接） 
 	 *
@@ -268,10 +277,10 @@ public interface IZTListener {
 | Method | Required / Optional / Deprecated | Description |
 |--------|----------------------------------|----------------------------|
 | setAmount | 必填  | 设置商品金额(RMB). 单位(分) |
-| ~~setExchangeRatio~~ | 废弃  | 设置价格比率 |
 | setExtra | 必填 | 设置游戏订单扩展信息(游戏订单号等等)  |
-| ~~setMoneyName~~ | 废弃 | 设置货币单位名称  |
-| ~~setMonthCard~~ | 废弃 | 设置是否为月卡  |
+| setMoneyName | 可选设置 | 设置货币单位名称  |
+| setMonthCard | 可选设置 | 设置是否为月卡  |
+| setExchangeRatio | 可选设置  | 设置价格比率 |
 | setProductName | 可选设置  | 设置商品名称 |
 | setProductId | 可选设置  | 设置商品ID |
 
