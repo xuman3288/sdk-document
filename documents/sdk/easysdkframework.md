@@ -15,7 +15,7 @@ package com.ztgame.mobileappsdk.common;
 public abstract class IZTLibBase {
 
 	/**
-	* 初始化IZTLibBase实例
+	* 初始化IZTLibBase实例(必接)
 	* 
 	* @param ac Activity类的一个实例
 	**/
