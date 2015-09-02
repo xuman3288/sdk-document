@@ -4,7 +4,7 @@
 
 ## Classes reference.
 
-#### Class `com.ztgame.mobileappsdk.common.IZTLibBase` description
+### Class `com.ztgame.mobileappsdk.common.IZTLibBase` description
 
 ~~~java
 package com.ztgame.mobileappsdk.common;
@@ -193,7 +193,7 @@ public abstract class IZTLibBase {
 ~~~
 
 
-#### Interface `com.ztgame.mobileappsdk.common.IZTListener` description
+### Interface `com.ztgame.mobileappsdk.common.IZTListener` description
 
 ~~~java
 /**
@@ -214,7 +214,7 @@ public interface IZTListener {
 }
 ~~~
 
-##### Parameter `what`
+#### Parameter `what`
 
 Values:
 
@@ -230,7 +230,7 @@ Values:
 | ZTConsts.ZTGAME_CREATE_ORDER  | Call it when players touch some product and ZTgameframework call create order finished. |
 
 
-###### Case `ZTConsts.ZTGAME_LOGIN` the `json_obj` values:
+##### Case `ZTConsts.ZTGAME_LOGIN` the `json_obj` values:
 
 ~~~json
 {
@@ -252,7 +252,7 @@ Values:
 > `account` may be empty string.
 
 
-###### Case `ZTConsts.ZTGAME_TENCENT_QUERY` the `json_obj` values:
+##### Case `ZTConsts.ZTGAME_TENCENT_QUERY` the `json_obj` values:
 
 ~~~json
 {
@@ -271,13 +271,13 @@ Values:
 | auto_consumed | boolean   | Auto consumed. |
 
 
-###### Case `ZTConsts.ZTGAME_LOGOUT`:
+##### Case `ZTConsts.ZTGAME_LOGOUT`:
 
 > **Note:**
 > 
 > Ensure player is logined before call `IZTLibBase.getInstance().loginZTGame()`.
 
-#### Class `com.ztgame.mobileappsdk.common.ZTPayInfo`'s methods description
+### Class `com.ztgame.mobileappsdk.common.ZTPayInfo`'s methods description
 
 | Method | Required / Optional | Description |
 |--------|----------------------------------|----------------------------|
