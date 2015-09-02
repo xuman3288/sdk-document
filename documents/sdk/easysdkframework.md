@@ -14,95 +14,95 @@ package com.ztgame.mobileappsdk.common;
 
 public abstract class IZTLibBase {
 
-	/**
-	* 初始化IZTLibBase实例(必接)
-	* 
-	* @param ac Activity类的一个实例
-	**/
-	@Override
-	static public boolean newInstance(Activity ac){}
+    /**
+     * 初始化IZTLibBase实例(必接)
+     * 
+     * @param ac Activity类的一个实例
+     */
+    @Override
+    static public boolean newInstance(Activity ac){}
 
-	/**
-	 * 初始化Android SDK（必接） 
-	 *
-	 * 首先调用IZTLibBase 的newInstance方法，传入你的Activity。然后调用getInstance()方法的initZTGame初始化游戏信息。
-	 * 
-	 * @param gameId   游戏ID
-	 * @param appName  游戏名称
-	 * @param isLandScape 游戏横竖屏.  
-	 *     - true  : 横版
-	 *     - false : 竖版
-	 * @param listener  用于响应回调事件的监听接口
-	 */
-	@Override
-	public void initZTGame(String gameId, String appName, boolean isLandScape, IZTListener listener) {}
+    /**
+     * 初始化Android SDK（必接） 
+     *
+     * 首先调用IZTLibBase 的newInstance方法，传入你的Activity。然后调用getInstance()方法的initZTGame初始化游戏信息。
+     * 
+     * @param gameId   游戏ID
+     * @param appName  游戏名称
+     * @param isLandScape 游戏横竖屏.  
+     *     - true  : 横版
+     *     - false : 竖版
+     * @param listener  用于响应回调事件的监听接口
+     */
+    @Override
+    public void initZTGame(String gameId, String appName, boolean isLandScape, IZTListener listener) {}
 
-	/**
-	 * 登录接口（必接）
-	 * 
-	 * @param zoneId   游戏区ID（Int, 大于0）
-	 * @param zoneName 游戏区名称
-	 * @param isAutoLogin 是否自动登录，传true即可
-	 */
-	public void loginZTGame(String zoneId, String zoneName, boolean isAutoLogin) {}
+    /**
+     * 登录接口（必接）
+     * 
+     * @param zoneId   游戏区ID（Int, 大于0）
+     * @param zoneName 游戏区名称
+     * @param isAutoLogin 是否自动登录，传true即可
+     */
+    public void loginZTGame(String zoneId, String zoneName, boolean isAutoLogin) {}
 
-	/**
+    /**
      * 支付接口（必接）
      * 
      * @param payInfo 实例化 ZTPayInfo 信息 
      */
-	final public boolean payZTGame(ZTPayInfo payInfo) {}
+    final public boolean payZTGame(ZTPayInfo payInfo) {}
 
 
-	/**
+    /**
      * 是否需要切换账号按钮接口
      * 以上接口返回true则游戏需要添加一个切换账号按钮以方便用户切换账号.
      * 点击此按钮后调用switchAccountZTGame()
      */
     public boolean isHasSwitchAccountZTGame() {}
 
-	/**
+    /**
      * 切换账号操作
      * 
      * 以上为切换账号接口功能，调用此接口执行切换账号操作，调用此接口后，会发送ZTGAME_LOGOUT消息。
      */
-	public void switchAccountZTGame(){}
+    public void switchAccountZTGame(){}
 
     /**
      * 是否需要用户中心按钮接口
      * 
      * 以上为某些渠道判断是否存在用户中心按钮倘若返回false不作处理，倘若返回true需要显示用户中心按钮，点击此按钮后调用enterCenterZTGame()
      */
-	public boolean isHasCenterZTGame(){}
+    public boolean isHasCenterZTGame(){}
 
 
-	/**
+    /**
      * 用户中心操作, 调用此接口弹去渠道方的用户中心界面
      */
-	public void enterCenterZTGame(){}
+    public void enterCenterZTGame(){}
 
 
-	/**
+    /**
      * 是否有第三方渠道的退出确认弹出框
-	 *  
-	 * 如果此函数返回true，请游戏不要弹出游戏自身的退出确认弹出框而是直接调用quitZTGame来弹出第三方的退出弹出框，在ZTGame_Quit回调内处理游戏的退出操作
-	 * （销毁代码，而不是再次弹出退出确认对话框。返回false则按照游戏自己的退出流程处理即可。)
+     *  
+     * 如果此函数返回true，请游戏不要弹出游戏自身的退出确认弹出框而是直接调用quitZTGame来弹出第三方的退出弹出框，在ZTGame_Quit回调内处理游戏的退出操作
+     * （销毁代码，而不是再次弹出退出确认对话框。返回false则按照游戏自己的退出流程处理即可。)
      */
-	public void isHasQuitDialog(){}
+    public void isHasQuitDialog(){}
 
     /**
      * 弹出第三方退出弹出确认框接口
      */
-	public void quitZTGame(){}
+    public void quitZTGame(){}
 
 
-	/**
+    /**
      * 开启日志输出接口
      * 游戏上线前需要注释该行代码以关闭日志输出
      */
-	public void enableDebugMode(){}
+    public void enableDebugMode(){}
 
-	/**
+    /**
      * 获取渠道id
      * 
      * 渠道id以及游戏id可以统一从此wiki链接查询.
@@ -111,32 +111,32 @@ public abstract class IZTLibBase {
     public int getPlatform(){}
 
 
-	/**
+    /**
      * 更新服务器id
      * 玩家切换服务器后需要调用此方法更新当前服务器id
      */
-	public void setZoneId(final String zoneId){}
+    public void setZoneId(final String zoneId){}
 
-	/**
+    /**
      * 更新当前活动Activity
      * 如果游戏当前Activity变更，需要更新activity到SDK
      */
-	public void setActivity(Activity activity){}
+    public void setActivity(Activity activity){}
 
-	/**
+    /**
      * 是否已经登录
      */
-	public boolean isLogined(){}
+    public boolean isLogined(){}
 
 
-	/**
+    /**
      * 是否有一键加QQ群功能接口
      * 
      * 注: 接入此接口时，游戏会收到ZTGAME_QQGROUP消息，当errcode为0表示有一键加QQ功能，-1表示没有该功能
      */
-	public void isHasJoinQQGroup(){}
+    public void isHasJoinQQGroup(){}
 
-	/**
+    /**
      * 一键加QQ群接口
      * 
      * 注：接入此接口时，需提供QQ群对应的key，key由QQ官方申请。
@@ -149,42 +149,42 @@ public abstract class IZTLibBase {
      * }
      * </code>
      */
-	public void joinQQGroup(){}
+    public void joinQQGroup(){}
 
 
-	/**
-	 * 登录完成数据统计接口
-	 * 
-	 * 角色进入游戏后调用
-	 * 
-	 * @param roleId     角色ID
-	 * @param roleName   角色名称
-	 * @param roleLevel  角色等级
-	 * @param zoneId     游戏区ID 
-	 * @param zoneName   游戏区名称
-	 */
-	public void loginOkZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName) {}
+    /**
+     * 登录完成数据统计接口
+     * 
+     * 角色进入游戏后调用
+     * 
+     * @param roleId     角色ID
+     * @param roleName   角色名称
+     * @param roleLevel  角色等级
+     * @param zoneId     游戏区ID 
+     * @param zoneName   游戏区名称
+     */
+    public void loginOkZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName) {}
 
-	/**
-	 * 创建角色数据统计接口（建议接入）
-	 * 
-	 * 玩家创建角色后调用.
-	 * 
-	 * @param roleId     角色ID
-	 * @param roleName   角色名称
-	 * @param roleLevel  角色等级
-	 * @param zoneId     游戏区ID 
-	 * @param zoneName   游戏区名称
-	 */
-	public void createRoleZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName) {}
+    /**
+     * 创建角色数据统计接口（建议接入）
+     * 
+     * 玩家创建角色后调用.
+     * 
+     * @param roleId     角色ID
+     * @param roleName   角色名称
+     * @param roleLevel  角色等级
+     * @param zoneId     游戏区ID 
+     * @param zoneName   游戏区名称
+     */
+    public void createRoleZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName) {}
 
-	/**
+    /**
      * 角色等级升级信息接口
      * 
-	 * @param roleId     角色ID
-	 * @param roleName   角色名称
-	 * @param zoneId     游戏区ID 
-	 * @param zoneName   游戏区名称
+     * @param roleId     角色ID
+     * @param roleName   角色名称
+     * @param zoneId     游戏区ID 
+     * @param zoneName   游戏区名称
      * @param level      角色等级
      */
     public void roleLevelUpZTGame(String roleId,String roleName,String zoneId,String zoneName,int level){}
@@ -199,16 +199,16 @@ public abstract class IZTLibBase {
  */
 public interface IZTListener {
 
-	/**
-	 * 当某事件执行后触发
-	 * 
-	 * @param what Finished events type
+    /**
+     * 当某事件执行后触发
+     * 
+     * @param what Finished events type
      * @param errcode Error code.
      * If equal to 0 Success, then error.
      * 
-	 * @param json_obj Finished callback info.
-	 */
-	public void onFinished(int what, int errcode, JSONObject json_obj);
+     * @param json_obj Finished callback info.
+     */
+    public void onFinished(int what, int errcode, JSONObject json_obj);
 }
 ~~~
 
@@ -230,15 +230,15 @@ public interface IZTListener {
 
 ~~~json
 {
-	"mobile_type":"xxxxxx",
-	"token":"c814684cbf4f17e2dd0c169db997db7f",
-	"accid":"1-123456",
-	"imei":"xxxxxx",
-	"action":"login",
-	"account":"xxxxxx",
-	"mac":"xxxxxx",
-	"channel":1,
-	"ip":"xxxxxx"
+    "mobile_type":"xxxxxx",
+    "token":"c814684cbf4f17e2dd0c169db997db7f",
+    "accid":"1-123456",
+    "imei":"xxxxxx",
+    "action":"login",
+    "account":"xxxxxx",
+    "mac":"xxxxxx",
+    "channel":1,
+    "ip":"xxxxxx"
 }
 ~~~
 
@@ -251,10 +251,10 @@ public interface IZTListener {
 
 ~~~json
 {
-	"code": 0,
-	"error":"Error message.",
-	"balance":"0",
-	"auto_consumed":false
+    "code": 0,
+    "error":"Error message.",
+    "balance":"0",
+    "auto_consumed":false
 }
 ~~~
 
@@ -375,63 +375,63 @@ import com.ztgame.mobileappsdk.common.IZTListener;
 
 public class MainActivity extends Activity {
 
-	@Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
-		//游戏其它事项初始化代码...
+        //游戏其它事项初始化代码...
 
-		//IZTLibBase 初始化
-		IZTLibBase.newInstance(MainActivity.this);
-		IZTLibBase.getInstance().initZTGame("5012","Game Name", false, mListener);
-	}
+        //IZTLibBase 初始化
+        IZTLibBase.newInstance(MainActivity.this);
+        IZTLibBase.getInstance().initZTGame("5012","Game Name", false, mListener);
+    }
 
-	//事件监听
-	private IZTListener mListener = new IZTListener() {
-		@Override
-		public void onFinished(int what, int errcode, JSONObject json_obj) {
+    //事件监听
+    private IZTListener mListener = new IZTListener() {
+        @Override
+        public void onFinished(int what, int errcode, JSONObject json_obj) {
 
-			switch (what) {
-			case ZTConsts.ZTGAME_LOGIN:
-				if (errcode == 0) {
-					//游戏完成事件, 设置角色信息
-					IZTLibBase.getInstance().loginOkZTGame("roleId", "roleName", "roleLevel", "zoneId", "zoneName");
-				} else {
-					//登录失败
-				}
-				break;
-			case ZTConsts.ZTGAME_INIT:
-				if (errcode == 0) {
-					//初始化完成
-				} else {
-					//初始化失败
-				}
-				break;
-			case ZTConsts.ZTGAME_PAY:
-				if(errcode == 0){
-					//支付完成
-				}else{
-					//支付失败
-				}
-				break;
-			case ZTConsts.ZTGAME_QUIT:
-				if(errcode == 0){
-					//游戏退出
-				} else {
-				}
-				break;
-			case ZTConsts.ZTGAME_LOGOUT:
-				//玩家退出处理
-				if(!IZTLibBase.getInstance().isLogined()){
-					IZTLibBase.getInstance().loginZTGame("1", "Game area", true);
-				}
-				break;
-			case ZTConsts.ZTGAME_QQGROUP: //腾讯QQ一键加群
-				if(errcode == 0){
-					joinQQButton.setVisibility(View.VISIBLE);
-				}
-				break;
-			}
-		}
-	};
+            switch (what) {
+            case ZTConsts.ZTGAME_LOGIN:
+                if (errcode == 0) {
+                    //游戏完成事件, 设置角色信息
+                    IZTLibBase.getInstance().loginOkZTGame("roleId", "roleName", "roleLevel", "zoneId", "zoneName");
+                } else {
+                    //登录失败
+                }
+                break;
+            case ZTConsts.ZTGAME_INIT:
+                if (errcode == 0) {
+                    //初始化完成
+                } else {
+                    //初始化失败
+                }
+                break;
+            case ZTConsts.ZTGAME_PAY:
+                if(errcode == 0){
+                    //支付完成
+                }else{
+                    //支付失败
+                }
+                break;
+            case ZTConsts.ZTGAME_QUIT:
+                if(errcode == 0){
+                    //游戏退出
+                } else {
+                }
+                break;
+            case ZTConsts.ZTGAME_LOGOUT:
+                //玩家退出处理
+                if(!IZTLibBase.getInstance().isLogined()){
+                    IZTLibBase.getInstance().loginZTGame("1", "Game area", true);
+                }
+                break;
+            case ZTConsts.ZTGAME_QQGROUP: //腾讯QQ一键加群
+                if(errcode == 0){
+                    joinQQButton.setVisibility(View.VISIBLE);
+                }
+                break;
+            }
+        }
+    };
 }
 ~~~
 
@@ -453,46 +453,46 @@ import com.ztgame.mobileappsdk.common.ZTConsts;
 
 public class MainActivity extends Activity {
 
-	//...
+    //...
 
-	@Override
-	public void onClick(View v) {
-		
-		switch (v.getId()) {
-			case R.id.enterGameWorldButton: //玩家点击"进入游戏" 
-            	IZTLibBase.getInstance().loginZTGame("1", "ZoneName", true);
-				break;
-			case R.id.exitButton:
-				//玩家点击退出
-				if(IZTLibBase.getInstance().isHasQuitDialog()){ //渠道是否有退出框确认
-					IZTLibBase.getInstance().quitZTGame();
-				}else{
-					//游戏自己的退出框代码
-				}
-				
-				break;
-			case R.id.accountCenterButton: //进入用户中心
-				IZTLibBase.getInstance().enterCenterZTGame();
-				break;
-			case R.id.switchAccountButton: //切换账号
-				IZTLibBase.getInstance().switchAccountZTGame();
-				break;
-			//...
-		}
-	}
+    @Override
+    public void onClick(View v) {
+        
+        switch (v.getId()) {
+            case R.id.enterGameWorldButton: //玩家点击"进入游戏" 
+                IZTLibBase.getInstance().loginZTGame("1", "ZoneName", true);
+                break;
+            case R.id.exitButton:
+                //玩家点击退出
+                if(IZTLibBase.getInstance().isHasQuitDialog()){ //渠道是否有退出框确认
+                    IZTLibBase.getInstance().quitZTGame();
+                }else{
+                    //游戏自己的退出框代码
+                }
+                
+                break;
+            case R.id.accountCenterButton: //进入用户中心
+                IZTLibBase.getInstance().enterCenterZTGame();
+                break;
+            case R.id.switchAccountButton: //切换账号
+                IZTLibBase.getInstance().switchAccountZTGame();
+                break;
+            //...
+        }
+    }
 
-	//...
+    //...
 }
 ~~~
 
 或者通过主线程调用方式:
 
 ~~~java
-	YourActivity.runOnUiThread(new Runnable() {
-			public void run() {			
-					 IZTLibBase.getInstance().loginZTGame("1", "zoneName"", true);
-			}
-	});
+    YourActivity.runOnUiThread(new Runnable() {
+            public void run() {            
+                     IZTLibBase.getInstance().loginZTGame("1", "zoneName"", true);
+            }
+    });
 ~~~
 
 
@@ -514,25 +514,25 @@ import com.ztgame.mobileappsdk.common.ZTConsts;
 import com.ztgame.mobileappsdk.common.ZTPayInfo;
 
 public class MainActivity extends Activity {
-	@Override
-	public void onClick(View v) {
-		//玩家点击购买商品按键
-		switch (v.getId()) {
-			case R.id.buyButton:
-				if(IZTLibBase.getInstance().isLogined()){
-					ZTPayInfo payInfo = new ZTPayInfo();
-					payInfo.setAmount(100);  //设置金额, 单位(分)
-					payInfo.setProductName("test item"); //设置商品名称
-					payInfo.setProductId("1001"); // 设置商品ID
-					payInfo.setExtra("1"); //设置游戏订单扩展信息
-					IZTLibBase.getInstance().payZTGame(payInfo);
-				} else {
-					Toast.makeText(MainActivity.this, "Please login.", Toast.LENGTH_SHORT).show();
-				}
-				break;
-			//...
-		}
-	}
+    @Override
+    public void onClick(View v) {
+        //玩家点击购买商品按键
+        switch (v.getId()) {
+            case R.id.buyButton:
+                if(IZTLibBase.getInstance().isLogined()){
+                    ZTPayInfo payInfo = new ZTPayInfo();
+                    payInfo.setAmount(100);  //设置金额, 单位(分)
+                    payInfo.setProductName("test item"); //设置商品名称
+                    payInfo.setProductId("1001"); // 设置商品ID
+                    payInfo.setExtra("1"); //设置游戏订单扩展信息
+                    IZTLibBase.getInstance().payZTGame(payInfo);
+                } else {
+                    Toast.makeText(MainActivity.this, "Please login.", Toast.LENGTH_SHORT).show();
+                }
+                break;
+            //...
+        }
+    }
 }
 ~~~
 
@@ -545,65 +545,65 @@ import android.app.Activity;
 import com.ztgame.mobileappsdk.common.IZTLibBase;
 
 public class MainActivity extends Activity {
-	@Override
-	protected void onPause() {
-		super.onPause();
-		IZTLibBase.getInstance().onPauseZTGame();
-	}
+    @Override
+    protected void onPause() {
+        super.onPause();
+        IZTLibBase.getInstance().onPauseZTGame();
+    }
 
-	@Override
+    @Override
     protected void onStop() {
-		super.onStop();
-		IZTLibBase.getInstance().onStopZTGame();
-	}
+        super.onStop();
+        IZTLibBase.getInstance().onStopZTGame();
+    }
 
-	@Override
-	protected void onResume() {
-		super.onResume();
-		IZTLibBase.getInstance().onResumeZTGame();
-	}
+    @Override
+    protected void onResume() {
+        super.onResume();
+        IZTLibBase.getInstance().onResumeZTGame();
+    }
 
-	@Override
+    @Override
     protected void onDestroy() {
-		super.onDestroy();
-		IZTLibBase.getInstance().destroyZTGame();
-		IZTLibBase.delInstance();
-	}
+        super.onDestroy();
+        IZTLibBase.getInstance().destroyZTGame();
+        IZTLibBase.delInstance();
+    }
 
-	@Override
-	protected void onStart() {
-		super.onStart();
-		IZTLibBase.getInstance().onStartZTGame();
-	}
+    @Override
+    protected void onStart() {
+        super.onStart();
+        IZTLibBase.getInstance().onStartZTGame();
+    }
 
-	@Override
-	protected void onRestart() {
-    	super.onRestart();
-		IZTLibBase.getInstance().onRestartZTGame();
-	}
-	@Override
-	public void onConfigurationChanged(Configuration newConfig) {
-		super.onConfigurationChanged(newConfig);
-		IZTLibBase.getInstance().onConfigurationChangedZTGame(newConfig);
-	}
-	
-	@Override
-	protected void onNewIntent(Intent intent) {
-		super.onNewIntent(intent);
-		IZTLibBase.getInstance().onNewIntentZTGame(intent);
-	}
-	
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		super.onActivityResult(requestCode, resultCode, data);
-		IZTLibBase.getInstance().onActivityResultZTGame(requestCode, resultCode, data);
-	}
-	
-	@Override
-	public void onSaveInstanceState(Bundle outState) {
-		super.onSaveInstanceState(outState);
-		IZTLibBase.getInstance().onSaveInstanceState(outState);
-	}
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        IZTLibBase.getInstance().onRestartZTGame();
+    }
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        IZTLibBase.getInstance().onConfigurationChangedZTGame(newConfig);
+    }
+    
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        IZTLibBase.getInstance().onNewIntentZTGame(intent);
+    }
+    
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        IZTLibBase.getInstance().onActivityResultZTGame(requestCode, resultCode, data);
+    }
+    
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        IZTLibBase.getInstance().onSaveInstanceState(outState);
+    }
 }
 ~~~
 
@@ -615,8 +615,8 @@ public class MainActivity extends Activity {
 * 增加 `payNotify()` 方法
 
 ~~~java
-	public void payNotify(String amount, String order, String description) {
-		Log.d("giant", "Pay Notify called" +  amount + order + description);
+    public void payNotify(String amount, String order, String description) {
+        Log.d("giant", "Pay Notify called" +  amount + order + description);
     }
 ~~~
 
@@ -625,36 +625,36 @@ public class MainActivity extends Activity {
 * 增加腾讯一键加群功能
 
 ~~~java
-	public void isHasJoinQQGroup();
-	public void joinQQGroup();
+    public void isHasJoinQQGroup();
+    public void joinQQGroup();
 ~~~
 
 * 增加 `getSDKVersion()` 方法
 
 ~~~java
-	/**
+    /**
      * 获取SDK 版本号
      */
-	public String getSDKVersion() {
-		return mSDKVersionName;
-	}
+    public String getSDKVersion() {
+        return mSDKVersionName;
+    }
 
-	public long getSDKVersionCode(){
-		return mSDKVersionCode;
-	}
-	
-	/**
+    public long getSDKVersionCode(){
+        return mSDKVersionCode;
+    }
+    
+    /**
      * 获取第三方SDK版本号
      */
     public String getChannelSDKVersion(){
-    	return CHANNEL_SDKVERSION;
+        return CHANNEL_SDKVERSION;
     }
 
     /**
      * 获取当前框架版本号
      */
     public String getFrameworkVersion(){
-    	return FRAMEWORK_VERSION;
+        return FRAMEWORK_VERSION;
     }
 ~~~
 
@@ -663,14 +663,14 @@ public class MainActivity extends Activity {
 * 设置腾讯登录类型
 
 ~~~java
-	public void setTencentLoginType(int tencentLoginType)
+    public void setTencentLoginType(int tencentLoginType)
 ~~~
 
 Login types:
 
 ~~~java
-	ZTConsts.TencentLoginType.QQ;
-	ZTConsts.TencentLoginType.WECHAT;
+    ZTConsts.TencentLoginType.QQ;
+    ZTConsts.TencentLoginType.WECHAT;
 ~~~
 
 * 腾讯游戏点 接入功能
@@ -679,10 +679,10 @@ Login types:
     /**
      * 腾讯游戏点查询接口
      */
-	public void queryTencentGamePoint()
+    public void queryTencentGamePoint()
 
     /**
      * 腾讯补单接口
      */
-	public boolean createOrderZTGame(ZTPayInfo payInfo)
+    public boolean createOrderZTGame(ZTPayInfo payInfo)
 ~~~
