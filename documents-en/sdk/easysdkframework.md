@@ -1,6 +1,6 @@
 # GiantMobile Android SDK API
 
-**SDK Version：**	 Ver 4.4.5
+**SDK Version：**     Ver 4.4.5
 
 ## Classes reference.
 
@@ -10,87 +10,96 @@
 package com.ztgame.mobileappsdk.common;
 
 public abstract class IZTLibBase {
-	/**
-	 * Init game info.
-	 *
-	 * Call it after IZTLibBase.newInstance(SomeActivity.this);
-	 * 
-	 * @param gameId   Set game id 
-	 * @param appName  Set app name
-	 * @param isLandScape Screen type.  
-	 *     - true  : Horizontal
-	 *     - false : Vertical
-	 * @param listener  When something event was finished call it.
-	 */
-	@Override
-	public void initZTGame(String gameId, String appName, boolean isLandScape, IZTListener listener) {}
 
-	/**
-	 * 
-	 * @param zoneId   Game zone ID
-	 * @param zoneName Game zone name
-	 * @param isAutoLogin Player auto login. Always set true.
-	 */
-	public void loginZTGame(String zoneId, String zoneName, boolean isAutoLogin) {}
+    /**
+     * New Instance
+     * 
+     * @param ac An activity  
+     **/
+    @Override
+    static public boolean newInstance(Activity ac){}
 
-	/**
+    /**
+     * Init game info.
+     *
+     * Call it after IZTLibBase.newInstance(SomeActivity.this);
+     * 
+     * @param gameId   Set game id 
+     * @param appName  Set app name
+     * @param isLandScape Screen type.  
+     *     - true  : Horizontal
+     *     - false : Vertical
+     * @param listener  When something event was finished call it.
+     */
+    @Override
+    public void initZTGame(String gameId, String appName, boolean isLandScape, IZTListener listener) {}
+
+    /**
+     * 
+     * @param zoneId   Game zone ID
+     * @param zoneName Game zone name
+     * @param isAutoLogin Player auto login. Always set true.
+     */
+    public void loginZTGame(String zoneId, String zoneName, boolean isAutoLogin) {}
+
+    /**
      * Call payment information.
      * 
      * @param payInfo Init product payment information.
      */
-	final public boolean payZTGame(ZTPayInfo payInfo) {}
+    final public boolean payZTGame(ZTPayInfo payInfo) {}
 
 
-	/**
+    /**
      * Is has switch account button
      * If it is true then the game must be has a switch account button. 
      * And call `switchAccountZTGame()` when player touched.
      */
     public boolean isHasSwitchAccountZTGame() {}
 
-	/**
+    /**
      * Call switch account.
      * Send a `ZTGAME_LOGOUT` signal when calling this method.
      */
-	public void switchAccountZTGame(){}
+    public void switchAccountZTGame(){}
 
     /**
      * Is has account center button in game UI
      * Some vendor has account center button.
      * If return true must be show account center button. And goto the vendor's account center UI when player touched.
      */
-	public boolean isHasCenterZTGame(){}
+    public boolean isHasCenterZTGame(){}
 
 
-	/**
+    /**
      * Goto the vendor's account center UI.
      */
-	public void enterCenterZTGame(){}
+    public void enterCenterZTGame(){}
 
 
-	/**
+    /**
      * Is has vendor's exit dialog.
-	 *  
-	 * Notes: 
-	 * 1. If return ture, mean vendor has exit dialog. 
-	 * 2. Don't popup yourself exit dialog if return true.
-	 * 3. At method `IZTListener.onfinished()` todo exit program.
+     *  
+     * Notes: 
+     * 1. If return ture, mean vendor has exit dialog. 
+     * 2. Don't popup yourself exit dialog if return true.
+     * 3. At method `IZTListener.onfinished()` todo exit program.
      */
-	public void isHasQuitDialog(){}
+    public void isHasQuitDialog(){}
 
     /**
      * Popup vendor's exit dialog
      */
-	public void quitZTGame(){}
+    public void quitZTGame(){}
 
 
-	/**
+    /**
      * Enable debug mode.
      * Don't enable on production.
      */
-	public void enableDebugMode(){}
+    public void enableDebugMode(){}
 
-	/**
+    /**
      * Get vendor ID
      * 
      * Vendors ID list.
@@ -99,33 +108,33 @@ public abstract class IZTLibBase {
     public int getPlatform(){}
 
 
-	/**
+    /**
      * Set game zone ID
      * Set the zone ID when player switched the zone.
      */
-	public void setZoneId(final String zoneId){}
+    public void setZoneId(final String zoneId){}
 
-	/**
+    /**
      * Set current Activity.
      * If the game Activity switched, set it.
      */
-	public void setActivity(Activity activity){}
+    public void setActivity(Activity activity){}
 
-	/**
+    /**
      * Player is logined.
      */
-	public boolean isLogined(){}
+    public boolean isLogined(){}
 
 
-	/**
+    /**
      * Is has join Tencent QQGroup interface
      * Note: 
      * Send a `ZTGAME_QQGROUP` signal when calling this method.
      * If `errcode` is equal to 0 call `joinQQGroup()`.
      */
-	public void isHasJoinQQGroup(){}
+    public void isHasJoinQQGroup(){}
 
-	/**
+    /**
      * Join Tencent QQGroup interface
      * 
      * Notes: 
@@ -138,45 +147,45 @@ public abstract class IZTLibBase {
      *     IZTLibBase.getInstance().joinQQGroup();
      * </code>
      */
-	public void joinQQGroup(){}
+    public void joinQQGroup(){}
 
 
-	/**
-	 * Character enter the game world
-	 * Optional call it.
-	 * 
-	 * When character enter the game world call it.
-	 * 
-	 * @param roleId     Character ID
-	 * @param roleName   Character name
-	 * @param roleLevel  Character level
-	 * @param zoneId     Game zone ID 
-	 * @param zoneName   Game zone name
-	 */
-	public void loginOkZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName) {}
+    /**
+     * Character enter the game world
+     * Optional call it.
+     * 
+     * When character enter the game world call it.
+     * 
+     * @param roleId     Character ID
+     * @param roleName   Character name
+     * @param roleLevel  Character level
+     * @param zoneId     Game zone ID 
+     * @param zoneName   Game zone name
+     */
+    public void loginOkZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName) {}
 
-	/**
-	 * Player create a character.
-	 * Optional call it.
-	 * 
-	 * When player create a character call it.
-	 * 
-	 * @param roleId     Character ID
-	 * @param roleName   Character name
-	 * @param roleLevel  Character level
-	 * @param zoneId     Game zone ID 
-	 * @param zoneName   Game zone name
-	 */
-	public void createRoleZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName) {}
+    /**
+     * Player create a character.
+     * Optional call it.
+     * 
+     * When player create a character call it.
+     * 
+     * @param roleId     Character ID
+     * @param roleName   Character name
+     * @param roleLevel  Character level
+     * @param zoneId     Game zone ID 
+     * @param zoneName   Game zone name
+     */
+    public void createRoleZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName) {}
 
-	/**
+    /**
      * Character level up.
      * Optional call it.
      * 
-	 * @param roleId     Character ID
-	 * @param roleName   Character name
-	 * @param zoneId     Game zone ID 
-	 * @param zoneName   Game zone name
+     * @param roleId     Character ID
+     * @param roleName   Character name
+     * @param zoneId     Game zone ID 
+     * @param zoneName   Game zone name
      * @param level      Character level
      */
     public void roleLevelUpZTGame(String roleId,String roleName,String zoneId,String zoneName,int level){}
@@ -192,16 +201,16 @@ public abstract class IZTLibBase {
  */
 public interface IZTListener {
 
-	/**
-	 * Finished callback.
-	 * 
-	 * @param what Finished events type
+    /**
+     * Finished callback.
+     * 
+     * @param what Finished events type
      * @param errcode Error code.
      * If equal to 0 Success, then error.
      * 
-	 * @param json_obj Finished callback info.
-	 */
-	public void onFinished(int what, int errcode, JSONObject json_obj);
+     * @param json_obj Finished callback info.
+     */
+    public void onFinished(int what, int errcode, JSONObject json_obj);
 }
 ~~~
 
@@ -225,15 +234,15 @@ Values:
 
 ~~~json
 {
-	"mobile_type":"xxxxxx",
-	"token":"c814684cbf4f17e2dd0c169db997db7f",
-	"accid":"1-123456",
-	"imei":"xxxxxx",
-	"action":"login",
-	"account":"xxxxxx",
-	"mac":"xxxxxx",
-	"channel":1,
-	"ip":"xxxxxx"
+    "mobile_type":"xxxxxx",
+    "token":"c814684cbf4f17e2dd0c169db997db7f",
+    "accid":"1-123456",
+    "imei":"xxxxxx",
+    "action":"login",
+    "account":"xxxxxx",
+    "mac":"xxxxxx",
+    "channel":1,
+    "ip":"xxxxxx"
 }
 ~~~
 
@@ -247,10 +256,10 @@ Values:
 
 ~~~json
 {
-	"code": 0,
-	"error":"Error message.",
-	"balance":"0",
-	"auto_consumed":false
+    "code": 0,
+    "error":"Error message.",
+    "balance":"0",
+    "auto_consumed":false
 }
 ~~~
 
@@ -270,13 +279,13 @@ Values:
 
 #### Class `com.ztgame.mobileappsdk.common.ZTPayInfo`'s methods description
 
-| Method | Required / Optional / Deprecated | Description |
+| Method | Required / Optional | Description |
 |--------|----------------------------------|----------------------------|
 | setAmount | Required  | Set product amount (RMB). |
-| setExchangeRatio | Deprecated  | ... |
+| setExchangeRatio | Optional  | Set RMB to game coin exchange ratio |
 | setExtra | Required | Set developer payload.  |
-| setMoneyName | Deprecated | Set game coin name.  |
-| setMonthCard | Deprecated | ...  |
+| setMoneyName | Optional | Set game coin name.  |
+| setMonthCard | Optional | Set product type is card.  |
 | setProductName | Optional  | Set product name. |
 | setProductId | Optional  | Set product id. |
 
@@ -373,60 +382,60 @@ import com.ztgame.mobileappsdk.common.IZTListener;
 
 public class MainActivity extends Activity {
 
-	@Override
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
-		//Game init ...
+        //Game init ...
 
-		//Init
-		IZTLibBase.newInstance(MainActivity.this);
-		IZTLibBase.getInstance().initZTGame("5012","Game Name", false, mListener);
-	}
+        //Init
+        IZTLibBase.newInstance(MainActivity.this);
+        IZTLibBase.getInstance().initZTGame("5012","Game Name", false, mListener);
+    }
 
-	private IZTListener mListener = new IZTListener() {
-		@Override
-		public void onFinished(int what, int errcode, JSONObject json_obj) {
+    private IZTListener mListener = new IZTListener() {
+        @Override
+        public void onFinished(int what, int errcode, JSONObject json_obj) {
 
-			switch (what) {
-			case ZTConsts.ZTGAME_LOGIN:
-				if (errcode == 0) {
-					//Todo login success
-					IZTLibBase.getInstance().loginOkZTGame("roleId", "roleName", "roleLevel", "zoneId", "zoneName");
-				} else {
-					//Todo login failed
-				}
-				break;
-			case ZTConsts.ZTGAME_INIT:
-				if (errcode == 0) {
-					//Todo initialized.
-				} else {
-					//Todo failed
-				}
-				break;
-			case ZTConsts.ZTGAME_PAY:
-				if(errcode == 0){
-					//Todo success
-				}else{
-					//Todo failed
-				}
-				break;
-			case ZTConsts.ZTGAME_QUIT:
-				if(errcode == 0){
-				} else {
-				}
-				break;
-			case ZTConsts.ZTGAME_LOGOUT:
-				if(!IZTLibBase.getInstance().isLogined()){
-					IZTLibBase.getInstance().loginZTGame("1", "Game area", true);
-				}
-				break;
-			case ZTConsts.ZTGAME_QQGROUP: //Tencent QQGroup library
-				if(errcode == 0){
-					joinQQButton.setVisibility(View.VISIBLE);
-				}
-				break;
-			}
-		}
-	};
+            switch (what) {
+            case ZTConsts.ZTGAME_LOGIN:
+                if (errcode == 0) {
+                    //Todo login success
+                    IZTLibBase.getInstance().loginOkZTGame("roleId", "roleName", "roleLevel", "zoneId", "zoneName");
+                } else {
+                    //Todo login failed
+                }
+                break;
+            case ZTConsts.ZTGAME_INIT:
+                if (errcode == 0) {
+                    //Todo initialized.
+                } else {
+                    //Todo failed
+                }
+                break;
+            case ZTConsts.ZTGAME_PAY:
+                if(errcode == 0){
+                    //Todo success
+                }else{
+                    //Todo failed
+                }
+                break;
+            case ZTConsts.ZTGAME_QUIT:
+                if(errcode == 0){
+                } else {
+                }
+                break;
+            case ZTConsts.ZTGAME_LOGOUT:
+                if(!IZTLibBase.getInstance().isLogined()){
+                    IZTLibBase.getInstance().loginZTGame("1", "Game area", true);
+                }
+                break;
+            case ZTConsts.ZTGAME_QQGROUP: //Tencent QQGroup library
+                if(errcode == 0){
+                    joinQQButton.setVisibility(View.VISIBLE);
+                }
+                break;
+            }
+        }
+    };
 }
 ~~~
 
@@ -448,46 +457,46 @@ import com.ztgame.mobileappsdk.common.ZTConsts;
 
 public class MainActivity extends Activity {
 
-	//...
+    //...
 
-	@Override
-	public void onClick(View v) {
-		//Player touch a enter the game button
-		switch (v.getId()) {
-			case R.id.enterGameWorldButton:
-            	IZTLibBase.getInstance().loginZTGame("1", "ZoneName", true);
-				break;
-			case R.id.exitButton:
-				//exit ui of channels'
-				if(IZTLibBase.getInstance().isHasQuitDialog()){
-					IZTLibBase.getInstance().quitZTGame();
-				}else{
-					//The exit ui of game's.
-				}
-				
-				break;
-			case R.id.accountCenterButton:
-				IZTLibBase.getInstance().enterCenterZTGame();
-				break;
-			case R.id.switchAccountButton:
-				IZTLibBase.getInstance().switchAccountZTGame();
-				break;
-			//...
-		}
-	}
+    @Override
+    public void onClick(View v) {
+        //Player touch a enter the game button
+        switch (v.getId()) {
+            case R.id.enterGameWorldButton:
+                IZTLibBase.getInstance().loginZTGame("1", "ZoneName", true);
+                break;
+            case R.id.exitButton:
+                //exit ui of channels'
+                if(IZTLibBase.getInstance().isHasQuitDialog()){
+                    IZTLibBase.getInstance().quitZTGame();
+                }else{
+                    //The exit ui of game's.
+                }
+                
+                break;
+            case R.id.accountCenterButton:
+                IZTLibBase.getInstance().enterCenterZTGame();
+                break;
+            case R.id.switchAccountButton:
+                IZTLibBase.getInstance().switchAccountZTGame();
+                break;
+            //...
+        }
+    }
 
-	//...
+    //...
 }
 ~~~
 
 Or call it at `Runnable`
 
 ~~~java
-	YourActivity.runOnUiThread(new Runnable() {
-			public void run() {			
-					 IZTLibBase.getInstance().loginZTGame("1", "zoneName"", true);
-			}
-	});
+    YourActivity.runOnUiThread(new Runnable() {
+            public void run() {            
+                     IZTLibBase.getInstance().loginZTGame("1", "zoneName"", true);
+            }
+    });
 ~~~
 
 
@@ -509,25 +518,25 @@ import com.ztgame.mobileappsdk.common.ZTConsts;
 import com.ztgame.mobileappsdk.common.ZTPayInfo;
 
 public class MainActivity extends Activity {
-	@Override
-	public void onClick(View v) {
-		//Player touch a buy product button
-		switch (v.getId()) {
-			case R.id.buyButton:
-				if(IZTLibBase.getInstance().isLogined()){
-					ZTPayInfo payInfo = new ZTPayInfo();
-					payInfo.setAmount(100);  //Set RMB
-					payInfo.setProductName("test item"); // Set product name.
-					payInfo.setProductId("1001"); // Set product id.
-					payInfo.setExtra("1"); // Set developer payload.
-					IZTLibBase.getInstance().payZTGame(payInfo);
-				} else {
-					Toast.makeText(MainActivity.this, "Please login.", Toast.LENGTH_SHORT).show();
-				}
-				break;
-			//...
-		}
-	}
+    @Override
+    public void onClick(View v) {
+        //Player touch a buy product button
+        switch (v.getId()) {
+            case R.id.buyButton:
+                if(IZTLibBase.getInstance().isLogined()){
+                    ZTPayInfo payInfo = new ZTPayInfo();
+                    payInfo.setAmount(100);  //Set RMB
+                    payInfo.setProductName("test item"); // Set product name.
+                    payInfo.setProductId("1001"); // Set product id.
+                    payInfo.setExtra("1"); // Set developer payload.
+                    IZTLibBase.getInstance().payZTGame(payInfo);
+                } else {
+                    Toast.makeText(MainActivity.this, "Please login.", Toast.LENGTH_SHORT).show();
+                }
+                break;
+            //...
+        }
+    }
 }
 ~~~
 
@@ -540,65 +549,65 @@ import android.app.Activity;
 import com.ztgame.mobileappsdk.common.IZTLibBase;
 
 public class MainActivity extends Activity {
-	@Override
-	protected void onPause() {
-		super.onPause();
-		IZTLibBase.getInstance().onPauseZTGame();
-	}
+    @Override
+    protected void onPause() {
+        super.onPause();
+        IZTLibBase.getInstance().onPauseZTGame();
+    }
 
-	@Override
+    @Override
     protected void onStop() {
-		super.onStop();
-		IZTLibBase.getInstance().onStopZTGame();
-	}
+        super.onStop();
+        IZTLibBase.getInstance().onStopZTGame();
+    }
 
-	@Override
-	protected void onResume() {
-		super.onResume();
-		IZTLibBase.getInstance().onResumeZTGame();
-	}
+    @Override
+    protected void onResume() {
+        super.onResume();
+        IZTLibBase.getInstance().onResumeZTGame();
+    }
 
-	@Override
+    @Override
     protected void onDestroy() {
-		super.onDestroy();
-		IZTLibBase.getInstance().destroyZTGame();
-		IZTLibBase.delInstance();
-	}
+        super.onDestroy();
+        IZTLibBase.getInstance().destroyZTGame();
+        IZTLibBase.delInstance();
+    }
 
-	@Override
-	protected void onStart() {
-		super.onStart();
-		IZTLibBase.getInstance().onStartZTGame();
-	}
+    @Override
+    protected void onStart() {
+        super.onStart();
+        IZTLibBase.getInstance().onStartZTGame();
+    }
 
-	@Override
-	protected void onRestart() {
-    	super.onRestart();
-		IZTLibBase.getInstance().onRestartZTGame();
-	}
-	@Override
-	public void onConfigurationChanged(Configuration newConfig) {
-		super.onConfigurationChanged(newConfig);
-		IZTLibBase.getInstance().onConfigurationChangedZTGame(newConfig);
-	}
-	
-	@Override
-	protected void onNewIntent(Intent intent) {
-		super.onNewIntent(intent);
-		IZTLibBase.getInstance().onNewIntentZTGame(intent);
-	}
-	
-	@Override
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		super.onActivityResult(requestCode, resultCode, data);
-		IZTLibBase.getInstance().onActivityResultZTGame(requestCode, resultCode, data);
-	}
-	
-	@Override
-	public void onSaveInstanceState(Bundle outState) {
-		super.onSaveInstanceState(outState);
-		IZTLibBase.getInstance().onSaveInstanceState(outState);
-	}
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        IZTLibBase.getInstance().onRestartZTGame();
+    }
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        IZTLibBase.getInstance().onConfigurationChangedZTGame(newConfig);
+    }
+    
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        IZTLibBase.getInstance().onNewIntentZTGame(intent);
+    }
+    
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        IZTLibBase.getInstance().onActivityResultZTGame(requestCode, resultCode, data);
+    }
+    
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        IZTLibBase.getInstance().onSaveInstanceState(outState);
+    }
 }
 ~~~
 
@@ -610,8 +619,8 @@ public class MainActivity extends Activity {
 * Add `payNotify()` method
 
 ~~~java
-	public void payNotify(String amount, String order, String description) {
-		Log.d("giant", "Pay Notify called" +  amount + order + description);
+    public void payNotify(String amount, String order, String description) {
+        Log.d("giant", "Pay Notify called" +  amount + order + description);
     }
 ~~~
 
@@ -620,36 +629,36 @@ public class MainActivity extends Activity {
 * Add Tencent join QQGroup feature.
 
 ~~~java
-	public void isHasJoinQQGroup();
-	public void joinQQGroup();
+    public void isHasJoinQQGroup();
+    public void joinQQGroup();
 ~~~
 
 * Add `getSDKVersion()` method
 
 ~~~java
-	/**
+    /**
      * Get SDK version
      */
-	public String getSDKVersion() {
-		return mSDKVersionName;
-	}
+    public String getSDKVersion() {
+        return mSDKVersionName;
+    }
 
-	public long getSDKVersionCode(){
-		return mSDKVersionCode;
-	}
-	
-	/**
+    public long getSDKVersionCode(){
+        return mSDKVersionCode;
+    }
+    
+    /**
      * Get vendor's SDK version.
      */
     public String getChannelSDKVersion(){
-    	return CHANNEL_SDKVERSION;
+        return CHANNEL_SDKVERSION;
     }
 
     /**
      * Get current framework version
      */
     public String getFrameworkVersion(){
-    	return FRAMEWORK_VERSION;
+        return FRAMEWORK_VERSION;
     }
 ~~~
 
@@ -658,20 +667,20 @@ public class MainActivity extends Activity {
 * Add set Tencent login type.
 
 ~~~java
-	public void setTencentLoginType(int tencentLoginType)
+    public void setTencentLoginType(int tencentLoginType)
 ~~~
 
 Login types:
 
 ~~~java
-	ZTConsts.TencentLoginType.QQ;
-	ZTConsts.TencentLoginType.WECHAT;
+    ZTConsts.TencentLoginType.QQ;
+    ZTConsts.TencentLoginType.WECHAT;
 ~~~
 
 * Add query Tencent balance interface.
 
 ~~~java
-	public void queryTencentGamePoint()
+    public void queryTencentGamePoint()
 
-	public boolean createOrderZTGame(ZTPayInfo payInfo)
+    public boolean createOrderZTGame(ZTPayInfo payInfo)
 ~~~
