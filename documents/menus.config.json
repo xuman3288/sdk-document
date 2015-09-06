@@ -40,5 +40,15 @@
                 "uri": "/docs/plugins\/game-share"
             }
         ]
-    }
+    },
+    {
+        "label": "其它文档",
+        "uri": "#",
+        "pages": [
+            {
+                "label": "GM工具接入",
+                "uri": "/docs/gmt/gmt_guide"
+            }
+        ]
+    },
 ]
