@@ -125,6 +125,9 @@ OPENSSL_ALGO_SHA1
 //其中公钥(public_key)由巨人移动服务端对接人员提供
 ```
 
+[RSA 范例下载(PHP, JAVA, C++, C#)](http://docs.mztgame.com/files/rsa_examples.zip)
+
+
 #### 响应说明
 响应内容为JSON格式
 如果出现网络异常, 或者返回格式错误, 充值系统无法读取, 将加入充值系统队列处理. 
