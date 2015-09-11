@@ -109,17 +109,19 @@ ZTPromoteCode.getInstance().generatePromoteCode(width,"ic_launcher",30,false,lis
 
 ##### 4. 其他接口  
 
-	IPromoteCodeListener接口：  
-	该接口必须实现，并实现接口方法onResult  
-	原型：  
+IPromoteCodeListener接口:
+该接口必须实现，并实现接口方法onResult, 原型： 
 
-		public void onResult(int code,String errmsg,String shortUrl,Bitmap codeBitmap);
-
-	参数说明：  
-	`code:`返回结果码，0表示成功，其他失败  
-	`errmsg:`结果消息，当code为0是，该值为"success"；  
-	`shortUrl:`短链接地址  
-	`codeBitmap:`二维码图片的bitmap  
+~~~java
+/**
+ * 
+ * @param code        返回结果码，0表示成功，其他失败
+ * @param errmsg      结果消息，当code为0是，该值为"success"；
+ * @param shortUrl    短链接地址
+ * @param codeBitmap  二维码图片的bitmap
+ */
+public void onResult(int code,String errmsg,String shortUrl,Bitmap codeBitmap);
+~~~
 
 > 注：当code值不为0时，shortUrl和codebitmap均为null。
 
