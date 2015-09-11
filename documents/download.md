@@ -12,7 +12,7 @@
 
 ### 3.x SDK
 
-* [巨人官方SDK-4.3.3版本下载地址](http://docs.mztgame.com/files/iOS/3.0/gaSDK4.3.3.zip)
+* [巨人官方SDK-4.3.4版本下载地址](http://docs.mztgame.com/files/iOS/3.0/gaSDK4.3.4.zip)
 * [I苹果渠道SDK-1.2.8版本下载地址](http://docs.mztgame.com/files/iOS/3.0/iaSDK1.2.8.zip)
 * [同步推渠道SDK-4.1.0版本下载地址](http://docs.mztgame.com/files/iOS/3.0/tbSDK4.1.0.zip)
 * [快用渠道SDK-2.0.3版本下载地址](http://docs.mztgame.com/files/iOS/3.0/xySDK2.0.3.zip)
@@ -20,7 +20,7 @@
 
 ### 4.x SDK
 
-* [巨人官方SDK-4.3.3版本下载地址](http://docs.mztgame.com/files/iOS/4.0/gaSDK4.3.3.zip)
+* [巨人官方SDK-4.3.4版本下载地址](http://docs.mztgame.com/files/iOS/4.0/gaSDK4.3.4.zip)
 * [I苹果渠道SDK-1.2.8版本下载地址](http://docs.mztgame.com/files/iOS/4.0/iaSDK1.2.8.zip)
 * [同步推渠道SDK-4.1.0版本下载地址](http://docs.mztgame.com/files/iOS/4.0/tbSDK4.1.0.zip)
 * [快用渠道SDK-2.0.3版本下载地址](http://docs.mztgame.com/files/iOS/4.0/xySDK2.0.3.zip)
