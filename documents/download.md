@@ -30,5 +30,16 @@
 
 ## Android相关下载
 
+### 母包SDK
+
 * [巨人母包SDK-4.4.9版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK20150915.zip)
+
+### 渠道SDK
+
 * [巨人官方SDK-4.0.7版本下载地址](http://docs.mztgame.com/files/Android/giantSDK4.0.7.zip)
+
+### 插件SDK
+
+* [激活插件SDK版本下载地址](http://docs.mztgame.com/files/Android/ActivePluginSDK.zip)
+* [二维码分享插件SDK-1.0.1版本下载](http://docs.mztgame.com/files/Android/ztpromotecode_v1.0.1.zip)
+* 
