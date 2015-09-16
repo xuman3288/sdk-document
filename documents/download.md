@@ -40,6 +40,6 @@
 
 ### 插件SDK
 
-* [激活插件SDK版本下载地址](http://docs.mztgame.com/files/Android/ActivePluginSDK.zip)
+* [激活插件SDK版本下载地址](http://docs.mztgame.com/files/Android/ActivePluginSDKv1.0.2.zip)
 * [二维码分享插件SDK-1.0.1版本下载](http://docs.mztgame.com/files/Android/ztpromotecode_v1.0.1.zip)
 * 
