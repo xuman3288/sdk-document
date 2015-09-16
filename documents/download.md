@@ -25,3 +25,10 @@
 * [同步推渠道SDK-4.1.0版本下载地址](http://docs.mztgame.com/files/iOS/4.0/tbSDK4.1.0.zip)
 * [XY渠道SDK-2.0.3版本下载地址](http://docs.mztgame.com/files/iOS/4.0/xySDK2.0.3.zip)
 * [PP助手渠道SDK-1.5.4版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ppSDK1.5.4.zip)
+
+
+
+## Android相关下载
+
+* [巨人母包SDK-4.4.9版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK20150915.zip)
+* [巨人官方SDK-4.0.7版本下载地址](http://docs.mztgame.com/files/Android/giantSDK4.0.7.zip)
