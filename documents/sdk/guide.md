@@ -4,7 +4,8 @@
 ##相关文档
 
 * [服务端接口文档](/docs/sdk/server_guide)
-* [安卓SDK接入文档](/docs/sdk/easysdkframework)
+* [巨人移动Android母包接入文档](/docs/sdk/easysdkframework)
+* [巨人官方SDK接入文档](/docs/sdk/giantdoc)
 * [IOS接入文档](/docs/sdk/iosdoc)
 
 
