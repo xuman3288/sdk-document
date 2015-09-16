@@ -22,7 +22,7 @@
 | 当乐(Android)              | 27        | d                | *.downjoy| Android         | v4.0.3              | v4.0.3              | -             | 渠道后台       |
 | 当乐(IOS)                  | 27        | d                |          | IOS             | v4.0.3              | v4.0.3              | -             | 渠道后台       |
 | 小米                       | 28        | xiaomi           | *.mi     | Android         | v4.3.4              | v4.3.4              | -             | 渠道后台       |
-| 安智                       | 29        | anzhi            | *.anzhi  | Android         | v3.3                | v3.3_0811           | 2015-8-11     | 渠道后台       |
+| 安智                       | 29        | anzhi            | *.anzhi  | Android         | v3.5                | v3.5           | 2015-9-16     | 渠道后台       |
 | 快用                       | 30        | kuaiyong         | *.KY     | Android         | v2.1.0              | v2.1.0              | 2015-8-13     | 渠道后台       |
 | 快用                       | 30        | kuaiyong         |          | IOS             | v2.0.3              | v2.0.3              | 2015-7-22     | 渠道后台       |
 | itools                     | 31        | itools           |          | Android         | v1.1.3              | v1.1.3              | 2015-8-18     | 渠道后台       |
