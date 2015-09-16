@@ -29,7 +29,9 @@ IOS 其它唯一标识(H5 指纹)关联.
 
 ### 二维码分享插件SDK下载链接：
 
-[Download SDK V1.0.1](http://docs.mztgame.com/files/Android/plugin/ztpromotecode_v1.0.1.zip)
+- [Download SDK V1.0.1](http://docs.mztgame.com/files/Android/plugin/ztpromotecode_v1.0.1.zip)
+
+---------------------------------------------------------------------------------------------------------
 
 > 注：该插件依赖base,务必在base的初始化接口完成后保证gameid,openid不为空的情况下，再调用该插件接口
 
