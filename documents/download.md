@@ -17,6 +17,7 @@
 * [同步推渠道SDK-4.1.0版本下载地址](http://docs.mztgame.com/files/iOS/3.0/tbSDK4.1.0.zip)
 * [XY渠道SDK-2.0.3版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_XY_2.0.3.tar.gz)
 * [PP渠道SDK-1.5.4版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ppSDK1.5.4.zip)
+* [爱思渠道SDK-2.0.3版本下载地址](http://docs.mztgame.com/files/iOS/3.0/asSDK2.0.3.zip)
 
 ### 4.x SDK
 
