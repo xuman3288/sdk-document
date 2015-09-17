@@ -57,7 +57,7 @@
 | 多玩                       | 64        | duowan           | *.douwan | Android         | v1.0                | v1.0                | -             |                |
 | 熊猫玩                     | 65        | xmwan           |*.ztxmw.apk| Android         | v2.0.1              | -                   | -             |                |
 | 3G门户                     | 66        | c3g              |          | Android         | -                   | -                   | -             |                |
-| 爱游戏                     | 67        | play             |*.egame   | Android         | v4.10               | v4.10               | -             |                |
+| 爱游戏                     | 67        | play             |*.egame   | Android         | v4.13               | v4.10               | 2015/09/17     |                |
 | 云点友游(Android)          | 68        | yundian          | *.yd     | Android         | ?                   | -                   | -             |                |
 | 云点友游(IOS)              | 68        | yundian          |          | IOS             | ?                   | -                   | -             |                |
 | 49you                      | 69        | c49you           | *.sj49you| Android         | v7.1.3              | v7.1.3              | -             |                |
