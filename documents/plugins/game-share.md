@@ -93,7 +93,7 @@ ZTPromoteCode.getInstance().init(MainActivity.this,gameid,channelid+"",openid);
  * 
  * @param width       生成的二维码长宽
  * @param logoName    logo图片对应的资源名称
- * @param logowidth   logo对应长宽
+ * @param logowidth   logo对应长宽,最小值为20
  * @param isShow      是否展示二维码图片,true展示二维码图片，false不展示图片
  * @param listener    生成结果回调接口
  */
