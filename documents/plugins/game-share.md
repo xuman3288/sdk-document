@@ -29,7 +29,7 @@ IOS 其它唯一标识(H5 指纹)关联.
 
 ### 二维码分享插件SDK下载链接：
 
-- [Download SDK V1.0.1](http://docs.mztgame.com/files/Android/plugin/ztpromotecode_v1.0.1.zip)
+- [Download SDK V1.0.2](http://docs.mztgame.com/files/Android/plugin/ztpromotecode_v1.0.2.zip)
 
 ---------------------------------------------------------------------------------------------------------
 
@@ -93,17 +93,16 @@ ZTPromoteCode.getInstance().init(MainActivity.this,gameid,channelid+"",openid);
  * 
  * @param width       生成的二维码长宽
  * @param logoName    logo图片对应的资源名称
- * @param logowidth   logo对应长宽,最小值为20
  * @param isShow      是否展示二维码图片,true展示二维码图片，false不展示图片
  * @param listener    生成结果回调接口
  */
-public void generatePromoteCode(int width, String logoName,int logowidth,boolean  isShow,IPromoteCodeListener listener)
+public void generatePromoteCode(int width, String logoName,boolean  isShow,IPromoteCodeListener listener)
 ~~~
 
 调用实例：
 
 ~~~java
-ZTPromoteCode.getInstance().generatePromoteCode(width,"ic_launcher",30,false,listener);
+ZTPromoteCode.getInstance().generatePromoteCode(width,"ic_launcher",false,listener);
 ~~~
 
 > 注：在调用该接口之前，请务必先调用init接口。
