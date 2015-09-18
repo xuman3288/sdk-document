@@ -28,6 +28,7 @@
 * [XY渠道SDK-2.0.3版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_XY_2.0.3.tar.gz)
 ######XY此版本工程内需要手动添加XYPlatform.framework
 * [PP助手渠道SDK-1.5.4版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ppSDK1.5.4.zip)
+* [快用渠道SDK-2.2.3版本下载地址](http://docs.mztgame.com/files/iOS/4.0/kySDK2.2.3.zip)######快用此版本工程内需要手动添加xsdkFramework.framework
 
 
 
