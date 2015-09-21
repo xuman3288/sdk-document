@@ -146,13 +146,13 @@ table.zyhovertable td {
 <tr> 
 <th>编号</th><th>渠道名称</th><th> 3.0SDK版本</th><th> 4.0SDK版本</th><th> 最后更新时间</th>
 </tr>
-<tr><td>1</td><td>官方</td><td> v4.3.2</td><td> v4.3.2</td><td> 2015-8-5</td></tr>
+<tr><td>1</td><td>官方</td><td> v4.3.6</td><td> v4.3.6</td><td> 2015-9-18</td></tr>
 <tr><td>2</td><td>91</td><td>v3.2.6.5</td><td> v3.2.6.5</td><td> 2014-3-17</td></tr>
 <tr><td>3</td><td>itool</td><td> v2.3.2</td><td> v2.3.2</td><td> 2015-4-14</td></tr>
-<tr><td>4</td><td>I苹果</td><td> v1.2.7</td><td> v1.2.7</td><td> 2015-4-7</td></tr>
-<tr><td>5</td><td>PP助手</td><td> v1.5.3</td><td> v1.5.3</td><td> 2015-7-21</td></tr>
-<tr><td>6</td><td>XY</td><td> v2.0.0</td><td> v2.0.0</td><td> 2015-5-26</td></tr>
+<tr><td>4</td><td>I苹果</td><td> v1.2.9</td><td> v1.2.9</td><td> 2015-9-18</td></tr>
+<tr><td>5</td><td>PP助手</td><td> v1.5.4</td><td> v1.5.4</td><td> 2015-9-18</td></tr>
+<tr><td>6</td><td>XY</td><td> v2.0.3</td><td> v2.0.3</td><td> 2015-9-18</td></tr>
 <tr><td>7</td><td>爱思助手</td><td> v2.0.3</td><td> v2.0.3</td><td> 2015-4-14</td></tr>
-<tr><td>8</td><td>快用</td><td> v2.0.3</td><td> v2.0.3</td><td> 2015-7-22</td></tr>
-<tr><td>9</td><td>海马</td><td> v3.4.3</td><td> v3.4.3</td><td> 2015-4-14</td></tr>
+<tr><td>8</td><td>快用</td><td> v2.2.3</td><td> v2.2.3</td><td> 2015-9-18</td></tr>
+<tr><td>9</td><td>海马</td><td> v4.0.0</td><td> v4.0.0</td><td> 2015-9-18</td></tr>
 <tr><td>10</td><td>同步推</td><td> v4.0.0</td><td> v4.0.0</td><td> 2015-3-4</td></tr>
