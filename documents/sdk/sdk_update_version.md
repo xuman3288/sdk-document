@@ -155,4 +155,4 @@ table.zyhovertable td {
 <tr><td>7</td><td>爱思助手</td><td> v2.0.3</td><td> v2.0.3</td><td> 2015-4-14</td></tr>
 <tr><td>8</td><td>快用</td><td> v2.2.3</td><td> v2.2.3</td><td> 2015-9-18</td></tr>
 <tr><td>9</td><td>海马</td><td> v4.0.0</td><td> v4.0.0</td><td> 2015-9-18</td></tr>
-<tr><td>10</td><td>同步推</td><td> v4.0.0</td><td> v4.0.0</td><td> 2015-3-4</td></tr>
+<tr><td>10</td><td>同步推</td><td> v4.1.2</td><td> v4.1.2</td><td> 2015-9-21</td></tr>
