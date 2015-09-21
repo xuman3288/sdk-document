@@ -46,7 +46,7 @@
 | 酷派                       | 51        | coolpad          | *.coolpad| Android         | v1.2.1              | v1.2.1              | -             |                |
 | 益玩                       | 52        | ewan             | *.ewan   | Android         | v2.1.0              | v2.1.0              | -             |                |
 | 拇指玩                     | 53        | muzhiwan         | *.mzw    | Android         | v2.2.1              | v2.2.1              | -             |                |
-| 37wan                      | 54        | c37wan           | *.sy37   | Android         | -                   | V2.1.1              | -             |                |
+| 37wan                      | 54        | c37wan           | *.sy37   | Android         | -V1.7.0             | V1.7.0              | -             |                |
 | 草花互动                   | 55        | caohua           | *.ch     | Android         | v2.3.1              | v2.3.1              | -             |                |
 | 4399                       | 56        | c4399            | *.m4399  | Android         | v2.5.0.01           | v2.5.0.01           | 2015-8-18     |                |
 | 腾讯/应用宝                | 57        | myapp            |          | Android         | ?                   | ?                   | -             |                |
@@ -61,7 +61,7 @@
 | 云点友游(Android)          | 68        | yundian          | *.yd     | Android         | ?                   | -                   | -             |                |
 | 云点友游(IOS)              | 68        | yundian          |          | IOS             | ?                   | -                   | -             |                |
 | 49you                      | 69        | c49you           | *.sj49you| Android         | v7.1.3              | v7.1.3              | -             |                |
-| 37wan(Ver 2)               | 70        | c37wan2          | *.sy37x  | Android         | ？                  | ？                  | -             |                |
+| 37wan(Ver 2)               | 70        | c37wan2          | *.sy37x  | Android         | V2.1.1              | V2.1.1              | -             |                |
 | YY珠海                     | 71        | yyzhuhai         | *.yyzh   | Android         | v3.0.0              | -                   | -             |                |
 | 爱苹果                     | 72        | iapple           |          | IOS             | v1.2.8              | v1.2.8              | 2015-8-31     |                |
 | 豆豆 / 洪金宝              | 73        | doudou           |  *.doudou| Android         | v1.0                | -                   | -             |                |
