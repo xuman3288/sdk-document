@@ -42,8 +42,7 @@ libstdc++.dylib
 
 * 爱思渠道  
 1、需要手动添加libMobileGestalt.dylib  
-2、URL identifier设置成：AsQQPay；URL Schemes设置成Bundle identifier。比如：com.mztgame.i4  
-3、URL identifier设置成：Alixpay；URL Schemes设置成Asappid。比如：As328（每个项目的appid都写在ztsdk_config.plist配置文件里了）
+2、URL Schemes设置成Asappid。比如：As328（每个项目的appid都写在ztsdk_config.plist配置文件里了）
 
 
 * 海马玩渠道  
@@ -60,6 +59,7 @@ libstdc++.dylib
 2、URL Schemes设置成com.iOS49AppSdk.游戏名。比如：com.iOS49AppSdk.zhengtu  
 
 * 快用渠道  
+1、在配置里面的Embeded Framework里面添加xsdkFramework.framework
 1、会验证Bundle identifier的值，需要设置成商务给的id才能登录。比如：com.mztgame.sg.ky    
 2、URL identifier设置成：com.ky.xSDK.alipay；URL Schemes设置成Bundle identifier。比如：com.mztgame.dzz.ky 
 
