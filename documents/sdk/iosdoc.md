@@ -59,7 +59,7 @@ libstdc++.dylib
 2、URL Schemes设置成com.iOS49AppSdk.游戏名。比如：com.iOS49AppSdk.zhengtu  
 
 * 快用渠道  
-1、在配置里面的Embeded Framework里面添加xsdkFramework.framework
+1、在配置里面的Embeded Framework里面添加xsdkFramework.framework                                                
 2、会验证Bundle identifier的值，需要设置成商务给的id才能登录。比如：com.mztgame.sg.ky    
 3、URL identifier设置成：com.ky.xSDK.alipay；URL Schemes设置成Bundle identifier。比如：com.mztgame.dzz.ky 
 
