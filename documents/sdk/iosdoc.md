@@ -60,8 +60,8 @@ libstdc++.dylib
 
 * 快用渠道  
 1、在配置里面的Embeded Framework里面添加xsdkFramework.framework
-1、会验证Bundle identifier的值，需要设置成商务给的id才能登录。比如：com.mztgame.sg.ky    
-2、URL identifier设置成：com.ky.xSDK.alipay；URL Schemes设置成Bundle identifier。比如：com.mztgame.dzz.ky 
+2、会验证Bundle identifier的值，需要设置成商务给的id才能登录。比如：com.mztgame.sg.ky    
+3、URL identifier设置成：com.ky.xSDK.alipay；URL Schemes设置成Bundle identifier。比如：com.mztgame.dzz.ky 
 
 * 云点渠道  
 1、URL Schemes设置成CloudPoint.Bundle identifier。比如：CloudPoint.com.mztgame.hm2.hm 
