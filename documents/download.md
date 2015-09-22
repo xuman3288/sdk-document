@@ -23,7 +23,7 @@
 
 ### 4.x SDK
 
-* [巨人官方SDK-4.3.6版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_GA_4.3.6.tar.gz)
+* [巨人官方SDK-4.3.7版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_GA_4.3.7.tar.gz)
 * [I苹果渠道SDK-1.2.9版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_IA_1.2.9.tar.gz)
 * [同步推渠道SDK-4.1.2版本下载地址](http://docs.mztgame.com/files/iOS/4.0/tbSDK4.1.2.zip)
 * [XY渠道SDK-2.0.3版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_XY_2.0.3.tar.gz)
