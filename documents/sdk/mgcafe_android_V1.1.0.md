@@ -68,12 +68,6 @@ android:theme="@style/AppTheme" >
     android:theme="@android:style/Theme.Translucent.NoTitleBar"
     android:screenOrientation="landscape">
 </activity>
-<activity
-    android:name="com.mgcafe.floatwindow.MgcafeFloatWindowActivity"
-    android:configChanges="orientation|screenSize|keyboardHidden"
-    android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
-    android:screenOrientation="portrait"
-    android:launchMode="singleTask" />
 
 <activity
     android:name="com.ztgame.websdk.payment.ui.WebPayActivity"
