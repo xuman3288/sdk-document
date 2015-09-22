@@ -1,6 +1,7 @@
 {
   "guide": "Guide",
   "server_guide": "Server guide",
-  "easysdkframework": "Android SDK framework",
-  "iosdoc": "IOS guide"
+  "easysdkframework": "Android easy SDK framework",
+  "iosdoc": "IOS guide",
+  "giant_android_payment": "Android Payment SDK"
 }
