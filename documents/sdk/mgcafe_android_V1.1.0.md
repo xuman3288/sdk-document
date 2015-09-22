@@ -26,7 +26,7 @@ config.appkey=be2750459900795c4d4f06144733d126
 #config.promoterid=0
 ~~~
 
-`说明：``config.appid`为登录使用的appid，`config.appkey`为登录使用的appkey，由手游咖啡渠道提供,`config.promoterid`为推广员id，出母包时请务必将该行使用`#`注释，其他配置请务修改。
+> `说明：``config.appid`为登录使用的appid，`config.appkey`为登录使用的appkey，由手游咖啡渠道提供,`config.promoterid`为推广员id，出母包时请务必将该行使用`#`注释，其他配置请务修改。
 
 - 配置工程项目的AndroidManifest.xml文件，
 
@@ -201,10 +201,7 @@ android:theme="@style/AppTheme" >
 > `注意：`LoginActivity的属性`android:screenOrientation`需要跟工程主Activity的方向一直，需游戏自行修改。
 
 ###2、IZTListener SDK事件回调接口（必接）
-
 IZTListener接口实现onFinish()方法
-
-*`函数原型`*：
 
 ~~~java
 /**
@@ -245,10 +242,7 @@ public void onFinished(int what, int errcode, JSONObject json_obj);
 ###3、SDK 接入
 
 - 1.1 初始化SDK接口（必接）
- **`说明:`**  
-    首先调用IZTLibBase 的newInstance方法，传入你的Activity。然后调用getInstance()方法的initZTGame初始化游戏信息。  
-
-   *`函数原型`*  
+首先调用IZTLibBase 的newInstance方法，传入你的Activity。然后调用getInstance()方法的initZTGame初始化游戏信息。  
 
 ~~~java
 /**
