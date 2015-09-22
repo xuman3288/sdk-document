@@ -5,7 +5,7 @@ version： 4.1.0
 
 ## Getting start
 
-1. Add some permission to `Androidmenifest.xml`：
+### 1. Add some permission to `Androidmenifest.xml`：
 
 ~~~xml
 <uses-permission android:name="android.permission.INTERNET" />
@@ -19,8 +19,9 @@ version： 4.1.0
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 ~~~
 
-2. Copy `DemoProject/assets/*` to `GameProject/assets/*`. 
-3. Modify `GameProject/assets/ztsdk_config.properties` file:
+### 2. Copy `DemoProject/assets/*` to `GameProject/assets/*`. 
+
+### 3. Modify `GameProject/assets/ztsdk_config.properties` file:
 
 ~~~ini
 config.sdk.class=com.ztgame.mobileappsdk.ga.ZTLibGA
@@ -49,7 +50,7 @@ config.channel_id=1
 #config.ad_id=10000000000
 ~~~
 
-4. Add some activity tag in `AndroidManifest.xml` (Reference demo):
+### 4. Add some activity tag in `AndroidManifest.xml` (Reference demo):
 
 ~~~xml
     <activity
@@ -175,7 +176,7 @@ config.channel_id=1
     </activity>
 ~~~
 
-5. Add some code to `MainActivity.onCreate()`, and new A `IZTListener`.
+### 5. Add some code to `MainActivity.onCreate()`, and new A `IZTListener`.
 
 ~~~java
 package com.example;
@@ -223,7 +224,7 @@ public static final int ZTGAME_LOGOUT = 0x07;   //Switch account event
 public static final int ZTGAME_INIT   = 0x08;   //Init SDK event
 ~~~
 
-6. Call payment method
+### 6. Call payment method
 
 Call `IZTLibBase.getInstance().payZTGame(ZTPayInfo payInfo)` when player clicked some product.
 
