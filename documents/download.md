@@ -31,7 +31,7 @@
 * [PP助手渠道SDK-1.5.4版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ppSDK1.5.4.zip)
 * [快用渠道SDK-2.2.3版本下载地址](http://docs.mztgame.com/files/iOS/4.0/kySDK2.2.3.zip)######快用此版本工程内需要手动添加xsdkFramework.framework
 * [海马渠道SDK-4.0.0版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_HM_4.0.0.tar.gz)
-
+* [爱思渠道SDK-2.1.0版本下载地址](http://docs.mztgame.com/files/iOS/4.0/asSDK2.1.0.zip)
 
 ## Android相关下载
 
