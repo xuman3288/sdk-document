@@ -12,7 +12,7 @@
 
 ### 3.x SDK
 
-* [巨人官方SDK-4.3.7版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_GA_4.3.7.tar.gz)
+* [巨人官方SDK-4.3.8版本下载地址](http://docs.mztgame.com/files/iOS/3.0/gaSDK4.3.8.zip)
 * [I苹果渠道SDK-1.2.9版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_IA_1.2.9.tar.gz)
 * [同步推渠道SDK-4.1.2版本下载地址](http://docs.mztgame.com/files/iOS/3.0/tbSDK4.1.2.zip)
 * [XY渠道SDK-2.0.3版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_XY_2.0.3.tar.gz) ######XY此版本工程内需要手动添加XYPlatform.framework
