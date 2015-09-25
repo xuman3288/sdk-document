@@ -19,7 +19,7 @@
 | 豌豆荚                     | 24        | wandoujia        | *.wdj    | Android         | v4.0.0              | v4.0.0              | -             | 渠道后台       |
 | 同步推                     | 25        | tongbu           |          | IOS             | v4.1.0              | v4.1.0              | 2015-8-31     | 渠道后台       |
 | 九游UC                     | 26        | uc               | *.uc     | Android         | v3.5.3.1            | v3.5.3.1            | -             | 渠道后台       |
-| 当乐(Android)              | 27        | d                | *.downjoy| Android         | v4.0.3              | v4.0.3              | -             | 渠道后台       |
+| 当乐(Android)              | 27        | d                | *.downjoy| Android         | v4.2              | v4.2              | 2015-9-25             | 渠道后台       |
 | 当乐(IOS)                  | 27        | d                |          | IOS             | v4.0.3              | v4.0.3              | -             | 渠道后台       |
 | 小米                       | 28        | xiaomi           | *.mi     | Android         | v4.3.4              | v4.3.4              | -             | 渠道后台       |
 | 安智                       | 29        | anzhi            | *.anzhi  | Android         | v3.5                | v3.5           | 2015-9-16     | 渠道后台       |
