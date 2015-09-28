@@ -1,8 +1,8 @@
 mgcafe-android接入文档
 ================================
 
-*SDK版本： Ver 1.1.0  
-时间：2015-09-22
+*SDK版本： Ver 1.1.2  
+时间：2015-09-28
 
 烦请cp方仔细阅读文档，每次更新的修改在文档最下方  
 
@@ -11,7 +11,7 @@ mgcafe-android接入文档
 ### 1、环境搭建  
   
 - 请将SDK中`mgcafe`作为外部依赖library添加到工程的库依赖中。  
-- 将SDK中在`mgcafeDemo/assets`目录下内容到复制到工程目录`ssets`中,并确保文件`ztsdk_config.properties`中有以下内容:
+- 将SDK中在`mgcafeDemo/assets`目录下内容到复制到工程目录`assets`中,并确保文件`ztsdk_config.properties`中有以下内容:
 
 ~~~xml
 config.sdk.class=com.mztgame.mgcafe.ZTLibMgcafe
@@ -53,12 +53,14 @@ config.appkey=be2750459900795c4d4f06144733d126
 ~~~
 
 Activity注册
+声明Appliction节点时，请设置android:name的值为com.ztgame.mobileappsdk.common.ZTBaseApplication，若接入方有自己的application，请继承ZTBaseApplication。
 
 ~~~xml
 <application
 android:allowBackup="true"
 android:label="@string/app_name"
 android:icon="@drawable/ic_launcher"
+android:name="com.ztgame.mobileappsdk.common.ZTBaseApplication"
 android:theme="@style/AppTheme" >
        
 <activity
@@ -68,7 +70,12 @@ android:theme="@style/AppTheme" >
     android:theme="@android:style/Theme.Translucent.NoTitleBar"
     android:screenOrientation="landscape">
 </activity>
-
+<activity
+    android:name="com.mgcafe.floatwindow.MgcafeFloatWindowActivity"
+    android:configChanges="orientation|screenSize|keyboardHidden"
+    android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+    android:screenOrientation="portrait"
+    android:launchMode="singleTask" />
 <activity
     android:name="com.ztgame.websdk.payment.ui.WebPayActivity"
     android:configChanges="orientation|keyboardHidden|screenSize"
