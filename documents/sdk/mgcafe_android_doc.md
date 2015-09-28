@@ -53,6 +53,7 @@ config.appkey=be2750459900795c4d4f06144733d126
 ~~~
 
 Activity注册
+
 声明Appliction节点时，请设置android:name的值为com.ztgame.mobileappsdk.common.ZTBaseApplication，若接入方有自己的application，请继承ZTBaseApplication。
 
 ~~~xml
