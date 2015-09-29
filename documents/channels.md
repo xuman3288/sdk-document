@@ -44,7 +44,7 @@
 | 星云                       | 49        | scloudm          | *.xy     | Android         | v1.1.0              | v1.1.0              | -             | 自动           |
 | 优酷                       | 50        | youku            | *.youku  | Android         | v1.9.5              | v1.9.5              | -             |                |
 | 酷派                       | 51        | coolpad          | *.coolpad| Android         | v1.2.1              | v1.2.1              | -             |                |
-| 益玩                       | 52        | ewan             | *.ewan   | Android         | v2.1.0              | v2.1.0              | -             |                |
+| 益玩                       | 52        | ewan             | *.ewan   | Android         | v2.1.0              | v2.1.0              | -             | 渠道人工       |
 | 拇指玩                     | 53        | muzhiwan         | *.mzw    | Android         | v2.2.1              | v2.2.1              | -             |                |
 | 37wan                      | 54        | c37wan           | *.sy37   | Android         | -V1.7.0             | V1.7.0              | -             |                |
 | 草花互动                   | 55        | caohua           | *.ch     | Android         | v2.3.1              | v2.3.1              | -             |                |
