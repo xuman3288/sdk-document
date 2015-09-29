@@ -179,3 +179,4 @@
 | 京东卡活动               |  10078   |  *.jingdong      |  CPS              |
 | 新浪手游助手             |  10079   |  *.sinazhushou   |  CPS              |
 | 天天游戏中心             |  10080   |  *.tiantian      |  CPS              |
+| 品效通                   |  10081   |  *.pinxiaotong   |  CPS              |
