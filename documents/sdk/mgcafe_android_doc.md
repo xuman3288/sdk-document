@@ -26,7 +26,7 @@ config.appkey=be2750459900795c4d4f06144733d126
 #config.promoterid=0
 ~~~
 
-> `说明：``config.appid`为登录使用的appid，`config.appkey`为登录使用的appkey，由手游咖啡渠道提供,`config.promoterid`为推广员id，出母包时请务必将该行使用`#`注释，其他配置请务修改。
+> `说明：`config.appid`为登录使用的appid，`config.appkey`为登录使用的appkey，由手游咖啡渠道提供,`config.promoterid`为推广员id，出母包时请务必将该行使用`#`注释，其他配置请务修改。
 
 - 配置工程项目的AndroidManifest.xml文件，
 
@@ -53,6 +53,7 @@ config.appkey=be2750459900795c4d4f06144733d126
 ~~~
 
 Activity注册
+
 声明Appliction节点时，请设置android:name的值为com.ztgame.mobileappsdk.common.ZTBaseApplication，若接入方有自己的application，请继承ZTBaseApplication。
 
 ~~~xml

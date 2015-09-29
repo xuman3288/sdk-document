@@ -24,7 +24,7 @@
 | 参数     |  必填 |	说明 |
 | -------- | ---- | --- |
 | game_id  | 是   | 游戏应用ID  |
-| openid   | 是   | 由SDK获得唯一ID |
+| openid   | 是   | 由SDK获得唯一ID, (数据库建议设置长度 120位) |
 | time     | 是   | 时间戳,以秒为单位, 如(1421212874) |
 | token    | 是   | 由SDK获得 |
 | sign     | 是   | 签名, 生成规则: <br>Md5(game_id+openid+time+token+key) <br>其中key 由, 巨人移动服务端对接人员提供 |
