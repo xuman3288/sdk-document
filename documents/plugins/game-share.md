@@ -9,8 +9,7 @@
 
 ### 邀请人与被邀请人关联标识技术说明
 
-#### Android
-Android 过程是通过IP方式进行关联. 如:
+过程是通过IP方式进行关联. 如:
 B 点击 A 的连接下载, 我方服务端记录 A 与 IP(1.1.1.1) 的关系.
 B 在IP(1.1.1.1) 下注册后, 与A形成关系.
 
@@ -18,11 +17,6 @@ B 在IP(1.1.1.1) 下注册后, 与A形成关系.
 * 问题2: 若B用户通过(IP: 1.1.1.1)下载,不参数注册. C用户其它途径下载安装在(IP: 1.1.1.1)进行注册, 会导致C与A形成关系.
 
 以上问题, 请不要过分信任此插件带来用户关系的完整性. 
-
-
-#### IOS
-
-IOS 其它唯一标识(H5 指纹)关联.
 
 
 ## Android 客户端接入说明
@@ -180,3 +174,27 @@ public void onResult(int code,String errmsg,String shortUrl,Bitmap codeBitmap);
 | code    | int    | 响应码, 0: 正常返回; 大于0: 错误, error 字段为错误信息  |
 | error   | string | 错误消息       |
 | inviter | string | 分享者的账号ID |
+
+
+### 用户点击回调说明
+
+若已配置点击回调链接, 用户触发链接会发生以下请求行为.
+
+* 协议说明: `HTTP`
+* 请求方式: `POST`
+* 内容类型(Content-Type): `application/x-www-form-urlencoded`
+
+#### 参数说明:
+
+| 参数名     | 说明          |
+|------------|---------------|
+| game_id    | 游戏ID        |
+| inviter    | 邀请人        |
+| ip         | 游戏应用ID    |
+| user_agent | 分享者账号ID  |
+| sign       | 签名, 计算方式 `md5(game_id+"&"+inviter+"&"+ip+"&"+user_agent+"&"+key)`, 其中 key 为接登录时分配的密钥 |
+
+
+#### 响应说明
+
+发送请求后HTTP连接关闭, 不接收响应内容, 可随意定响应.
