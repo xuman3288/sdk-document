@@ -15,8 +15,8 @@
 * [巨人官方SDK-4.3.10版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_GA_4.3.10.tar.gz)
 * [I苹果渠道SDK-1.2.9版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_IA_1.2.9.tar.gz)
 * [同步推渠道SDK-4.1.2版本下载地址](http://docs.mztgame.com/files/iOS/3.0/tbSDK4.1.2.zip)
-* [XY渠道SDK-2.0.3版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_XY_2.0.3.tar.gz) ######XY此版本工程内需要手动添加XYPlatform.framework
-* [PP渠道SDK-1.5.4版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ppSDK1.5.4.zip)
+* [XY渠道SDK-2.1.0版本下载地址](http://docs.mztgame.com/files/iOS/3.0/xySDK2.1.0.zip) ######XY此版本工程内需要手动添加XYPlatform.framework
+* [PP助手渠道SDK-1.5.5版本下载地址（动态库1.5.7，静态库1.5.5）](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_PP_1.5.5.tar.gz)
 * [爱思渠道SDK-2.1.0版本下载地址](http://docs.mztgame.com/files/iOS/3.0/asSDK2.1.0.zip)
 * [快用渠道SDK-2.2.3版本下载地址](http://docs.mztgame.com/files/iOS/3.0/kySDK2.2.3.zip)######快用此版本工程内需要手动添加xsdkFramework.framework
 * [海马渠道SDK-4.0.0版本下载地址](http://docs.mztgame.com/files/iOS/3.0/hmSDK4.0.0.zip)
@@ -27,9 +27,9 @@
 * [巨人官方SDK-4.3.10版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_GA_4.3.10.tar.gz)
 * [I苹果渠道SDK-1.2.9版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_IA_1.2.9.tar.gz)
 * [同步推渠道SDK-4.1.2版本下载地址](http://docs.mztgame.com/files/iOS/4.0/tbSDK4.1.2.zip)
-* [XY渠道SDK-2.0.3版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_XY_2.0.3.tar.gz)
+* [XY渠道SDK-2.1.0版本下载地址](http://docs.mztgame.com/files/iOS/4.0/xySDK2.1.0.zip)
 ######XY此版本工程内需要手动添加XYPlatform.framework
-* [PP助手渠道SDK-1.5.4版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ppSDK1.5.4.zip)
+* [PP助手渠道SDK-1.5.5版本下载地址（动态库1.5.7，静态库1.5.5）](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_PP_1.5.5.tar.gz)
 * [快用渠道SDK-2.2.3版本下载地址](http://docs.mztgame.com/files/iOS/4.0/kySDK2.2.3.zip)######快用此版本工程内需要手动添加xsdkFramework.framework
 * [海马渠道SDK-4.0.0版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_HM_4.0.0.tar.gz)
 * [爱思渠道SDK-2.1.0版本下载地址](http://docs.mztgame.com/files/iOS/4.0/asSDK2.1.0.zip)
