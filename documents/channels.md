@@ -19,7 +19,7 @@
 | 豌豆荚                     | 24        | wandoujia        | *.wdj    | Android         | v4.0.2              | v4.0.2              | -             | 渠道后台       |
 | 同步推                     | 25        | tongbu           |          | IOS             | v4.1.0              | v4.1.0              | 2015-8-31     | 渠道后台       |
 | 九游UC                     | 26        | uc               | *.uc     | Android         | v3.5.3.1            | v3.5.3.1            | -             | 渠道后台       |
-| 当乐(Android)              | 27        | d                | *.downjoy| Android         | v4.2              | v4.2              | 2015-9-25             | 渠道后台       |
+| 当乐(Android)              | 27        | d                | *.downjoy| Android         | v4.2                | v4.2              | 2015-9-25             | 渠道后台       |
 | 当乐(IOS)                  | 27        | d                |          | IOS             | v4.0.3              | v4.0.3              | -             | 渠道后台       |
 | 小米                       | 28        | xiaomi           | *.mi     | Android         | v4.3.4              | v4.3.4              | -             | 渠道后台       |
 | 安智                       | 29        | anzhi            | *.anzhi  | Android         | v3.5                | v3.5           | 2015-9-16     | 渠道后台       |
@@ -27,7 +27,7 @@
 | 快用                       | 30        | kuaiyong         |          | IOS             | v2.0.3              | v2.0.3              | 2015-7-22     | 渠道后台       |
 | itools                     | 31        | itools           |          | Android         | v1.1.3              | v1.1.3              | 2015-8-18     | 渠道后台       |
 | itools                     | 31        | itools           |          | IOS             | v2.3.2              | v2.3.2              | 2015-4-14     | 渠道后台       |
-| 搜狗                       | 33        | sogou            |          | Android         | -                   | v1.4                | -             |                |
+| 搜狗                       | 33        | sogou            |          | Android         | -                   | v1.4.29                | -             |                |
 | 华为                       | 34        | huawei           |  *.huawei| Android         | v1.6.3.53           | v1.6.3.53           | -             | 渠道后台       |
 | 联想                       | 35        | lenovo           |  *.lenovo| Android         | v2.4.1.2            | v2.4.1.2            | -             | 渠道后台       |
 | 可可游戏(OPPO)             | 37        | keke           |*.gamecenter| Android         | v1.7.0              | v1.7.0              | -             | 渠道后台       |
@@ -42,7 +42,7 @@
 | 陌陌                       | 47        | momo             |          | Android         | ?                   | ?                   | -             |                |
 | 应用汇                     | 48        | appchina         | *.yyhui  | Android         | v6.1.0              | v6.1.0              | -             |                |
 | 星云                       | 49        | scloudm          | *.xy     | Android         | v1.1.0              | v1.1.0              | -             | 自动           |
-| 优酷                       | 50        | youku            | *.youku  | Android         | v1.9.5              | v1.9.5              | -             |                |
+| 优酷                       | 50        | youku            | *.youku  | Android         | v2.2                | v2.2              | -             |                |
 | 酷派                       | 51        | coolpad          | *.coolpad| Android         | v1.2.5              | v1.2.5             | -             |                |
 | 益玩                       | 52        | ewan             | *.ewan   | Android         | v2.1.0              | v2.1.0              | -             | 渠道人工       |
 | 拇指玩                     | 53        | muzhiwan         | *.mzw    | Android         | v2.2.1              | v2.2.1              | -             |                |
@@ -78,7 +78,7 @@
 | Google play                | 84        | google           |          | Android         | ?                   | -                   | -             |                |
 | 海马玩(Android)            | 85        | haimawan         | *.HM     | Android         | v1.1.5              | v1.1.5              | 2015-9-11     |                |
 | 海马玩(IOS)                | 85        | haimawan         |          | IOS             | -                   | ?                   | -             |                |
-| 手游咖啡                   | 86        | mgcafe           | *.mgcafe | Android         | v1.0.0              | v1.0.0              | -             | 自动           |
+| 手游咖啡                   | 86        | mgcafe           | *.mgcafe | Android         | v1.1.2              | v1.1.2              | -             | 自动           |
 | 易娱                       | 87        | eyu              |          | Android         | v2.3.2              | v2.3.2              | -             |                |
 | 奇天乐地                   | 88        | c44755           |          | Android         | v4.0                | v4.0                | -             |                |
 | 果盘                       | 89        | guopan           |          | Android         | v1.0.7              | -                   | -             |                |
@@ -86,7 +86,7 @@
 | 麟游                       | 91        | linyou           |*.linyou  | Android         | v2.0.3              | -                   | -             |                |
 | 今日头条                   | 92        | jinritoutiao     | *.jrtt   | Android         | v2.0                | v2.0                | -             |                |
 | 乐视                       | 93        | letv             | *.leshi  | Android         | v1.0.2              | v1.0.2              | -             |                |
-| 新浪                       | 94        | sina             |          | Android         | -                   | v1.0.3              | -             |                |
+| 新浪                       | 94        | sina             |          | Android         | -                   | v1.3.0              | -             |                |
 | 灰喜鹊                     | 95        | huixique         |          | Android         | -                   | v2.3.2              | -             |                |
 | 斗鱼                       | 96        | douyu            | *.dy     | Android         | v1.0.5              | v1.0.5              | -             |                |
 | 联众                       | 97        | lianzhong        |          | Android         | -                   | v4.2.x              | -             |                |
