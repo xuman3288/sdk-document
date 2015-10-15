@@ -16,7 +16,7 @@
 | 91无线平台                 | 21        | baidu91          |          | Android         | v3.2.6.5            | v3.2.6.5            | 2014-3-17     | 渠道后台       |
 | PP助手                     | 22        | pp               |          | IOS             | v1.5.4              | v1.5.4              | 2015-9-9      | 渠道后台       |
 | 百度手机助手               | 23        | baidu            | *.baidu  | Android         | v3.2.0              | v3.2.0              | -             | 渠道后台       |
-| 豌豆荚                     | 24        | wandoujia        | *.wdj    | Android         | v4.0.0              | v4.0.0              | -             | 渠道后台       |
+| 豌豆荚                     | 24        | wandoujia        | *.wdj    | Android         | v4.0.2              | v4.0.2              | -             | 渠道后台       |
 | 同步推                     | 25        | tongbu           |          | IOS             | v4.1.0              | v4.1.0              | 2015-8-31     | 渠道后台       |
 | 九游UC                     | 26        | uc               | *.uc     | Android         | v3.5.3.1            | v3.5.3.1            | -             | 渠道后台       |
 | 当乐(Android)              | 27        | d                | *.downjoy| Android         | v4.2              | v4.2              | 2015-9-25             | 渠道后台       |
@@ -28,7 +28,7 @@
 | itools                     | 31        | itools           |          | Android         | v1.1.3              | v1.1.3              | 2015-8-18     | 渠道后台       |
 | itools                     | 31        | itools           |          | IOS             | v2.3.2              | v2.3.2              | 2015-4-14     | 渠道后台       |
 | 搜狗                       | 33        | sogou            |          | Android         | -                   | v1.4                | -             |                |
-| 华为                       | 34        | huawei           |  *.huawei| Android         | v1.3.1              | v1.3.1              | -             | 渠道后台       |
+| 华为                       | 34        | huawei           |  *.huawei| Android         | v1.6.3.53           | v1.6.3.53           | -             | 渠道后台       |
 | 联想                       | 35        | lenovo           |  *.lenovo| Android         | v2.4.1.2            | v2.4.1.2            | -             | 渠道后台       |
 | 可可游戏(OPPO)             | 37        | keke           |*.gamecenter| Android         | v1.7.0              | v1.7.0              | -             | 渠道后台       |
 | 移动MM                     | 38        | mm10086          | *.MM     | Android         | v3.1.7              | v3.1.7              | 2015-8-19     |                |
@@ -38,21 +38,21 @@
 | XY                         | 43        | xy               |          | IOS             | v2.0.3              | v2.0.3              | 2015-8-31     | 渠道后台       |
 | 机锋                       | 44        | gfan             |          | Android         | ?                   | ?                   | -             |                |
 | 爱思                       | 45        | i4               |          | IOS             | v2.0.3              | v2.0.3              | 2015-4-14     | 渠道后台       |
-| 魅族                       | 46        | meizu            | *.mz     | Android         | v2.1                | v2.1                | -             | 渠道后台       |
+| 魅族                       | 46        | meizu            | *.mz     | Android         | v2.2                | v2.2                | -             | 渠道后台       |
 | 陌陌                       | 47        | momo             |          | Android         | ?                   | ?                   | -             |                |
 | 应用汇                     | 48        | appchina         | *.yyhui  | Android         | v6.1.0              | v6.1.0              | -             |                |
 | 星云                       | 49        | scloudm          | *.xy     | Android         | v1.1.0              | v1.1.0              | -             | 自动           |
 | 优酷                       | 50        | youku            | *.youku  | Android         | v1.9.5              | v1.9.5              | -             |                |
-| 酷派                       | 51        | coolpad          | *.coolpad| Android         | v1.2.1              | v1.2.1              | -             |                |
+| 酷派                       | 51        | coolpad          | *.coolpad| Android         | v1.2.8              | v1.2.8             | -             |                |
 | 益玩                       | 52        | ewan             | *.ewan   | Android         | v2.1.0              | v2.1.0              | -             | 渠道人工       |
 | 拇指玩                     | 53        | muzhiwan         | *.mzw    | Android         | v2.2.1              | v2.2.1              | -             |                |
-| 37wan                      | 54        | c37wan           | *.sy37   | Android         | -V1.7.0             | V1.7.0              | -             |                |
+| 37wan                      | 54        | c37wan           | *.sy37   | Android         |  V1.7.0             | V1.7.0              | -             |                |
 | 草花互动                   | 55        | caohua           | *.ch     | Android         | v2.3.1              | v2.3.1              | -             |                |
 | 4399                       | 56        | c4399            | *.m4399  | Android         | v2.5.0.01           | v2.5.0.01           | 2015-8-18     |                |
-| 腾讯/应用宝                | 57        | myapp            |          | Android         | ?                   | ?                   | -             |                |
+| 腾讯/应用宝                | 57        | myapp            |          | Android         | V2.8.1              | V2.8.1             | -             |                |
 | 掌阅                       | 60        | zhangyue         |  *.zy    | Android         | v1.0(150708)        | v1.0(150708)        | -             |                |
 | 游龙                       | 61        | youlong          |          | Android         | ？                  | -                   | -             |                |
-| 酷狗                       | 62        | kugou            | *.zkugou | Android         | ？                  | v1.0                | -             | 渠道人工       |
+| 酷狗                       | 62        | kugou            | *.zkugou | Android         | 5.2.3               | 5.2.3                | -             | 渠道人工       |
 | YY语音                     | 63        | yy               |          | Android         | ?                   | ?                   | ?             |                |
 | 多玩                       | 64        | duowan           | *.douwan | Android         | v1.0                | v1.0                | -             |                |
 | 熊猫玩                     | 65        | xmwan           |*.ztxmw.apk| Android         | v2.0.1              | -                   | -             |                |
