@@ -76,7 +76,7 @@
 | 暴风游戏                   | 82        | baofeng          |          | Android         | -                   | v1.2                | -             | 渠道人工       |
 | Facebook                   | 83        | facebook         |          | Android         | ?                   | -                   | -             |                |
 | Google play                | 84        | google           |          | Android         | ?                   | -                   | -             |                |
-| 海马玩(Android)            | 85        | haimawan         | *.HM     | Android         | v1.1.4              | v1.1.4              | 2015-9-11     |                |
+| 海马玩(Android)            | 85        | haimawan         | *.HM     | Android         | v1.1.5              | v1.1.5              | 2015-9-11     |                |
 | 海马玩(IOS)                | 85        | haimawan         |          | IOS             | -                   | ?                   | -             |                |
 | 手游咖啡                   | 86        | mgcafe           | *.mgcafe | Android         | v1.0.0              | v1.0.0              | -             | 自动           |
 | 易娱                       | 87        | eyu              |          | Android         | v2.3.2              | v2.3.2              | -             |                |
