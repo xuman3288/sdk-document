@@ -30,7 +30,7 @@
 | 搜狗                       | 33        | sogou            |          | Android         | -                   | v1.4.29                | -             |                |
 | 华为                       | 34        | huawei           |  *.huawei| Android         | v1.6.3.53           | v1.6.3.53           | -             | 渠道后台       |
 | 联想                       | 35        | lenovo           |  *.lenovo| Android         | v2.4.1.2            | v2.4.1.2            | -             | 渠道后台       |
-| 可可游戏(OPPO)             | 37        | keke           |*.gamecenter| Android         | v1.7.0              | v1.7.0              | -             | 渠道后台       |
+| 可可游戏(OPPO)             | 37        | keke           |*.gamecenter| Android         | v1.7.4              | v1.7.4             | -             | 渠道后台       |
 | 移动MM                     | 38        | mm10086          | *.MM     | Android         | v3.1.7              | v3.1.7              | 2015-8-19     |                |
 | 金立                       | 39        | gionee           | *.am     | Android         | v3.0.5b             | v3.0.5b              | -             |                |
 | PPS                        | 41        | pps              | *.pps    | Android         | v3.7.5              | v3.7.5              | -             | 渠道人工       |
