@@ -58,7 +58,7 @@
 | 熊猫玩                     | 65        | xmwan           |*.ztxmw.apk| Android         | v2.0.1              | -                   | -             |                |
 | 3G门户                     | 66        | c3g              |          | Android         | -                   | -                   | -             |                |
 | 爱游戏                     | 67        | play             |*.egame   | Android         | v4.13               | v4.13               | 2015/09/17     |                |
-| 云点友游(Android)          | 68        | yundian          | *.yd     | Android         | ?                   | -                   | -             |                |
+| 云点友游(Android)          | 68        | yundian          | *.yd     | Android         | v2.1.2              | v2.1.2                   | -             |                |
 | 云点友游(IOS)              | 68        | yundian          |          | IOS             | ?                   | -                   | -             |                |
 | 49you                      | 69        | c49you           | *.sj49you| Android         | v7.1.3              | v7.1.3              | -             |                |
 | 37wan(Ver 2)               | 70        | c37wan2          | *.sy37x  | Android         | V2.1.1              | V2.1.1              | -             |                |
