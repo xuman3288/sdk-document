@@ -10,7 +10,7 @@
 
 ## IOS相关下载
 
-### 3.x SDK
+### 3.x SDK(征途用)
 
 * [巨人官方SDK-4.3.12版本下载地址](http://docs.mztgame.com/files/iOS/3.0/gaSDK4.3.12.zip)
 * [I苹果渠道SDK-1.2.9版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_IA_1.2.9.tar.gz)
