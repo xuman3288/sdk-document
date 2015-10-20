@@ -88,7 +88,7 @@
 | 乐视                       | 93        | letv             | *.leshi  | Android         | v1.0.2              | v1.0.2              | -             |                |
 | 新浪                       | 94        | sina             |          | Android         | -                   | v1.3.0              | -             |                |
 | 灰喜鹊                     | 95        | huixique         |          | Android         | -                   | v2.3.2              | -             |                |
-| 斗鱼                       | 96        | douyu            | *.dy     | Android         | v1.0.5              | v1.0.5              | -             |                |
+| 斗鱼                       | 96        | douyu            | *.dy     | Android         | v1.0.8              | v1.0.8              | -             |                |
 | 联众                       | 97        | lianzhong        |          | Android         | -                   | v4.2.x              | -             |                |
 | 起凡                       | 98        | qifan            |          | Android         | -                   | v2.0                | 2015-8-7      |                |
 | 靠谱                       | 99        | kaopu            |          | Android         | -                   | v4.3.1              | 2015-8-3      |                |
