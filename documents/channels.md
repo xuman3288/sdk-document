@@ -40,7 +40,7 @@
 | 爱思                       | 45        | i4               |          | IOS             | v2.0.3              | v2.0.3              | 2015-4-14     | 渠道后台       |
 | 魅族                       | 46        | meizu            | *.mz     | Android         | v2.2                | v2.2                | -             | 渠道后台       |
 | 陌陌                       | 47        | momo             |          | Android         | ?                   | ?                   | -             |                |
-| 应用汇                     | 48        | appchina         | *.yyhui  | Android         | v6.1.0              | v6.1.0              | -             |                |
+| 应用汇                     | 48        | appchina         | *.yyhui  | Android         | v6.2.0              | v6.2.0              | -             |                |
 | 星云                       | 49        | scloudm          | *.xy     | Android         | v1.1.0              | v1.1.0              | -             | 自动           |
 | 优酷                       | 50        | youku            | *.youku  | Android         | v2.2                | v2.2              | -             |                |
 | 酷派                       | 51        | coolpad          | *.coolpad| Android         | v1.2.5              | v1.2.5             | -             |                |
