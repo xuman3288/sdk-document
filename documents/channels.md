@@ -16,7 +16,7 @@
 | 91无线平台                 | 21        | baidu91          |          | Android         | v3.5.2              | v3.5.2            | 2014-3-17     | 渠道后台       |
 | PP助手                     | 22        | pp               |          | IOS             | v1.5.4              | v1.5.4              | 2015-9-9      | 渠道后台       |
 | 百度手机助手               | 23        | baidu            | *.baidu  | Android         | v3.3.1              | v3.3.1              | -             | 渠道后台       |
-| 豌豆荚                     | 24        | wandoujia        | *.wdj    | Android         | v4.0.2              | v4.0.2              | -             | 渠道后台       |
+| 豌豆荚                     | 24        | wandoujia        | *.wdj    | Android         | v4.0.2              | v4.0.4              | -             | 渠道后台       |
 | 同步推                     | 25        | tongbu           |          | IOS             | v4.1.0              | v4.1.0              | 2015-8-31     | 渠道后台       |
 | 九游UC                     | 26        | uc               | *.uc     | Android         | v3.5.3.1            | v3.5.3.1            | -             | 渠道后台       |
 | 当乐(Android)              | 27        | d                | *.downjoy| Android         | v4.2                | v4.2              | 2015-9-25             | 渠道后台       |
@@ -45,7 +45,7 @@
 | 优酷                       | 50        | youku            | *.youku  | Android         | v2.2                | v2.2              | -             |                |
 | 酷派                       | 51        | coolpad          | *.coolpad| Android         | v1.2.5              | v1.2.5             | -             |                |
 | 益玩                       | 52        | ewan             | *.ewan   | Android         | v2.1.0              | v2.1.0              | -             | 渠道人工       |
-| 拇指玩                     | 53        | muzhiwan         | *.mzw    | Android         | v2.2.1              | v2.2.1              | -             |                |
+| 拇指玩                     | 53        | muzhiwan         | *.mzw    | Android         | v2.2.1              | v3.0.6              | -             |                |
 | 37wan                      | 54        | c37wan           | *.sy37   | Android         |  V1.7.0             | V1.7.0              | -             |                |
 | 草花互动                   | 55        | caohua           | *.ch     | Android         | v2.3.1              | v2.3.1              | -             |                |
 | 4399                       | 56        | c4399            | *.m4399  | Android         | v2.5.0.01           | v2.5.0.01           | 2015-8-18     |                |
