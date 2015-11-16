@@ -65,7 +65,7 @@
 | YY珠海                     | 71        | yyzhuhai         | *.yyzh   | Android         | v3.0.0              | -                   | -             |                |
 | 爱苹果                     | 72        | iapple           |          | IOS             | v1.2.8              | v1.2.8              | 2015-8-31     |                |
 | 豆豆 / 洪金宝              | 73        | doudou           |  *.doudou| Android         | v1.0                | -                   | -             |                |
-| 蜗牛免商店                 | 74        | snail            |  *.snail | Android         | v1.1.5              | v1.1.5              | 2015-8-13     |                |
+| 蜗牛免商店                 | 74        | snail            |  *.snail | Android         | v1.3.0              | v1.3.0              | 2015-8-13     |                |
 | 移动游戏基地               | 75        | g10086           |          | Android         | ？                  | ？                  | -             |                |
 | 联通沃商店                 | 76        | wo               |          | Android         | ？                  | ？                  | -             |                |
 | 爱贝                       | 77        | iapppay          |          | Android         | v3.4.2              | v3.4.2              | -             |                |
