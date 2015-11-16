@@ -50,7 +50,7 @@
 | 草花互动                   | 55        | caohua           | *.ch     | Android         | v2.3.1              | v2.3.1              | -             |                |
 | 4399                       | 56        | c4399            | *.m4399  | Android         | v2.5.0.01           | v2.5.0.01           | 2015-8-18     |                |
 | 腾讯/应用宝                | 57        | myapp            |          | Android         | V2.8.1              | V2.8.1             | -             |                |
-| 掌阅                       | 60        | zhangyue         |  *.zy    | Android         | v1.0(150708)        | v1.0(150708)        | -             |                |
+| 掌阅                       | 60        | zhangyue         |  *.zy    | Android         | v1.1(151116)        | v1.1(151116)        | -             |                |
 | 游龙                       | 61        | youlong          |          | Android         | ？                  | -                   | -             |                |
 | 酷狗                       | 62        | kugou            | *.zkugou | Android         | 5.2.3               | 5.2.3                | -             | 渠道人工       |
 | YY语音                     | 63        | yy               |          | Android         | ?                   | ?                   | ?             |                |
