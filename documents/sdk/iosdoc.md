@@ -273,6 +273,7 @@ if([[ZTLibBase getInstance] isHasQQGroup])
 
 QQ号请提交我们，我们会后台配置，便于后期管理  
 
+Xcode7以上适配iOS9要在 info.plist加上 LSApplicationQueriesSchemes 类型 Array,在LSApplicationQueriesSchemes下添加item类型String,值设为mqqapi
 
 ###备注
 渠道id以及游戏id可以统一从此wiki链接查询
