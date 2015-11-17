@@ -45,7 +45,7 @@
 | 优酷                       | 50        | youku            | *.youku  | Android         | v2.2                | v2.2              | -             |                |
 | 酷派                       | 51        | coolpad          | *.coolpad| Android         | v1.2.5              | v1.2.5             | -             |                |
 | 益玩                       | 52        | ewan             | *.ewan   | Android         | v2.1.0              | v2.1.0              | -             | 渠道人工       |
-| 拇指玩                     | 53        | muzhiwan         | *.mzw    | Android         | v2.2.1              | v3.0.6              | -             |                |
+| 拇指玩                     | 53        | muzhiwan         | *.mzw    | Android         | v2.2.1              | v3.0.8              | -             |                |
 | 37wan                      | 54        | c37wan           | *.sy37   | Android         |  V1.7.0             | V1.7.0              | -             |                |
 | 草花互动                   | 55        | caohua           | *.ch     | Android         | v2.3.1              | v2.3.1              | -             |                |
 | 4399                       | 56        | c4399            | *.m4399  | Android         | v2.5.0.01           | v2.5.0.01           | 2015-8-18     |                |
