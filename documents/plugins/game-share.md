@@ -67,7 +67,7 @@ android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
  * @param notify_url 通知地址(如果设置以当前通知为准，未设置以后台配置通知地址为准)
  */
 
-public void init(Context context,String gameid,String channelId,String openid, notify_url)
+public void init(Context context,String gameid,String channelId,String openid, String notify_url)
 ~~~
 	
 调用例子：
