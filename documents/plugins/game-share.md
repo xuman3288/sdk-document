@@ -23,7 +23,7 @@ B 在IP(1.1.1.1) 下注册后, 与A形成关系.
 
 ### 二维码分享插件SDK下载链接：
 
-- [Download SDK V1.0.2](http://docs.mztgame.com/files/Android/plugin/ztpromotecode_v1.0.2.zip)
+- [Download SDK V1.0.3](http://docs.mztgame.com/files/Android/plugin/ztpromotecode_v1.0.3.zip)
 
 ---------------------------------------------------------------------------------------------------------
 
@@ -64,8 +64,10 @@ android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
  * @param gameid     游戏的id（另：若已接入base包，该值可用接口IZTLibBase.getUserInfo().get(ZTConsts.User.GAMEID)获取)
  * @param channelId  渠道id（另：若已接入base包，该值可用接口IZTLibBase.getInstance().getPlatform()获取）
  * @param openid     用户的uid（唯一标识)（另：若已接入base包，该值可由IZTLibBase.getUserInfo().get(ZTConsts.User.ACCID)接口获取）
+ * @param notify_url 通知地址(如果设置以当前通知为准，未设置以后台配置通知地址为准)
  */
-public void init(Context context,String gameid,String channelId,String openid)
+
+public void init(Context context,String gameid,String channelId,String openid, notify_url)
 ~~~
 	
 调用例子：
@@ -75,7 +77,7 @@ String gameid = IZTLibBase.getUserInfo().get(ZTConsts.User.GAMEID);//获取gamei
 int channelid = IZTLibBase.getInstance().getPlatform();//获取渠道id
 String openid = IZTLibBase.getUserInfo().get(ZTConsts.User.ACCID);//获取openid
 
-ZTPromoteCode.getInstance().init(MainActivity.this,gameid,channelid+"",openid);
+ZTPromoteCode.getInstance().init(MainActivity.this,gameid,channelid+"",openid,notify_url);
 ~~~
 
 ##### 3. 生成分享二维码接口:
