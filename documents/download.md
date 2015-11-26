@@ -44,7 +44,7 @@
 
 ### 渠道SDK
 
-* [巨人官方SDK-4.0.7版本下载地址](http://docs.mztgame.com/files/Android/giantSDK4.0.7.zip)
+* [巨人官方SDK-4.0.9版本下载地址](http://docs.mztgame.com/files/Android/giantSDK4.0.9.zip)
 * [手游咖啡SDK-1.1.2版本下载地址](http://docs.mztgame.com/files/Android/mgcafe_v1.1.2.zip)
 * [腾讯应用宝SDK-v2.8.1版本下载地址](http://docs.mztgame.com/files/Android/tencent_v2.8.1.zip)
 
