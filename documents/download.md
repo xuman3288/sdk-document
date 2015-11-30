@@ -32,7 +32,7 @@
 ######XY此版本工程内需要手动添加XYPlatform.framework
 * [PP助手渠道SDK-1.5.5版本下载地址（动态库1.5.7，静态库1.5.5）](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_PP_1.5.5.tar.gz)
 * [快用渠道SDK-2.2.3版本下载地址](http://docs.mztgame.com/files/iOS/4.0/kySDK2.2.3.zip)######快用此版本工程内需要手动添加xsdkFramework.framework
-* [海马渠道SDK-4.3.19版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_HM_4.3.19.tar.gz)
+* [海马渠道SDK-4.0.1-2.1版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_HM_4.0.1-2.1.tar.gz)
 * [爱思渠道SDK-2.1.0版本下载地址](http://docs.mztgame.com/files/iOS/4.0/asSDK2.1.0.zip)
 * [iTools渠道SDK-2.5.1版本下载地址](http://docs.mztgame.com/files/iOS/4.0/itSDK2.5.1.zip)
 
