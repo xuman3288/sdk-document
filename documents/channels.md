@@ -32,7 +32,7 @@
 | 联想                       | 35        | lenovo           |  *.lenovo| Android         | v2.4.1.2            | v2.4.1.2            | -             | 渠道后台       |
 | 可可游戏(OPPO)             | 37        | keke           |*.gamecenter| Android         | v1.7.4              | v1.7.4             | -             | 渠道后台       |
 | 移动MM                     | 38        | mm10086          | *.MM     | Android         | v3.1.7              | v3.1.7              | 2015-8-19     |                |
-| 金立                       | 39        | gionee           | *.am     | Android         | v3.0.5b             | v3.0.5b              | -             |                |
+| 金立                       | 39        | gionee           | *.am     | Android         | v3.0.7o             | v3.0.7o              | -             |                |
 | PPS                        | 41        | pps              | *.pps    | Android         | v3.8.0              | v3.8.0              | -             | 渠道人工       |
 | VIVO                       | 42        | vivo             | *.vivo   | Android         | v3.1.3&v2.5.5       | v3.1.3&v2.5.5       | 2015/10/15     | 自动           |
 | XY                         | 43        | xy               |          | IOS             | v2.0.3              | v2.0.3              | 2015-8-31     | 渠道后台       |
@@ -45,10 +45,10 @@
 | 优酷                       | 50        | youku            | *.youku  | Android         | v2.2                | v2.2              | -             |                |
 | 酷派                       | 51        | coolpad          | *.coolpad| Android         | v1.2.5              | v1.2.5             | -             |                |
 | 益玩                       | 52        | ewan             | *.ewan   | Android         | v2.1.0              | v2.1.0              | -             | 渠道人工       |
-| 拇指玩                     | 53        | muzhiwan         | *.mzw    | Android         | v2.2.1              | v3.0.8              | -             |                |
+| 拇指玩                     | 53        | muzhiwan         | *.mzw    | Android         | v3.0.9              | v3.0.9              | -             |                |
 | 37wan                      | 54        | c37wan           | *.sy37   | Android         |  V1.7.0             | V1.7.0              | -             |                |
 | 草花互动                   | 55        | caohua           | *.ch     | Android         | v2.3.1              | v2.3.1              | -             |                |
-| 4399                       | 56        | c4399            | *.m4399  | Android         | v2.5.0.01           | v2.5.0.01           | 2015-8-18     |                |
+| 4399                       | 56        | c4399            | *.m4399  | Android         | v2.6.0.4            | v2.6.0.4            | 2015-8-18     |                |
 | 腾讯/应用宝                | 57        | myapp            |          | Android         | V2.8.1              | V2.8.1             | -             |                |
 | 掌阅                       | 60        | zhangyue         |  *.zy    | Android         | v1.1(151116)        | v1.1(151116)        | -             |                |
 | 游龙                       | 61        | youlong          |          | Android         | ？                  | -                   | -             |                |
