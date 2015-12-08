@@ -275,9 +275,10 @@ QQ号请提交我们，我们会后台配置，便于后期管理
 
 Xcode7以上适配iOS9要在 info.plist加上 LSApplicationQueriesSchemes 类型 Array,在LSApplicationQueriesSchemes下添加item类型String,值设为mqqapi
 
-另外：在Xcode7则需在info.plist配置以下项
-在Info.plist中添加NSAppTransportSecurity类型Dictionary，在NSAppTransportSecurity下添加NSAllowsArbitraryLoads类型Boolean,值设为YES
-在Build Settings下的 Build Options-> Enable Bitcode 项设置值为No
+> 另外：在Xcode7则需在info.plist配置以下项
+> 在Info.plist中添加NSAppTransportSecurity类型Dictionary，在NSAppTransportSecurity下添加NSAllowsArbitraryLoads类型Boolean,值设为YES
+> 在Build Settings下的 Build Options-> Enable Bitcode 项设置值为No
+
 ###备注
 渠道id以及游戏id可以统一从此wiki链接查询
 [http://wiki.mztgame.com/index.php/%E6%B8%A0%E9%81%93%E4%BF%A1%E6%81%AF%E5%88%97%E8%A1%A8](http://wiki.mztgame.com/index.php/%E6%B8%A0%E9%81%93%E4%BF%A1%E6%81%AF%E5%88%97%E8%A1%A8)
