@@ -330,6 +330,13 @@ Please inform us the qqGroup number，We will configuration in server.
      [[ZTLibBase getInstance] joinQQGroup];
 }
 ~~~
+to Xcode7+iOS9 need add key "LSApplicationQueriesSchemes" type of Array in "info.plist" and add item of String for "LSApplicationQueriesSchemes", value with "mqqapi"
+
+## tips for xcode7:
+>add "NSAppTransportSecurity" type of Dictionary in Info.plist;
+>add "NSAllowsArbitraryLoads" type of Boolean in Info.plist, value with "YES";
+>set value with "NO" for "Enable Bitcode" in Build Settings -> Build Options
+
 
 ## Remark
 
