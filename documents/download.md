@@ -36,7 +36,7 @@
 * [爱思渠道SDK-2.1.0版本下载地址](http://docs.mztgame.com/files/iOS/4.0/asSDK2.1.0.zip)
 * [iTools渠道SDK-2.5.1版本下载地址](http://docs.mztgame.com/files/iOS/4.0/itSDK2.5.1.zip)
 
-[4.0官方渠道4.3.21demo+SDK下载地址（不一定是最新的版本号，仅供参考）](http://docs.mztgame.com/files/iOS/4.0/4.3.21 iOS SDK+demo.zip)
+[4.0官方渠道4.3.21demo+SDK下载地址](http://docs.mztgame.com/files/iOS/4.0/4.3.21 iOS SDK%2Bdemo.zip) （不一定是最新的版本号，仅供参考）
 ## Android相关下载
 
 ### 母包SDK
