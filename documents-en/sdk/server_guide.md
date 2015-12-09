@@ -80,8 +80,9 @@ http://passport.mobileztgame.com/service/check-token?game_id=5012&openid=1-1234&
 ### Payment guide
 
 Request from GiantMobile payment server. Server IPs [see payment server IP list](#__14)
+Tell our developer your feedback URL and set it by us when you complated your API.
 
-![Payment chart](http://i.imgur.com/3KrkhIl.png)
+![Payment chart](http://i.imgur.com/bsUs9zZ.png)
 
 #### Protocol
 

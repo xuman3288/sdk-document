@@ -270,6 +270,28 @@ Values:
 | balance   | string        | Tencent account balance.               |
 | auto_consumed | boolean   | Auto consumed. |
 
+##### Case `ZTConsts.ZTGAME_CREATE_ORDER`:
+
+The `errcode` always equal to 0.
+
+The `json_obj` values:
+
+~~~json
+{
+    "order_id": "xxxxxxxxxx"
+}
+~~~
+
+##### Case `ZTConsts.ZTGAME_PAY`:
+
+When we call it?
+
+~~~java
+IZTListener.onFinished(ZTConsts.ZTGAME_PAY, -1, new JSONObject('{}')); //When player was canceled
+IZTListener.onFinished(ZTConsts.ZTGAME_PAY, 0, new JSONObject('{}')); //When player was paid
+~~~
+
+> Notice: `json_obj` always is empty json object.
 
 ##### Case `ZTConsts.ZTGAME_LOGOUT`:
 
