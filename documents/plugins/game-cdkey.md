@@ -1,27 +1,60 @@
-### 查询接口地址
+#游戏激活码插件
 
-请求地址: `http://share.plugin.mobileztgame.com/query.php` 
+## IOS 客户端
 
-请求方式: GET
+### 配置
+* deployment target 6.0以上
+* ztactivegameres以蓝色资源文件夹方式添加进项目
+* 链接SystemConfiguration.framework以及libZTActive.a库文件
+* 添加ZTActive.h头文件
 
-### 参数说明:
+####初始化
 
+~~~objectc
+    [[ZTActive instance] initWithGameId:@"5012" isLandscape:YES userId:@"1629306" platformId:@"23" account:@"1234569999" block:^(NSDictionary *dictionary) {    
+	    NSLog(@"%@", dictionary);
+	    if([[ZTActive instance] isNeedActive]){
+	    	//需要激活
+	    }    
+    }];
+~~~
 
-| 参数名  | 说明          |
-|---------|---------------|
-| game_id | 游戏应用ID    |
-| openid  | 分享者账号ID  |
-| channel | 渠道ID        |
-| sign    | 签名 md5(game_id+"&"+openid+"&"+channel+"&"+key), 其中 key 为接登录时分配的密钥 |
+初始化信息dictionary格式:
 
+* 初始化成功：`{"code":0,"info":"success"}`
+* 初始化失败：`{"code":大于零的状态码,"info":"状态码说明"}`
 
-### 响应说明
+#### 查询是否已经激活
 
-响应内容格式为: `application/json`
+> 注: 此接口必须在初始化完成后才可调用
 
+~~~objectc
+[[ZTActive instance] isNeedActive]
+~~~
 
-| 参数名  | 类型   | 说明          |
-|---------|--------|---------------|
-| code    | int    | 响应码, 0: 正常返回; 大于0: 错误, error 字段为错误信息  |
-| error   | string | 错误消息           |
-| count   | int    | 分享者带来的账号数 |
+### 激活
+
+~~~objectc
+// 显⽰激活用户界⾯
+[[ZTActive instance] showEntry:^(NSDictionary *ret) {
+// 激活信息json
+NSLog(@"%@", ret);        
+}];
+~~~
+
+激活信息dictionary格式:
+
+* 激活成功：{"code":0,"info":"success"}
+* 其他状态：{"code":大于零的状态码,"info":"状态码说明"}
+
+------------------------------------------------------
+
+## Android 客户端
+
+...
+
+-------------------------------------------------------
+
+## 服务端
+
+...
