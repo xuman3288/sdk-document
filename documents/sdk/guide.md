@@ -16,7 +16,7 @@
 
 ### 1. 资源包下载
 
-* [Android 依赖包](/docs/download#__4)
+* [Android 依赖包](/docs/download#__9)
 
 ### 2. 查看相关文档
 
