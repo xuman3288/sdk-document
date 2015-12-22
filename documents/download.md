@@ -25,7 +25,7 @@
 
 ### 4.x SDK
 
-* [巨人官方SDK-4.3.22版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_GA_4.3.22.tar.gz)
+* [巨人官方SDK-4.3.23版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_GA_4.3.23.tar.gz)
 * [I苹果渠道SDK-1.3.0版本下载地址](http://docs.mztgame.com/files/iOS/4.0/iaSDK1.3.0.zip)
 * [同步推渠道SDK-4.1.2版本下载地址](http://docs.mztgame.com/files/iOS/4.0/tbSDK4.1.2.zip)
 * [XY渠道SDK-2.1.1版本下载地址](http://docs.mztgame.com/files/iOS/4.0/xySDK2.1.1.zip)
@@ -36,9 +36,13 @@
 * [爱思渠道SDK-2.1.0版本下载地址](http://docs.mztgame.com/files/iOS/4.0/asSDK2.1.0.zip)
 * [iTools渠道SDK-2.5.1版本下载地址](http://docs.mztgame.com/files/iOS/4.0/itSDK2.5.1.zip)
 
-[4.0官方渠道4.3.22demo&SDK下载地址](http://docs.mztgame.com/files/iOS/4.0/4.3.22iOSSDKdemo.zip)（不一定是最新的版本号，仅供参考）
+### 4.x demo
+* [4.0官方渠道4.3.22demo&SDK下载地址](http://docs.mztgame.com/files/iOS/4.0/4.3.22iOSSDKdemo.zip)（不一定是最新的版本号，仅供参考）
+* [4.0官方渠道4.3.22UnityDemo下载地址](http://docs.mztgame.com/files/iOS/4.0/iosSDKUnityDemo.zip)（不一定是最新的版本号，仅供参考）
 
-[4.0官方渠道4.3.22UnityDemo下载地址](http://docs.mztgame.com/files/iOS/4.0/iosSDKUnityDemo.zip)（不一定是最新的版本号，仅供参考）
+### 插件SDK
+* [iOS激活插件SDK下载地址](http://docs.mztgame.com/files/iOS/plugin/iOSActivePluginSDK.zip)
+
 ## Android相关下载
 
 ### 母包SDK
