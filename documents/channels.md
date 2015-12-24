@@ -82,7 +82,7 @@
 | 易娱                       | 87        | eyu              |          | Android         | v2.3.2              | v2.3.2              | -             |                |
 | 奇天乐地                   | 88        | c44755           |          | Android         | v4.0                | v4.0                | -             |                |
 | 果盘                       | 89        | guopan           |          | Android         | v1.0.7              | -                   | -             |                |
-| PPTV                       | 90        | pptv             | *.pptv   | Android         | V4.3.06.150819      | V4.3.06.150819      | 2015-8-20     |                |
+| PPTV                       | 90        | pptv             | *.pptv   | Android         | v4.4.06             | V4.4.06      | 2015-8-20     |                |
 | 麟游                       | 91        | linyou           |*.linyou  | Android         | v2.0.3              | -                   | -             |                |
 | 今日头条                   | 92        | jinritoutiao     | *.jrtt   | Android         | v2.0                | v2.0                | -             |                |
 | 乐视                       | 93        | letv             | *.leshi  | Android         | v1.0.2              | v1.0.2              | -             |                |
