@@ -95,6 +95,9 @@
 | 搜狐                       | 100       | souhu            |          | Android         | -                   | v1.1.10             | 2015-8-7      |                |
 | 趣游                       | 101       | quyou            |*.funity  | Android         | v1.0                | v1.0                | 2015-8-10     |                |
 | 虫虫                       | 102       | chongchong       |          | Android         | -                   | v1.0.2              | 2015-8-11     |                |
+| 虚荣                       | 103       | vainglory        |          | Android         | -                   | -                   | -             |                |
+| 麟游-盟宝                  | 105       | mengbao          |          | Android         | -                   | -                   | -             |                |
+| 起点-阅文                  | 106       | yuewen           |          | Android         | -                   | -                   | -             |                |
 
 ## 巨人移动官方CPS渠道
 
