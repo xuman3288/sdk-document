@@ -42,7 +42,7 @@
 | 陌陌                       | 47        | momo             |          | Android         | ?                   | ?                   | -             |                |
 | 应用汇                     | 48        | appchina         | *.yyhui  | Android         | v6.2.0              | v6.2.0              | -             |                |
 | 星云                       | 49        | scloudm          | *.xy     | Android         | v1.1.0              | v1.1.0              | -             | 自动           |
-| 优酷                       | 50        | youku            | *.youku  | Android         | v2.2                | v2.2              | -             |                |
+| 优酷                       | 50        | youku            | *.youku  | Android         | v2.5                | v2.5              | -             |                |
 | 酷派                       | 51        | coolpad          | *.coolpad| Android         | v1.2.5              | v1.2.5             | -             |                |
 | 益玩                       | 52        | ewan             | *.ewan   | Android         | v2.1.0              | v2.1.0              | -             | 渠道人工       |
 | 拇指玩                     | 53        | muzhiwan         | *.mzw    | Android         | v3.0.9              | v3.0.9              | -             |                |
@@ -52,7 +52,7 @@
 | 腾讯/应用宝                | 57        | myapp            |          | Android         | V2.8.1              | V2.8.1             | -             |                |
 | 掌阅                       | 60        | zhangyue         |  *.zy    | Android         | v1.1(151116)        | v1.1(151116)        | -             |                |
 | 游龙                       | 61        | youlong          |          | Android         | ？                  | -                   | -             |                |
-| 酷狗                       | 62        | kugou            | *.zkugou | Android         | 5.2.3               | 5.2.3                | -             | 渠道人工       |
+| 酷狗                       | 62        | kugou            | *.zkugou | Android         | 5.4.1               | 5.4.1                | -             | 渠道人工       |
 | YY语音                     | 63        | yy               |          | Android         | ?                   | ?                   | ?             |                |
 | 多玩                       | 64        | duowan           | *.douwan | Android         | v1.0                | v1.0                | -             |                |
 | 熊猫玩                     | 65        | xmwan           |*.ztxmw.apk| Android         | v2.0.1              | -                   | -             |                |
@@ -82,7 +82,7 @@
 | 易娱                       | 87        | eyu              |          | Android         | v2.3.2              | v2.3.2              | -             |                |
 | 奇天乐地                   | 88        | c44755           |          | Android         | v4.0                | v4.0                | -             |                |
 | 果盘                       | 89        | guopan           |          | Android         | v1.0.7              | -                   | -             |                |
-| PPTV                       | 90        | pptv             | *.pptv   | Android         | v4.4.06             | V4.4.06      | 2015-8-20     |                |
+| PPTV                       | 90        | pptv             | *.pptv   | Android         | v4.4.06             | V4.4.06      | 2015-12-30     |                |
 | 麟游                       | 91        | linyou           |*.linyou  | Android         | v2.0.3              | -                   | -             |                |
 | 今日头条                   | 92        | jinritoutiao     | *.jrtt   | Android         | v2.0                | v2.0                | -             |                |
 | 乐视                       | 93        | letv             | *.leshi  | Android         | v1.0.2              | v1.0.2              | -             |                |
