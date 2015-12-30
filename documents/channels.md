@@ -11,7 +11,7 @@
 | 巨人移动/ 苹果官方         | 2         |                  |          | IOS             | v4.0.5              | v4.0.6              | 2015-8-6      | 自动           |
 | 巨人移动/ WinPhone         | 3         |                  |          | -               | -                   | -                   | 2015-8-6      | 自动           |
 | 巨人移动苹果越狱           | 4         |                  |          | IOS             | -                   | -                   | 2015-8-6      | 自动           |
-| 奇虎360                    | 20        | qihu             | *.qh360  | Android         | v1.1.6              | v1.1.8              | -             | 渠道后台       |
+| 奇虎360                    | 20        | qihu             | *.qh360  | Android         | v1.1.6              | v1.2.2              | -             | 渠道后台       |
 | 91无线平台                 | 21        | baidu91          |          | Android         | -                   | -                   | 2015-8-6      | 渠道后台       |
 | 91无线平台                 | 21        | baidu91          |          | Android         | v3.5.2              | v3.5.2            | 2014-3-17     | 渠道后台       |
 | PP助手                     | 22        | pp               |          | IOS             | v1.5.4              | v1.5.4              | 2015-9-9      | 渠道后台       |
@@ -30,7 +30,7 @@
 | 搜狗                       | 33        | sogou            |          | Android         | -                   | v1.4.29                | -             |                |
 | 华为                       | 34        | huawei           |  *.huawei| Android         | v1.6.3.53           | v1.6.3.53           | -             | 渠道后台       |
 | 联想                       | 35        | lenovo           |  *.lenovo| Android         | v2.4.1.2            | v2.4.1.2            | -             | 渠道后台       |
-| 可可游戏(OPPO)             | 37        | keke           |*.gamecenter| Android         | v1.7.4              | v1.7.4             | -             | 渠道后台       |
+| 可可游戏(OPPO)             | 37        | keke           |*.gamecenter| Android         | v1.7.4              | v2.0.0             | -             | 渠道后台       |
 | 移动MM                     | 38        | mm10086          | *.MM     | Android         | v3.1.7              | v3.1.7              | 2015-8-19     |                |
 | 金立                       | 39        | gionee           | *.am     | Android         | v3.0.7o             | v3.0.7o              | -             |                |
 | PPS                        | 41        | pps              | *.pps    | Android         | v3.8.0              | v3.8.0              | -             | 渠道人工       |
@@ -96,8 +96,8 @@
 | 趣游                       | 101       | quyou            |*.funity  | Android         | v1.0                | v1.0                | 2015-8-10     |                |
 | 虫虫                       | 102       | chongchong       |          | Android         | -                   | v1.0.2              | 2015-8-11     |                |
 | 虚荣                       | 103       | vainglory        |          | Android         | -                   | -                   | -             |                |
-| 麟游-盟宝                  | 105       | mengbao          |          | Android         | -                   | -                   | -             |                |
-| 起点-阅文                  | 106       | yuewen           |          | Android         | -                   | -                   | -             |                |
+| 麟游-盟宝                  | 105       | mengbao          |          | Android         | -                   | -v1.4.1                   | -             |                |
+| 起点-阅文                  | 106       | yuewen           |          | Android         | -                   | -v1.7                   | -             |                |
 
 ## 巨人移动官方CPS渠道
 
