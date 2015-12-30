@@ -15,7 +15,7 @@
 | 91无线平台                 | 21        | baidu91          |          | Android         | -                   | -                   | 2015-8-6      | 渠道后台       |
 | 91无线平台                 | 21        | baidu91          |          | Android         | v3.5.2              | v3.5.2            | 2014-3-17     | 渠道后台       |
 | PP助手                     | 22        | pp               |          | IOS             | v1.5.4              | v1.5.4              | 2015-9-9      | 渠道后台       |
-| 百度手机助手               | 23        | baidu            | *.baidu  | Android         | v3.3.1              | v3.3.1              | -             | 渠道后台       |
+| 百度手机助手               | 23        | baidu            | *.baidu  | Android         | v3.5.2              | v3.5.2              | -             | 渠道后台       |
 | 豌豆荚                     | 24        | wandoujia        | *.wdj    | Android         | v4.0.2              | v4.0.4              | -             | 渠道后台       |
 | 同步推                     | 25        | tongbu           |          | IOS             | v4.1.0              | v4.1.0              | 2015-8-31     | 渠道后台       |
 | 九游UC                     | 26        | uc               | *.uc     | Android         | v3.5.3.1            | v3.5.3.1            | -             | 渠道后台       |
@@ -82,7 +82,7 @@
 | 易娱                       | 87        | eyu              |          | Android         | v2.3.2              | v2.3.2              | -             |                |
 | 奇天乐地                   | 88        | c44755           |          | Android         | v4.0                | v4.0                | -             |                |
 | 果盘                       | 89        | guopan           |          | Android         | v1.0.7              | -                   | -             |                |
-| PPTV                       | 90        | pptv             | *.pptv   | Android         | V4.3.06.150819      | V4.3.06.150819      | 2015-8-20     |                |
+| PPTV                       | 90        | pptv             | *.pptv   | Android         | v4.4.06             | V4.4.06      | 2015-8-20     |                |
 | 麟游                       | 91        | linyou           |*.linyou  | Android         | v2.0.3              | -                   | -             |                |
 | 今日头条                   | 92        | jinritoutiao     | *.jrtt   | Android         | v2.0                | v2.0                | -             |                |
 | 乐视                       | 93        | letv             | *.leshi  | Android         | v1.0.2              | v1.0.2              | -             |                |
