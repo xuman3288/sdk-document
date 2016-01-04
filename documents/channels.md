@@ -184,3 +184,5 @@
 | 天天游戏中心             |  10080   |  *.tiantian      |  CPS              |
 | 品效通                   |  10081   |  *.pinxiaotong   |  CPS              |
 | 顺网                     |  10082   |  *.shunwang      |  CPS              |
+| 新游互联                 |  10083   |  *.xyhl          |  CPS              |
+| 三星                     |  10084   |  *.shunwang      |  CPS              |
