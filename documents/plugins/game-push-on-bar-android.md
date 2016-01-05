@@ -111,7 +111,7 @@ protected void onCreate(Bundle savedInstanceState) {
 > 建议startPushService()接口在依赖base包中的init接口初始化完成后调用。
 
 ### 5.上报用户信息接口
-登录成功后调用接口
+登录成功后调用接口（*使用前请联系游戏产品开启此功能*）
 
 ~~~java
 void reportUserInfo(Context context,String userId);
