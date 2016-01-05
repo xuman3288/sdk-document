@@ -38,7 +38,7 @@
 
 
 ### 4.x SDK 武极专用
-* [巨人官方SDK-4.3.23版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_GA_WJ4.3.23.tar.gz)
+* [巨人官方SDK-4.3.23版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_GA_WJ4.3.24.tar.gz)
 
 
 ### 4.x demo
