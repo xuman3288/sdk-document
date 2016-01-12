@@ -110,7 +110,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 > 建议startPushService()接口在依赖base包中的init接口初始化完成后调用。
 
-### 5.上报用户信息接口
+### 5.上报用户信息接口（已废弃）
 登录成功后调用接口
 
 ~~~java
