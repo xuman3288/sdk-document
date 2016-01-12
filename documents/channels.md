@@ -187,3 +187,4 @@
 | 新游互联                 |  10083   |  *.xyhl          |  CPS              |
 | 三星                     |  10084   |  *.shunwang      |  CPS              |
 | 努比亚应用商店           |  10085   |  *.nubiya        |  CPS              |
+| 天天助手                 |  10086   |  *.tiantianzhushou |  CPS            |
