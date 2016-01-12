@@ -188,3 +188,4 @@
 | 三星                     |  10084   |  *.shunwang      |  CPS              |
 | 努比亚应用商店           |  10085   |  *.nubiya        |  CPS              |
 | 天天助手                 |  10086   |  *.tiantianzhushou |  CPS            |
+| 喜马拉雅FM               |  10087   |  *.ximalayafm    |  CPS              |
