@@ -96,6 +96,7 @@
 | 趣游                       | 101       | quyou            |*.funity  | Android         | v1.0                | v1.0                | 2015-8-10     |                |
 | 虫虫                       | 102       | chongchong       |          | Android         | -                   | v1.0.2              | 2015-8-11     |                |
 | 虚荣                       | 103       | vainglory        |          | Android         | -                   | -                   | -             |                |
+| 手游咖啡-inly              | 104       | inly             |          | Android         | -                   | -                   | -             |                |
 | 麟游-盟宝                  | 105       | mengbao          |          | Android         | -                   | -v1.4.1                   | -             |                |
 | 起点-阅文                  | 106       | yuewen           |          | Android         | -                   | -v1.7                   | -             |                |
 
