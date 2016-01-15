@@ -190,3 +190,4 @@
 | 努比亚应用商店           |  10085   |  *.nubiya        |  CPS              |
 | 天天助手                 |  10086   |  *.tiantianzhushou |  CPS            |
 | 喜马拉雅FM               |  10087   |  *.ximalayafm    |  CPS              |
+| 华硕游戏中心             |  10088   |  *.huashuoyouxi  |  CPS              |
