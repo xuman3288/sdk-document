@@ -191,3 +191,4 @@
 | 天天助手                 |  10086   |  *.tiantianzhushou |  CPS            |
 | 喜马拉雅FM               |  10087   |  *.ximalayafm    |  CPS              |
 | 华硕游戏中心             |  10088   |  *.huashuoyouxi  |  CPS              |
+| 9665游戏                 |  10089	  |  *.jiuliuliuwu |  CPS              |
