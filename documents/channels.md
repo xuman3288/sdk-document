@@ -42,7 +42,7 @@
 | 陌陌                       | 47        | momo             |          | Android         | ?                   | ?                   | -             |                |
 | 应用汇                     | 48        | appchina         | *.yyhui  | Android         | v6.2.0              | v6.2.0              | -             |                |
 | 星云                       | 49        | scloudm          | *.xy     | Android         | v1.1.0              | v1.1.0              | -             | 自动           |
-| 优酷                       | 50        | youku            | *.youku  | Android         | v2.5                | v2.5              | -             |                |
+| 优酷                       | 50        | youku            | *.youku  | Android         | v2.5.1             | v2.5.1              | -             |                |
 | 酷派                       | 51        | coolpad          | *.coolpad| Android         | v1.2.5              | v1.2.5             | -             |                |
 | 益玩                       | 52        | ewan             | *.ewan   | Android         | v2.1.0              | v2.1.0              | -             | 渠道人工       |
 | 拇指玩                     | 53        | muzhiwan         | *.mzw    | Android         | v3.0.9              | v3.0.9              | -             |                |
