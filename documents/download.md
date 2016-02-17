@@ -43,7 +43,7 @@
 
 ### 插件SDK
 * [iOS激活插件SDK下载地址](http://docs.mztgame.com/files/iOS/plugin/iOSActivePluginSDK.zip)
-* [iOS设备激活插件SDK下载地址](http://docs.mztgame.com/files/iOS/iOSDeviceActivePluginSDK.zip)
+* [iOS设备激活插件SDK下载地址](http://docs.mztgame.com/files/iOS/plugin/iOSDeviceActivePluginSDK.zip)
 
 ## Android相关下载
 
