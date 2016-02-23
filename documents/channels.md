@@ -194,3 +194,4 @@
 | 9665游戏                 |  10089	  |  *.jiuliuliuwu |  CPS              |
 | 软游天下                 |  10090	  |  *.ruanyoutianxia |  CPS              |
 | 柠檬助手                 |  10091	  |  *.ningmengzhushou |  CPS              |
+|笑傲科技                  |  10092   |  *.xiaoaokeji       |   CPS             |
