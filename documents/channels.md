@@ -193,3 +193,4 @@
 | 华硕游戏中心             |  10088   |  *.huashuoyouxi  |  CPS              |
 | 9665游戏                 |  10089	  |  *.jiuliuliuwu |  CPS              |
 | 软游天下                 |  10090	  |  *.ruanyoutianxia |  CPS              |
+| 柠檬助手                 |  10091	  |  *.ningmengzhushou |  CPS              |
