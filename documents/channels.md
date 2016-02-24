@@ -195,3 +195,4 @@
 | 软游天下                 |  10090	  |  *.ruanyoutianxia |  CPS              |
 | 柠檬助手                 |  10091	  |  *.ningmengzhushou |  CPS              |
 |笑傲科技                  |  10092   |  *.xiaoaokeji       |   CPS             |
+|全民免费                  |  10093   |  *.quanminmianfei   |   CPS             |
