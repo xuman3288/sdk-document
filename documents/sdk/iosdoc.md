@@ -272,13 +272,13 @@ if([[ZTLibBase getInstance] isHasQQGroup])
                 }  
                 
 ###提交玩家最后登录游戏区：  
-登录后，调用
+登录后，调用： 
 [[ZTLibBase getInstance] updateLastGameZone:zoneId block:^(BOOL status) {
 
 }];
 
 ###获取玩家最后登录游戏区：
-登录后，调用：
+登录后，调用： 
 [[ZTLibBase getInstance] loadLastGameZoneBlock:^(BOOL status, NSString *zoneId) {
 
 }];
