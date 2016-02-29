@@ -297,9 +297,6 @@ Accept: application/json
 
 ~~~
 HTTP/1.1 200 OK
-Date: Tue, 14 Jul 2015 12:47:35 GMT
-Server: Apache/2.4.9 (Win64) OpenSSL/1.0.1g PHP/5.5.11
-X-Powered-By: PHP/5.5.11
 Content-Length: 24
 Connection: close
 Content-Type: application/json
@@ -315,11 +312,9 @@ Content-Type: application/json
 POST /gm-demo/rpc/character HTTP/1.1
 Host: gm.mztgame.com
 Connection: close
-Accept-Encoding: gzip, deflate
 Content-Type: application/json
 Content-Length: 150
 Accept: application/json
-User-Agent: Zend_Json_Server_Client
 
 {
     "method":"select",
@@ -340,9 +335,6 @@ User-Agent: Zend_Json_Server_Client
 
 ~~~
 HTTP/1.1 200 OK
-Date: Tue, 14 Jul 2015 12:47:35 GMT
-Server: Apache/2.4.9 (Win64) OpenSSL/1.0.1g PHP/5.5.11
-X-Powered-By: PHP/5.5.11
 Content-Length: 2101
 Connection: close
 Content-Type: application/json
@@ -389,5 +381,190 @@ Content-Type: application/json
         ]
     },
     "id": "2"
+}
+~~~
+
+### 新增(Insert)范例 
+
+~~~
+POST /gm-demo/rpc/character HTTP/1.1
+Host: gm.mztgame.com
+Connection: close
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+Content-Length: 150
+Accept: application/json
+
+{
+    "method":"insert",
+    "id":"123",
+    "params": [
+        {
+            "name":"test2",
+            "age":"1",
+            "level":"10"
+        },
+    ]
+}
+~~~
+
+**响应**
+
+~~~
+HTTP/1.1 200 OK
+Content-Length: 2101
+Connection: close
+Content-Type: application/json
+
+{
+    "result": {
+      "code" : 0,
+      "msg" : "成功或失败消息",
+      "row" : {
+          "id":"2",
+          "name":"test2",
+          "age":"1",
+	  "level":"10"
+      }
+    },
+    "id": "123"
+}
+~~~
+
+
+### 修改(Update)范例 
+
+~~~
+POST /gm-demo/rpc/character HTTP/1.1
+Host: gm.mztgame.com
+Connection: close
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+Content-Length: 150
+Accept: application/json
+
+{
+    "method":"update",
+    "id":"123",
+    "params": [
+        {
+            "id":"2",
+	    "name":"test2",
+            "age":"100",
+            "level":"11"
+        },
+    ]
+}
+~~~
+
+**响应**
+
+~~~
+HTTP/1.1 200 OK
+Date: Tue, 14 Jul 2015 12:47:35 GMT
+Content-Length: 2101
+Connection: close
+Content-Type: application/json
+
+{
+    "result": {
+      "code" : 0,
+      "msg" : "成功或失败消息",
+      "row" : {
+            "id":"2",
+	    "name":"test2",
+            "age":"100",
+            "level":"11"
+      }
+    },
+    "id": "123"
+}
+~~~
+
+
+### 删除(Delete)范例 
+
+~~~
+POST /gm-demo/rpc/character HTTP/1.1
+Host: gm.mztgame.com
+Connection: close
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+Content-Length: 150
+Accept: application/json
+
+{
+    "method":"delete",
+    "id":"123",
+    "params": [
+        {
+            "id":"2",
+	    "name":"test2",
+            "age":"100",
+            "level":"11"
+        },
+    ]
+}
+~~~
+
+**响应**
+
+~~~
+HTTP/1.1 200 OK
+Date: Tue, 14 Jul 2015 12:47:35 GMT
+Content-Length: 2101
+Connection: close
+Content-Type: application/json
+
+{
+    "result": {
+      "code" : 0,
+      "msg" : "删除成功"
+    },
+    "id": "123"
+}
+~~~
+
+
+### 其它接口调用(Callable)范例 
+
+~~~
+POST /gm-demo/rpc/character HTTP/1.1
+Host: gm.mztgame.com
+Connection: close
+Accept-Encoding: gzip, deflate
+Content-Type: application/json
+Content-Length: 150
+Accept: application/json
+
+{
+    "method":"example",
+    "id":"123",
+    "params": [
+        {
+            "id":"2",
+	    "name":"test2",
+            "age":"100",
+            "level":"11"
+        },
+    ]
+}
+~~~
+
+**响应**
+
+~~~
+HTTP/1.1 200 OK
+Date: Tue, 14 Jul 2015 12:47:35 GMT
+Content-Length: 2101
+Connection: close
+Content-Type: application/json
+
+{
+    "result": {
+      "code" : 0,
+      "msg" : "执行结果"
+    },
+    "id": "123"
 }
 ~~~
