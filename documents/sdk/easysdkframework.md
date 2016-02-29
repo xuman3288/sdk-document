@@ -686,3 +686,34 @@ Login types:
      */
     public boolean createOrderZTGame(ZTPayInfo payInfo)
 ~~~
+### 4.4.7
+
+* 提交玩家最后登录游戏区
+
+~~~java
+    public void saveZoneId(String openId, String gameId, String zoneId)
+~~~
+
+例子:
+
+~~~java
+    IZTLibBase.getInstance().saveZoneId(IZTLibBase.getUserInfo().get(ZTConsts.User.ACCID),           IZTLibBase.getUserInfo().get(ZTConsts.User.GAMEID),"1");
+~~~
+
+* 获取玩家最后登录游戏区
+
+~~~java
+    public void getZoneIdforServices(String openId, String gameId, final ZTNetCallBack iCallBack)
+~~~
+例子:
+
+~~~java
+      	IZTLibBase.getInstance().getZoneIdforServices(IZTLibBase.getUserInfo().get(ZTConsts.User.ACCID),    IZTLibBase.getUserInfo().get(ZTConsts.User.GAMEID),new ZTNetCallBack() {
+				
+				@Override
+				public void callBack(Bundle bundle) {
+					// TODO Auto-generated method stub
+					Log.e("giant", bundle.toString());
+				}
+			});
+~~~
