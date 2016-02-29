@@ -42,7 +42,6 @@
 * [4.0官方渠道4.3.22UnityDemo下载地址](http://docs.mztgame.com/files/iOS/4.0/iosSDKUnityDemo.zip)（不一定是最新的版本号，仅供参考）
 
 ### 5.x SDK
-* [巨人官方SDK-5.0版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_GA_5.0.tar.gz)
 * [巨人官方SDK-5.0.1版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_GA_5.0.1.tar.gz)
 
 ### 插件SDK
