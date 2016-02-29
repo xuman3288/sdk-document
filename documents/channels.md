@@ -22,7 +22,7 @@
 | 当乐(Android)              | 27        | d                | *.downjoy| Android         | v4.2                | v4.2              | 2015-9-25             | 渠道后台       |
 | 当乐(IOS)                  | 27        | d                |          | IOS             | v4.0.3              | v4.0.3              | -             | 渠道后台       |
 | 小米                       | 28        | xiaomi           | *.mi     | Android         | v4.3.4              | v4.4.33              | -             | 渠道后台       |
-| 安智                       | 29        | anzhi            | *.anzhi  | Android         | v3.5                | v3.5           | 2015-9-16     | 渠道后台       |
+| 安智                       | 29        | anzhi            | *.anzhi  | Android         | v3.5.2              | v3.5.2           | 2015-9-16     | 渠道后台       |
 | 快用                       | 30        | kuaiyong         | *.KY     | Android         | v2.1.0              | v2.1.0              | 2015-8-13     | 渠道后台       |
 | 快用                       | 30        | kuaiyong         |          | IOS             | v2.0.3              | v2.0.3              | 2015-7-22     | 渠道后台       |
 | itools                     | 31        | itools           |          | Android         | v1.1.3              | v1.1.3              | 2015-8-18     | 渠道后台       |
@@ -42,7 +42,7 @@
 | 陌陌                       | 47        | momo             |          | Android         | ?                   | ?                   | -             |                |
 | 应用汇                     | 48        | appchina         | *.yyhui  | Android         | v6.2.0              | v6.2.0              | -             |                |
 | 星云                       | 49        | scloudm          | *.xy     | Android         | v1.1.0              | v1.1.0              | -             | 自动           |
-| 优酷                       | 50        | youku            | *.youku  | Android         | v2.5                | v2.5              | -             |                |
+| 优酷                       | 50        | youku            | *.youku  | Android         | v2.5.1             | v2.5.1              | -             |                |
 | 酷派                       | 51        | coolpad          | *.coolpad| Android         | v1.2.5              | v1.2.5             | -             |                |
 | 益玩                       | 52        | ewan             | *.ewan   | Android         | v2.1.0              | v2.1.0              | -             | 渠道人工       |
 | 拇指玩                     | 53        | muzhiwan         | *.mzw    | Android         | v3.0.9              | v3.0.9              | -             |                |
@@ -191,3 +191,8 @@
 | 天天助手                 |  10086   |  *.tiantianzhushou |  CPS            |
 | 喜马拉雅FM               |  10087   |  *.ximalayafm    |  CPS              |
 | 华硕游戏中心             |  10088   |  *.huashuoyouxi  |  CPS              |
+| 9665游戏                 |  10089	  |  *.jiuliuliuwu |  CPS              |
+| 软游天下                 |  10090	  |  *.ruanyoutianxia |  CPS              |
+| 柠檬助手                 |  10091	  |  *.ningmengzhushou |  CPS              |
+|笑傲科技                  |  10092   |  *.xiaoaokeji       |   CPS             |
+|全民免费                  |  10093   |  *.quanminmianfei   |   CPS             |
