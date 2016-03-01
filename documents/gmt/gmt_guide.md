@@ -308,7 +308,7 @@ Content-Type: application/json
 
 **查询数据(select)**
 
-~~~
+~~~json
 POST /gm-demo/rpc/character HTTP/1.1
 Host: gm.mztgame.com
 Connection: close
@@ -318,7 +318,7 @@ Accept: application/json
 
 {
     "method":"select",
-    "id":"2",
+    "id":"2",   //此ID为请求ID，与数据内容无关，响应时原值返回
     "params": [
         [
             {"field":"玩家账号","operator":"eq","value":"test1"},
@@ -333,7 +333,7 @@ Accept: application/json
 
 **响应**
 
-~~~
+~~~json
 HTTP/1.1 200 OK
 Content-Length: 2101
 Connection: close
@@ -380,13 +380,13 @@ Content-Type: application/json
             [ 15, "test15", "1区", 20, "Test", 1, "1", "10", "10", "2015-01-01 00:00:00", "127.0.0.1", "123", "5", "5"]
         ]
     },
-    "id": "2"
+    "id": "2"  //JSON-RPC 请求ID
 }
 ~~~
 
 ### 新增(Insert)范例 
 
-~~~
+~~~json
 POST /gm-demo/rpc/character HTTP/1.1
 Host: gm.mztgame.com
 Connection: close
@@ -410,7 +410,7 @@ Accept: application/json
 
 **响应**
 
-~~~
+~~~json
 HTTP/1.1 200 OK
 Content-Length: 2101
 Connection: close
@@ -434,7 +434,7 @@ Content-Type: application/json
 
 ### 修改(Update)范例 
 
-~~~
+~~~json
 POST /gm-demo/rpc/character HTTP/1.1
 Host: gm.mztgame.com
 Connection: close
@@ -459,7 +459,7 @@ Accept: application/json
 
 **响应**
 
-~~~
+~~~json
 HTTP/1.1 200 OK
 Date: Tue, 14 Jul 2015 12:47:35 GMT
 Content-Length: 2101
@@ -509,7 +509,7 @@ Accept: application/json
 
 **响应**
 
-~~~
+~~~json
 HTTP/1.1 200 OK
 Date: Tue, 14 Jul 2015 12:47:35 GMT
 Content-Length: 2101
@@ -528,7 +528,7 @@ Content-Type: application/json
 
 ### 其它接口调用(Callable)范例 
 
-~~~
+~~~json
 POST /gm-demo/rpc/character HTTP/1.1
 Host: gm.mztgame.com
 Connection: close
@@ -553,7 +553,7 @@ Accept: application/json
 
 **响应**
 
-~~~
+~~~json
 HTTP/1.1 200 OK
 Date: Tue, 14 Jul 2015 12:47:35 GMT
 Content-Length: 2101
