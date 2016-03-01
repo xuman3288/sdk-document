@@ -308,7 +308,7 @@ Content-Type: application/json
 
 **查询数据(select)**
 
-~~~json
+~~~javascript
 POST /gm-demo/rpc/character HTTP/1.1
 Host: gm.mztgame.com
 Connection: close
@@ -333,7 +333,7 @@ Accept: application/json
 
 **响应**
 
-~~~json
+~~~javascript
 HTTP/1.1 200 OK
 Content-Length: 2101
 Connection: close
@@ -386,7 +386,7 @@ Content-Type: application/json
 
 ### 新增(Insert)范例 
 
-~~~json
+~~~javascript
 POST /gm-demo/rpc/character HTTP/1.1
 Host: gm.mztgame.com
 Connection: close
@@ -410,7 +410,7 @@ Accept: application/json
 
 **响应**
 
-~~~json
+~~~javascript
 HTTP/1.1 200 OK
 Content-Length: 2101
 Connection: close
@@ -434,7 +434,7 @@ Content-Type: application/json
 
 ### 修改(Update)范例 
 
-~~~json
+~~~javascript
 POST /gm-demo/rpc/character HTTP/1.1
 Host: gm.mztgame.com
 Connection: close
@@ -459,7 +459,7 @@ Accept: application/json
 
 **响应**
 
-~~~json
+~~~javascript
 HTTP/1.1 200 OK
 Date: Tue, 14 Jul 2015 12:47:35 GMT
 Content-Length: 2101
@@ -509,7 +509,7 @@ Accept: application/json
 
 **响应**
 
-~~~json
+~~~javascript
 HTTP/1.1 200 OK
 Date: Tue, 14 Jul 2015 12:47:35 GMT
 Content-Length: 2101
@@ -528,7 +528,7 @@ Content-Type: application/json
 
 ### 其它接口调用(Callable)范例 
 
-~~~json
+~~~javascript
 POST /gm-demo/rpc/character HTTP/1.1
 Host: gm.mztgame.com
 Connection: close
@@ -553,7 +553,7 @@ Accept: application/json
 
 **响应**
 
-~~~json
+~~~javascript
 HTTP/1.1 200 OK
 Date: Tue, 14 Jul 2015 12:47:35 GMT
 Content-Length: 2101
