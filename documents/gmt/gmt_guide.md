@@ -143,15 +143,22 @@ var updateInterface = {
      * 更新接口
      *
      * @param {object} data  更新后的新数据, 包含主键, 可根据主键进行更新
+     * @param {object} where  根据 meta 分析主键，传递where更新时主键条件。
      * @return array
      *
      * 请求参数 data 范例
      * <code>
      * {
-     *     "id":"1",
      *     "name":"test",
      *     "age":"1",
      *     //...
+     * }
+     * </code>
+     *
+     * 请求参数 where 范例
+     * <code>
+     * {
+     *     "id":"1"
      * }
      * </code>
      *
@@ -170,7 +177,7 @@ var updateInterface = {
      * }
      * </code>
      */
-    update : function (data) {}
+    update : function (data, where) {}
 };
 
 ~~~
@@ -448,11 +455,13 @@ Accept: application/json
     "id":"123",
     "params": [
         {
-            "id":"2",
             "name":"test2",
             "age":"100",
             "level":"11"
         },
+        {
+            "id":"2"
+        }
     ]
 }
 ~~~
