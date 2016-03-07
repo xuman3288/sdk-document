@@ -48,6 +48,14 @@
             {
                 "label": "GM工具接入",
                 "uri": "/docs/gmt/gmt_guide"
+            },
+	    {
+                "label": "游戏在线人数统计",
+                "uri": "/docs/stat/game_online"
+            },
+	    {
+                "label": "游戏步骤点统计接口",
+                "uri": "/docs/stat/game_step"
             }
         ]
     }
