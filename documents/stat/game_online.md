@@ -3,11 +3,15 @@
 
 ## 接口说明
 
-应用协议: HTTP
-请求方式: GET / POST
-参数传递方式(Content-Type): application/x-www-form-urlencoded
+应用协议: `HTTP`
+
+请求方式: `GET` / `POST`
+
+参数传递方式(Content-Type): `application/x-www-form-urlencoded`
+
 接口地址: `http://stat.mztgame.com/game/online`
-响应内容类型: JSON
+
+响应内容类型: `JSON`
 
 接口请求频率: 每分钟一次
 
