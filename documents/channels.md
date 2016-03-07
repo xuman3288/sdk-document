@@ -85,7 +85,7 @@
 | PPTV                       | 90        | pptv             | *.pptv   | Android         | v4.4.06             | V4.4.06      | 2015-12-30     |                |
 | 麟游                       | 91        | linyou           |*.linyou  | Android         | v2.0.3              | -                   | -             |                |
 | 今日头条                   | 92        | jinritoutiao     | *.jrtt   | Android         | v2.0                | v2.0                | -             |                |
-| 乐视                       | 93        | letv             | *.leshi  | Android         | v1.0.2              | v1.0.2              | -             |                |
+| 乐视                       | 93        | letv             | *.leshi  | Android         | v1.0.2              | v1.0.2              | -             | 自动           |
 | 新浪                       | 94        | sina             |          | Android         | -                   | v1.3.0              | -             |                |
 | 灰喜鹊                     | 95        | huixique         |          | Android         | -                   | v2.3.2              | -             |                |
 | 斗鱼                       | 96        | douyu            | *.dy     | Android         | v1.0.8              | v1.0.8              | -             |                |
