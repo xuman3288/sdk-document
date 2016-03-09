@@ -196,3 +196,5 @@
 | 柠檬助手                 |  10091	  |  *.ningmengzhushou |  CPS              |
 |笑傲科技                  |  10092   |  *.xiaoaokeji       |   CPS             |
 |全民免费                  |  10093   |  *.quanminmianfei   |   CPS             |
+|小财神	                  |10094	    |*.xiaocaishen        |   CPS             |
+|怪猫游戏	                |10095	    |*.guaimaoyouxi       |   CPS             |
