@@ -44,6 +44,7 @@
 ### 5.x SDK
 * [巨人官方SDK-5.0.4版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_GA_5.0.4.tar.gz)
 * [PP助手渠道SDK-1.5.6版本下载地址（静态库1.5.6，动态库1.6.3）](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_PP_1.5.6.tar.gz)
+* [XY渠道SDK-2.2.2版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_XY_2.2.2.tar.gz)
 
 ### 插件SDK
 * [iOS激活插件SDK下载地址](http://docs.mztgame.com/files/iOS/plugin/iOSActivePluginSDK.zip)
