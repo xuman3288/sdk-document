@@ -55,6 +55,7 @@
 ### 母包SDK
 
 * [巨人母包SDK-4.4.9版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK20150915.zip)
+* [巨人母包SDK-4.5.0版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK20160310.zip)
 
 ### 渠道SDK
 
