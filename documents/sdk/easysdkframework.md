@@ -730,13 +730,12 @@ Login types:
 * 游戏端下单，调起sdk支付
 
 ~~~java
-    public void payZTGame(ZTPayInfo mZTPayInfo ,String extra, final String order_id)
+    public void payZTGame(ZTPayInfo mZTPayInfo ,String extra)
 ~~~
 
 ~~~java
-    mZTPayInfo 订单信息;
+    mZTPayInfo 订单信息：订单号、金额、商品id...;
     extra 下单成功后服务端返回的json 字符串，如果没有传"";
-    order_id 订单号
 ~~~
 
 
