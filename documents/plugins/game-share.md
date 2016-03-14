@@ -195,12 +195,12 @@ public void onResult(int code,String errmsg,String shortUrl,Bitmap codeBitmap);
 
 #### 参数说明:
 
-| 参数名     | 说明           |
-|------------|----------------|
-| game_id    | 游戏ID         |
-| inviter    | 邀请人(openid) |
-| ip         | 客户端IP       |
-| user_agent | 分享者账号ID   |
+| 参数名     | 说明             |
+|------------|------------------|
+| game_id    | 游戏ID           |
+| inviter    | 邀请人(openid)   |
+| ip         | 被邀请人客户端IP |
+| user_agent | 被邀请人浏览器UA |
 | sign       | 签名, 计算方式 `md5(game_id+"&"+inviter+"&"+ip+"&"+user_agent+"&"+key)`, 其中 key 为接登录时分配的密钥 |
 
 
