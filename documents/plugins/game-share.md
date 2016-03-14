@@ -64,7 +64,7 @@ android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
  * @param gameid     游戏的id（另：若已接入base包，该值可用接口IZTLibBase.getUserInfo().get(ZTConsts.User.GAMEID)获取)
  * @param channelId  渠道id（另：若已接入base包，该值可用接口IZTLibBase.getInstance().getPlatform()获取）
  * @param openid     用户的uid（唯一标识)（另：若已接入base包，该值可由IZTLibBase.getUserInfo().get(ZTConsts.User.ACCID)接口获取）
- * @param notify_url 通知地址(如果设置以当前通知为准，未设置以后台配置通知地址为准)
+ * @param notify_url 游戏活动回调通知地址(如果设置以当前通知为准，未设置以后台配置通知地址为准)
  */
 
 public void init(Context context,String gameid,String channelId,String openid, String notify_url)
@@ -76,8 +76,9 @@ public void init(Context context,String gameid,String channelId,String openid, S
 String gameid = IZTLibBase.getUserInfo().get(ZTConsts.User.GAMEID);//获取gameid
 int channelid = IZTLibBase.getInstance().getPlatform();//获取渠道id
 String openid = IZTLibBase.getUserInfo().get(ZTConsts.User.ACCID);//获取openid
+String notify_url = "http://127.0.0.1";
 
-ZTPromoteCode.getInstance().init(MainActivity.this,gameid,channelid+"",openid,notify_url);
+ZTPromoteCode.getInstance().init(MainActivity.this,gameid,channelid+"",openid, notify_url);
 ~~~
 
 ##### 3. 生成分享二维码接口:
