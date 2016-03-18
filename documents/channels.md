@@ -195,7 +195,9 @@
 | 9665游戏                 |  10089	  |  *.jiuliuliuwu |  CPS              |
 | 软游天下                 |  10090	  |  *.ruanyoutianxia |  CPS              |
 | 柠檬助手                 |  10091	  |  *.ningmengzhushou |  CPS              |
-|笑傲科技                  |  10092   |  *.xiaoaokeji       |   CPS             |
-|全民免费                  |  10093   |  *.quanminmianfei   |   CPS             |
-|小财神	                  |10094	    |*.xiaocaishen        |   CPS             |
-|怪猫游戏	                |10095	    |*.guaimaoyouxi       |   CPS             |
+| 笑傲科技                 |  10092   |  *.xiaoaokeji       |   CPS             |
+| 全民免费                 |  10093   |  *.quanminmianfei   |   CPS             |
+| 小财神	                 |  10094	  |  *.xiaocaishen      |   CPS             |
+| 怪猫游戏	               |  10095	  |  *.guaimaoyouxi     |   CPS             |
+| 俺来也                   |  10096   |  *.anlaiye           |  CPS            |
+| 91993                    |  10097   |  *.jiuyijiujiusan    |  CPS              |
