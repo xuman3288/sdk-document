@@ -42,7 +42,7 @@
 * [4.0官方渠道4.3.22UnityDemo下载地址](http://docs.mztgame.com/files/iOS/4.0/iosSDKUnityDemo.zip)（不一定是最新的版本号，仅供参考）
 
 ### 5.x SDK
-* [巨人官方SDK-5.1.0版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_GA_5.1.0.tar.gz)
+* [巨人官方SDK-5.1.7版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_GA_5.1.7.tar.gz)
 * [PP助手渠道SDK-1.5.6版本下载地址（静态库1.5.6，动态库1.6.3）](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_PP_1.5.6.tar.gz)
 * [XY渠道SDK-2.2.2版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_XY_2.2.2.tar.gz)
 
@@ -59,7 +59,7 @@
 
 ### 渠道SDK
 
-* [巨人官方SDK-4.1.0版本下载地址](http://docs.mztgame.com/files/Android/giantSDK4.1.0.zip)
+* [巨人官方SDK-4.1.1版本下载地址](http://docs.mztgame.com/files/Android/giantSDK4.1.1.zip)
 * [手游咖啡SDK-1.1.2版本下载地址](http://docs.mztgame.com/files/Android/mgcafe_v1.1.2.zip)
 * [腾讯应用宝SDK-v2.8.1版本下载地址](http://docs.mztgame.com/files/Android/tencent_v2.8.1.zip)
 
