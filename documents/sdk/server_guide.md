@@ -93,21 +93,21 @@ http://passport.mobileztgame.com/service/check-token?game_id=5012&openid=1-1234&
 
 #### 参数说明
 
-| 参数     |  必填 |	说明 |
-| -------- | ---- | --- |
-|account | 是 | 账号名|
-|amount | 是 | 总金额(单位人民币), 浮点数两位 decimal(15,2)|
-|channel | 是 | 渠道ID, 详情查看 [渠道信息列表](/docs/channel)|
-|extra | 是 | 游戏扩展数据, 创建订单传入的值, 原数据返回|
-|game_id | 是 | 游戏ID|
-|order_id | 是 | 巨人移动订单号|
-|product_id | 否 | 苹果商品编号或安卓渠道或游戏自定义商品编号|
-|time | 是 | 巨人移动充值服发起请求,秒为单位的时间戳|
-|transaction_id | 是 | 第三方交易单号|
-|openid | 是 | 账号ID|
-|zone_id | 是 | 游戏区ID|
-|version | 是 | 回调接口版本3.0|
-|sign | 是 | Base64加密的签名 <br> 接收到的参数,除sign以外,按字母排序连接后,进行RSA校验: |
+| 参数           | 必填 | 类型、最大长度(Mysql Types) | 说明                                                                        |
+| -------------- | ---- | --------------------------- | --------------------------------------------------------------------------- |
+| account        | 是   | varchar(100)                | 账号名                                                                      |
+| amount         | 是   | decimal(15,2)               | 总金额(单位人民币), 浮点数两位 decimal(15,2)                                |
+| channel        | 是   | int                         | 渠道ID, 详情查看 [渠道信息列表](/docs/channel)                              |
+| extra          | 是   | varchar(255)                | 游戏扩展数据, 创建订单传入的值, 原数据返回                                  |
+| game_id        | 是   | int                         | 游戏ID                                                                      |
+| order_id       | 是   | bigint                      | 巨人移动订单号                                                              |
+| product_id     | 否   | varchar(45)                 | 苹果商品编号或安卓渠道或游戏自定义商品编号                                  |
+| time           | 是   | int                         | 巨人移动充值服发起请求,秒为单位的时间戳                                     |
+| transaction_id | 是   | varchar(100)                | 第三方交易单号                                                              |
+| openid         | 是   | varchar(128)                | 账号ID                                                                      |
+| zone_id        | 是   | int                         | 游戏区ID                                                                    |
+| version        | 是   | varchar(5)                  | 回调接口版本3.0                                                             |
+| sign           | 是   | text                        | Base64加密的签名 <br> 接收到的参数,除sign以外,按字母排序连接后,进行RSA校验: |
 
 ##### 签名事例
 

@@ -93,21 +93,21 @@ Tell our developer your feedback URL and set it by us when you complated your AP
 
 #### Parameters
 
-| Parameter  | Required/Optional | Description  |
-| ---------- | ----------------- | ------------ |
-| account    | Optional | Account name. May be empty string |
-| amount     | Required | RMB, decimal(15,2) |
-| channel    | Required | Vendor NO. |
-| extra      | Optional | Game extra data. Set from GiantMobile Client. |
-| game_id    | Required | Game ID |
-| order_id   | Required | GiantMobile order id |
-| product_id | Optional | Product ID. IOS set it product ID |
-| time       | Required | GiantMobile server timestamp, (Unit: second) |
-| transaction_id | Required | Vendor transaction id |
-| openid     | Required | openID|
-| zone_id    | Required | Game zone ID. Set from GiantMobile SDK client |
-| version    | Required | Request version 3.0 |
-| sign       | Required | Rsa private sign. <br> Algo: `SHA1` <br> Data format: <br> `data = account+amount+channel+extra+game_id+openid+order_id+product_id+time+transaction_id+version+zone_id;` <br> **PS:** Public key get from GiantMobile server programmer. |
+| Parameter      | Required/Optional | Types & Max size (Mysql)     | Description                                                                                                                                                                                                                              |
+| -------------- | ----------------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| account        | Optional          | varchar(100)                 | Account name. May be empty string                                                                                                                                                                                                        |
+| amount         | Required          | decimal(15,2)                | RMB, decimal(15,2)                                                                                                                                                                                                                       |
+| channel        | Required          | int                          | Vendor NO.                                                                                                                                                                                                                               |
+| extra          | Optional          | varchar(255)                 | Game extra data. Set from GiantMobile Client.                                                                                                                                                                                            |
+| game_id        | Required          | int                          | Game ID                                                                                                                                                                                                                                  |
+| order_id       | Required          | bigint                       | GiantMobile order id                                                                                                                                                                                                                     |
+| product_id     | Optional          | varchar(45)                  | Product ID. IOS set it product ID                                                                                                                                                                                                        |
+| time           | Required          | int                          | GiantMobile server timestamp, (Unit: second)                                                                                                                                                                                             |
+| transaction_id | Required          | varchar(100)                 | Vendor transaction id                                                                                                                                                                                                                    |
+| openid         | Required          | varchar(128)                 | openID                                                                                                                                                                                                                                   |
+| zone_id        | Required          | int                          | Game zone ID. Set from GiantMobile SDK client                                                                                                                                                                                            |
+| version        | Required          | varchar(5)(no need to store) | Request version 3.0                                                                                                                                                                                                                      |
+| sign           | Required          | text(no need to store)       | Rsa private sign. <br> Algo: `SHA1` <br> Data format: <br> `data = account+amount+channel+extra+game_id+openid+order_id+product_id+time+transaction_id+version+zone_id;` <br> **PS:** Public key get from GiantMobile server programmer. |
 
 #### Response
 
