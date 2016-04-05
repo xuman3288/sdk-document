@@ -99,7 +99,7 @@
 | 手游咖啡-inly              | 104       | inly             |          | Android         | -                   | -                   | -             |                |
 | 麟游-盟宝                  | 105       | mengbao          |          | Android         | -                   | -v1.4.1                   | -             |                |
 | 起点-阅文                  | 106       | yuewen           |          | Android         | -                   | -v1.7                   | -             |                |
-| 起点-阅文                  | 107       | muzhiwan2         |          | Android         | -                   | -                   | -             |                |
+| 拇指玩2                    | 107       | muzhiwan2         |          | Android         | -                   | -                   | -             |                |
 
 ## 巨人移动官方CPS渠道
 
