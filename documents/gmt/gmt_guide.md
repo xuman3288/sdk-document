@@ -101,27 +101,30 @@ var selectInterface = {
      * 响应结构说明
      * <code>
      * {
-     *     "primary"    : "id",  //主键
-     *     "fields"     : {
-     *         //字段       类型               允许编辑该字段        允许为null
-     *         "id"     : {"type" : "number", "editable": false,  "nullable" : false},
-     *         "name"   : {                                       "nullable" : false},
-     *         "age"    : {"type" : "number", "editable": true,   "nullable" : true},
-     *         "date"   : {"type" : "date",   "editable": false,  "nullable" : false},
-     *         //...
-     *     }
+     *    
+     *     //字段       类型               允许编辑该字段        允许为null        主键
+     *     "id"     : {"type" : "number", "editable": false,  "nullable" : false, "primary" : true},
+     *     "name"   : {                                       "nullable" : false},
+     *     "age"    : {"type" : "number", "editable": true,   "nullable" : true},
+     *     "date"   : {"type" : "date",   "editable": false,  "nullable" : false},
+     *     //...
+     * 
      * }
      * </code>
      *
-     * *fields.fieldName.type  类型说明:
+     * fieldName.primary  类型说明:
+     * 可设的值: true/false
+     * 默认为 false
+     *
+     * fieldName.type  类型说明:
      * 可设的值: ["string", "number", "date", "boolean"]
      * 默认为 "string"
      *
-     * *fields.fieldName.editable  允许编辑该字段说明:
+     * fieldName.editable  允许编辑该字段说明:
      * 当接入 UpdateInterface 设置字段是否允许编辑
      * 默认为 true
      *
-     * *fields.fieldName.nullable  允许为null 说明:
+     * fieldName.nullable  允许为null 说明:
      * 当接入 UpdateInterface, InsertInterface 设置字段是否允许为空
      * 默认为 false
      */
@@ -386,6 +389,56 @@ Content-Type: application/json
             [ 14, "test14", "1区", 1, "Test", 1, "1", "10", "10", "2015-01-01 00:00:00", "127.0.0.1", "123", "5", "5"],
             [ 15, "test15", "1区", 20, "Test", 1, "1", "10", "10", "2015-01-01 00:00:00", "127.0.0.1", "123", "5", "5"]
         ]
+    },
+    "id": "2"  //JSON-RPC 请求ID
+}
+~~~
+
+**获得数据META(meta)**
+
+~~~javascript
+POST /gm-demo/rpc/character HTTP/1.1
+Host: gm.mztgame.com
+Connection: close
+Content-Type: application/json
+Content-Length: 26
+Accept: application/json
+
+{
+    "method":"meta",
+    "id":"2"   //此ID为请求ID，与数据内容无关，响应时原值返回
+}
+~~~
+
+**响应**
+
+~~~javascript
+HTTP/1.1 200 OK
+Content-Length: 2101
+Connection: close
+Content-Type: application/json
+
+{
+    "result": {
+        "ID": {
+            "primary": true,
+            "type": "number",
+            "editable": false,
+            "nullable": true
+        },
+        "玩家账号": {"type": "string"},
+        "服务器名": {"type": "string"},
+        "注册平台": {"type": "string"},
+        "角色名": {"type": "string"},
+        "公会名称": {"type": "string"},
+        "VIP等级": {"type": "string"},
+        "玩家等级": {"type": "string"},
+        "充值货币": {"type": "string"},
+        "注册时间": {"type": "string"},
+        "注册IP": {"type": "string"},
+        "注册设备码": {"type": "string"},
+        "体力": {"type": "string"},
+        "精力": {"type": "string"}
     },
     "id": "2"  //JSON-RPC 请求ID
 }
