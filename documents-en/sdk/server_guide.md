@@ -118,7 +118,7 @@ If the connection or protocol is broken. Request will try again.
 
 | Parameter | Type | Description |
 | --------- | --------- | --------- |
-| code      | int  | Values: <br> 0: Success; <br> 1: Failed(Request will try again every minutes, when the code is equal to 0 stop it); <br> 2: Failed(Never request again); <br><br> Game server return success (`code=0`) condition: <br> 1. First request and game server execute successfully. <br> 2. The same order request and the game server has been executed. |
+| code      | int  | Values: <br> 0: Success; <br> 1: Failed(Request will try again, every 5 minutes until next week to stop); <br> 2: Failed(Never request again); <br><br> Game server return success (`code=0`) condition: <br> 1. First request and game server execute successfully. <br> 2. The same order request and the game server has been executed. |
 | msg | string | Error message, when the code is greater than 0. |
 
 
