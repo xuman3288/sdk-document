@@ -720,20 +720,24 @@ Login types:
 
 ### 4.4.8
 
-* 游戏端下单获取参数信息接口
-
 ~~~java
-    public ZTPayInfo convertPayOrder()
+    /**
+     * 游戏端下单获取参数信息接口
+     */
+    public ZTPayInfo convertPayOrder();
+
+    /**
+     * 游戏端下单，调起sdk支付
+     */
+    public void payOrderZTGame(ZTPayInfo mZTPayInfo);
 ~~~
 
 
-* 游戏端下单，调起sdk支付
+**使用范例:**
 
 ~~~java
-    public void payOrderZTGame(ZTPayInfo mZTPayInfo)
-~~~
 
-~~~java
+    
     mZTPayInfo 订单信息(渠道支付需要的信息)：订单号、金额、商品id...;
     例子：
     jsonObject 服务器下单接口的返回的json

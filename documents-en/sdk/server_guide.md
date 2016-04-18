@@ -3,8 +3,8 @@ GiantMobile SDK4.0 server guide
 
 ## Login guide
 
-### Login guide
-![Login chart](http://i.imgur.com/SbDLwTI.png)
+### Flow overview
+![Login flow](http://i.imgur.com/SbDLwTI.png)
 
 
 1.	When a user login, get a token.
@@ -77,13 +77,13 @@ http://passport.mobileztgame.com/service/check-token?game_id=5012&openid=1-1234&
 
 **Version:** `3.0`
 
-### Payment guide
+### Flow overview
 
 Request from GiantMobile payment server. Server IPs [see payment server IP list](#__14).
 
 Tell our developer your feedback URL and set it by us when you complated your API.
 
-![Payment chart](http://i.imgur.com/bsUs9zZ.png)
+![Payment Flow](http://i.imgur.com/bsUs9zZ.png)
 
 #### Protocol
 
