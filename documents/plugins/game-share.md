@@ -144,13 +144,66 @@ public void onResult(int code,String errmsg,String shortUrl,Bitmap codeBitmap);
 | X-Uri-Sign      | HTTP 协议中 URI 的 `HMAC-MD5` 的值，其中key 为游戏分配的密钥 |
 | X-Content-Sign  | HTTP 协议中 body `HMAC-MD5` 的值，其中key 为游戏分配的密钥   |
 
+
+### 设置IP(身份标识者)的id
+
+请求地址: `http://share.plugin.mobileztgame.com/game/{game_id}/channels/{channel_id}/identifies/{client_ip}` 
+
+请求方式: `PATCH`
+
+#### 链接路径(Path)参数说明
+
+| 参数名     | 说明          |
+|------------|---------------|
+| game_id    | 游戏ID        |
+| channel_id | 渠道ID        |
+| client_ip  | 客户端IP      |
+
+#### 响应说明
+
+HTTP 状态 200 响应内容:
+
+响应头内容类型：`Content-Type: application/json`
+
+响应内容说明：
+
+~~~javascript
+{
+    "channel_id":"渠道ID",
+    "invitee_id":"被邀请人ID",
+    "inviter_id":"邀请人ID",
+    "click_time":"触发链接时间",
+    "os_type" :"被邀请人系统类型(android/ios)"
+},
+~~~
+
+#### HTTP流举例说明
+
+~~~
+PATCH /games/5012/channels/1/identifies/1.1.1.1 HTTP/1.1
+Host: share.plugin.mobileztgame.com
+X-Uri-Sign: 9e37b5a3ee0ed1754af3139ccdf15dc4
+X-Content-Sign: 6ccf4b59c895de5b585a95e5032bdac1
+Accept: application/json
+
+invitee_id=123
+
+HTTP/1.1 200 OK
+Date: Fri, 29 Apr 2016 07:25:29 GMT
+Content-Length: 107
+Connection: close
+Content-Type: application/json;charset=utf-8
+
+{"channel_id":"1","inviter_id":"111","invitee_id":"123","click_time":"2016-04-29 10:14:28","os_type":"web"}
+~~~
+
 ### 分享者带来人数服务端查询接口
 
 请求地址: `http://share.plugin.mobileztgame.com/game/{game_id}/inviters/{inviter_id}/invitees` 
 
 请求方式: GET
 
-#### 参数说明:
+#### 查询部分(Query)参数说明:
 
 | 参数名     | 说明          |
 |------------|---------------|
@@ -158,7 +211,6 @@ public void onResult(int code,String errmsg,String shortUrl,Bitmap codeBitmap);
 
 #### 响应说明
 
-请求时，请携带 `Accept: application/json` 的请求头， 已保证所有的响应都为 json
 HTTP 状态 200 响应内容:
 
 响应头内容类型：`Content-Type: application/json`
@@ -179,6 +231,34 @@ HTTP 状态 200 响应内容:
 ]
 ~~~
 
+#### 请求举例
+
+~~~
+GET /games/5012/inviters/123/invitees HTTP/1.1
+Host: share.plugin.mobileztgame.com
+X-Uri-Sign: 9e37b5a3ee0ed1754af3139ccdf15dc4
+Accept: application/json
+
+invitee_id=123
+
+HTTP/1.1 200 OK
+Date: Fri, 29 Apr 2016 07:25:29 GMT
+Content-Length: 107
+Connection: close
+Content-Type: application/json;charset=utf-8
+
+[
+    {
+        "channel_id":"渠道ID",
+        "invitee_id":"分享者ID"
+    },
+    {
+        "channel_id":"渠道ID",
+        "invitee_id":"分享者ID"
+    }
+]
+~~~
+
 ### 通过被邀请人查询邀请人服务端接口
 
 请求地址: `http://share.plugin.mobileztgame.com/game/{game_id}/invitees/{invitee_id}/inviters` 
@@ -193,7 +273,6 @@ HTTP 状态 200 响应内容:
 
 #### 响应说明
 
-请求时，请携带 `Accept: application/json` 的请求头， 已保证所有的响应都为 json
 HTTP 状态 200 响应内容:
 
 响应头内容类型：`Content-Type: application/json`
