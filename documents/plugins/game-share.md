@@ -75,7 +75,7 @@ android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
 
 public void init(Context context,String gameid,String channelId,String openid, String notify_url)
 ~~~
-	
+
 调用例子：
 
 ~~~java
@@ -169,11 +169,11 @@ HTTP 状态 200 响应内容:
 [
     {
         "channel_id":"渠道ID",
-	"invitee_id":"分享者ID"
+        "invitee_id":"分享者ID"
     },
     {
         "channel_id":"渠道ID",
-	"invitee_id":"分享者ID"
+        "invitee_id":"分享者ID"
     },
     //...
 ]
@@ -204,7 +204,7 @@ HTTP 状态 200 响应内容:
 [
     {
         "channel_id":"渠道ID",
-	"inviter_id":"分享者ID"
+        "inviter_id":"分享者ID"
     }
 ]
 ~~~
