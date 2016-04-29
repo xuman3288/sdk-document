@@ -203,6 +203,13 @@ Content-Type: application/json;charset=utf-8
 
 请求方式: GET
 
+#### 链接路径(Path)参数说明
+
+| 参数名     | 说明          |
+|------------|---------------|
+| game_id    | 游戏ID        |
+| inviter_id | 邀请人ID      |
+
 #### 查询部分(Query)参数说明:
 
 | 参数名     | 说明          |
@@ -264,6 +271,13 @@ Content-Type: application/json;charset=utf-8
 请求地址: `http://share.plugin.mobileztgame.com/game/{game_id}/invitees/{invitee_id}/inviters` 
 
 请求方式: GET
+
+#### 链接路径(Path)参数说明
+
+| 参数名     | 说明          |
+|------------|---------------|
+| game_id    | 游戏ID        |
+| invitee_id | 被邀请人ID    |
 
 #### 参数说明:
 
