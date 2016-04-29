@@ -131,59 +131,83 @@ public void onResult(int code,String errmsg,String shortUrl,Bitmap codeBitmap);
 
 ## 服务端查询接口
 
+采用 Restful 接口设计，部分Restful 成功失败说明，请参考 Restful 相关文档。
+
+> 提示：请求时，请携带 `Accept: application/json` 的请求头， 已保证所有的响应内容类型都为 `application/json`。
+
+### 签名请求头说明
+
+请求头：
+
+| 头名称   | 说明          |
+|----------|---------------|
+| X-Uri-Sign      | HTTP 协议中 URI 的 `HMAC-MD5` 的值，其中key 为游戏分配的密钥 |
+| X-Content-Sign  | HTTP 协议中 body `HMAC-MD5` 的值，其中key 为游戏分配的密钥   |
+
 ### 分享者带来人数服务端查询接口
 
-请求地址: `http://share.plugin.mobileztgame.com/query_slaves.php` 
+请求地址: `http://share.plugin.mobileztgame.com/game/{game_id}/inviters/{inviter_id}/invitees` 
 
 请求方式: GET
 
 #### 参数说明:
 
-
-| 参数名   | 说明          |
-|---------|---------------|
-| game_id | 游戏应用ID    |
-| openid  | 分享者账号ID  |
-| channel | 渠道ID        |
-| sign    | 签名 md5(game_id+"&"+openid+"&"+channel+"&"+key), 其中 key 为接登录时分配的密钥 |
-
+| 参数名     | 说明          |
+|------------|---------------|
+| channel_id | 渠道ID        |
 
 #### 响应说明
 
-响应内容格式为: `application/json`
+请求时，请携带 `Accept: application/json` 的请求头， 已保证所有的响应都为 json
+HTTP 状态 200 响应内容:
 
-| 参数名  | 类型   | 说明          |
-|---------|--------|---------------|
-| code    | int    | 响应码, 0: 正常返回; 大于0: 错误, error 字段为错误信息  |
-| error   | string | 错误消息           |
-| slaves  | array  | 分享者带来的账号 |
+响应头内容类型：`Content-Type: application/json`
+
+响应内容说明：
+
+~~~javascript
+[
+    {
+        "channel_id":"渠道ID",
+	"invitee_id":"分享者ID"
+    },
+    {
+        "channel_id":"渠道ID",
+	"invitee_id":"分享者ID"
+    },
+    //...
+]
+~~~
 
 ### 通过被邀请人查询邀请人服务端接口
 
-请求地址: `http://share.plugin.mobileztgame.com/query_inviter.php` 
+请求地址: `http://share.plugin.mobileztgame.com/game/{game_id}/invitees/{invitee_id}/inviters` 
 
 请求方式: GET
 
 #### 参数说明:
 
-| 参数名   | 说明          |
-|---------|---------------|
-| game_id | 游戏应用ID    |
-| openid  | 被邀请人账号ID  |
-| channel | 渠道ID        |
-| sign    | 签名 md5(game_id+"&"+openid+"&"+channel+"&"+key), 其中 key 为接登录时分配的密钥 |
-
+| 参数名     | 说明          |
+|------------|---------------|
+| channel_id | 渠道ID        |
 
 #### 响应说明
 
-响应内容格式为: `application/json`
+请求时，请携带 `Accept: application/json` 的请求头， 已保证所有的响应都为 json
+HTTP 状态 200 响应内容:
 
-| 参数名   | 类型   | 说明            |
-|---------|--------|---------------|
-| code    | int    | 响应码, 0: 正常返回; 大于0: 错误, error 字段为错误信息  |
-| error   | string | 错误消息       |
-| inviter | string | 分享者的账号ID |
+响应头内容类型：`Content-Type: application/json`
 
+响应内容说明：
+
+~~~javascript
+[
+    {
+        "channel_id":"渠道ID",
+	"inviter_id":"分享者ID"
+    }
+]
+~~~
 
 ### 流程图(2.3)用户点击回调接口协议说明
 
