@@ -147,7 +147,7 @@ public void onResult(int code,String errmsg,String shortUrl,Bitmap codeBitmap);
 
 ### 设置IP(身份标识者)的id
 
-请求地址: `http://share.plugin.mobileztgame.com/game/{game_id}/channels/{channel_id}/identifies/{client_ip}` 
+请求地址: `http://share.plugin.mobileztgame.com/games/{game_id}/channels/{channel_id}/identifies/{client_ip}` 
 
 请求方式: `PATCH`
 
@@ -199,7 +199,7 @@ Content-Type: application/json;charset=utf-8
 
 ### 分享者带来人数服务端查询接口
 
-请求地址: `http://share.plugin.mobileztgame.com/game/{game_id}/inviters/{inviter_id}/invitees` 
+请求地址: `http://share.plugin.mobileztgame.com/games/{game_id}/inviters/{inviter_id}/invitees` 
 
 请求方式: GET
 
@@ -268,7 +268,7 @@ Content-Type: application/json;charset=utf-8
 
 ### 通过被邀请人查询邀请人服务端接口
 
-请求地址: `http://share.plugin.mobileztgame.com/game/{game_id}/invitees/{invitee_id}/inviters` 
+请求地址: `http://share.plugin.mobileztgame.com/games/{game_id}/invitees/{invitee_id}/inviters` 
 
 请求方式: GET
 
