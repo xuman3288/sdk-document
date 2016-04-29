@@ -185,6 +185,7 @@ Host: share.plugin.mobileztgame.com
 X-Uri-Sign: 9e37b5a3ee0ed1754af3139ccdf15dc4
 X-Content-Sign: 6ccf4b59c895de5b585a95e5032bdac1
 Accept: application/json
+Content-Length: 14
 
 invitee_id=123
 
@@ -245,8 +246,6 @@ GET /games/5012/inviters/123/invitees HTTP/1.1
 Host: share.plugin.mobileztgame.com
 X-Uri-Sign: 9e37b5a3ee0ed1754af3139ccdf15dc4
 Accept: application/json
-
-invitee_id=123
 
 HTTP/1.1 200 OK
 Date: Fri, 29 Apr 2016 07:25:29 GMT
