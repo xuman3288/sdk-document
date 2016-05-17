@@ -19,7 +19,19 @@
 | 参数    | 类型   | 说明 |
 | --------|--------| --- |
 | entity  | object | 由客户端中取得, 参与签名需要 encode 后的字符串  |
-| sign    | string | 签名, 生成规则: `Rsa.sign(Json.encode(entity), privateKey)` <br> 验证签名：`Rsa.verify(Json.encode(entity), sign, publicKey)` <br> 其中 PublicKey 由, 巨人移动服务端对接人员提供 |
+| entity.openid  | string | 账号唯一标识  |
+| sign    | string | 由Rsa\Sha1 生成的签名, <br> 其中 PublicKey 由, 巨人移动服务端对接人员提供 |
+
+##### RSA 签名简例子
+
+**生成规则: **
+`Rsa.sign(Json.encode(entity), privateKey)` 
+
+**验证签名：**
+1. 验证签名
+2. 验证 entity.time 是否超时（时间 1200s）
+
+简例：`Rsa.verify(Json.encode(entity), sign, publicKey) && entity.time > (time() - 1200)`
 
 #### 接口方式验证
 
