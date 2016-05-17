@@ -24,7 +24,7 @@
 
 ##### RSA 签名简例子
 
-**生成规则: **
+**生成规则：**
 
 `Rsa.sign(Json.encode(entity), privateKey)` 
 
