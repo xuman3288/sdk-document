@@ -19,7 +19,9 @@
 | 参数    | 类型   | 说明 |
 | --------|--------| --- |
 | entity  | object | 由客户端中取得, 参与签名需要 encode 后的字符串  |
-| entity.openid  | string | 账号唯一标识  |
+| entity.openid  | string | 用户账号唯一标识(账号唯一性标识) |
+| entity.time  | int | 生成签名的服务器时间，单位秒。  |
+| entity.account  | string|null | 用户账号，可能为null。  |
 | sign    | string | 由Rsa\Sha1 生成的签名, <br> 其中 PublicKey 由, 巨人移动服务端对接人员提供 |
 
 ##### RSA 签名简例子
