@@ -201,3 +201,4 @@
 | 怪猫游戏	               |  10095	  |  *.guaimaoyouxi     |   CPS             |
 | 俺来也                   |  10096   |  *.anlaiye           |  CPS            |
 | 91993                    |  10097   |  *.jiuyijiujiusan    |  CPS              |
+| 咕咕鸟                   |  10098   |  *.guguniao          |  CPS              |
