@@ -10,16 +10,27 @@
 2.	游戏客户端从SDK获得 token和openid 交付游戏服务端
 3.	游戏服务端使用token和openid在巨人移动服务端进行认证, 验证成功则登录进入游戏
 
-### 服务端Token验证接口说明
+### 服务端登录验证接口说明
 
-#### 协议说明
+#### 签名方式验证(离线验证，需客户端5.0以上支持)
+
+##### 验签需要参数(JSON类型)
+
+| 参数    | 类型   | 说明 |
+| --------|--------| --- |
+| entity  | object | 由客户端中取得, 参与签名需要 encode 后的字符串  |
+| sign    | string | 签名, 生成规则: `Rsa.sign(Json.encode(entity), privateKey)` <br> 验证签名：`Rsa.verify(Json.encode(entity), sign, publicKey)` <br> 其中 PublicKey 由, 巨人移动服务端对接人员提供 |
+
+#### 接口方式验证
+
+##### 协议说明
 
 * 协议说明: `HTTP`
 * 请求方式: `GET`
 * 内容类型(Content-Type): `application/x-www-form-urlencoded`
 * 接口地址: `http://passport.mobileztgame.com/service/check-token`
 
-#### 参数说明
+##### 参数说明
 
 | 参数     |  必填 |	说明 |
 | -------- | ---- | --- |
@@ -29,7 +40,7 @@
 | token    | 是   | 由SDK获得 |
 | sign     | 是   | 签名, 生成规则: <br>Md5(game_id+openid+time+token+key) <br>其中key 由, 巨人移动服务端对接人员提供 |
 
-#### 响应说明
+##### 响应说明
 
 响应内容为JSON格式:
 
@@ -52,7 +63,7 @@
 > * "-" 后就是各渠道相应的用户ID
 
 
-#### 请求举例
+##### 请求举例
 
 Key = 123456为例:
 参与md5的字符串和加密后的值为:
