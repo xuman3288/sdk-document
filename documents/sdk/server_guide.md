@@ -26,6 +26,11 @@
 
 ##### RSA 签名简例子
 
+1. 从客户端取得 `entity` 和 `sign` 两个值.
+2. `JSON.Encode` `entity` 得到一个String: `'{"openid":"1-1234","account":"test"}'`.
+3. 是该String 进行RSA-SHA1 验证.
+4. 对 `entity.time` 进行有效时间验证.
+
 **生成规则：**
 
 `Rsa.sign(Json.encode(entity), privateKey)` 
