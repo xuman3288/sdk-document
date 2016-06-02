@@ -29,14 +29,14 @@
 我方服务器生成规则示例： `Rsa.sign(Json.encode(entity), privateKey)` 
 游戏需按该规则执行验证.
 
-执行顺序：
+RSA验证签名执行顺序：
 
 1. 从客户端取得 `entity` 和 `sign` 两个值.
 2. `JSON.Encode` `entity` 得到一个String: `'{"openid":"1-1234","account":"test"}'`.
 3. 是该String 进行RSA-SHA1 验证.
-4. 对 `entity.time` 进行有效时间验证 (验证 `entity.time` 是否超时 1200s).
+4. 对 `entity.time` 进行有效时间验证 (验证 `entity.time` 是否超过建议时间 7*86400s(一周)).
 
-简例：`Rsa.verify(Json.encode(entity), sign, publicKey) && entity.time > (time() - 1200)`
+简例：`Rsa.verify(Json.encode(entity), sign, publicKey) && entity.time > (time() - 7*86400)`
 
 #### 1.2.2. 接口方式验证
 
