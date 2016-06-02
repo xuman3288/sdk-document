@@ -21,7 +21,7 @@
 | 九游UC                     | 26        | uc               | *.uc     | Android         | v3.5.3.1            | v3.5.3.1            | -             | 渠道后台       |
 | 当乐(Android)              | 27        | d                | *.downjoy| Android         | v4.2                | v4.2              | 2015-9-25             | 渠道后台       |
 | 当乐(IOS)                  | 27        | d                |          | IOS             | v4.0.3              | v4.0.3              | -             | 渠道后台       |
-| 小米                       | 28        | xiaomi           | *.mi     | Android         | v4.3.4              | v4.4.33              | -             | 渠道后台       |
+| 小米                       | 28        | xiaomi           | *.mi     | Android         | v4.6.11             | v4.6.11              | -             | 渠道后台       |
 | 安智                       | 29        | anzhi            | *.anzhi  | Android         | v3.5.2              | v3.5.2           | 2015-9-16     | 渠道后台       |
 | 快用                       | 30        | kuaiyong         | *.KY     | Android         | v2.1.0              | v2.1.0              | 2015-8-13     | 渠道后台       |
 | 快用                       | 30        | kuaiyong         |          | IOS             | v2.0.3              | v2.0.3              | 2015-7-22     | 渠道后台       |
