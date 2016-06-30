@@ -74,7 +74,7 @@
 * [支付sdk-1.0.4版本下载](http://docs.mztgame.com/files/Android/plugin/giantpaysdk_1.0.4.zip)
 * [网页版支付SDK-1.0.4版本下载](http://docs.mztgame.com/files/Android/plugin/giantpaywebsdk_1.0.4.zip)
 ### 5.x SDK
-* [巨人官方SDK-5.0.7版本下载地址](http://docs.mztgame.com/files/Android/giantSDK5.0.7.zip)
+* [巨人官方SDK-5.0.8版本下载地址](http://docs.mztgame.com/files/Android/giantSDK5.0.8.zip)
  
 
 
