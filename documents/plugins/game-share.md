@@ -242,7 +242,7 @@ HTTP 状态 200 响应内容:
 #### 请求举例
 
 ~~~
-GET /games/5012/inviters/123/invitees HTTP/1.1
+GET /games/5012/inviters/123/invitees?channel_id=1 HTTP/1.1
 Host: share.plugin.mobileztgame.com
 X-Uri-Sign: 9e37b5a3ee0ed1754af3139ccdf15dc4
 Accept: application/json
