@@ -43,7 +43,9 @@
 
 ### 5.x SDK
 * [巨人官方SDK-5.1.17版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_GA_5.1.17.tar.gz)
-* [PP助手渠道SDK-1.5.6版本下载地址（静态库1.5.6，动态库1.6.4）](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_PP_1.5.6.tar.gz)
+* [PP助手渠道SDK-1.5.6版本下载地址（静态库1.5.6，动态库1.6.4）](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_PP_1.5.6~1.6.4.tar.gz)
+* [果盘渠道SDK-2.3.0版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_GP_2.3.0.tar.gz)
+* [同步推渠道SDK-4.2.1版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_TB_4.2.1.tar.gz)
 * [XY渠道SDK-2.2.2版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_XY_2.2.2.tar.gz)
 
 ### 插件SDK
@@ -54,24 +56,25 @@
 
 ### 母包SDK
 
-* [巨人母包SDK-4.5.8版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK4.0.8.zip)
+* [巨人母包SDK-4.6.0版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK4.6.0.zip)
 
 ### 渠道SDK
 
 * [巨人官方SDK-4.1.3版本下载地址](http://docs.mztgame.com/files/Android/giantSDK4.1.3.zip)
-* [手游咖啡SDK-1.1.2版本下载地址](http://docs.mztgame.com/files/Android/mgcafe_v1.1.2.zip)
+* [手游咖啡SDK-1.1.4版本下载地址](http://docs.mztgame.com/files/Android/mgcafe_v1.1.4.zip)
 * [腾讯应用宝SDK-v2.8.1版本下载地址](http://docs.mztgame.com/files/Android/tencent_v2.8.1.zip)
 * [腾讯YSDK-v1.1.1版本下载地址](http://docs.mztgame.com/files/Android/ysdk4-v1.1.1.zip)
+* [巨人官方渠道接口sdk-v1.1.0版本下载地址](http://docs.mztgame.com/files/Android/GiantSDKIF-v1.0.0.zip)
 ### 插件SDK
 
 * [激活插件SDK-1.0.3版本下载地址](http://docs.mztgame.com/files/Android/plugin/ActivePluginSDKv1.0.3.zip)
 * [二维码分享插件SDK-1.0.3版本下载](http://docs.mztgame.com/files/Android/plugin/ztpromotecode_v1.0.3.zip)
 * [通知栏推送插件SDK-1.0.1版本下载](http://docs.mztgame.com/files/Android/plugin/push_on_barSDK_v1.0.1.zip)
 * [游戏内公告插件SDK-1.0版本下载](http://docs.mztgame.com/files/Android/plugin/inapppushSDK1.0.zip)
-* [支付sdk-1.0.0版本下载](http://docs.mztgame.com/files/Android/plugin/giantpaysdk_1.0.0.zip)
-* [网页版支付SDK-1.0.0版本下载](http://docs.mztgame.com/files/Android/plugin/giantpaywebsdk_1.0.0.zip)
+* [支付sdk-1.0.4版本下载](http://docs.mztgame.com/files/Android/plugin/giantpaysdk_1.0.4.zip)
+* [网页版支付SDK-1.0.4版本下载](http://docs.mztgame.com/files/Android/plugin/giantpaywebsdk_1.0.4.zip)
 ### 5.x SDK
-* [巨人官方SDK-5.0.6版本下载地址](http://docs.mztgame.com/files/Android/giantSDK5.0.6.zip)
+* [巨人官方SDK-5.0.8版本下载地址](http://docs.mztgame.com/files/Android/giantSDK5.0.8.zip)
  
 
 
