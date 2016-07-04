@@ -125,7 +125,7 @@ http://passport.mobileztgame.com/service/check-token?game_id=5012&openid=1-1234&
 | -------------- | ---- | --------------------------- | --------------------------------------------------------------------------- |
 | account        | 是   | varchar(100)                | 账号名                                                                      |
 | amount         | 是   | decimal(15,2)               | 总金额(单位人民币), 浮点数两位 decimal(15,2)                                |
-| channel        | 是   | int                         | 渠道ID, 详情查看 [渠道信息列表](/docs/channel)                              |
+| channel        | 是   | int                         | 渠道ID, 详情查看 [渠道信息列表](/docs/channels)                              |
 | extra          | 是   | varchar(255)                | 游戏扩展数据, 创建订单传入的值, 原数据返回                                  |
 | game_id        | 是   | int                         | 游戏ID                                                                      |
 | order_id       | 是   | bigint                      | 巨人移动订单号                                                              |
