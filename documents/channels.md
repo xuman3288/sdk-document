@@ -202,3 +202,4 @@
 | 俺来也                   |  10096   |  *.anlaiye           |  CPS            |
 | 91993                    |  10097   |  *.jiuyijiujiusan    |  CPS              |
 | 咕咕鸟                   |  10098   |  *.guguniao          |  CPS              |
+| 麟游                     |  10099   |  *.linyou            |  CPS              |
