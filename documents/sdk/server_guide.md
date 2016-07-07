@@ -154,7 +154,7 @@ http://passport.mobileztgame.com/service/check-token?game_id=5012&openid=1-1234&
 ##### 2.2.4.1. 简例
 
 ```javascript
-data = account+amount+channel+extra+game_id+order_id+product_id+time+transaction_id+openid+zone_id;
+data = account + amount + channel + extra + game_id + openid + order_id + product_id + time + transaction_id + version + zone_id;
 sign = base64_decode(sign);
 
 openssl_verify(
