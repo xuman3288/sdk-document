@@ -131,11 +131,14 @@ public void onResult(int code,String errmsg,String shortUrl,Bitmap codeBitmap);
 
 ## 服务端查询接口
 
+
+### 接口协议说明
+
 采用 Restful 接口设计，部分Restful 成功失败说明，请参考 Restful 相关文档。
 
 > 提示：请求时，请携带 `Accept: application/json` 的请求头， 已保证所有的响应内容类型都为 `application/json`。
 
-### 签名请求头说明
+#### 签名请求头说明
 
 请求头：
 
@@ -144,6 +147,16 @@ public void onResult(int code,String errmsg,String shortUrl,Bitmap codeBitmap);
 | X-Uri-Sign      | HTTP 协议中 URI 的 `HMAC-MD5` 的值，其中key 为游戏分配的密钥 |
 | X-Content-Sign  | HTTP 协议中 body `HMAC-MD5` 的值，其中key 为游戏分配的密钥   |
 
+#### 响应说明
+
+常见状态码：
+
+| 状态码   | 说明          |
+|----------|---------------|
+| 200      | 请求成功      |
+| 400      | 请确认请求,是否按HTTP 协议格式,并确认签名是否正确,具体见响应内容(message)说明 |
+| 405      | 请求方式接口不支持，请按接口文档说明的请求方式  |
+| 422      | 提交的内容无法处理,具体见响应内容(message)说明  |
 
 ### 设置IP(身份标识者)的id
 
@@ -323,3 +336,4 @@ HTTP 状态 200 响应内容:
 #### 响应说明
 
 发送请求后HTTP连接关闭, 不接收响应内容, 可随意定响应.
+
