@@ -155,6 +155,7 @@ public void onResult(int code,String errmsg,String shortUrl,Bitmap codeBitmap);
 |----------|---------------|
 | 200      | 请求成功      |
 | 400      | 请确认请求,是否按HTTP 协议格式,并确认签名是否正确,具体见响应内容(message)说明 |
+| 404      | 请求URI接口拼接错误 或者 请求的资源不存在 |
 | 405      | 请求方式接口不支持，请按接口文档说明的请求方式  |
 | 422      | 提交的内容无法处理,具体见响应内容(message)说明  |
 
