@@ -169,7 +169,7 @@ OPENSSL_ALGO_SHA1
 
 ##### 2.2.4.2. 范例下载
 
-[RSA 范例下载(PHP, JAVA, C++, C#)](http://docs.mztgame.com/files/rsa_examples.zip)
+[RSA 范例下载(PHP, JAVA, C++, C#, Python3)](http://docs.mztgame.com/files/rsa_examples.zip)
 
 ####  2.2.5. 请求示例
 
