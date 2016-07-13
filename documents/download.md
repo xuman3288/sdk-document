@@ -56,6 +56,7 @@
 ### 3.x SDK(征途用)
 
 ##### 渠道SDK
+[移动基地SDK-v21156版本下载地址](http://docs.mztgame.com/files/Android/YDJD3-v21156.zip)
 
 ### 4.x SDK
 ##### 母包SDK
