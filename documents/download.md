@@ -53,19 +53,22 @@
 * [iOS设备激活插件SDK下载地址](http://docs.mztgame.com/files/iOS/plugin/iOSDeviceActivePluginSDK.zip)
 
 ## Android相关下载
+### 3.x SDK(征途用)
 
-### 母包SDK
+
+### 4.x SDK
+##### 母包SDK
 
 * [巨人母包SDK-4.6.0版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK4.6.0.zip)
 
-### 渠道SDK
+##### 渠道SDK
 
 * [巨人官方SDK-4.1.3版本下载地址](http://docs.mztgame.com/files/Android/giantSDK4.1.3.zip)
 * [手游咖啡SDK-1.1.4版本下载地址](http://docs.mztgame.com/files/Android/mgcafe_v1.1.4.zip)
 * [腾讯应用宝SDK-v2.8.1版本下载地址](http://docs.mztgame.com/files/Android/tencent_v2.8.1.zip)
 * [腾讯YSDK-v1.1.1版本下载地址](http://docs.mztgame.com/files/Android/ysdk4-v1.1.1.zip)
 * [巨人官方渠道接口sdk-v1.1.0版本下载地址](http://docs.mztgame.com/files/Android/GiantSDKIF-v1.0.0.zip)
-### 插件SDK
+##### 插件SDK
 
 * [激活插件SDK-1.0.3版本下载地址](http://docs.mztgame.com/files/Android/plugin/ActivePluginSDKv1.0.3.zip)
 * [二维码分享插件SDK-1.0.4版本下载](http://docs.mztgame.com/files/Android/plugin/ztpromotecode_v1.0.4.zip)
