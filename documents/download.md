@@ -18,7 +18,7 @@
 * [XY渠道SDK-2.1.1版本下载地址](http://docs.mztgame.com/files/iOS/3.0/xySDK2.1.1.zip) ######XY此版本工程内需要手动添加XYPlatform.framework
 * [PP助手渠道SDK-1.5.5版本下载地址（静态库1.5.5,动态库1.6.2）](http://docs.mztgame.com/files/iOS/3.0/ppSDKS1.5.5D1.6.2.zip)
 * [爱思渠道SDK-2.1.1版本下载地址](http://docs.mztgame.com/files/iOS/3.0/asSDK2.1.1.zip)
-* [快用渠道SDK-2.2.3版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_KY_2.2.3.tar.gz)######快用此版本工程内需要手动添加xsdkFramework.framework
+* [快用渠道SDK-2.2.3版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_KY_3.0.2.tar.gz)
 * [海马渠道SDK-4.0.1-2.1版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_HM_4.0.1-2.1.tar.gz)
 * [iTools渠道SDK-2.6.0版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_IT_2.6.0.tar.gz)
 * [云点友游渠道SDK-20151022版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ydSDK1022.zip)
