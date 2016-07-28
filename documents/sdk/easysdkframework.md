@@ -750,4 +750,4 @@ Login types:
 ~~~
 
 ###注意事项
-####1.如果游戏是u3d框架，以上sdk接口必须放在runOnUiThread()方法中调用
+#### '1.如果游戏是u3d框架，以上sdk接口必须放在runOnUiThread()方法中调用'
