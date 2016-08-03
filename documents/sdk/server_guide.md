@@ -123,10 +123,10 @@ http://passport.mobileztgame.com/service/check-token?game_id=5012&openid=1-1234&
 
 | 参数           | 必填 | 类型、最大长度(Mysql Types) | 说明                                                                        |
 | -------------- | ---- | --------------------------- | --------------------------------------------------------------------------- |
-| account        | 是   | varchar(100)                | 账号名                                                                      |
+| account        | 否   | varchar(100)                | 渠道方账号名，部分渠道无法取得账号名则为空可能                              |
 | amount         | 是   | decimal(15,2)               | 总金额(单位人民币), 浮点数两位 decimal(15,2)                                |
 | channel        | 是   | int                         | 渠道ID, 详情查看 [渠道信息列表](/docs/channels)                              |
-| extra          | 是   | varchar(255)                | 游戏扩展数据, 创建订单传入的值, 原数据返回                                  |
+| extra          | 否   | varchar(255)                | 游戏扩展数据, 创建订单传入的值, 原数据返回                                  |
 | game_id        | 是   | int                         | 游戏ID                                                                      |
 | order_id       | 是   | bigint                      | 巨人移动订单号                                                              |
 | product_id     | 否   | varchar(45)                 | 苹果商品编号或安卓渠道或游戏自定义商品编号                                  |
