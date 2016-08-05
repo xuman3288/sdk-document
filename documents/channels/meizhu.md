@@ -1,10 +1,10 @@
 ## 魅族SDK配置说明
 
- ###  一.接入前的准备
+###  一.接入前的准备
 
   1. 商务在开发者中心：http://developer.meizu.com/ 注册登入账号。
 
-      ![](http://docs.mztgame.com/files/assets/img/meizu.png)
+      ![](http://docs.mztgame.com/files/assets/img/meizu01.png)
 
   2. 创建游戏获取所需参数。
 

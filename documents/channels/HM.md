@@ -1,8 +1,8 @@
 ## 海马 SDK配置说明
 
- ###  一.接入前的准备
+###  一.接入前的准备
 
-  1. 进入海马游戏联运中心：http://pay.haima.me/index.php?m=login&a=index
+  1. 进入海马游戏联运中心：<http://pay.haima.me/index.php?m=login&a=index>
 
       注册账号，待审核后登陆
 

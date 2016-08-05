@@ -1,8 +1,8 @@
- ## 华为SDK配置说明
+## 华为SDK配置说明
 
- ###  一.接入前的准备
+###  一.接入前的准备
 
-  1. 注册成为开发者：登录华为开发者网站：http://developer.huawei.com，注册成为开发者。
+  1. 注册成为开发者：登录华为开发者网站：<http://developer.huawei.com>，注册成为开发者。
 
   2. 登录账号，点击创建移动应用。如图：
 
@@ -11,7 +11,7 @@
   3. 创建完app后，点击创建的应用，获取游戏所需的参数：AppID，支付私钥，支付公钥，支付 ID，CPID，浮标密钥
   4.  配置回调地址：
 
-  ![](http://docs.mztgame.com/files/assets/img/huawei_ztgame3.png)
+  ![](http://docs.mztgame.com/files/assets/img/huawei_ztgame3.jpg)
 
 ### 二.注意事项
 
@@ -33,7 +33,7 @@
 
    4. 出现短信暂未送达，请重试，如下图情况，怎么办？        
 
-      ![](http://docs.mztgame.com/files/assets/img/huawei-ztgame5)
+      ![](http://docs.mztgame.com/files/assets/img/huawei-ztgame5.jpg)
 
       a.检查手机的系统时间是否正确；
 

@@ -2,7 +2,7 @@
 
 ### 一.接入前的准备
 
-1. 获取开发者账号后登陆开发者平台: http://appdev.coolyun.com/ylra/
+1. 获取开发者账号后登陆开发者平台: <http://appdev.coolyun.com/ylra/>
 
   ![](http://docs.mztgame.com/files/assets/img/coolpadhelper1.jpg)
 
@@ -52,7 +52,7 @@
 
     在首页下点击统计系统，进入统计信息的界面
 
-    ![](http://docs.mztgame.com/files/assets/img/coolpadhelpr9a.jpg)
+    ![](http://docs.mztgame.com/files/assets/img/coolpadhelper9a.jpg)
 
     跳转到下图页面中查看相应统计信息:
 

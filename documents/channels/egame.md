@@ -1,8 +1,8 @@
 ## 电信爱游戏 SDK配置说明
 
- ###  一.接入前的准备
+###  一.接入前的准备
 
-  1.  开发者网站：http://open.play.cn/dev/注册您的开发者账号。
+  1.  开发者网站：<http://open.play.cn/dev/> 注册您的开发者账号。
 
   ![](http://docs.mztgame.com/files/assets/img/dxayxhelper0.jpg)
 

@@ -1,11 +1,12 @@
 
- ## PPS SDK配置说明
+## PPS SDK配置说明
 
- ###  一.接入前的准备
+###  一.接入前的准备
 
-  1. 需要与PPS渠道商务联系，获取应用必需的参数http://open.iqiyi.com/。
+  1. 需要与PPS渠道商务联系，获取应用必需的参数<http://open.iqiyi.com/>。
 
-         获取必需的参数：gameid，key，渠道id，支付key。
+      获取必需的参数：gameid，key，渠道id，支付key。
+
   2. 同步地址的设置，联系PPS商务
 
 ### 二.注意事项
@@ -22,7 +23,7 @@
 
   需要在游戏的主activity加以下属性：
 
-   ```java
+   ```xml
   <meta-data
   android:name="unityplayer.ForwardNativeEventsToDalvik"
   android:value="true" />

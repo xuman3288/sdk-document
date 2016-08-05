@@ -1,8 +1,8 @@
 ## 腾讯游戏币YSDK配置说明
 
- ###  一.接入前的准备
+###  一.接入前的准备
 
-  1. 登录：http://open.qq.com/2012
+  1. 登录：<http://open.qq.com/2012>
 
   2. 点“移动应用”→“创建应用”→“移动应用”，填写游戏名称，选择游戏分类和合作模式
 
@@ -28,11 +28,11 @@
 
     3): 使用游戏币模式接入腾讯支付；
 
-        ![](http://docs.mztgame.com/files/assets/img/txysdk5.png)
+    ![](http://docs.mztgame.com/files/assets/img/txysdk5.png)
 
-        ![](http://docs.mztgame.com/files/assets/img/txysdk6.png)
+    ![](http://docs.mztgame.com/files/assets/img/txysdk6.png)
 
- 5. 在http://open.qq.com 完成基本资料审核后，流程到达“接入YSDK”，签署合作接入协议以后就会提供手Q和微信的appid和appkey，此时会同步开启测试环境权限，参照下图：
+  5. 在http://open.qq.com 完成基本资料审核后，流程到达“接入YSDK”，签署合作接入协议以后就会提供手Q和微信的appid和appkey，此时会同步开启测试环境权限，参照下图：
 
   ![](http://docs.mztgame.com/files/assets/img/txysdk7.png)
 
@@ -74,7 +74,7 @@
        如何检查签名和包名 ：
 
        下载
-        https://res.wx.qq.com/open/zh_CN/htmledition/res/dev/download/sdk/Gen_Signature_Android2.apk
+        <https://res.wx.qq.com/open/zh_CN/htmledition/res/dev/download/sdk/Gen_Signature_Android2.apk>
 
      ， 将此apk安装到手机上， 在输入框中输入游戏的包名，点击按钮读取游戏包的签名。 检查上述工具获取到的签名是否和微信后台配置的签名  一致。后台配置如下图：
 
@@ -95,7 +95,7 @@
 
  `100044`：游戏当前安装包签名与平台上传的安装包签名不一致，请检查打包用的keystone。
    游戏下载地址：
-    https://res.wx.qq.com/open/zh_CN/htmledition/res/dev/download/sdk/Gen_Signature_Android2.apk，
+    <https://res.wx.qq.com/open/zh_CN/htmledition/res/dev/download/sdk/Gen_Signature_Android2.apk>，
     并将此apk安装到手机上， 在输入框中输入游戏的包名，点击按钮读取游戏包的签名。
     检查上述工具获取到的签名是否和微信后台配置的签名一致。
 
