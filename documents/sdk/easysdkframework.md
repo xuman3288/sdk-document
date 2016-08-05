@@ -278,11 +278,11 @@ public interface IZTListener {
 |--------|----------------------------------|----------------------------|
 | setAmount | 必填  | 设置商品金额(RMB). 单位(分) |
 | setExtra | 必填 | 设置游戏订单扩展信息(游戏订单号等等)  |
-| setMoneyName | 可选设置 | 设置货币单位名称  |
+| setMoneyName | 必填 | 设置货币单位名称  |
 | setMonthCard | 可选设置 | 设置是否为月卡  |
-| setExchangeRatio | 可选设置  | 设置价格比率 |
-| setProductName | 可选设置  | 设置商品名称 |
-| setProductId | 可选设置  | 设置商品ID |
+| setExchangeRatio | 必填  | 设置价格比率 |
+| setProductName | 必填  | 设置商品名称 |
+| setProductId | 必填  | 设置商品ID |
 
 
 ## 开始接入 ZTgameFramework 
