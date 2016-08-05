@@ -83,7 +83,7 @@ public abstract class IZTLibBase {
 
 
     /**
-     * 是否有第三方渠道的退出确认弹出框
+     * 是否有第三方渠道的退出确认弹出框（必接）
      *  
      * 如果此函数返回true，请游戏不要弹出游戏自身的退出确认弹出框而是直接调用quitZTGame来弹出第三方的退出弹出框，在ZTGame_Quit回调内处理游戏的退出操作
      * （销毁代码，而不是再次弹出退出确认对话框。返回false则按照游戏自己的退出流程处理即可。)
@@ -91,7 +91,7 @@ public abstract class IZTLibBase {
     public void isHasQuitDialog(){}
 
     /**
-     * 弹出第三方退出弹出确认框接口
+     * 弹出第三方退出弹出确认框接口（必接）
      */
     public void quitZTGame(){}
 
@@ -153,7 +153,7 @@ public abstract class IZTLibBase {
 
 
     /**
-     * 登录完成数据统计接口
+     * 登录完成数据统计接口（必接）
      * 
      * 角色进入游戏后调用
      * 
@@ -166,7 +166,7 @@ public abstract class IZTLibBase {
     public void loginOkZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName) {}
 
     /**
-     * 创建角色数据统计接口（建议接入）
+     * 创建角色数据统计接口（必接）
      * 
      * 玩家创建角色后调用.
      * 
@@ -179,7 +179,7 @@ public abstract class IZTLibBase {
     public void createRoleZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName) {}
 
     /**
-     * 角色等级升级信息接口
+     * 角色等级升级信息接口（必接）
      * 
      * @param roleId     角色ID
      * @param roleName   角色名称
@@ -472,10 +472,18 @@ public class MainActivity extends Activity {
                 
                 break;
             case R.id.accountCenterButton: //进入用户中心
-                IZTLibBase.getInstance().enterCenterZTGame();
+		if (IZTLibBase.getInstance().isHasCenterZTGame()) {
+		      IZTLibBase.getInstance().enterCenterZTGame();
+	        }else{
+		      System.out.println("该渠道没有用户中心功能");
+	        }
                 break;
             case R.id.switchAccountButton: //切换账号
-                IZTLibBase.getInstance().switchAccountZTGame();
+                if(IZTLibBase.getInstance().isHasSwitchAccountZTGame()){
+			IZTLibBase.getInstance().switchAccountZTGame();
+	        }else{
+		        System.out.println("该渠道没有切换账号功能");
+	        }
                 break;
             //...
         }
@@ -521,9 +529,9 @@ public class MainActivity extends Activity {
             case R.id.buyButton:
                 if(IZTLibBase.getInstance().isLogined()){
                     ZTPayInfo payInfo = new ZTPayInfo();
-                    payInfo.setAmount(100);  //设置金额, 单位(分)
-                    payInfo.setProductName("test item"); //设置商品名称
-                    payInfo.setProductId("1001"); // 设置商品ID
+                    payInfo.setAmount(100);  //设置金额, 单位(分) *必传参数
+                    payInfo.setProductName("test item"); //设置商品名称 *必传参数
+                    payInfo.setProductId("1001"); // 设置商品ID *必传参数
                     payInfo.setExtra("1"); //设置游戏订单扩展信息
                     IZTLibBase.getInstance().payZTGame(payInfo);
                 } else {
