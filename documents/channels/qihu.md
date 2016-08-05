@@ -12,7 +12,7 @@
       ![](http://docs.mztgame.com/files/assets/img/mi-360helper2.jpg)
 
 ### 二.注意事项
-  1.  包名 + ** `.qh360 ` **
+  1.  包名 +   `.qh360 `  。
 
 
 ### 三.常见问题

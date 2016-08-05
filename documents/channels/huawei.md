@@ -11,11 +11,11 @@
   3. 创建完app后，点击创建的应用，获取游戏所需的参数：AppID，支付私钥，支付公钥，支付 ID，CPID，浮标密钥
   4.  配置回调地址：
 
-  ![](http://docs.mztgame.com/files/assets/img/huawei_ztgame3)
+  ![](http://docs.mztgame.com/files/assets/img/huawei_ztgame3.png)
 
 ### 二.注意事项
 
-  1.  包名 + ** `.huawei` ** 结尾。
+  1.  包名 +  `.huawei`  结尾。
 
 
 ### 三.常见问题

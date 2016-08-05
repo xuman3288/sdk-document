@@ -23,7 +23,7 @@
 
 ### 二.注意事项
 
-    1.  包名 + ** `.gamecenter ` **
+    1.  包名 +   `.gamecenter ` 
 
     2. 有游戏中心浮标，请确保onPause、onResume已经调用
 
