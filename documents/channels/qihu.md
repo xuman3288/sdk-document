@@ -3,7 +3,7 @@
 
 ###  一.接入前的准备
 
-  1. 商务在开发者网站：http://dev.360.cn/ ，注册您的开发者账号。
+  1. 商务在开发者网站：<http://dev.360.cn/> ，注册您的开发者账号。
 
     ![](http://docs.mztgame.com/files/assets/img/360helper.jpg)
 
