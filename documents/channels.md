@@ -17,7 +17,7 @@
 | [百度手机助手](/docs/channels/baidu)               | 23        | baidu            | *.baidu  | Android         | v3.5.2              | v3.5.2              | -             | 渠道后台       |
 | [豌豆荚](/docs/channels/wandoujia)                     | 24        | wandoujia        | *.wdj    | Android         | v4.0.2              | v4.0.4              | -             | 渠道后台       |
 | [UC九游](/docs/channels/UC)                     | 26        | uc               | *.uc     | Android         | v3.5.3.1            | v3.5.3.1            | -             | 渠道后台       |
-| [当乐(Android)]()              | 27        | d                | *.downjoy| Android         | v4.2                | v4.2              | 2015-9-25             | 渠道后台       |
+| 当乐(Android)             | 27        | d                | *.downjoy| Android         | v4.2                | v4.2              | 2015-9-25             | 渠道后台       |
 | [小米](/docs/channels/mi)                       | 28        | xiaomi           | *.mi     | Android         | v4.6.11             | v4.6.11              | -             | 渠道后台       |
 | [安智](/docs/channels/anzhi)                       | 29        | anzhi            | *.anzhi  | Android         | v3.5.2              | v3.5.2           | 2015-9-16     | 渠道后台       |
 | [快用](/docs/channels/ky)                       | 30        | kuaiyong         | *.KY     | Android         | v2.1.0              | v2.1.0              | 2015-8-13     | 渠道后台       |
@@ -67,7 +67,7 @@
 | 暴风游戏                   | 82        | baofeng          |          | Android         | -                   | v1.2                | -             | 渠道人工       |
 | Facebook                   | 83        | facebook         |          | Android         | ?                   | -                   | -             |                |
 | Google play                | 84        | google           |          | Android         | ?                   | -                   | -             |                |
-| [海马玩(Android)](/docs/channels/HM.md)            | 85        | haimawan         | *.HM     | Android         | v1.1.5              | v1.1.5              | 2015-9-11     |                |
+| [海马玩(Android)](/docs/channels/HM)            | 85        | haimawan         | *.HM     | Android         | v1.1.5              | v1.1.5              | 2015-9-11     |                |
 | [手游咖啡](/docs/channels/mgcafe)                  | 86        | mgcafe           | *.mgcafe | Android         | v1.1.2              | v1.1.2              | -             | 自动           |
 | 易娱                       | 87        | eyu              |          | Android         | v2.3.2              | v2.3.2              | -             |                |
 | 奇天乐地                   | 88        | c44755           |          | Android         | v4.0                | v4.0                | -             |                |
