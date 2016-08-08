@@ -51,6 +51,6 @@
 
     3. 查看游戏服务器的access log
 
-    4. 在开发者后台http://open.wandoujia.com/home/myapp里查询订单详情中的回调时间
+    4. 在开发者后台<http://open.wandoujia.com/home/myapp>里查询订单详情中的回调时间
 
     5. 确认以上没有问题后，可以在开发者后台里查询失败订单发起手动回调
