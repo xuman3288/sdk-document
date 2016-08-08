@@ -42,15 +42,15 @@
 
 ### 三.常见问题解决
 
-   1. 支付订单后没有收到豌豆荚服务器回调通知的原因：。
+  1. 支付订单后没有收到豌豆荚服务器回调通知的原因:
 
-        1. 配置的URL是否正确，可在开发者后台<http://open.wandoujia.com/home/myapp>
-             里编辑，会立刻生效。
+    1. 配置的URL是否正确，可在开发者后台<http://open.wandoujia.com/home/myapp>
+         里编辑，会立刻生效。
 
-        2. 检查客户端appkey是否正确
+    2. 检查客户端appkey是否正确
 
-        3. 查看游戏服务器的access log
+    3. 查看游戏服务器的access log
 
-        4. 在开发者后台http://open.wandoujia.com/home/myapp里查询订单详情中的回调时间
+    4. 在开发者后台http://open.wandoujia.com/home/myapp里查询订单详情中的回调时间
 
-        5. 确认以上没有问题后，可以在开发者后台里查询失败订单发起手动回调
+    5. 确认以上没有问题后，可以在开发者后台里查询失败订单发起手动回调
