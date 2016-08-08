@@ -16,17 +16,17 @@ public abstract class IZTLibBase {
 
     /**
      * 初始化IZTLibBase实例(必接)
-     * 
+     *
      * @param ac Activity类的一个实例
      */
     @Override
     static public boolean newInstance(Activity ac){}
 
     /**
-     * 初始化Android SDK（必接） 
+     * 初始化Android SDK（必接）
      *
      * 首先调用IZTLibBase 的newInstance方法，传入你的Activity。然后调用getInstance()方法的initZTGame初始化游戏信息。
-     * 
+     *
      * @param gameId   游戏ID
      * @param appName  游戏名称
      * @param isLandScape 游戏横竖屏.  
@@ -39,7 +39,7 @@ public abstract class IZTLibBase {
 
     /**
      * 登录接口（必接）
-     * 
+     *
      * @param zoneId   游戏区ID（Int, 大于0）
      * @param zoneName 游戏区名称
      * @param isAutoLogin 是否自动登录，传true即可
@@ -48,8 +48,8 @@ public abstract class IZTLibBase {
 
     /**
      * 支付接口（必接）
-     * 
-     * @param payInfo 实例化 ZTPayInfo 信息 
+     *
+     * @param payInfo 实例化 ZTPayInfo 信息
      */
     final public boolean payZTGame(ZTPayInfo payInfo) {}
 
@@ -63,14 +63,14 @@ public abstract class IZTLibBase {
 
     /**
      * 切换账号操作
-     * 
+     *
      * 以上为切换账号接口功能，调用此接口执行切换账号操作，调用此接口后，会发送ZTGAME_LOGOUT消息。
      */
     public void switchAccountZTGame(){}
 
     /**
      * 是否需要用户中心按钮接口
-     * 
+     *
      * 以上为某些渠道判断是否存在用户中心按钮倘若返回false不作处理，倘若返回true需要显示用户中心按钮，点击此按钮后调用enterCenterZTGame()
      */
     public boolean isHasCenterZTGame(){}
@@ -104,7 +104,7 @@ public abstract class IZTLibBase {
 
     /**
      * 获取渠道id
-     * 
+     *
      * 渠道id以及游戏id可以统一从此wiki链接查询.
      * @see http://wiki.mztgame.com/index.php/%E6%B8%A0%E9%81%93%E4%BF%A1%E6%81%AF%E5%88%97%E8%A1%A8
      */
@@ -131,17 +131,17 @@ public abstract class IZTLibBase {
 
     /**
      * 是否有一键加QQ群功能接口
-     * 
+     *
      * 注: 接入此接口时，游戏会收到ZTGAME_QQGROUP消息，当errcode为0表示有一键加QQ功能，-1表示没有该功能
      */
     public void isHasJoinQQGroup(){}
 
     /**
      * 一键加QQ群接口
-     * 
+     *
      * 注：接入此接口时，需提供QQ群对应的key，key由QQ官方申请。
      * 接入次接口前，请务必调用 `isHasJoinQQGroup()` 接口，并且在收到ZTGAME_QQGROUP消息后，errcode为0的情况下调用。
-     * 
+     *
      * @example:
      * <code>
      * if(IZTLibBase.getInstance().isHasJoinQQGroup()){
@@ -154,36 +154,36 @@ public abstract class IZTLibBase {
 
     /**
      * 登录完成数据统计接口（必接）
-     * 
+     *
      * 角色进入游戏后调用
-     * 
+     *
      * @param roleId     角色ID
      * @param roleName   角色名称
      * @param roleLevel  角色等级
-     * @param zoneId     游戏区ID 
+     * @param zoneId     游戏区ID
      * @param zoneName   游戏区名称
      */
     public void loginOkZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName) {}
 
     /**
      * 创建角色数据统计接口（必接）
-     * 
+     *
      * 玩家创建角色后调用.
-     * 
+     *
      * @param roleId     角色ID
      * @param roleName   角色名称
      * @param roleLevel  角色等级
-     * @param zoneId     游戏区ID 
+     * @param zoneId     游戏区ID
      * @param zoneName   游戏区名称
      */
     public void createRoleZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName) {}
 
     /**
      * 角色等级升级信息接口（必接）
-     * 
+     *
      * @param roleId     角色ID
      * @param roleName   角色名称
-     * @param zoneId     游戏区ID 
+     * @param zoneId     游戏区ID
      * @param zoneName   游戏区名称
      * @param level      角色等级
      */
@@ -201,11 +201,11 @@ public interface IZTListener {
 
     /**
      * 当某事件执行后触发
-     * 
+     *
      * @param what Finished events type
      * @param errcode Error code.
      * If equal to 0 Success, then error.
-     * 
+     *
      * @param json_obj Finished callback info.
      */
     public void onFinished(int what, int errcode, JSONObject json_obj);
@@ -226,7 +226,7 @@ public interface IZTListener {
 | ZTConsts.ZTGAME_TENCENT_QUERY  | 是腾讯游戏点查询接口的消息，游戏收到该消息后，当errcode为0表示有查询成功，需要游戏端根据查询金额判断是否补单|
 | ZTConsts.ZTGAME_CREATE_ORDER  | 是创建订单成功的消息，返回的order_id参数 |
 
-###### 当 `what` 值为 `ZTConsts.ZTGAME_LOGIN`, `json_obj` 出现值:
+###### 当 `what` 值为 `ZTConsts.ZTGAME_LOGIN`,errcode为0成功时， `json_obj` 出现值:
 
 ~~~json
 {
@@ -243,7 +243,7 @@ public interface IZTListener {
 ~~~
 
 > **注:**
-> 
+>
 > `accid` 为账号唯一身份标识, 即服务端的 `openid`;
 > `account` 可能为空;
 
@@ -269,7 +269,7 @@ public interface IZTListener {
 ###### 当 `what` 值为 `ZTConsts.ZTGAME_LOGOUT`, `json_obj` 出现值:
 
 > **注:**
-> 
+>
 > 在游戏接收ZTGAME_LOGOUT后，调用登录接口之前前，建议调用isLogin接口做一次用户登录状态判断，如果true则不调用登录接口，否则调用。增加判断可防止多次弹出登录界面。
 
 #### 类 `com.ztgame.mobileappsdk.common.ZTPayInfo`'s 方法说明:
@@ -285,7 +285,7 @@ public interface IZTListener {
 | setProductId | 必填  | 设置商品ID |
 
 
-## 开始接入 ZTgameFramework 
+## 开始接入 ZTgameFramework
 
 ### Step 1. 环境说明
 
@@ -296,18 +296,13 @@ public interface IZTListener {
 
 ~~~XML
 <uses-permission android:name="android.permission.WRITE_SETTINGS" />
-<uses-permission android:name="android.permission.RECORD_AUDIO" />
-<uses-permission android:name="android.permission.CALL_PHONE" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
 <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-<uses-permission android:name="android.permission.GET_TASKS" />
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.SEND_SMS" />
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-<uses-permission android:name="android.permission.READ_PHONE_STATE" />
-<uses-permission android:name="android.permission.RECEIVE_SMS" />
 <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -324,40 +319,37 @@ android:name="com.ztgame.ztgameframework.ZTApplication"
 * 在demo中, 复制 asserts 文件夹到你的游戏项目. ztsdk_config.properties 文件范例:
 
 ~~~
-config.sdk.class=com.ztgame.mobileappsdk.ga.ZTLibGA
+config.sdk.class=com.ztgame.ztgameframework.ZTgameFramework
+
+config.paynotify.url=http://pay.mztgame.com/service/notify/
+
 config.domain.passport.legacy=http://passport.mztgame.com
-config.domain.passport=http://passport.mobileztgame.com
-config.domain.pay=http://pay.mobileztgame.com
-config.ui.transparentbg=1
-config.ui.hidemibaolingpwd=0
-config.ui.hidechangepwd=0
-config.ui.hidefindpwd=0
-config.ui.hideregpwd=0
-config.ui.hideloginpwd=0
-#config.ui.css=
-#config.ui.css=.close{display:none;} .header{display:none !important;}
-config.ui.css=#login_close{display:none;}
-config.pay.version=1.0.4
-config.appid=5016 ###5016
-config.paykey=p0emh5SFwBvpDbT ###your own payKey
-config.paypid=10 ###your own paypid
+config.v4.login.url=http://other.passport.mobileztgame.com
+config.v4.create_order.url=http://pay.mobileztgame.com/service/create
+
+# 3.0
+config.v3.create_order.url=http://pay.mztgame.com/service/create
+config.v3.login.url=http://passport.mztgame.com/api/account/login
+config.v3.active.url=http://stat.mztgame.com/active
+
+config.sdk.v=4
 config.channel_id=1
 #config.ad_id=10000000000
 ~~~
 
 > **注 1**：
-> 
+>
 > 在 `androidManifest.xml` 中需要将所有的activity service等标签 `android:name` 字段写上对应的java包名的全称
 
 > **注 2**：
-> 
+>
 > 在assets目录下添加 ztsdk_config.properties 文件确保文件中有以下内容:
 > ~~~
 > config.sdk.class=com.ztgame.ztgameframework.ZTgameFramework
 > ~~~
 
 > **注 3**：
-> 
+>
 > 如果你的工程里存在 Application 需要继承改Application 并且在 `onCreate()` 函数中添加 `super.onCreate()`
 
 
@@ -457,19 +449,19 @@ public class MainActivity extends Activity {
 
     @Override
     public void onClick(View v) {
-        
+
         switch (v.getId()) {
-            case R.id.enterGameWorldButton: //玩家点击"进入游戏" 
+            case R.id.enterGameWorldButton: //玩家点击"进入游戏"
                 IZTLibBase.getInstance().loginZTGame("1", "ZoneName", true);
                 break;
             case R.id.exitButton:
                 //玩家点击退出
                 if(IZTLibBase.getInstance().isHasQuitDialog()){ //渠道是否有退出框确认
-                    IZTLibBase.getInstance().quitZTGame();
+                    IZTLibBase.getInstance().quitZTGame();//
                 }else{
                     //游戏自己的退出框代码
                 }
-                
+
                 break;
             case R.id.accountCenterButton: //进入用户中心
 		if (IZTLibBase.getInstance().isHasCenterZTGame()) {
@@ -508,7 +500,7 @@ public class MainActivity extends Activity {
 
 当用户点击充值商品时调用 `IZTLibBase.getInstance().payZTGame(ZTPayInfo payInfo)`
 
-#### 代码范例: 
+#### 代码范例:
 
 ~~~java
 package com.example;
@@ -594,19 +586,19 @@ public class MainActivity extends Activity {
         super.onConfigurationChanged(newConfig);
         IZTLibBase.getInstance().onConfigurationChangedZTGame(newConfig);
     }
-    
+
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         IZTLibBase.getInstance().onNewIntentZTGame(intent);
     }
-    
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         IZTLibBase.getInstance().onActivityResultZTGame(requestCode, resultCode, data);
     }
-    
+
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
@@ -650,7 +642,7 @@ public class MainActivity extends Activity {
     public long getSDKVersionCode(){
         return mSDKVersionCode;
     }
-    
+
     /**
      * 获取第三方SDK版本号
      */
@@ -717,7 +709,7 @@ Login types:
 
 ~~~java
       	IZTLibBase.getInstance().getZoneIdforServices(IZTLibBase.getUserInfo().get(ZTConsts.User.ACCID),    IZTLibBase.getUserInfo().get(ZTConsts.User.GAMEID),new ZTNetCallBack() {
-				
+
 				@Override
 				public void callBack(Bundle bundle) {
 					// TODO Auto-generated method stub
@@ -745,7 +737,7 @@ Login types:
 
 ~~~java
 
-    
+
     mZTPayInfo 订单信息(渠道支付需要的信息)：订单号、金额、商品id...;
     例子：
     jsonObject 服务器下单接口的返回的json
