@@ -751,3 +751,5 @@ Login types:
 
 ###注意事项
 #### 1.如果游戏是u3d框架，以上sdk接口必须放在runOnUiThread()方法中调用
+#### 2.游戏的Activity，在AndroidManifest.xml的配置包含这些属性：android:configChanges="orientation|keyboardHidden|screenSize"，
+      android:launchMode设置成standard或者singleTop
