@@ -95,4 +95,4 @@
 
 ### 常见问题
 
-* [ Java 环境sdk 接入](/channels/commonProblem)
+* [ Java 环境sdk 接入](/docs/channels/commonProblem)
