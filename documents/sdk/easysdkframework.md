@@ -218,7 +218,7 @@ public interface IZTListener {
 | 出现值                   | 描述 |
 |--------------------------|--------------|
 | ZTConsts.ZTGAME_INIT     | 是SDK初始化完成的通知，所有接口都需要在INIT成功完成之后才能开始调用 |
-| ZTConsts.ZTGAME_LOGIN    | 需要处理登录返回的json_obj参数，交给游戏服务器[进行效验](http://docs.mztgame.com/docs/sdk/server_guide#__2) |
+| ZTConsts.ZTGAME_LOGIN    | errcode为-1登录失败，errcode为-2用户取消登录，errcode为0登录成功时需要处理登录返回的json_obj参数，交给游戏服务器[进行效验](http://docs.mztgame.com/docs/sdk/server_guide#__2) |
 | ZTConsts.ZTGAME_PAY      | 只需要判断errcode为0成功还是-1失败，但是是否到账要以[服务器通知为准](http://docs.mztgame.com/docs/sdk/server_guide#__7) |
 | ZTConsts.ZTGAME_QUIT     | 是游戏进行销毁操作的地方，玩家在第三方退出框点击确认后会收到此回调 |
 | ZTConsts.ZTGAME_LOGOUT   | 是游戏进行登出操作/切换账号操作的地方，需要返回到游戏登录界面等待用户再次登录 |
