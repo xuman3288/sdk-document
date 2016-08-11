@@ -38,10 +38,12 @@
 
 
 ### 4.x demo
+
 * [4.0官方渠道4.3.22demo&SDK下载地址](http://docs.mztgame.com/files/iOS/4.0/4.3.22iOSSDKdemo.zip)（不一定是最新的版本号，仅供参考）
 * [4.0官方渠道4.3.22UnityDemo下载地址](http://docs.mztgame.com/files/iOS/4.0/iosSDKUnityDemo.zip)（不一定是最新的版本号，仅供参考）
 
 ### 5.x SDK
+
 * [巨人官方SDK-5.1.17版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_GA_5.1.17.tar.gz)
 * [PP助手渠道SDK-1.5.6版本下载地址（静态库1.5.6，动态库1.6.4）](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_PP_1.5.6~1.6.4.tar.gz)
 * [果盘渠道SDK-2.3.0版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_GP_2.3.0.tar.gz)
@@ -49,16 +51,20 @@
 * [XY渠道SDK-2.4.1版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_XY_2.4.1.tar.gz)
 
 ### 插件SDK
+
 * [iOS激活插件SDK下载地址](http://docs.mztgame.com/files/iOS/plugin/iOSActivePluginSDK.zip)
 * [iOS设备激活插件SDK下载地址](http://docs.mztgame.com/files/iOS/plugin/iOSDeviceActivePluginSDK.zip)
 
 ## Android相关下载
+
 ### 3.x SDK(征途用)
 
 ##### 渠道SDK
+
 [移动基地SDK-v21156版本下载地址](http://docs.mztgame.com/files/Android/YDJD3-v21156.zip)
 
 ### 4.x SDK
+
 ##### 母包SDK
 
 * [巨人母包SDK-4.6.0版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK4.6.0.zip)
@@ -71,6 +77,7 @@
 * [腾讯YSDK-v1.1.1版本下载地址](http://docs.mztgame.com/files/Android/ysdk4-v1.1.1.zip)
 * [腾讯YSDK-v1.2.2版本下载地址](http://docs.mztgame.com/files/Android/ysdk4-v1.2.2.zip)
 * [巨人官方渠道接口sdk-v1.1.0版本下载地址](http://docs.mztgame.com/files/Android/GiantSDKIF-v1.0.0.zip)
+
 ##### 插件SDK
 
 * [激活插件SDK-1.0.3版本下载地址](http://docs.mztgame.com/files/Android/plugin/ActivePluginSDKv1.0.3.zip)
@@ -79,11 +86,13 @@
 * [游戏内公告插件SDK-1.0版本下载](http://docs.mztgame.com/files/Android/plugin/inapppushSDK1.0.zip)
 * [支付sdk-1.0.4版本下载](http://docs.mztgame.com/files/Android/plugin/giantpaysdk_1.0.4.zip)
 * [网页版支付SDK-1.0.4版本下载](http://docs.mztgame.com/files/Android/plugin/giantpaywebsdk_1.0.4.zip)
+
 ### 5.x SDK
+
 * [巨人母包SDK-5.0.0版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK5.0.0.zip)
 * [巨人官方SDK-5.0.8版本下载地址](http://docs.mztgame.com/files/Android/giantSDK5.0.8.zip)
 * [腾讯YSDK-v1.2.2版本下载地址](http://docs.mztgame.com/files/Android/ysdk5-v1.2.2.zip)
- 
 
+### 常见问题
 
-
+* [ Java 环境sdk 接入](/channels/commonProblem)
