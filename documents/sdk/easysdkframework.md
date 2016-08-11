@@ -386,7 +386,10 @@ public class MainActivity extends Activity {
                 if (errcode == 0) {
                     //游戏完成事件, 设置角色信息
                     IZTLibBase.getInstance().loginOkZTGame("roleId", "roleName", "roleLevel", "zoneId", "zoneName");
-                } else {
+                }else if（errcode == -2）{
+                     //用户取消登录，关闭登录框
+                } 
+                else {
                     //登录失败
                 }
                 break;
