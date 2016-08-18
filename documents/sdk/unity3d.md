@@ -26,7 +26,7 @@
 调用例子:
 
 ```
-     GASDKManager.Instance.initGASDK("5014","testGameName",false);
+  GASDKManager.Instance.initGASDK("5014","testGameName",false);
 ```
 
 ###### 登录接口
@@ -85,7 +85,7 @@ public void pay(string zoneId,int money,string productId,string productName,PayS
 调用实例：可参考demo
 
 ```
-    GASDKManager.Instance.pay("1",100,"1","金币",logPayResult);
+  GASDKManager.Instance.pay("1",100,"1","金币",logPayResult);
 ```
 ###### 切换账号
 
