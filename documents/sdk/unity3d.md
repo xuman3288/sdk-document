@@ -15,7 +15,6 @@
 ###### 初始化接口：  
 
 ```
-  
   /// <summary>
   ///
   /// </summary>
@@ -24,9 +23,9 @@
   /// <param name="isLandScape">是否横屏  游戏自传</param>
 
   public void initGASDK(string gameid,string appName,bool isLandScape){
-
-  _androidManager  = new AndroidJavaClass("com.gasdk.u3d.GAManager");
-  _androidManager.CallStatic("initGA",gameid,appName,isLandScape);
+  
+  	_androidManager  = new AndroidJavaClass("com.gasdk.u3d.GAManager");
+  	_androidManager.CallStatic("initGA",gameid,appName,isLandScape);
  
  }
  
@@ -35,6 +34,7 @@
 ```c#
 
      GASDKManager.Instance.initGASDK("5014","testGameName",false);
+     
 ```
 ###### 登录接口
 
