@@ -12,7 +12,7 @@
 
 ####  接口说明
 
-###### 初始化接口：  
+###### `初始化接口`  
 
 ```
   /// <summary>
@@ -29,7 +29,7 @@
   GASDKManager.Instance.initGASDK("5014","testGameName",false);
 ```
 
-###### 登录接口
+###### `登录接口`
 
 ```
   /// <summary>
@@ -54,7 +54,7 @@
 
 ###### ` 注：在调用该接口之前，请务必先调用init接口。`
 
-###### 支付接口
+###### `支付接口`
 
 ```
 /// <summary>
@@ -87,7 +87,7 @@ public void pay(string zoneId,int money,string productId,string productName,PayS
 ```
   GASDKManager.Instance.pay("1",100,"1","金币",logPayResult);
 ```
-###### 切换账号
+###### `切换账号`
 
 ```
 /// <summary>
