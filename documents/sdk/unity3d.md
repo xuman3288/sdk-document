@@ -32,7 +32,7 @@
 ```
 调用例子:
 
-```c#
+```
 
      GASDKManager.Instance.initGASDK("5014","testGameName",false);
      
@@ -40,7 +40,7 @@
 
 ###### 登录接口
 
-```c#
+```
 
   /// <summary>
   /// 登录
@@ -59,7 +59,7 @@
 `zoneName` :可为空
 
 调用举例：可参考demo
-```c#
+```
   GASDKManager.Instance.login("1","败走麦城区",logResult);
 
 ```
@@ -68,7 +68,7 @@
 
 ###### 支付接口
 
-```c#
+```
 
 /// <summary>
 /// 支付
@@ -98,24 +98,25 @@ public void pay(string zoneId,int money,string productId,string productName,PayS
 
 调用实例：可参考demo
 
-```c#
+```
 
     GASDKManager.Instance.pay("1",100,"1","金币",logPayResult);
 ```
 ###### 切换账号
 
-```c#
+```
 
 /// <summary>
 /// 切换账号
 /// </summary>
 /// <param name="req">回调方法</param>
 public void switchAccount(LogoutCallback req)
+
 ```
 
 调用实例：可参考demo
 
-```c#
+```
 
   GASDKManager.Instance.switchAccount(logSwitchUser);
 ```
