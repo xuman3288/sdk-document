@@ -12,7 +12,7 @@
 
 ####  接口说明
 
- ###### 初始化接口：  
+###### 初始化接口：  
 
 ```c#
   /// <summary>
@@ -56,7 +56,7 @@ public void initGASDK(string gameid,string appName,bool isLandScape){
 	 GASDKManager.Instance.login("1","败走麦城区",logResult);
 
 ```
-  ###### ` 注：在调用该接口之前，请务必先调用init接口。`
+###### ` 注：在调用该接口之前，请务必先调用init接口。`
 
 ###### 支付接口
 
