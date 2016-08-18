@@ -21,34 +21,23 @@
   /// <param name="gameid">游戏id   游戏自传</param>
   /// <param name="appName">游戏名字  游戏自传</param>
   /// <param name="isLandScape">是否横屏  游戏自传</param>
-
-  public void initGASDK(string gameid,string appName,bool isLandScape){
-  
-  	_androidManager  = new AndroidJavaClass("com.gasdk.u3d.GAManager");
-  	_androidManager.CallStatic("initGA",gameid,appName,isLandScape);
- 
- }
- 
+  public void initGASDK(string gameid,string appName,bool isLandScape);
 ```
 调用例子:
 
 ```
-
      GASDKManager.Instance.initGASDK("5014","testGameName",false);
-     
 ```
 
 ###### 登录接口
 
 ```
-
   /// <summary>
   /// 登录
   /// </summary>
   /// <param name="zoneId">区id 游戏自传</param>
   /// <param name="zoneName">区name 游戏自传</param>
   /// <param name="req">回调方法</param>
-
   public void login(string zoneId,string zoneName,LoginStatusCallback req);
 
 ```    
@@ -61,7 +50,6 @@
 调用举例：可参考demo
 ```
   GASDKManager.Instance.login("1","败走麦城区",logResult);
-
 ```
 
 ###### ` 注：在调用该接口之前，请务必先调用init接口。`
@@ -69,7 +57,6 @@
 ###### 支付接口
 
 ```
-
 /// <summary>
 /// 支付
 /// </summary>
@@ -78,8 +65,7 @@
 /// <param name="productId">商品id  游戏自传</param>
 /// <param name="productName">商品名称  游戏自传</param>
 /// <param name="req">回调方法</param>
-
-public void pay(string zoneId,int money,string productId,string productName,PayStatusCallback req)
+public void pay(string zoneId,int money,string productId,string productName,PayStatusCallback req);
 
 ```
 
@@ -99,13 +85,11 @@ public void pay(string zoneId,int money,string productId,string productName,PayS
 调用实例：可参考demo
 
 ```
-
     GASDKManager.Instance.pay("1",100,"1","金币",logPayResult);
 ```
 ###### 切换账号
 
 ```
-
 /// <summary>
 /// 切换账号
 /// </summary>
@@ -117,6 +101,5 @@ public void switchAccount(LogoutCallback req)
 调用实例：可参考demo
 
 ```
-
   GASDKManager.Instance.switchAccount(logSwitchUser);
 ```
