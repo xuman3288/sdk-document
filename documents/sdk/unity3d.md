@@ -15,6 +15,7 @@
 ###### 初始化接口：  
 
 ```c#
+
   /// <summary>
   ///
   /// </summary>
@@ -31,11 +32,13 @@ public void initGASDK(string gameid,string appName,bool isLandScape){
 ```
   调用例子：
 ```c#
+
      GASDKManager.Instance.initGASDK("5014","testGameName",false);
 ```
 ###### 登录接口
 
 ```c#
+
     /// <summary>
     /// 登录
     /// </summary>
@@ -61,6 +64,7 @@ public void initGASDK(string gameid,string appName,bool isLandScape){
 ###### 支付接口
 
 ```c#
+
 /// <summary>
 /// 支付
 /// </summary>
@@ -73,7 +77,9 @@ public void initGASDK(string gameid,string appName,bool isLandScape){
 public void pay(string zoneId,int money,string productId,string productName,PayStatusCallback req)
 
 ```
+
 参数说明：  
+
 `zoneId` :不能为空
 
 `productId` :不能为空
@@ -88,11 +94,13 @@ public void pay(string zoneId,int money,string productId,string productName,PayS
 调用实例：可参考demo
 
 ```c#
+
     GASDKManager.Instance.pay("1",100,"1","金币",logPayResult);
 ```
 ###### 切换账号
 
 ```c#
+
 /// <summary>
 /// 切换账号
 /// </summary>
@@ -103,5 +111,6 @@ public void switchAccount(LogoutCallback req)
 调用实例：可参考demo
 
 ```c#
+
   GASDKManager.Instance.switchAccount(logSwitchUser);
 ```
