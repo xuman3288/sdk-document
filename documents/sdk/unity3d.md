@@ -5,7 +5,7 @@
 
 #### 插件 下载链接：
 
-- [Download  ](http://222.73.243.55:3000/downloadsdk/ztpromotecode_v1.0.zip)
+- [Download  ](http://docs.mztgame.com/files/unity3d/loginPaySdkUinity_20160818.rar)
 
 ------------------------------------------------------------------
 ####  导入 loginPaySdk.unitypackage 全部（\Assets\import package\custom package）
