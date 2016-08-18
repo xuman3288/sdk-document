@@ -14,8 +14,8 @@
 
 ###### 初始化接口：  
 
-```c#
-
+```
+  
   /// <summary>
   ///
   /// </summary>
@@ -23,14 +23,15 @@
   /// <param name="appName">游戏名字  游戏自传</param>
   /// <param name="isLandScape">是否横屏  游戏自传</param>
 
-public void initGASDK(string gameid,string appName,bool isLandScape){
+  public void initGASDK(string gameid,string appName,bool isLandScape){
 
   _androidManager  = new AndroidJavaClass("com.gasdk.u3d.GAManager");
   _androidManager.CallStatic("initGA",gameid,appName,isLandScape);
-
-}
+ 
+ }
+ 
 ```
-  调用例子：
+调用例子：
 ```c#
 
      GASDKManager.Instance.initGASDK("5014","testGameName",false);
