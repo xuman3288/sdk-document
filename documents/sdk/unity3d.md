@@ -30,24 +30,27 @@
  }
  
 ```
-调用例子：
+调用例子:
+
 ```c#
 
      GASDKManager.Instance.initGASDK("5014","testGameName",false);
      
 ```
+
 ###### 登录接口
 
 ```c#
 
-    /// <summary>
-    /// 登录
-    /// </summary>
-    /// <param name="zoneId">区id 游戏自传</param>
-    /// <param name="zoneName">区name 游戏自传</param>
-    /// <param name="req">回调方法</param>
+  /// <summary>
+  /// 登录
+  /// </summary>
+  /// <param name="zoneId">区id 游戏自传</param>
+  /// <param name="zoneName">区name 游戏自传</param>
+  /// <param name="req">回调方法</param>
 
- public void login(string zoneId,string zoneName,LoginStatusCallback req);
+  public void login(string zoneId,string zoneName,LoginStatusCallback req);
+
 ```    
 参数说明：  
 
@@ -57,9 +60,10 @@
 
 调用举例：可参考demo
 ```c#
-	 GASDKManager.Instance.login("1","败走麦城区",logResult);
+  GASDKManager.Instance.login("1","败走麦城区",logResult);
 
 ```
+
 ###### ` 注：在调用该接口之前，请务必先调用init接口。`
 
 ###### 支付接口
