@@ -129,7 +129,7 @@ http://passport.mobileztgame.com/service/check-token?game_id=5012&openid=1-1234&
 | extra          | 否   | varchar(255)                | 游戏扩展数据, 创建订单传入的值, 原数据返回                                  |
 | game_id        | 是   | int                         | 游戏ID                                                                      |
 | order_id       | 是   | bigint                      | 巨人移动订单号                                                              |
-| product_id     | 否   | varchar(45)                 | 苹果商品编号或安卓渠道或游戏自定义商品编号                                  |
+| product_id     | 否   | varchar(45)                 | 苹果商品编号或安卓渠道或游戏自定义商品编号(苹果渠道请验证商品ID与金额后发货) |
 | time           | 是   | int                         | 巨人移动充值服发起请求,秒为单位的时间戳                                     |
 | transaction_id | 是   | varchar(100)                | 第三方交易单号                                                              |
 | openid         | 是   | varchar(128)                | 账号ID                                                                      |
