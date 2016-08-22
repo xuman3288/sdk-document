@@ -96,3 +96,4 @@
 ### 常见问题
 
 * [ Java 环境sdk 接入](/docs/channels/commonProblem)
+* [ 打包工具使用文档 ](http://docs.mztgame.com/files/Android/doc/dbgj.doc)
