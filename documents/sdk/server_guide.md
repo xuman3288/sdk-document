@@ -136,13 +136,15 @@ http://passport.mobileztgame.com/service/check-token?game_id=5012&openid=1-1234&
 | extra          | 否   | varchar(255)                | 游戏扩展数据, 创建订单传入的值, 原数据返回                                  |
 | game_id        | 是   | int                         | 游戏ID                                                                      |
 | order_id       | 是   | bigint                      | 巨人移动订单号                                                              |
-| product_id     | 否   | varchar(45)                 | 苹果商品编号或安卓渠道或游戏自定义商品编号(苹果渠道请验证商品ID与金额后发货) |
+| product_id     | 否   | varchar(45)                 | 苹果商品编号或安卓渠道或游戏自定义商品编号(**苹果渠道请验证商品ID与金额后发货**) |
 | time           | 是   | int                         | 巨人移动充值服发起请求,秒为单位的时间戳                                     |
 | transaction_id | 是   | varchar(100)                | 第三方交易单号                                                              |
 | openid         | 是   | varchar(128)                | 账号ID                                                                      |
 | zone_id        | 是   | int                         | 游戏区ID                                                                    |
 | version        | 是   | varchar(5)                  | 回调接口版本3.0                                                             |
 | sign           | 是   | text                        | Base64加密的签名 <br> 接收到的参数,除sign以外,按字母排序连接后,进行RSA校验: |
+
+> 注意：苹果渠道请验证 `product_id` 与 `amount` 匹配后再发货，如不验证请提供给我方服务器开发人员苹果商品ID对应金额，我方系统给于配置和验证。
 
 
 #### 2.2.3. 响应说明
