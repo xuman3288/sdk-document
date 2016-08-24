@@ -84,7 +84,7 @@
 * [二维码分享插件SDK-1.0.4版本下载](http://docs.mztgame.com/files/Android/plugin/ztpromotecode_v1.0.4.zip)
 * [通知栏推送插件SDK-1.0.1版本下载](http://docs.mztgame.com/files/Android/plugin/push_on_barSDK_v1.0.1.zip)
 * [游戏内公告插件SDK-1.0版本下载](http://docs.mztgame.com/files/Android/plugin/inapppushSDK1.0.zip)
-* [支付sdk-1.0.4版本下载](http://docs.mztgame.com/files/Android/plugin/giantpaysdk_1.0.4.zip)
+* [支付sdk-1.0.5版本下载](http://docs.mztgame.com/files/Android/plugin/giantpaysdk_1.0.5.zip)
 * [网页版支付SDK-1.0.4版本下载](http://docs.mztgame.com/files/Android/plugin/giantpaywebsdk_1.0.4.zip)
 
 ### 5.x SDK
