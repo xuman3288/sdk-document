@@ -50,7 +50,7 @@
 * [同步推渠道SDK-4.2.1版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_TB_4.2.1.tar.gz)
 * [XY渠道SDK-2.4.1版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_XY_2.4.1.tar.gz)
 * [爱思助手渠道SDK-2.1.2版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_AS_2.1.2.tar.gz)
-* [iTools渠道SDK-2.7.0版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv5_IT_2.7.0.tar.gz)
+* [iTools渠道SDK-2.7.0版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_IT_2.7.0.tar.gz)
 
 ### 插件SDK
 
