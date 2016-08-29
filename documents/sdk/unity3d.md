@@ -152,7 +152,7 @@ public void switchAccount(LogoutCallback req)
 
 ##### 添加使用OC callback的MonoPInvokeCallbackAttribute.cs文件
 
-```java
+```
 
 using System;
 
@@ -168,7 +168,7 @@ public sealed class MonoPInvokeCallbackAttribute : Attribute
 
 ```
 ##### 创建IOSConnector.cs并导入System.Runtime.InteropServices;用来解析.a库
-```c#
+```
 
 using UnityEngine;
 using System.Collections;
@@ -194,7 +194,7 @@ public class IOSConnector
 ```
 
 ##### DllImport
-```c#
+```
 
   /// <summary>
 	/// 注册初始化回调
@@ -360,7 +360,7 @@ public class IOSConnector
 
 ##### 初始化回调
 
-```c#
+```
 
 // delegate
   /// <summary>
@@ -382,7 +382,7 @@ public class IOSConnector
 
 
 #####  SDK View变化回调
-```c#
+```
 
   /// <summary>
 	/// SDK View变化回调
@@ -398,7 +398,7 @@ public class IOSConnector
 ```
 
 ##### 登陆回调
-```c#
+```
 
   /// <summary>
 	/// 登陆回调
@@ -417,7 +417,7 @@ public class IOSConnector
 
 ##### 支付回调
 
-```c#
+```
 
   /// <summary>
 	/// 支付回调
@@ -433,7 +433,7 @@ public class IOSConnector
 ```
 
 ##### 登出回调
-```c#
+```
 
   /// <summary>
 	/// 登出回调
@@ -449,7 +449,7 @@ public class IOSConnector
 ```
 
 ##### 产生新账号回调
-```c#
+```
 
   /// <summary>
 	/// 产生新账号回调
@@ -465,7 +465,7 @@ public class IOSConnector
 ```
 
 ##### 获取账号绑定信息回调
-```c#
+```
 
   /// <summary>
 	/// 获取账号绑定信息回调
@@ -482,7 +482,7 @@ public class IOSConnector
 ```
 
 ##### 更新最后一次登陆的游戏区信息的回调
-```c#
+```
 
   /// <summary>
 	/// 更新最后一次登陆的游戏区信息的回调
@@ -498,7 +498,7 @@ public class IOSConnector
 ```
 
 ##### 获取最后一次登陆的游戏区信息的回调
-```c#
+```
 
   /// <summary>
 	/// 获取账号绑定信息回调
@@ -517,7 +517,7 @@ public class IOSConnector
 ---
 ##### 调用实例
 ##### 注册所有回调
-```c#
+```
 
 	public void RegistAllCallback()
 	{
@@ -535,7 +535,7 @@ public class IOSConnector
 ```
 
 ##### Demo
-```c#
+```
 
 public class DemoApp : MonoBehaviour {
 
