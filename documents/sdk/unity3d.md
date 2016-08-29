@@ -150,11 +150,9 @@ public void switchAccount(LogoutCallback req)
 #### Unity部分
 
 
-
-
 ##### 添加使用OC callback的MonoPInvokeCallbackAttribute.cs文件
 
-```c#
+```java
 
 using System;
 
