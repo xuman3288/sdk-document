@@ -113,6 +113,12 @@ public void switchAccount(LogoutCallback req)
 
 ## Unity3d 官方SDK插件(IOS)
 
+#### 插件demo 下载链接：
+
+ [IOS  ](http://docs.mztgame.com/files/unity3d/GALoginUnityIOSDemo.zip)
+ 
+------------------------------------------------------------------
+
 #### 导入SDK文件
 
 #### 添加资源及配置文件
@@ -144,9 +150,7 @@ public void switchAccount(LogoutCallback req)
 #### Unity部分
 
 
-#### 插件demo 下载链接：
 
- -[IOS  ](http://docs.mztgame.com/files/unity3d/GALoginUnityIOSDemo.zip)
 
 ##### 添加使用OC callback的MonoPInvokeCallbackAttribute.cs文件
 
