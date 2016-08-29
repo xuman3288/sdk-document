@@ -155,6 +155,7 @@ public void switchAccount(LogoutCallback req)
 ##### 添加使用OC callback的MonoPInvokeCallbackAttribute.cs文件
 
 ```c#
+
 using System;
 
 // This attribute is used on static functions and it allows Mono's Ahead of Time Compiler
@@ -170,6 +171,7 @@ public sealed class MonoPInvokeCallbackAttribute : Attribute
 ```
 ##### 创建IOSConnector.cs并导入System.Runtime.InteropServices;用来解析.a库
 ```c#
+
 using UnityEngine;
 using System.Collections;
 using System;
@@ -195,6 +197,7 @@ public class IOSConnector
 
 ##### DllImport
 ```c#
+
   /// <summary>
 	/// 注册初始化回调
 	/// </summary>
@@ -360,6 +363,7 @@ public class IOSConnector
 ##### 初始化回调
 
 ```c#
+
 // delegate
   /// <summary>
 	/// 初始化回调
@@ -381,6 +385,7 @@ public class IOSConnector
 
 #####  SDK View变化回调
 ```c#
+
   /// <summary>
 	/// SDK View变化回调
 	/// </summary>
@@ -396,6 +401,7 @@ public class IOSConnector
 
 ##### 登陆回调
 ```c#
+
   /// <summary>
 	/// 登陆回调
 	/// </summary>
@@ -412,7 +418,9 @@ public class IOSConnector
 ```
 
 ##### 支付回调
+
 ```c#
+
   /// <summary>
 	/// 支付回调
 	/// </summary>
@@ -428,6 +436,7 @@ public class IOSConnector
 
 ##### 登出回调
 ```c#
+
   /// <summary>
 	/// 登出回调
 	/// </summary>
@@ -443,6 +452,7 @@ public class IOSConnector
 
 ##### 产生新账号回调
 ```c#
+
   /// <summary>
 	/// 产生新账号回调
 	/// </summary>
@@ -458,6 +468,7 @@ public class IOSConnector
 
 ##### 获取账号绑定信息回调
 ```c#
+
   /// <summary>
 	/// 获取账号绑定信息回调
 	/// </summary>
@@ -474,6 +485,7 @@ public class IOSConnector
 
 ##### 更新最后一次登陆的游戏区信息的回调
 ```c#
+
   /// <summary>
 	/// 更新最后一次登陆的游戏区信息的回调
 	/// </summary>
@@ -489,6 +501,7 @@ public class IOSConnector
 
 ##### 获取最后一次登陆的游戏区信息的回调
 ```c#
+
   /// <summary>
 	/// 获取账号绑定信息回调
 	/// </summary>
@@ -507,6 +520,7 @@ public class IOSConnector
 ##### 调用实例
 ##### 注册所有回调
 ```c#
+
 	public void RegistAllCallback()
 	{
 		Debug.Log ("Regist all callbacks");
@@ -523,6 +537,7 @@ public class IOSConnector
 ```
 
 ##### Demo
+```c#
 
 public class DemoApp : MonoBehaviour {
 
@@ -551,10 +566,11 @@ public class DemoApp : MonoBehaviour {
 
 	}
 }
-
+```
 ---
 #####  导出Xcode后检查工程设置
 #####  Build Settings
+
 在Links->Other Linker Flags中需要包含**-ObjC**，否则会出现“_unrecognized selector sent to class_”描述的错误。
 
 ##### 需要包含以下Frameworks和Libraries
