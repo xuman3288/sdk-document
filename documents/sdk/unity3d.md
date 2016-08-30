@@ -569,8 +569,8 @@ public class DemoApp : MonoBehaviour {
 }
 ```
 ---
-#####  导出Xcode后检查工程设置
-#####  Build Settings
+##  导出Xcode后检查工程设置
+###  Build Settings设置
 
 在Links->Other Linker Flags中需要包含**-ObjC**，否则会出现“_unrecognized selector sent to class_”描述的错误。
 
@@ -592,3 +592,8 @@ public class DemoApp : MonoBehaviour {
   * libstdc++.tbd
   * libsqlite3.tbd
   * libz.tbd
+
+###必须包含自定义配置文件和资源文件
+检查Build Phases->Copy Bundle Resources
+  * ztsdk_config.plist
+  * GASDKResource.bundle
