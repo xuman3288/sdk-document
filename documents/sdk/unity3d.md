@@ -149,6 +149,9 @@ public void switchAccount(LogoutCallback req)
 ---
 #### Unity部分
 
+###设置libZTLibGA的Platform settings
+
+![](http://docs.mztgame.com/files//assets/unityimg/11521753AC9B9074318B4E550BB29823.png)
 
 ##### 添加使用OC callback的MonoPInvokeCallbackAttribute.cs文件
 
