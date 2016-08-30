@@ -97,6 +97,6 @@
 * [腾讯YSDK-v1.2.2版本下载地址](http://docs.mztgame.com/files/Android/ysdk5-v1.2.2.zip)
 
 ### 常见问题
-
+* [5.0打包工具下载地址](http://docs.mztgame.com/files/Android/sdktool/setup5.0.exe)
 * [ Java 环境sdk 接入](/docs/channels/commonProblem)
 * [ 打包工具使用文档 ](http://docs.mztgame.com/files/Android/doc/dbgj.doc)
