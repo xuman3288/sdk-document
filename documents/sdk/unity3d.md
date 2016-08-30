@@ -4,7 +4,7 @@
 
 #### 插件 下载链接：
 
-- [Android  ](http://docs.mztgame.com/files/unity3d/loginPaySdkUinity_20160818.rar)
+- [Android  ](http://docs.mztgame.com/files/unity3d/loginPaySdkAndroid_20160830.zip)
 
 ------------------------------------------------------------------
 ####  导入 loginPaySdk.unitypackage 全部（\Assets\import package\custom package）
