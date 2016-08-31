@@ -62,7 +62,7 @@ RSA验证签名执行顺序：
 | openid   | 是   | 由SDK获得唯一ID, (数据库建议设置长度 120位) |
 | time     | 是   | 游戏服务器时间戳,以秒为单位, 如(1421212874) |
 | token    | 是   | 由SDK客户端中获得 |
-| sign     | 是   | 签名, 生成规则: <br>Md5(game_id+openid+time+token+key) <br>其中key 由, 巨人移动服务端对接人员提供 |
+| sign     | 是   | MD5 签名,结果为32位字符十六进制数字形式返回的散列值, 生成规则: <br>Md5(game_id+openid+time+token+key) <br>其中key 由, 巨人移动服务端对接人员提供 |
 
 #####  1.2.2.3. 响应说明
 
