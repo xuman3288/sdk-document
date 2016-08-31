@@ -123,7 +123,7 @@ public void switchAccount(LogoutCallback req)
 
 #### 添加资源及配置文件
 
-在与Assets同级目录创建SDKFile目录，包含SDK的bundle和plist文件
+在与Assets同级目录创建SDKFile目录，包含SDK的bundle和plist文件(也可在导出xcode工程后添加)
 
 * #### SDK的bundle文件
   * GASDKResource.bundle
