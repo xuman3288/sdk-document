@@ -45,10 +45,13 @@
 ### 5.x SDK
 
 * [巨人官方SDK-5.1.17版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_GA_5.1.17.tar.gz)
-* [PP助手渠道SDK-1.5.6版本下载地址（静态库1.5.6，动态库1.6.4）](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_PP_1.5.6~1.6.4.tar.gz)
+* [PP助手渠道SDK-1.5.6版本下载地址（静态库1.5.6，动态库1.6.4）](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_PP_1.5.6.tar.gz)
 * [果盘渠道SDK-2.3.0版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_GP_2.3.0.tar.gz)
-* [同步推渠道SDK-4.2.1版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_TB_4.2.1.tar.gz)
 * [XY渠道SDK-2.4.1版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_XY_2.4.1.tar.gz)
+* [iTools渠道SDK-2.7.0版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_IT_2.7.0.tar.gz)
+* [快用渠道SDK-3.0.4版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_KY_3.0.4.tar.gz)
+* [爱思助手渠道SDK-2.1.2版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_I4_2.1.2.tar.gz)
+* [同步推渠道SDK-4.2.3版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_TB_4.2.3.tar.gz)
 
 ### 插件SDK
 
@@ -84,16 +87,16 @@
 * [二维码分享插件SDK-1.0.4版本下载](http://docs.mztgame.com/files/Android/plugin/ztpromotecode_v1.0.4.zip)
 * [通知栏推送插件SDK-1.0.1版本下载](http://docs.mztgame.com/files/Android/plugin/push_on_barSDK_v1.0.1.zip)
 * [游戏内公告插件SDK-1.0版本下载](http://docs.mztgame.com/files/Android/plugin/inapppushSDK1.0.zip)
-* [支付sdk-1.0.4版本下载](http://docs.mztgame.com/files/Android/plugin/giantpaysdk_1.0.4.zip)
+* [支付sdk-1.0.5版本下载](http://docs.mztgame.com/files/Android/plugin/giantpaysdk_1.0.5.zip)
 * [网页版支付SDK-1.0.4版本下载](http://docs.mztgame.com/files/Android/plugin/giantpaywebsdk_1.0.4.zip)
 
-### 5.x SDK
+### 5.x SDK（新游戏接入）
 
 * [巨人母包SDK-5.0.1版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK5.0.1.zip)
-* [巨人官方SDK-5.0.8版本下载地址](http://docs.mztgame.com/files/Android/giantSDK5.0.8.zip)
+* [巨人官方SDK-5.0.9版本下载地址](http://docs.mztgame.com/files/Android/giantSDK5.0.9.zip)
 * [腾讯YSDK-v1.2.2版本下载地址](http://docs.mztgame.com/files/Android/ysdk5-v1.2.2.zip)
 
 ### 常见问题
-
+* [5.0打包工具下载地址](http://docs.mztgame.com/files/Android/sdktool/setup5.0.exe)
 * [ Java 环境sdk 接入](/docs/channels/commonProblem)
 * [ 打包工具使用文档 ](http://docs.mztgame.com/files/Android/doc/dbgj.doc)
