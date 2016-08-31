@@ -113,7 +113,7 @@ public void switchAccount(LogoutCallback req)
 
 ## Unity3d 官方SDK插件(IOS)
 
-#### 插件demo 下载链接：
+#### 插件 下载链接：
 
  [IOS  ](http://docs.mztgame.com/files/unity3d/iosunity_20160831.zip)
  
