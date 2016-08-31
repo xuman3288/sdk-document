@@ -115,7 +115,7 @@ public void switchAccount(LogoutCallback req)
 
 #### 插件demo 下载链接：
 
- [IOS  ](http://docs.mztgame.com/files/unity3d/GALoginUnityIOSDemo.zip)
+ [IOS  ](http://docs.mztgame.com/files/unity3d/iosunity_20160831.zip)
  
 ------------------------------------------------------------------
 
