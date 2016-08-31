@@ -595,5 +595,6 @@ public class DemoApp : MonoBehaviour {
 
 ####必须包含自定义配置文件和资源文件
 检查Build Phases->Copy Bundle Resources
+  
   * ztsdk_config.plist
   * GASDKResource.bundle
