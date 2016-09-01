@@ -52,7 +52,8 @@
 * [快用渠道SDK-3.0.4版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_KY_3.0.4.tar.gz)
 * [爱思助手渠道SDK-2.1.2版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_I4_2.1.2.tar.gz)
 * [同步推渠道SDK-4.2.3版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_TB_4.2.3.tar.gz)
-
+* [I苹果渠道SDK-1.3.0版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_IA_1.3.0.tar.gz)
+* 
 ### 插件SDK
 
 * [iOS激活插件SDK下载地址](http://docs.mztgame.com/files/iOS/plugin/iOSActivePluginSDK.zip)
@@ -95,6 +96,7 @@
 * [巨人母包SDK-5.0.1版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK5.0.1.zip)
 * [巨人官方SDK-5.0.9版本下载地址](http://docs.mztgame.com/files/Android/giantSDK5.0.9.zip)
 * [腾讯YSDK-v1.2.2版本下载地址](http://docs.mztgame.com/files/Android/ysdk5-v1.2.2.zip)
+* [百度-v3.7.2版本下载地址](http://docs.mztgame.com/files/Android/BDGameSDKV3.7.2.zip)
 
 ### 常见问题
 * [5.0打包工具下载地址](http://docs.mztgame.com/files/Android/sdktool/setup5.0.exe)
