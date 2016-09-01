@@ -40,7 +40,7 @@
   /// <param name="zoneId">区id 游戏自传</param>
   /// <param name="zoneName">区name 游戏自传</param>
   /// <param name="req">回调方法</param>
-  public void login(string zoneId,string zoneName,LoginStatusCallback req);
+  public void loginAndroid(string zoneId,string zoneName,LoginStatusCallback req);
 
 ```    
 参数说明：  
@@ -51,7 +51,7 @@
 
 调用举例：可参考demo
 ```
-  GASDKManager.Instance.login("1","败走麦城区",logResult);
+  GASDKManager.Instance.loginAndroid("1","败走麦城区",logResult);
 ```
 
 ###### ` 注：在调用该接口之前，请务必先调用init接口。`
@@ -69,7 +69,7 @@
 /// <param name="productId">商品id  游戏自传</param>
 /// <param name="productName">商品名称  游戏自传</param>
 /// <param name="req">回调方法</param>
-public void pay(string zoneId,int money,string productId,string productName,PayStatusCallback req);
+public void payAndroid(string zoneId,int money,string productId,string productName,PayStatusCallback req);
 
 ```
 
@@ -89,7 +89,7 @@ public void pay(string zoneId,int money,string productId,string productName,PayS
 调用实例：可参考demo
 
 ```
-  GASDKManager.Instance.pay("1",100,"1","金币",logPayResult);
+  GASDKManager.Instance.payAndroid("1",100,"1","金币",logPayResult);
 ```
 
 ------------------------------------------------------------------
@@ -101,14 +101,14 @@ public void pay(string zoneId,int money,string productId,string productName,PayS
 /// 切换账号
 /// </summary>
 /// <param name="req">回调方法</param>
-public void switchAccount(LogoutCallback req)
+public void switchAccountAndroid(LogoutCallback req)
 
 ```
 
 调用实例：可参考demo
 
 ```
-  GASDKManager.Instance.switchAccount(logSwitchUser);
+  GASDKManager.Instance.switchAccountAndroid(logSwitchUser);
 ```
 
 ## Unity3d 官方SDK插件(IOS)
