@@ -3,14 +3,27 @@
 ## Unity插件下载
 
 - [插件](http://docs.mztgame.com/files/unity3d/GASDKUnity_20160901.zip)
- 
 
-## Unity3d 官方SDK插件(Android)
-
----------------------------------------------------------
 ------------------------------------------------------------------
-####  导入 GASDKUnity.unitypackage 全部（\Assets\import package\custom package）
+
+ ####  导入 GASDKUnity.unitypackage 全部（\Assets\import package\custom package）
+
 ![](http://docs.mztgame.com/files/assets/unityimg/giantsdk_unity_import.png)
+
+
+#### 可参考testLogin.cs
+
+```
+
+
+
+``` 
+
+
+
+## Unity3d 官方SDK(Android)
+ 
+------------------------------------------------------------------
 
 ####  接口说明
 
@@ -28,7 +41,7 @@
 调用例子:
 
 ```
-  GASDKManager.Instance.initGASDK("5014","testGameName",false);
+  GASDKManager.Instance.initAndroid("5014","testGameName",false);
 ```
 
 ------------------------------------------------------------------
@@ -113,7 +126,7 @@ public void switchAccountAndroid(LogoutCallback req)
   GASDKManager.Instance.switchAccountAndroid(logSwitchUser);
 ```
 
-## Unity3d 官方SDK插件(IOS)
+## Unity3d 官方SDK(IOS)
 
  
  
