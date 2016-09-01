@@ -1,11 +1,13 @@
-## Unity3d 官方SDK插件(Android)
 
----------------------------------------------------------
 
 #### 插件 下载链接：
 
-- [Android  ](http://docs.mztgame.com/files/unity3d/loginPaySdkAndroid_20160830.zip)
+- [插件  ](http://docs.mztgame.com/files/unity3d/GASDKUnity_20160901.zip)
+ 
 
+## Unity3d 官方SDK插件(Android)
+
+---------------------------------------------------------
 ------------------------------------------------------------------
 ####  导入 loginPaySdk.unitypackage 全部（\Assets\import package\custom package）
 ![](http://docs.mztgame.com/files/assets/unityimg/giantsdk_unity_import.png)
@@ -113,9 +115,7 @@ public void switchAccountAndroid(LogoutCallback req)
 
 ## Unity3d 官方SDK插件(IOS)
 
-#### 插件 下载链接：
-
- [IOS  ](http://docs.mztgame.com/files/unity3d/iosunity_20160831.zip)
+ 
  
 ------------------------------------------------------------------
 
