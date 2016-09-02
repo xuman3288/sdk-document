@@ -35,7 +35,7 @@ GASDKManager.Instance.payIOS(...,callback);
 
 ```
 
-#### 可参考testLogin.cs
+#### [可参考testLogin.cs](/docs/sdk/.cs.md)
 
 
 
