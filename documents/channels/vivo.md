@@ -36,7 +36,9 @@
            （price）的单位。
 
    2.  支付参数不全，不能进行支付  payment_params参数需要核对 { 确保微信wxapi存在，配置文件 }
-     ```xml
+   
+    ```xml
+    
         config.cpid=#cp_id#
         config.appid=#app_id#
 
