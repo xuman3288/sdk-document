@@ -12,13 +12,13 @@
 
 #### 统一接口
 
- ```
+```
  //初始化
 
  GASDKManager.Instance.initGASDK("5014","testGameName",false);
 
 //切换账号
-GASDKManager.Instance.switchUser();
+ GASDKManager.Instance.switchUser();
 
 //用户中心
 GASDKManager.Instance.userCenter();
