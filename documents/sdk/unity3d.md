@@ -201,31 +201,7 @@ public sealed class MonoPInvokeCallbackAttribute : Attribute
 }
 
 ```
-##### 创建IOSConnector.cs并导入System.Runtime.InteropServices;用来解析.a库
-```
 
-using UnityEngine;
-using System.Collections;
-using System;
-using System.Runtime.InteropServices;
-
-public class IOSConnector
-{
-
-	protected static IOSConnector _connector = null;
-
-	public static IOSConnector Instance {
-
-		get{
-			if(_connector == null){
-
-				_connector = new IOSConnector();
-
-			}
-			return _connector;
-		}
-	}
-```
 
 ##### DllImport
 ```
