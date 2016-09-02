@@ -31,6 +31,7 @@ public class TestLogin : MonoBehaviour {
         GASDKManager.Instance.payAndroid("1",10,"1","金币",logPayResult);
 
 		#elif UNITY_IOS || UNITY_IPHONE
+
 		IOSSDKManager.Instance.payIOS ("1","1","金币",1,1,100,"",logPayResult);
 
 		#endif
