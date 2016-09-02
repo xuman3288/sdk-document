@@ -80,18 +80,7 @@ public class TestLogin : MonoBehaviour {
 		#endif
     }
 
-    public void logSwitchUser(int ret)
-    {
-        Debug.Log("  切换账号  In C# Client ret = " + ret);
-		#if UNITY_ANDROID
-        GASDKManager.Instance.AndroidToat("切换账号登录成功");
-
-		#endif
-
-	}
-
-
-	//#######################################################
+//#######################################################
 
 
 
