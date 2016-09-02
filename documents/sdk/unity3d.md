@@ -14,6 +14,89 @@
 #### 可参考testLogin.cs
 
 ```
+  public class TestLogin : MonoBehaviour {
+
+
+    void Start()
+    {
+		
+		GASDKManager.Instance.initGASDK("5163","testGameName",false);
+
+	}
+
+
+    public void testLogin(){
+		
+		#if UNITY_ANDROID
+
+		GASDKManager.Instance.loginAndroid("1"," testzoneName ",loginResult);
+
+		#elif UNITY_IOS || UNITY_IPHONE
+
+		IOSSDKManager.Instance.loginIOS(loginResult);
+
+		#endif
+	}
+
+    public void testPay()
+    {
+		#if UNITY_ANDROID
+
+        GASDKManager.Instance.payAndroid("1",10,"1","金币",logPayResult);
+
+		#elif UNITY_IOS || UNITY_IPHONE
+		IOSSDKManager.Instance.payIOS ("1","1","金币",1,1,100,"",logPayResult);
+
+		#endif
+
+	}
+
+    public void testSwitchUser()
+    {
+		GASDKManager.Instance.switchUser (); 
+     
+    }
+    public void testUserCenter()
+    {
+		
+		GASDKManager.Instance.userCenter ();	
+	}
+ 
+
+
+
+    //####################### 返回结果 ############################
+
+
+	public void loginResult(int ret, string usr, string token,string json){
+
+		Debug.Log( " 登录成功  In C# Client ret = "+ret + " ,user ="+usr + " token = "+token+",json = "+json);
+		#if UNITY_ANDROID
+        GASDKManager.Instance.AndroidToat("登录成功");
+		#endif
+
+	}
+
+    public void logPayResult(int ret)
+    {
+        Debug.Log("  支付  In C# Client ret = " + ret  );
+        
+		#if UNITY_ANDROID
+		if(ret == 0)
+        {
+            GASDKManager.Instance.AndroidToat("支付成功");
+        }
+        else
+        {
+            GASDKManager.Instance.AndroidToat("支付失败");
+        }
+		#endif
+    }
+
+    
+
+	//#######################################################
+
 
 
 
@@ -36,7 +119,7 @@
   /// <param name="gameid">游戏id   游戏自传</param>
   /// <param name="appName">游戏名字  游戏自传</param>
   /// <param name="isLandScape">是否横屏  游戏自传</param>
-  public void initGASDK(string gameid,string appName,bool isLandScape);
+  public void initAndroid(string gameid,string appName,bool isLandScape);
 ```
 调用例子:
 
@@ -550,37 +633,6 @@ public class IOSConnector
 	}
 ```
 
-##### Demo
-```
-
-public class DemoApp : MonoBehaviour {
-
-	// Use this for initialization
-	void  Awake() {
-		Debug.Log ("在执行初始化操作前先注册所有回调");
-		IOSManager.Instance.RegistAllCallback ();
-
-		Debug.Log("SDK初始化");
-		IOSManager.initWithGameId ("5016", "gameName");
-
-
-	}
-
-	public void loginGA(){
-
-		Debug.Log("登陆，未登陆过显示登陆界面，已登陆过则用上一次登陆的账号自动登陆");
-
-		IOSManager.login();
-
-	}
-
-	public void switchUser(){
-		Debug.Log("切换账号");
-		IOSManager.switchAccount();
-
-	}
-}
-```
 ---
 ####  导出Xcode后检查工程设置
 ####  Build Settings设置
