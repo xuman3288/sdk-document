@@ -563,6 +563,7 @@ public sealed class MonoPInvokeCallbackAttribute : Attribute
   * SystemConfiguration.framework
   * EventKit.framework
   * MediaPlayer.framework
+  * CoreImage.framework
 
 * ##### Libraries
   * libstdc++.tbd
