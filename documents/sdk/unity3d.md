@@ -2,7 +2,7 @@
 
 ## Unity插件下载
 
-- [插件](http://docs.mztgame.com/files/unity3d/GASDKUnity_20160901.zip)
+- [插件](http://docs.mztgame.com/files/unity3d/GASDKUnity_2.0.0.zip)
 
 ------------------------------------------------------------------
 
