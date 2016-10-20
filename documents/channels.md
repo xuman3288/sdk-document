@@ -90,6 +90,7 @@
 | 麟游-盟宝                             | 105         | mengbao            |              | Android           | -                     | -v1.4.1               | -               |                        |
 | 起点-阅文                             | 106         | yuewen             |              | Android           | -                     | -v1.7                 | -               |                        |
 | 拇指玩2                               | 107         | muzhiwan2          |              | Android           | -                     | -                     | -               |                        |
+| 360融合                               | 108         | jusdk              |              | Android           | -                     | -                     | -               |                        |
 
 ### 渠道 IOS
 
