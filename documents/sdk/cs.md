@@ -5,12 +5,12 @@ public class TestLogin : MonoBehaviour {
 
     void Start()
     {
-
+		//初始化	
 		GASDKManager.Instance.initGASDK("5163","testGameName",false);
 
 	}
 
-
+    //登录	
     public void testLogin(){
 
 		#if UNITY_ANDROID
@@ -23,7 +23,7 @@ public class TestLogin : MonoBehaviour {
 
 		#endif
 	}
-
+   //支付	
     public void testPay()
     {
 		#if UNITY_ANDROID
@@ -37,12 +37,13 @@ public class TestLogin : MonoBehaviour {
 		#endif
 
 	}
-
+   //切换账号	
     public void testSwitchUser()
     {
 		GASDKManager.Instance.switchUser ();
 
     }
+    //用户中心
     public void testUserCenter()
     {
 
