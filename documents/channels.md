@@ -214,3 +214,4 @@
 | 91993                    |  10097   |  *.jiuyijiujiusan    |  CPS            |
 | 咕咕鸟                   |  10098   |  *.guguniao          |  CPS            |
 | 麟游官方                 |  10099   |  *.linyou            |  CPS            |
+| 虎扑                     |  10100   |  *.hupu            |  CPS            |
