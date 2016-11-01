@@ -216,3 +216,4 @@
 | 麟游官方                 |  10099   |  *.linyou            |  CPS            |
 | 虎扑                     |  10100   |  *.hupu            |  CPS            |
 |人人美剧                   |10101     | *.renrenmeiju      | CPS             |
+|天游                      |10102     | *.tianyou          | CPS             |
