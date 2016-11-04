@@ -2,7 +2,8 @@
 
 ## Unity插件下载
 
-- [插件](http://docs.mztgame.com/files/unity3d/GASDKUnity_2.0.0.zip)
+- [巨人官方插件](http://docs.mztgame.com/files/unity3d/GASDKUnity_2.0.0.zip)
+- [渠道母包插件](http://docs.mztgame.com/files/unity3d/GASDKUnity_Android_母包_1.0.0.zip)
 
 ------------------------------------------------------------------
 
@@ -23,7 +24,7 @@
 //用户中心
 GASDKManager.Instance.userCenter();
 
-//登录 
+//登录
 GASDKManager.Instance.loginAndroid(...,Callback);
 GASDKManager.Instance.loginIOS(...,Callback);
 
@@ -40,7 +41,7 @@ GASDKManager.Instance.payIOS(...,callback);
 
 
 ## Unity3d 官方SDK(Android)
- 
+
 ------------------------------------------------------------------
 
 ####  接口说明
@@ -143,11 +144,207 @@ public void switchAccountAndroid(LogoutCallback req)
 ```
   GASDKManager.Instance.switchAccountAndroid(logSwitchUser);
 ```
+###### `用户中心`
+```
+  /**
+  *用户中心
+  **/
+  public void userCenterAndroid();
+
+```
+调用实例：可参考demo
+
+```
+  GASDKManager.Instance.userCenterAndroid();
+```
+
+## Unity3d 渠道母包SDK(Android)
+
+###### `初始化接口(必接)`
+###### `登录接口(必接)`
+###### `支付接口(必接)`
+###### `切换账号(必接)`
+###### `用户中心(必接)`
+以上接口说明可参考官方sdk(Android)
+
+###### `是否需要用户中心按钮接口(必接)`
+
+```
+    /**
+     * 是否需要用户中心按钮接口
+     *
+     * 以上为某些渠道判断是否存在用户中心按钮倘若返回false不作处理，倘若返回true需要显示*用户中心按钮，点击此按钮后调用userCenterAndroid()
+     */
+    public void hasUserCenterAndroid(IsHasUserCenterCallback  req);
+```
+调用实例：可参考demo
+
+```
+  GASDKManager.Instance.hasUserCenterAndroid(logHasUserCenter);
+```
+###### `是否需要切换账号按钮接口(必接)`
+
+```
+  /**
+    * 是否需要切换账号按钮接口
+    * 以上接口返回true则游戏需要添加一个切换账号按钮以方便用户切换账号.
+    * 点击此按钮后调用switchAccountAndroid()
+    */
+```
+调用实例：可参考demo
+
+```
+   GASDKManager.Instance.hasSwitchUserAndroid(logHasSwitchUserCenter);
+```
+
+###### `是否有第三方渠道的退出确认弹出框（必接）`
+
+```
+  /**
+    * 是否有第三方渠道的退出确认弹出框（必接）
+    *  
+    * 如果此函数返回true，请游戏不要弹出游戏自身的退出确认弹出框而是直接调用quitZTGameAndroid来弹出第三方的退出弹出框，在回调返回状态码:4 ,处理游戏的退出操作
+    * （销毁代码，而不是再次弹出退出确认对话框。返回false则按照游戏自己的退出流程处理即可。)
+    */
+    public void hasQuitDialogAndroid(IsHasQuitDialogCallback req)
+```
+调用实例：可参考demo
+
+```
+  GASDKManager.Instance.hasQuitDialogAndroid(logHasQuitDialog);
+```
+
+###### `弹出第三方退出弹出 确认框接口（必接）`
+
+```
+  /**
+   * 弹出第三方退出弹出 确认框接口（必接）
+   */
+   public void quitZTGameAndroid(QuitGameZTCallback req);
+
+```
+调用实例：可参考demo
+
+```
+   GASDKManager.Instance.quitZTGameAndroid(logQuitDialog);
+```
+###### ` 开启日志输出接口`
+
+```
+  /**
+   * 开启日志输出接口
+   * 游戏上线前需要注释该行代码以关闭日志输出
+   *
+   */
+   public void enableDebugModeAndroid();
+```
+调用实例：可参考demo
+
+```
+  GASDKManager.Instance.enableDebugModeAndroid();
+```
+###### `获取渠道id`
+
+```
+  /**
+    * 获取渠道id
+    *
+    * 渠道id以及游戏id可以统一从此wiki链接查询.
+    * @see http://wiki.mztgame.com/index.php/%E6%B8%A0%E9%81%93%E4%BF%A1%E6%81%AF%E5%88%97%E8%A1%A8
+    */
+   public void getPlatFormIdAndroid(GetPlatFormIdCallback req)
+```
+调用实例：可参考demo
+
+```
+   GASDKManager.Instance.getPlatFormIdAndroid(logGetPlatFormId);
+```
+###### `更新服务器id`
+
+```
+  /**
+   * 更新服务器id
+   * 玩家切换服务器后需要调用此方法更新当前服务器id
+   */
+   public void setZoneIdAndroid(string zoneId)
+```
+调用实例：可参考demo
+
+```
+  GASDKManager.Instance.setZoneIdAndroid("11");
+```
+###### `更新当前活动Activity`
+
+```
+    /**
+    * 更新当前活动Activity
+    * 如果游戏当前Activity变更，需要更新activity到SDK
+    */
+    public void setActivityAndroid();
+```
+调用实例：可参考demo
+
+```
+   GASDKManager.Instance.setActivityAndroid();
+```
+###### `是否已经登录`
+
+```
+    /**
+     * 是否已经登录
+     */
+    public void getIsLoginedAndroid(IsLoginedCallback req)
+```
+调用实例：可参考demo
+
+```
+   GASDKManager.Instance.getIsLoginedAndroid(logisLogined);
+```
+###### `登录完成数据统计接口（必接）`
+
+```
+  /**
+    *登录完成数据统计接口（必接）
+    角色进入游戏后调用
+    **/
+    public void loginOkZTGameAndroid(string roleId, string roleName, string roleLevel, string zoneId, string zoneName)
+```
+调用实例：可参考demo
+
+```
+ GASDKManager.Instance.loginOkZTGameAndroid("1","角色名","角色等级","11","区名");
+```
+###### `创建角色数据统计接口（必接）`
+
+```
+  /***
+    创建角色数据统计接口（必接）
+    **/
+    public void createRoleZTGameAndroid(string roleId, string roleName, string roleLevel, string zoneId, string zoneName)
+```
+调用实例：可参考demo
+
+```
+  GASDKManager.Instance.createRoleZTGameAndroid("1", "角色名", "角色等级", "11", "区名");
+```
+###### `角色等级升级信息接口（必接）`
+
+```
+  /**
+   角色等级升级信息接口（必接）
+   **
+   */
+   public void roleLevelUpZTGameAndroid(string roleId, string roleName, string zoneId, string zoneName, int level)
+```
+调用实例：可参考demo
+
+```
+   GASDKManager.Instance.roleLevelUpZTGameAndroid("1", "角色名",  "11", "区名",11);
+```
 
 ## Unity3d 官方SDK(IOS)
 
- 
- 
+
 ------------------------------------------------------------------
 
 #### 导入SDK文件
@@ -572,6 +769,6 @@ public sealed class MonoPInvokeCallbackAttribute : Attribute
 
 ####必须包含自定义配置文件和资源文件
 检查Build Phases->Copy Bundle Resources
-  
+
   * ztsdk_config.plist
   * GASDKResource.bundle
