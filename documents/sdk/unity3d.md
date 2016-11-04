@@ -173,7 +173,8 @@ public void switchAccountAndroid(LogoutCallback req)
    /**
     * 是否需要用户中心按钮接口
     *
-    * 以上为某些渠道判断是否存在用户中心按钮倘若返回false不作处理，倘若返回true需要显示*用户中心按钮，点击此按钮后调用userCenterAndroid()
+    * 以上为某些渠道判断是否存在用户中心按钮倘若返回false不作处理，倘若返回true需要显示*用户中心按钮，
+    点击此按钮后调用userCenterAndroid()
     */
     
     public void hasUserCenterAndroid(IsHasUserCenterCallback  req);
