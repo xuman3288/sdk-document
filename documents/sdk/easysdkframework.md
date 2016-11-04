@@ -88,7 +88,7 @@ public abstract class IZTLibBase {
      * 如果此函数返回true，请游戏不要弹出游戏自身的退出确认弹出框而是直接调用quitZTGame来弹出第三方的退出弹出框，在ZTGame_Quit回调内处理游戏的退出操作
      * （销毁代码，而不是再次弹出退出确认对话框。返回false则按照游戏自己的退出流程处理即可。)
      */
-    public void isHasQuitDialog(){}
+    public boolean isHasQuitDialog(){}
 
     /**
      * 弹出第三方退出弹出确认框接口（必接）
@@ -350,7 +350,8 @@ config.channel_id=1
 
 > **注 3**：
 >
-> 如果你的工程里存在 Application 需要继承改Application 并且在 `onCreate()` 函数中添加 `super.onCreate()`
+> 如果你的工程里存在 Application 需要继承ZTApplication 并且在 `onCreate()` 函数中添加 `super.onCreate()`
+> 
 
 
 ### Step 2. 初始化 `MainActivity`
