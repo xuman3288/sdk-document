@@ -357,7 +357,7 @@ public void switchAccountAndroid(LogoutCallback req)
    GASDKManager.Instance.roleLevelUpZTGameAndroid("1", "角色名",  "11", "区名",11);
 ```
 ##### 1.注意
- [ AndroidMinfest ](/docs/sdk/csParent)
+ [ AndroidMinfest ](/docs/sdk/csAndroidMinfest)
 ##### 2.接入生命周期
 [ UnityActivity ](/docs/sdk/csAndroidLife)
 
