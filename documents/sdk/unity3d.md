@@ -170,11 +170,12 @@ public void switchAccountAndroid(LogoutCallback req)
 ###### `是否需要用户中心按钮接口(必接)`
 
 ```
-    /**
-     * 是否需要用户中心按钮接口
-     *
-     * 以上为某些渠道判断是否存在用户中心按钮倘若返回false不作处理，倘若返回true需要显示*用户中心按钮，点击此按钮后调用userCenterAndroid()
-     */
+   /**
+    * 是否需要用户中心按钮接口
+    *
+    * 以上为某些渠道判断是否存在用户中心按钮倘若返回false不作处理，倘若返回true需要显示*用户中心按钮，点击此按钮后调用userCenterAndroid()
+    */
+    
     public void hasUserCenterAndroid(IsHasUserCenterCallback  req);
 ```
 调用实例：可参考demo
@@ -201,11 +202,11 @@ public void switchAccountAndroid(LogoutCallback req)
 
 ```
   /**
-    * 是否有第三方渠道的退出确认弹出框（必接）
-    *  
-    * 如果此函数返回true，请游戏不要弹出游戏自身的退出确认弹出框而是直接调用quitZTGameAndroid来弹出第三方的退出弹出框，在回调返回状态码:4 ,处理游戏的退出操作
-    * （销毁代码，而不是再次弹出退出确认对话框。返回false则按照游戏自己的退出流程处理即可。)
-    */
+   * 是否有第三方渠道的退出确认弹出框（必接）
+   *  
+   * 如果此函数返回true，请游戏不要弹出游戏自身的退出确认弹出框而是直接调用quitZTGameAndroid来弹出第三方的退出弹出框，在回调返回状态码:4 ,处理游    *戏的退出操作
+   * （销毁代码，而不是再次弹出退出确认对话框。返回false则按照游戏自己的退出流程处理即可。)
+   */
     public void hasQuitDialogAndroid(IsHasQuitDialogCallback req)
 ```
 调用实例：可参考demo
