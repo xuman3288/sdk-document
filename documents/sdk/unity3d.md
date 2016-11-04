@@ -160,12 +160,15 @@ public void switchAccountAndroid(LogoutCallback req)
 
 ## Unity3d 渠道母包SDK(Android)
 ![](http://docs.mztgame.com/files/assets/unityimg/unity_gasdk_android_parent.png)
+
 ###### `初始化接口(必接)`
 ###### `登录接口(必接)`
 ###### `支付接口(必接)`
 ###### `切换账号(必接)`
 ###### `用户中心(必接)`
 以上接口说明可参考官方sdk(Android)
+
+#### [可参考TestGaParentPackage.cs](/docs/sdk/csParent)
 
 ###### `是否需要用户中心按钮接口(必接)`
 
@@ -353,6 +356,10 @@ public void switchAccountAndroid(LogoutCallback req)
 ```
    GASDKManager.Instance.roleLevelUpZTGameAndroid("1", "角色名",  "11", "区名",11);
 ```
+##### 1.注意
+ [ AndroidMinfest ](/docs/sdk/csParent)
+##### 2.接入生命周期
+[ UnityActivity ](/docs/sdk/csAndroidLife)
 
 ## Unity3d 官方SDK(IOS)
 
