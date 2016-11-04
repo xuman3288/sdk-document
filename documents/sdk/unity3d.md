@@ -159,7 +159,7 @@ public void switchAccountAndroid(LogoutCallback req)
 ```
 
 ## Unity3d 渠道母包SDK(Android)
-
+![](http://docs.mztgame.com/files/assets/unityimg/unity_gasdk_android_parent.png)
 ###### `初始化接口(必接)`
 ###### `登录接口(必接)`
 ###### `支付接口(必接)`
