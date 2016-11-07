@@ -7,7 +7,9 @@ public class TestLogin : MonoBehaviour {
     {
 		//初始化
 		GASDKManager.Instance.initGASDK("5163","testGameName",false);
-
+		 #if UNITY_ANDROID
+         	 //GASDKManager.Instance.enableDebugModeAndroid();
+       		 #endif
 	}
 
     //登录
