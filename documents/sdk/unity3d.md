@@ -2,7 +2,7 @@
 
 ## Unity插件下载
 
-- [巨人官方插件](http://docs.mztgame.com/files/unity3d/GASDKUnity_2.0.0.zip)
+- [巨人官方插件](http://docs.mztgame.com/files/unity3d/GASDKUnity_2.0.1.zip)
 - [渠道母包插件](http://docs.mztgame.com/files/unity3d/GASDKUnity_Android_母包_1.0.0.zip)
 
 ------------------------------------------------------------------
@@ -156,6 +156,21 @@ public void switchAccountAndroid(LogoutCallback req)
 
 ```
   GASDKManager.Instance.userCenterAndroid();
+```
+###### ` 开启日志输出接口`
+
+```
+  /**
+   * 开启日志输出接口
+   * 游戏上线前需要注释该行代码以关闭日志输出
+   *
+   */
+   public void enableDebugModeAndroid();
+```
+调用实例：可参考demo
+
+```
+  GASDKManager.Instance.enableDebugModeAndroid();
 ```
 
 ## Unity3d 渠道母包SDK(Android)
