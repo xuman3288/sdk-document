@@ -230,9 +230,14 @@ public interface IZTListener {
 
 ~~~json
 {
-    "mobile_type":"xxxxxx",
-    "token":"c814684cbf4f17e2dd0c169db997db7f",
+	"entity": {
+    		"openid":"1-123456",
+    		"account":"XXXXXXXX"
+    	},
     "accid":"1-123456",
+    "token":"bbe7e46de2c7d3ace036cea155b23978",
+    "sign":"xxxxxx"
+	"mobile_type":"xxxxxx",
     "imei":"xxxxxx",
     "action":"login",
     "account":"xxxxxx",
@@ -387,10 +392,26 @@ public class MainActivity extends Activity {
                 if (errcode == 0) {
                     //游戏完成事件, 设置角色信息
                     IZTLibBase.getInstance().loginOkZTGame("roleId", "roleName", "roleLevel", "zoneId", "zoneName");
+					try {
+    					String openid = json_obj.getString("accid");
+    					String sign = json_obj.getString("sign");
+    					JSONObject entity = json_obj.getJSONObject("entity");
+    				} catch (JSONException e) {
+    					// TODO Auto-generated catch block
+    					e.printStackTrace();
+    				}
                 }else if（errcode == -2）{
                      //用户取消登录，关闭登录框
                 }else if(errcode == 2){
 					//连接平台服务器失败，返回上次用户登录的参数
+					try {
+    					String openid = json_obj.getString("accid");
+    					String sign = json_obj.getString("sign");
+    					JSONObject entity = json_obj.getJSONObject("entity");
+    				} catch (JSONException e) {
+    					// TODO Auto-generated catch block
+    					e.printStackTrace();
+    				}
 				}else {
                     //登录失败
                 }
