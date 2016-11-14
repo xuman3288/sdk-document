@@ -93,7 +93,8 @@
 
 ### 5.x SDK（新游戏接入）
 
-* [巨人母包SDK-5.0.1版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK5.0.1.zip)
+* [巨人母包SDK-5.0.3版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK5.0.3.zip)
+* [巨人母包SDK-5.1.0版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK5.1.0.zip)
 * [巨人官方SDK-5.1.2版本下载地址](http://docs.mztgame.com/files/Android/giantSDK5.1.2.zip)
 * [腾讯YSDK-v1.2.2版本下载地址](http://docs.mztgame.com/files/Android/ysdk5-v1.2.2.zip)
 * [百度-v3.7.2版本下载地址](http://docs.mztgame.com/files/Android/BDGameSDKV3.7.2.zip)
