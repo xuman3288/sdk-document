@@ -218,7 +218,7 @@ public interface IZTListener {
 | 出现值                   | 描述 |
 |--------------------------|--------------|
 | ZTConsts.ZTGAME_INIT     | 是SDK初始化完成的通知，所有接口都需要在INIT成功完成之后才能开始调用 |
-| ZTConsts.ZTGAME_LOGIN    | 需要处理登录返回的json_obj参数，交给游戏服务器[进行效验](http://docs.mztgame.com/docs/sdk/server_guide#__2) |
+| ZTConsts.ZTGAME_LOGIN    | errcode为-1登录失败，errcode为-2用户取消登录，errcode为0登录成功时需要处理登录返回的json_obj参数，交给游戏服务器[进行效验](http://docs.mztgame.com/docs/sdk/server_guide#__2) |
 | ZTConsts.ZTGAME_PAY      | 只需要判断errcode为0成功还是-1失败，但是是否到账要以[服务器通知为准](http://docs.mztgame.com/docs/sdk/server_guide#__7) |
 | ZTConsts.ZTGAME_QUIT     | 是游戏进行销毁操作的地方，玩家在第三方退出框点击确认后会收到此回调 |
 | ZTConsts.ZTGAME_LOGOUT   | 是游戏进行登出操作/切换账号操作的地方，需要返回到游戏登录界面等待用户再次登录 |
@@ -277,10 +277,10 @@ public interface IZTListener {
 | Method | Required / Optional / Deprecated | Description |
 |--------|----------------------------------|----------------------------|
 | setAmount | 必填  | 设置商品金额(RMB). 单位(分) |
-| setExtra | 必填 | 设置游戏订单扩展信息(游戏订单号等等)  |
+| setExtra | 可选设置  | 设置游戏订单扩展信息(游戏订单号等等)  |
 | setMoneyName | 必填 | 设置货币单位名称  |
 | setMonthCard | 可选设置 | 设置是否为月卡  |
-| setExchangeRatio | 必填  | 设置价格比率 |
+| setExchangeRatio | 可选设置   | 设置价格比率 |
 | setProductName | 必填  | 设置商品名称 |
 | setProductId | 必填  | 设置商品ID |
 
@@ -387,7 +387,10 @@ public class MainActivity extends Activity {
                 if (errcode == 0) {
                     //游戏完成事件, 设置角色信息
                     IZTLibBase.getInstance().loginOkZTGame("roleId", "roleName", "roleLevel", "zoneId", "zoneName");
-                } else {
+                }else if（errcode == -2）{
+                     //用户取消登录，关闭登录框
+                } 
+                else {
                     //登录失败
                 }
                 break;
@@ -752,3 +755,5 @@ Login types:
 
 ###注意事项
 #### 1.如果游戏是u3d框架，以上sdk接口必须放在runOnUiThread()方法中调用
+#### 2.游戏的Activity，在AndroidManifest.xml的配置包含这些属性：android:configChanges="orientation|keyboardHidden|screenSize"，
+      android:launchMode设置成standard或者singleTop

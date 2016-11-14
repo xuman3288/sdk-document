@@ -32,3 +32,17 @@
 
    1. 切换账号的操作：
            联想登陆一次以后会自动登录，若需切换账号，请登录时点击“切换账号”进行账号的切换。
+
+   2. 渠道登录错误: 渠道方登录错误
+
+    检查appid，appkey，在Manifest文件中要配置appid，搜索字符串“.app.ln”替换成＃app_id＃
+
+   3. 充值崩溃
+
+     检查waresid值是否为空
+
+   4. 黑屏、不兼容、没有悬浮框 
+     将版本改成
+```xml
+     <uses-sdk android:minSdkVersion="4"  android:targetSdkVersion="8"  />
+```     

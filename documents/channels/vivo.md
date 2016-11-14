@@ -34,3 +34,13 @@
            检查参数有没有配置正确，无误后再检查支付接口里面的参数有没有填写正确，特别是价格
 
            （price）的单位。
+
+   2.  支付参数不全，不能进行支付  payment_params参数需要核对 { 确保微信wxapi存在，配置文件 }
+   
+  ```
+    
+        config.cpid=#cp_id#
+        config.appid=#app_id#
+
+        <data android:scheme="qwallet#package#" />
+  ```
