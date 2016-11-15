@@ -217,3 +217,5 @@
 | 虎扑                     |  10100   |  *.hupu            |  CPS            |
 |人人美剧                   |10101     | *.renrenmeiju      | CPS             |
 |天游                      |10102     | *.tianyou          | CPS             |
+|讯飞助手	                  |10103	  |*.xunfeizhushou      |CPS              |
+|柠檬助手	                  |10104	  |*.ningmengzhushou    |CPS              |
