@@ -219,13 +219,13 @@
 |天游                      |10102     | *.tianyou          | CPS             |
 |讯飞助手	                  |10103	  |*.xunfeizhushou      |CPS              |
 |柠檬助手	                  |10104	  |*.ningmengzhushou    |CPS              |
-/豪鑫电竞	/10103	/*.haoxin1862/
-|网易模拟器	|10104	|*.mumu|
-/西西软件园	/10105	/*.xixi/
-|PC6	|10106	|*.pc6|
-/3DM	/10107	/*.thirddm/
-|游戏吧	|10108	|*.youxi|
-/游侠网	/10109	/*.youxia/
-|游乐园	|10110	|*.youle|
-/游迅网	/10111	/*.youxun/
-|网侠手机站	|10112	|*.wangxia|
+/豪鑫电竞	                 /10103	    /*.haoxin1862         /cps              /
+|网易模拟器	|10104	|*.mumu|cps|
+/西西软件园	/10105	/*.xixi/cps/
+|PC6	|10106	|*.pc6|cps|
+/3DM	/10107	/*.thirddm/cps/
+|游戏吧	|10108	|*.youxi|cps|
+/游侠网	/10109	/*.youxia/cps/
+|游乐园	|10110	|*.youle|cps|
+/游迅网	/10111	/*.youxun/cps/
+|网侠手机站	|10112	|*.wangxia|cps|
