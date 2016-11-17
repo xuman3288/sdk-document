@@ -28,7 +28,8 @@
 | entity  | object | 由客户端中取得, 参与签名需要 encode 后的字符串  |
 | entity.openid  | string | 用户账号唯一标识(账号唯一性标识) |
 | entity.time  | int | 生成签名的服务器时间，单位秒。  |
-| entity.account  | string|null | 用户账号，可能为null。  |
+| entity.account  | string\|null | 用户账号，可能为null。|
+| entity.???      | ... | 第三方平台其它信息。|
 | sign    | string | 由Rsa\Sha1 生成的签名, <br> 其中 PublicKey 由, 巨人移动服务端对接人员提供 |
 
 ##### 1.2.1.2. RSA 签名简例子
@@ -39,11 +40,13 @@
 RSA验证签名执行顺序：
 
 1. 从客户端取得 `entity` 和 `sign` 两个值.
-2. `JSON.Encode` `entity` 得到一个String: `'{"openid":"1-1234","account":"test"}'`.
-3. 是该String 进行RSA-SHA1 验证.
-4. 对 `entity.time` 进行有效时间验证 (验证 `entity.time` 是否超过建议时间 7*86400s(一周)).
+2. 对 `entity` 进行 JSON 序列化, 得到一个String: `'{"openid":"1-1234","account":"test","...":"..."}'`.
+3. 使用该 String 进行RSA-SHA1 验证.
+4. 对 `entity.time` 进行有效时间验证 (验证 `entity.time` 是否超过建议时间 86400s(一天)).
 
-简例：`Rsa.verify(Json.encode(entity), sign, publicKey) && entity.time > (time() - 7*86400)`
+简例：`Rsa.verify(Json.encode(entity), sign, publicKey) && entity.time > (time() - 86400)`
+
+> 注：不要对 `entity` 的值进行变更，自行拼接，排序等。
 
 #### 1.2.2. 接口方式验证
 
