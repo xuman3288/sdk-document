@@ -173,6 +173,7 @@ version： 4.1.0
     	"entity": {
     		"openid":"1-123456",
     		"account":"XXXXXXXX"
+			......
     	},
     	"accid":"1-123456",
     	"token":"bbe7e46de2c7d3ace036cea155b23978",
