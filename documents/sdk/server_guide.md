@@ -34,19 +34,14 @@
 
 ##### 1.2.1.2. RSA 签名简例子
 
-我方服务器生成规则示例： `Rsa.sign(Json.encode(entity), privateKey)` 
-游戏需按该规则执行验证.
-
-RSA验证签名执行顺序：
+需签名验证的字符串生成规范：
 
 1. 从客户端取得 `entity` 和 `sign` 两个值.
-2. 对 `entity` 进行 JSON 序列化, 得到一个String: `'{"openid":"1-1234","account":"test","...":"..."}'`.
-3. 使用该 String 进行RSA-SHA1 验证.
-4. 对 `entity.time` 进行有效时间验证 (验证 `entity.time` 是否超过建议时间 86400s(一天)).
+2. 对entity 下的键进行字母正序排序.
+3. 按 `aKey1=val1&bKey1=val2&cKeyN=valN` 格式进行拼接，得到一个 String
+4. 使用该 String 进行RSA-SHA1 验证.
+5. 对 `entity.time` 进行有效时间验证 (验证 `entity.time` 是否超过建议时间 86400s(一天)).
 
-简例：`Rsa.verify(Json.encode(entity), sign, publicKey) && entity.time > (time() - 86400)`
-
-> 注：不要对 `entity` 的值进行变更，自行拼接，排序等。
 
 #### 1.2.2. 接口方式验证
 
