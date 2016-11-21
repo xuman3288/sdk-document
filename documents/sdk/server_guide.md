@@ -25,7 +25,7 @@
 
 | 参数    | 类型   | 说明 |
 | --------|--------| --- |
-| entity  | object | 由客户端中取得, 参与签名需要 encode 后的字符串  |
+| entity  | object | 由客户端中取得, 该对象下所有键值都参与验签字符串的拼接  |
 | entity.openid  | string | 用户账号唯一标识(账号唯一性标识) |
 | entity.time  | int | 生成签名的服务器时间，单位秒。  |
 | entity.account  | string\|null | 用户账号，可能为null。|
