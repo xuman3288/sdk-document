@@ -2,8 +2,14 @@
 
 ## Unity插件下载
 
-- [巨人官方插件](http://docs.mztgame.com/files/unity3d/GASDKUnity_2.0.1.zip)
-- [渠道母包插件](http://docs.mztgame.com/files/unity3d/GASDKUnity_Android_母包_1.0.0.zip)
+- [巨人官方插件_2.0.2](http://docs.mztgame.com/files/unity3d/GASDKUnity_2.0.2.zip)
+
+  ***GASDK2.0.2 更新如下:***
+    >增加离线登录
+
+    >更新资源文件
+
+- [渠道母包插件_1.0.0](http://docs.mztgame.com/files/unity3d/GASDKUnity_Android_母包_1.0.0.zip)
 
 ------------------------------------------------------------------
 

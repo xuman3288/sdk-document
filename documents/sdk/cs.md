@@ -8,6 +8,7 @@ public class TestLogin : MonoBehaviour {
 		//初始化
 		GASDKManager.Instance.initGASDK("5163","testGameName",false);
 		 #if UNITY_ANDROID
+            // 默认关闭日志 ，放开注释（打开平台日志）
          	 //GASDKManager.Instance.enableDebugModeAndroid();
        		 #endif
 	}
@@ -17,11 +18,11 @@ public class TestLogin : MonoBehaviour {
 
 		#if UNITY_ANDROID
 
-		GASDKManager.Instance.loginAndroid("1"," testzoneName ",loginResult);
+		GASDKManager.Instance.loginAndroid("1"," testzoneName ",loginResultAndroid);
 
 		#elif UNITY_IOS || UNITY_IPHONE
 
-		IOSSDKManager.Instance.loginIOS(loginResult);
+		IOSSDKManager.Instance.loginIOS(loginResultIOS);
 
 		#endif
 	}
@@ -58,15 +59,30 @@ public class TestLogin : MonoBehaviour {
     //####################### 返回结果 ############################
 
 
-	public void loginResult(int ret, string usr, string token,string json){
+    public void loginResultAndroid(int ret, string usr, string token,string sign ,string entityjson ,string json){
 
-		Debug.Log( " 登录成功  In C# Client ret = "+ret + " ,user ="+usr + " token = "+token+",json = "+json);
-		#if UNITY_ANDROID
-        GASDKManager.Instance.AndroidToat("登录成功");
-		#endif
+  		Debug.Log( " 登录成功  In C# Client ret = "+ret + " ,user ="+usr +
+              " ,token = "+token+
+               " ,sign = " + sign +
+                " ,entityjson = " + entityjson +
+              ",json = " +json
 
-	}
+              );
+  		#if UNITY_ANDROID
+          GASDKManager.Instance.AndroidToat("登录成功");
+  		#endif
 
+  	}
+    public void loginResultIOS(int ret, string usr, string token,string sign ,string entityjson ,string json){
+
+      Debug.Log( " 登录成功  In C# Client ret = "+ret + " ,user ="+usr +
+              " ,token = "+token+
+              ",json = " +json
+
+              );
+
+
+    }
     public void logPayResult(int ret)
     {
         Debug.Log("  支付  In C# Client ret = " + ret  );
