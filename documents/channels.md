@@ -230,3 +230,6 @@
 |游迅网|10113|*.youxun      |CPS|
 |网侠手机站|10114|*.wangxia |CPS|
 |小鸡模拟器|10115|*.xiaoji  |CPS|
+|斗鱼1|10116|*.dongyu1|CPS|
+|斗鱼2|10117|*.dongyu2|CPS|
+|斗鱼3|10118|*.dongyu3|CPS|
