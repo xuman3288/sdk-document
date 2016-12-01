@@ -91,6 +91,8 @@
 | 起点-阅文                             | 106         | yuewen             |              | Android           | -                     | -v1.7                 | -               |                        |
 | 拇指玩2                               | 107         | muzhiwan2          |              | Android           | -                     | -                     | -               |                        |
 | 360融合                               | 108         | jusdk              |              | Android           | -                     | -                     | -               |                        |
+| 爱奇艺                                | 109         | aiqiyi             |              | Android           | -                     | -                     | -               |                        |
+
 
 ### 渠道 IOS
 
@@ -108,7 +110,6 @@
 | 云点友游(IOS)              | 68        | yundian          |          | IOS             | ?                   | -                   | -             |                |
 | 爱苹果                     | 72        | iapple           |          | IOS             | v1.2.8              | v1.2.8              | 2015-8-31     |                |
 | 海马玩(IOS)                | 85        | haimawan         |          | IOS             | -                   | ?                   | -             |                | |
-| 爱奇艺                                | 109         | aiqiyi             |              | Android           | -                     | -                     | -               |                        |
 
 
 
