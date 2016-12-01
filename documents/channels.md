@@ -108,7 +108,7 @@
 | 云点友游(IOS)              | 68        | yundian          |          | IOS             | ?                   | -                   | -             |                |
 | 爱苹果                     | 72        | iapple           |          | IOS             | v1.2.8              | v1.2.8              | 2015-8-31     |                |
 | 海马玩(IOS)                | 85        | haimawan         |          | IOS             | -                   | ?                   | -             |                | |
-
+| 爱奇艺                                | 109         | aiqiyi             |              | Android           | -                     | -                     | -               |                        |
 
 
 
