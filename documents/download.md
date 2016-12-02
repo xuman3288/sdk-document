@@ -20,7 +20,7 @@
 * [爱思渠道SDK-2.1.3版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_I4_2.1.3.tar.gz)
 ###### 爱思2.1.3版本后需要在 Info.plist 添加相册和相机权限，并勾选竖屏选项
 * [快用渠道SDK-3.0.2版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_KY_3.0.2.tar.gz)
-* [海马渠道SDK-4.0.1-2.1版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_HM_4.0.1-2.1.tar.gz)
+* [海马渠道SDK-4.0.2-1.0版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_HM_4.0.2-1.0.tar.gz)
 * [iTools渠道SDK-2.6.0版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_IT_2.6.0.tar.gz)
 * [云点友游渠道SDK-20151022版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ydSDK1022.zip)
 
