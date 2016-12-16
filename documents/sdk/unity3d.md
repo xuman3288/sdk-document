@@ -37,7 +37,10 @@ GASDKManager.Instance.login(bool,Callback);
 //支付
 GASDKManager.Instance.pay(GAPayInfo,callback);
  
-
+//登录回调  retCode 0 成功，1 失败  -1 错误。
+public delegate void GALoginCallback(int retCode,string json);
+//支付回调 retCode 0 成功 1 失败
+public delegate void PayCallback(int retCode);
 
 ```
 
