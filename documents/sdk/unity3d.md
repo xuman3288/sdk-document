@@ -2,9 +2,9 @@
 
 ## Unity插件下载
 
-- [巨人官方插件_2.0.2](http://docs.mztgame.com/files/unity3d/GASDKUnity_2.0.2.zip)
+- [巨人官方插件_2.0.2](http://docs.mztgame.com/files/unity3d/GASDKUnity_2.0.3.zip)
 
-  ***GASDK2.0.2 更新如下:***
+  ***GASDK2.0.3 更新如下:***
     >增加离线登录
 
     >更新资源文件
@@ -76,10 +76,8 @@ GASDKManager.Instance.pay(GAPayInfo,callback);
   /// <summary>
   /// 登录
   /// </summary>
-  /// <param name="zoneId">区id 游戏自传</param>
-  /// <param name="zoneName">区name 游戏自传</param>
   /// <param name="req">回调方法</param>
-  public void loginAndroid(string zoneId,string zoneName,LoginStatusCallback req);
+  public void loginAndroid(bool,LoginStatusCallback req);
 
 ```    
 参数说明：  
@@ -90,7 +88,7 @@ GASDKManager.Instance.pay(GAPayInfo,callback);
 
 调用举例：可参考demo
 ```
-  GASDKManager.Instance.loginAndroid("1","败走麦城区",logResult);
+  GASDKManager.Instance.loginAndroid(true,logResult);
 ```
 
 ###### ` 注：在调用该接口之前，请务必先调用init接口。`
@@ -108,7 +106,7 @@ GASDKManager.Instance.pay(GAPayInfo,callback);
 /// <param name="productId">商品id  游戏自传</param>
 /// <param name="productName">商品名称  游戏自传</param>
 /// <param name="req">回调方法</param>
-public void payAndroid(string zoneId,int money,string productId,string productName,PayStatusCallback req);
+public void payAndroid(GAPayInfo,PayStatusCallback req);
 
 ```
 
@@ -128,7 +126,7 @@ public void payAndroid(string zoneId,int money,string productId,string productNa
 调用实例：可参考demo
 
 ```
-  GASDKManager.Instance.payAndroid("1",100,"1","金币",logPayResult);
+  GASDKManager.Instance.payAndroid(new GAPayInfo("1",100,"1","金币"),logPayResult);
 ```
 
 ------------------------------------------------------------------
