@@ -37,11 +37,26 @@ GASDKManager.Instance.login(bool,Callback);
 //支付
 GASDKManager.Instance.pay(GAPayInfo,callback);
  
+
 //登录回调  retCode 0 成功，1 失败  -1 错误。
 public delegate void GALoginCallback(int retCode,string json);
+
+
 //支付回调 retCode 0 成功 1 失败
 public delegate void PayCallback(int retCode);
 
+支付类参数：
+public class GAPayInfo{
+
+	public string zoneId;//区ID （必填）	
+	public string productId;//商品id （必填）
+	public string productName;// 商品名字 （必填）
+	public int productPrice;// 商品价格 （必填）
+	public int productCount; // 商品数量 （必填）
+	public int exchangeRate = 1; // 商品兑换比例 （默认是1）
+	public string extra ;// 拓展信息 （可为空）
+	
+	}	
 ```
 
 #### [可参考testLogin.cs](/docs/sdk/cs)
