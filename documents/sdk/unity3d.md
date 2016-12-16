@@ -31,13 +31,12 @@
 GASDKManager.Instance.userCenter();
 
 //登录
-GASDKManager.Instance.loginAndroid(...,Callback);
-GASDKManager.Instance.loginIOS(...,Callback);
+GASDKManager.Instance.login(bool,Callback);
+ 
 
 //支付
-
-GASDKManager.Instance.payAndroid(...,callback);
-GASDKManager.Instance.payIOS(...,callback);
+GASDKManager.Instance.pay(GAPayInfo,callback);
+ 
 
 
 ```
