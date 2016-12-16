@@ -15,27 +15,27 @@ public class TestLogin : MonoBehaviour {
 
    
     public void testLogin(){
-		
-		GASDKManager.Instance.login (true,loginResult);
+	//登录接口 自动登录true，  不自动登录 false			
+         GASDKManager.Instance.login (true,loginResult);
 	}
 
     public void testPay()
     {
-		
-		GASDKManager.Instance.pay (new GAPayInfo("zonId","productId","productName",100,1,1,""),
+		//支付（区id，商品id，商品名字，商品价格，商品数量，兑换比例，拓展信息）		
+                GASDKManager.Instance.pay (new GAPayInfo("zonId","productId","productName",100,1,1,""),
 			logPayResult);
 	}
 
     public void testSwitchUser()
     {
-		
+		//切换用户		
 		GASDKManager.Instance.switchUser (); 
      
     }
     public void testUserCenter()
     {
-		
-		GASDKManager.Instance.userCenter ();	
+		//用户中心		
+             GASDKManager.Instance.userCenter ();	
 
 	}
  
