@@ -124,7 +124,7 @@ public class GAPayInfo{
 /// <param name="productId">商品id  游戏自传</param>
 /// <param name="productName">商品名称  游戏自传</param>
 /// <param name="req">回调方法</param>
-public void payAndroid(GAPayInfo,PayStatusCallback req);
+public void payAndroid(string zoneId,int productPrice,string productId,string productName,PayStatusCallback req);
 
 ```
 
@@ -144,7 +144,7 @@ public void payAndroid(GAPayInfo,PayStatusCallback req);
 调用实例：可参考demo
 
 ```
-  GASDKManager.Instance.payAndroid(new GAPayInfo("1",100,"1","金币"),logPayResult);
+  GASDKManager.Instance.payAndroid("1",100,"1","金币",logPayResult);
 ```
 
 ------------------------------------------------------------------
