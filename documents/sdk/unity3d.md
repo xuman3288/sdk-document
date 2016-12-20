@@ -9,8 +9,8 @@
 
     >更新资源文件
 
-- [渠道母包插件_1.0.0](http://docs.mztgame.com/files/unity3d/GASDKUnity_Android_母包_1.0.0.zip)
-
+- [渠道母包插件_1.0.1](http://docs.mztgame.com/files/unity3d/GASDKUnity_Android_母包_1.0.1.zip)
+ 
 ------------------------------------------------------------------
 
 ####  导入 GASDKUnity.unitypackage 全部（\Assets\import package\custom package）
