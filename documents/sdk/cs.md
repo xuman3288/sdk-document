@@ -13,80 +13,54 @@ public class TestLogin : MonoBehaviour {
        		 #endif
 	}
 
-    //登录
+   
     public void testLogin(){
-
-		#if UNITY_ANDROID
-
-		GASDKManager.Instance.loginAndroid("1"," testzoneName ",loginResultAndroid);
-
-		#elif UNITY_IOS || UNITY_IPHONE
-
-		IOSSDKManager.Instance.loginIOS(loginResultIOS);
-
-		#endif
+	//登录接口 自动登录true，  不自动登录 false			
+         GASDKManager.Instance.login (true,loginResult);
 	}
-   //支付
+
     public void testPay()
     {
-		#if UNITY_ANDROID
-
-        GASDKManager.Instance.payAndroid("1",10,"1","金币",logPayResult);
-
-		#elif UNITY_IOS || UNITY_IPHONE
-
-		IOSSDKManager.Instance.payIOS ("1","1","金币",1,1,100,"",logPayResult);
-
-		#endif
-
+		//支付（区id，商品id，商品名字，商品价格，商品数量，兑换比例，拓展信息）		
+                GASDKManager.Instance.pay (new GAPayInfo("zonId","productId","productName",100,1,1,""),
+			logPayResult);
 	}
-   //切换账号
+
     public void testSwitchUser()
     {
-		GASDKManager.Instance.switchUser ();
-
+		//切换用户		
+		GASDKManager.Instance.switchUser (); 
+     
     }
-    //用户中心
     public void testUserCenter()
     {
+		//用户中心		
+             GASDKManager.Instance.userCenter ();	
 
-		GASDKManager.Instance.userCenter ();
 	}
-
+ 
 
 
 
     //####################### 返回结果 ############################
 
 
-    public void loginResultAndroid(int ret, string usr, string token,string sign ,string entityjson ,string json){
+	public void loginResult(int ret,string json){
 
-  		Debug.Log( " 登录成功  In C# Client ret = "+ret + " ,user ="+usr +
-              " ,token = "+token+
-               " ,sign = " + sign +
-                " ,entityjson = " + entityjson +
-              ",json = " +json
+		Debug.Log( " 登录成功  In C# Client ret = "+ret + 
+            ",json = " +json
+            
+            );
+		#if UNITY_ANDROID
+        GASDKManager.Instance.AndroidToat("登录成功");
+		#endif
 
-              );
-  		#if UNITY_ANDROID
-          GASDKManager.Instance.AndroidToat("登录成功");
-  		#endif
-
-  	}
-    public void loginResultIOS(int ret, string usr, string token,string sign ,string entityjson ,string json){
-
-      Debug.Log( " 登录成功  In C# Client ret = "+ret + " ,user ="+usr +
-              " ,token = "+token+
-              ",json = " +json
-
-              );
-
-
-    }
+	}
+	 
     public void logPayResult(int ret)
     {
         Debug.Log("  支付  In C# Client ret = " + ret  );
-
+        
 		#if UNITY_ANDROID
 		if(ret == 0)
         {
@@ -98,8 +72,6 @@ public class TestLogin : MonoBehaviour {
         }
 		#endif
     }
-
-//#######################################################
 
 
 

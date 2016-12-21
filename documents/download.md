@@ -17,9 +17,10 @@
 * [同步推渠道SDK-4.2.0版本下载地址](http://docs.mztgame.com/files/iOS/3.0/tbSDK4.2.0.zip)
 * [XY渠道SDK-2.1.1版本下载地址](http://docs.mztgame.com/files/iOS/3.0/xySDK2.1.1.zip) ######XY此版本工程内需要手动添加XYPlatform.framework
 * [PP助手渠道SDK-1.5.5版本下载地址（静态库1.5.5,动态库1.6.2）](http://docs.mztgame.com/files/iOS/3.0/ppSDKS1.5.5D1.6.2.zip)
-* [爱思渠道SDK-2.1.1版本下载地址](http://docs.mztgame.com/files/iOS/3.0/asSDK2.1.1.zip)
+* [爱思渠道SDK-2.1.3版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_I4_2.1.3.tar.gz)
+###### 爱思2.1.3版本后需要在 Info.plist 添加相册和相机权限，并勾选竖屏选项
 * [快用渠道SDK-3.0.2版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_KY_3.0.2.tar.gz)
-* [海马渠道SDK-4.0.1-2.1版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_HM_4.0.1-2.1.tar.gz)
+* [海马渠道SDK-4.0.2-1.0版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_HM_4.0.2-1.0.tar.gz)
 * [iTools渠道SDK-2.6.0版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_IT_2.6.0.tar.gz)
 * [云点友游渠道SDK-20151022版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ydSDK1022.zip)
 
@@ -29,11 +30,12 @@
 * [I苹果渠道SDK-1.3.0版本下载地址](http://docs.mztgame.com/files/iOS/4.0/iaSDK1.3.0.zip)
 * [同步推渠道SDK-4.2.0版本下载地址](http://docs.mztgame.com/files/iOS/4.0/tbSDK4.2.0.zip)
 * [XY渠道SDK-2.1.1版本下载地址](http://docs.mztgame.com/files/iOS/4.0/xySDK2.1.1.zip)
-######XY此版本工程内需要手动添加XYPlatform.framework
+###### XY此版本工程内需要手动添加XYPlatform.framework
 * [PP助手渠道SDK-1.5.5版本下载地址（静态库1.5.5，动态库1.6.2）](http://docs.mztgame.com/files/iOS/4.0/ppSDKS1.5.5D1.6.2.zip)
 * [快用渠道SDK-3.0.2版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_ky_3.0.2.tar.gz)
 * [海马渠道SDK-4.0.1-2.1版本下载地址](http://docs.mztgame.com/files/iOS/4.0/ztsdkv4_HM_4.0.1-2.1.tar.gz)
-* [爱思渠道SDK-2.1.1版本下载地址](http://docs.mztgame.com/files/iOS/4.0/asSDK2.1.1.zip)
+* [爱思渠道SDK-2.1.3版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_I4_2.1.3.tar.gz)
+###### 爱思2.1.3版本后需要在 Info.plist 添加相册和相机权限，并勾选竖屏选项
 * [iTools渠道SDK-2.5.1版本下载地址](http://docs.mztgame.com/files/iOS/4.0/itSDK2.5.1.zip)
 
 
@@ -44,13 +46,14 @@
 
 ### 5.x SDK
 
-* [巨人官方SDK-5.2.9版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_GA_5.2.9.tar.gz)
+* [巨人官方SDK-5.2.17版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_GA_5.2.17.tar.gz)
 * [PP助手渠道SDK-1.5.7版本下载地址（静态库1.5.7，动态库1.6.6）](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_PP_1.5.7.tar.gz)
 * [果盘渠道SDK-2.3.0版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_GP_2.3.0.tar.gz)
 * [XY渠道SDK-2.5.0版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_XY_2.5.0.tar.gz)
 * [iTools渠道SDK-2.7.0版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_IT_2.7.0.tar.gz)
 * [快用渠道SDK-3.0.4版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_KY_3.0.4.tar.gz)
-* [爱思助手渠道SDK-2.1.2版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_I4_2.1.2.tar.gz)
+* [爱思渠道SDK-2.1.3版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_I4_2.1.3.tar.gz)
+###### 爱思2.1.3版本后需要在 Info.plist 添加相册和相机权限，并勾选竖屏选项
 * [同步推渠道SDK-4.2.3版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_TB_4.2.3.tar.gz)
 * [I苹果渠道SDK-1.3.0版本下载地址](http://docs.mztgame.com/files/iOS/5.0/ztsdkv5_IA_1.3.0.tar.gz)
 * 
@@ -94,13 +97,13 @@
 ### 5.x SDK（新游戏接入）
 
 * [巨人母包SDK-5.1.1版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK5.1.1.zip)
-* [巨人官方SDK-5.1.3版本下载地址](http://docs.mztgame.com/files/Android/giantSDK5.1.3.zip)
+* [巨人官方SDK-5.2.1版本下载地址](http://docs.mztgame.com/files/Android/giantSDK5.2.1.zip)
 * [腾讯YSDK-v1.2.2版本下载地址](http://docs.mztgame.com/files/Android/ysdk5-v1.2.2.zip)
 * [百度-v3.7.2版本下载地址](http://docs.mztgame.com/files/Android/BDGameSDKV3.7.2.zip)
 
 ### 常见问题
 * [5.0打包工具下载地址](http://docs.mztgame.com/files/Android/sdktool/setup5.0.exe)
-* [cps打包工具下载地址](http://docs.mztgame.com/files/Android/cpsTools.zip)
+* [cps打包工具下载地址](http://docs.mztgame.com/files/Android/cpsTools_all.zip)
 * [ Java 环境sdk 接入](/docs/channels/commonProblem)
 * [ 打包工具使用文档 ](http://docs.mztgame.com/files/Android/doc/dbgj.doc)
 * 

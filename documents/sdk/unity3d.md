@@ -2,15 +2,15 @@
 
 ## Unity插件下载
 
-- [巨人官方插件_2.0.2](http://docs.mztgame.com/files/unity3d/GASDKUnity_2.0.2.zip)
+- [巨人官方插件_2.0.3](http://docs.mztgame.com/files/unity3d/GASDKUnity_2.0.3.zip)
 
-  ***GASDK2.0.2 更新如下:***
+  ***GASDK2.0.3 更新如下:***
     >增加离线登录
 
     >更新资源文件
 
-- [渠道母包插件_1.0.0](http://docs.mztgame.com/files/unity3d/GASDKUnity_Android_母包_1.0.0.zip)
-
+- [渠道母包插件_1.0.1](http://docs.mztgame.com/files/unity3d/GASDKUnity_Android_母包_1.0.1.zip)
+ 
 ------------------------------------------------------------------
 
 ####  导入 GASDKUnity.unitypackage 全部（\Assets\import package\custom package）
@@ -31,15 +31,32 @@
 GASDKManager.Instance.userCenter();
 
 //登录
-GASDKManager.Instance.loginAndroid(...,Callback);
-GASDKManager.Instance.loginIOS(...,Callback);
+GASDKManager.Instance.login(bool,Callback);
+ 
 
 //支付
+GASDKManager.Instance.pay(GAPayInfo,callback);
+ 
 
-GASDKManager.Instance.payAndroid(...,callback);
-GASDKManager.Instance.payIOS(...,callback);
+//登录回调  retCode 0 成功，1 失败  -1 错误。
+public delegate void GALoginCallback(int retCode,string json);
 
 
+//支付回调 retCode 0 成功 1 失败
+public delegate void PayCallback(int retCode);
+
+支付类参数：
+public class GAPayInfo{
+
+	public string zoneId;//区ID （必填）	
+	public string productId;//商品id （必填）
+	public string productName;// 商品名字 （必填）
+	public int productPrice;// 商品价格 （必填）
+	public int productCount; // 商品数量 （必填）
+	public int exchangeRate = 1; // 商品兑换比例 （默认是1）
+	public string extra ;// 拓展信息 （可为空）
+	
+	}	
 ```
 
 #### [可参考testLogin.cs](/docs/sdk/cs)
@@ -77,10 +94,8 @@ GASDKManager.Instance.payIOS(...,callback);
   /// <summary>
   /// 登录
   /// </summary>
-  /// <param name="zoneId">区id 游戏自传</param>
-  /// <param name="zoneName">区name 游戏自传</param>
   /// <param name="req">回调方法</param>
-  public void loginAndroid(string zoneId,string zoneName,LoginStatusCallback req);
+  public void loginAndroid(bool,LoginStatusCallback req);
 
 ```    
 参数说明：  
@@ -91,7 +106,7 @@ GASDKManager.Instance.payIOS(...,callback);
 
 调用举例：可参考demo
 ```
-  GASDKManager.Instance.loginAndroid("1","败走麦城区",logResult);
+  GASDKManager.Instance.loginAndroid(true,logResult);
 ```
 
 ###### ` 注：在调用该接口之前，请务必先调用init接口。`
@@ -109,7 +124,7 @@ GASDKManager.Instance.payIOS(...,callback);
 /// <param name="productId">商品id  游戏自传</param>
 /// <param name="productName">商品名称  游戏自传</param>
 /// <param name="req">回调方法</param>
-public void payAndroid(string zoneId,int money,string productId,string productName,PayStatusCallback req);
+public void payAndroid(string zoneId,int productPrice,string productId,string productName,PayStatusCallback req);
 
 ```
 
