@@ -14,11 +14,6 @@
 
 系统提供两种验证方式：
 
-* 签名方式验证
-* 接口方式验证
-
-二者选一种，或者当“接口方式验证”因网络原因故障，可切为签名方式离线验证。
-
 #### 1.2.1. 签名方式验证(离线验证，需客户端 Android&IOS 5.2 以上支持)
 
 ##### 1.2.1.1. 验签需要参数(JSON类型)
@@ -32,77 +27,22 @@
 | entity.???      | ... | 第三方平台其它信息。|
 | sign    | string | 由Rsa\Sha1 生成的签名, <br> 其中 PublicKey 由, 巨人移动服务端对接人员提供 |
 
-##### 1.2.1.2. RSA 签名简例子
+##### 1.2.1.2. RSA 签名说明
 
 需签名验证的字符串生成规范：
 
 1. 从客户端取得 `entity` 和 `sign` 两个值.
 2. 对entity 下的键进行字母正序排序.
-3. 按 `aKey1=val1&bKey1=val2&cKeyN=valN` 格式进行拼接，得到一个 String
+3. 按 `aKey1=val1&bKey1=val2&cKeyN=valN` 格式进行拼接(**如果val1为null类型请转成空字符串进行拼接**) 得到一个 String
 4. 使用该 String 进行RSA-SHA1 验证.
 5. 对 `entity.time` 进行有效时间验证 (验证 `entity.time` 是否超过建议时间 86400s(一天)).
 
+##### 1.2.1.3. 登录签名示例
 
-#### 1.2.2. 接口方式验证
+* [PHP](https://github.com/mztgame/sdk-document/tree/master/examples/server/php)
+* [Java](https://github.com/mztgame/sdk-document/tree/master/examples/server/java)
+* [Python](https://github.com/mztgame/sdk-document/tree/master/examples/server/python)
 
-##### 1.2.2.1. 协议说明
-
-* 协议说明: `HTTP`
-* 请求方式: `GET`
-* 内容类型(Content-Type): `application/x-www-form-urlencoded`
-* 接口地址: `http://passport.mobileztgame.com/service/check-token`
-
-#####  1.2.2.2.  参数说明
-
-| 参数     |  必填 |	说明 |
-| -------- | ---- | --- |
-| game_id  | 是   | 游戏应用ID  |
-| openid   | 是   | 由SDK获得唯一ID, (数据库建议设置长度 120位) |
-| time     | 是   | 游戏服务器时间戳,以秒为单位, 如(1421212874) |
-| token    | 是   | 由SDK客户端中获得 |
-| sign     | 是   | MD5 签名,结果为32位字符十六进制数字形式返回的散列值, 生成规则: <br>Md5(game_id+openid+time+token+key) <br>其中key 由, 巨人移动服务端对接人员提供 |
-
-#####  1.2.2.3. 响应说明
-
-响应内容为JSON格式:
-
-| 参数     |  类型 |	说明 |
-| -------- | ---- | --- |
-| code | int | 错误代码: <br> 0 成功 <br> 大于 0 失败 |
-| error | string | 当code > 0 时的错误说明 |
-| errors | object | 参数缺少或参数格式的错误提示, 如: `{"time":"msg","token":"msg"}` |
-| entity | object | 登录账号的用户信息, 如: `{"openid":"1-1234","account":"test","nickname":"昵称"}` <br> account, nickname 可能为空, <br> 渠道接口有提供就返回, 没有可能为null 或 键不存在 |
-
-
-> `entity.openid`范例 : 1-1234 , 26-5678
->
-> * "-" 前表示渠道编号,
-> * "-" 后表示各渠道的用户ID.
->
-> 比如上面的
->
-> * "-" 前 1表示巨人移动渠道, 26表示 UC渠道.
-> * "-" 后就是各渠道相应的用户ID
-
-
-#####  1.2.2.4. 请求举例
-
-Key = 123456为例:
-参与md5的字符串和加密后的值为:
-
-```
-md5("50121-1234142121287408897c5d66eb86b8c6d50c623e63ea27123456");
-8da532dffb888fc0dbb88465032e20fa
-```
-
-**请求链接为:**
-```
-http://passport.mobileztgame.com/service/check-token?game_id=5012&openid=1-1234&time=1421212874&token=08897c5d66eb86b8c6d50c623e63ea27&sign=8da532dffb888fc0dbb88465032e20fa
-```
-响应: 
-```
-{"code":0,"entity":{"openid":"1-1234","account":"test"}}
-```
 
 ## 2. 充值回调接口
 
