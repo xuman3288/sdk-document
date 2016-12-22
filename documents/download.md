@@ -13,6 +13,7 @@
 ### 3.x SDK(征途用)
 
 * [巨人官方SDK-4.3.27版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_GA_4.3.27.tar.gz)
+* [巨人官方SDK-4.3.28 Https测试版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_GA_4.3.28.tar.gz)
 * [I苹果渠道SDK-1.3.0版本下载地址](http://docs.mztgame.com/files/iOS/3.0/iaSDK1.3.0.zip)
 * [同步推渠道SDK-4.2.0版本下载地址](http://docs.mztgame.com/files/iOS/3.0/tbSDK4.2.0.zip)
 * [XY渠道SDK-2.1.1版本下载地址](http://docs.mztgame.com/files/iOS/3.0/xySDK2.1.1.zip) ######XY此版本工程内需要手动添加XYPlatform.framework
