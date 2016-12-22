@@ -2,12 +2,14 @@ import java.security.KeyFactory;
 import java.security.PublicKey;
 import java.security.Signature;
 import java.security.spec.X509EncodedKeySpec;
+import java.util.Arrays;
 import java.util.Base64;
-import org.json.JSONObject;
+
+import org.json.JSONObject; //https://github.com/stleary/JSON-java
 
 /**
  * 
- * JDK 1.8 以上, 否则请修改Base64方式
+ * JDK 1.8 浠ヤ笂, 鍚﹀垯璇蜂慨鏀笲ase64鏂瑰紡
  */
 public class LoginRsaVerify {
 
@@ -21,7 +23,7 @@ public class LoginRsaVerify {
 
 	public static void main(String[] args) {
 
-		String jsonStr = "{\"entity\":{\"openid\":\"34-70086000145733010\",\"account\":\"\u7ea2\u4e3d\u662f\u732a\ud83d\udc37\",\"time\":1479810865},\"sign\":\"9c754z1NGburQlfCwmls18mNokRMOWCAIYIrxYZN0ocGqOiarH8fVMoO9q8rIzF2wa//TxuKitJ93NL0HDw+YfM6b5Uo9rf7rQmeWDFatnaFOJIvrbN4EJkNxEMZy8mJ5leUsIuGPoCEvtFATf5haXizQ9YJoNbQj8W377Xkfb9yzmGsmbyNoBRU8++K8adxPsOm+l/eQvUEvDQsnIkfEIgyfe8mXEpZFXpOFvCmIrTeTbekLjF7+8K6c44uugCx664FX2ejT0QeJ7dxZwWgR1BmcN7RFlOMQG4v4IHVxmCLdjsklKgAIYQ6B5DtyeXIA/UB4NPesEOu+rNUAC477g==\"}"
+		String jsonStr = "{\"entity\":{\"openid\":\"34-70086000145733010\",\"account\":\"\u7ea2\u4e3d\u662f\u732a\ud83d\udc37\",\"time\":1479810865},\"sign\":\"9c754z1NGburQlfCwmls18mNokRMOWCAIYIrxYZN0ocGqOiarH8fVMoO9q8rIzF2wa//TxuKitJ93NL0HDw+YfM6b5Uo9rf7rQmeWDFatnaFOJIvrbN4EJkNxEMZy8mJ5leUsIuGPoCEvtFATf5haXizQ9YJoNbQj8W377Xkfb9yzmGsmbyNoBRU8++K8adxPsOm+l/eQvUEvDQsnIkfEIgyfe8mXEpZFXpOFvCmIrTeTbekLjF7+8K6c44uugCx664FX2ejT0QeJ7dxZwWgR1BmcN7RFlOMQG4v4IHVxmCLdjsklKgAIYQ6B5DtyeXIA/UB4NPesEOu+rNUAC477g==\"}";
 
         JSONObject params = new JSONObject(jsonStr);
 		String signString = genSignStr(params.getJSONObject("entity"));
@@ -31,16 +33,20 @@ public class LoginRsaVerify {
 		System.out.println(rsaVerify(signString, sign));
 	}
 
-	public static string genSignStr(JSONObject entity) {
-		Iterator<String> keys = entity.keys();  
-		String key;  
-		Object o;  
-		while (keys.hasNext()) {  
-			key = keys.next();  
-			o = key + "=" + entity.getString(key) + "&";
+	public static String genSignStr(JSONObject entity) {
+		Object[] keys = entity.keySet().toArray();
+		Arrays.sort(keys);
+
+		String key;
+		String val;
+		String out = "";
+		for (int i = 0; i < keys.length; i++) { 
+			key = (String) keys[i];
+			val = entity.isNull(key) ? "" : "" + entity.get(key);
+			out += key + "=" + val + "&";
 		}
 
-		return o.substring(0, o.length() - 1);
+		return out.substring(0, out.length() -1);
 	}
 
 	public static String join(String join, String[] strAry){
@@ -59,24 +65,24 @@ public class LoginRsaVerify {
 
 	public static boolean rsaVerify(String data, String sign) {
 
-		// 解密由base64编码的公钥
+		// 瑙ｅ瘑鐢眀ase64缂栫爜鐨勫叕閽�
 		byte[] keyBytes = Base64.getDecoder().decode(PUBLIC_KEY);
 
-		// 构造X509EncodedKeySpec对象
+		// 鏋勯�燲509EncodedKeySpec瀵硅薄
 		X509EncodedKeySpec keySpec = new X509EncodedKeySpec(keyBytes);
 
 		try {
-			// KEY_ALGORITHM 指定的加密算法
+			// KEY_ALGORITHM 鎸囧畾鐨勫姞瀵嗙畻娉�
 			KeyFactory keyFactory = KeyFactory.getInstance("RSA");
 
-			// 取公钥匙对象
+			// 鍙栧叕閽ュ寵瀵硅薄
 			PublicKey pubKey = keyFactory.generatePublic(keySpec);
 
 			Signature signature = Signature.getInstance("SHA1withRSA");
 			signature.initVerify(pubKey);
 			signature.update(data.getBytes());
 
-			// 验证签名是否正常
+			// 楠岃瘉绛惧悕鏄惁姝ｅ父
 			return signature.verify(Base64.getDecoder().decode(sign));
 		} catch (Exception e) {
 			System.out.println("Error:" + e.getMessage());
