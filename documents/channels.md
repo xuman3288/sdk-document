@@ -239,4 +239,4 @@
 |乐视体育|10120|*.lesports|CPS|
 |大神TV|10121|*.ds|CPS|
 |今日头条|10122|*.toutiao|CPS|
-|章鱼TV|10123|*.zy|CPS|
+|章鱼TV|10123|*.zhangyu|CPS|
