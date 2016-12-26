@@ -240,3 +240,7 @@
 |大神TV|10121|*.ds|CPS|
 |今日头条|10122|*.toutiao|CPS|
 |章鱼TV|10123|*.zhangyu|CPS|
+|饿了么|10124|*.ele|CPS|
+|骑士助手|10125|*.qishi|CPS|
+|悦跑圈|10126|*.yuepao|CPS|
+|体育疯|10127|*.yuepao|CPS|
