@@ -22,20 +22,20 @@
 ```
  //初始化
 
- GASDKManager.Instance.initGASDK("5014","testGameName",false);
+ GASDKManager.Instance.InitGASDK("5014","testGameName",false);
 
 //切换账号
- GASDKManager.Instance.switchUser();
+ GASDKManager.Instance.SwitchUser();
 
 //用户中心
-GASDKManager.Instance.userCenter();
+GASDKManager.Instance.UserCenter();
 
 //登录
-GASDKManager.Instance.login(bool,Callback);
+GASDKManager.Instance.Login(bool,Callback);
  
 
 //支付
-GASDKManager.Instance.pay(GAPayInfo,callback);
+GASDKManager.Instance.Pay(GAPayInfo,callback);
  
 
 //登录回调  retCode 0 成功，1 失败  -1 错误。
