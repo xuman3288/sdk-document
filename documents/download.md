@@ -85,6 +85,7 @@
 * [腾讯应用宝SDK-v2.8.1版本下载地址](http://docs.mztgame.com/files/Android/tencent_v2.8.1.zip)
 * [腾讯YSDK-v1.1.1版本下载地址](http://docs.mztgame.com/files/Android/ysdk4-v1.1.1.zip)
 * [腾讯YSDK-v1.2.2版本下载地址](http://docs.mztgame.com/files/Android/ysdk4-v1.2.2.zip)
+* [腾讯YSDK-v1.2.4版本下载地址](http://docs.mztgame.com/files/Android/ysdk4-v1.2.4.zip)
 * [巨人官方渠道接口sdk-v1.1.0版本下载地址](http://docs.mztgame.com/files/Android/GiantSDKIF-v1.0.0.zip)
 
 ##### 插件SDK
