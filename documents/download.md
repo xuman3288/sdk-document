@@ -101,7 +101,7 @@
 
 * [巨人母包SDK-5.2.2版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK5.2.2.zip)
 * [巨人官方SDK-5.2.2版本下载地址](http://docs.mztgame.com/files/Android/giantSDK5.2.2.zip)
-* [腾讯YSDK-v1.2.2版本下载地址](http://docs.mztgame.com/files/Android/ysdk5-v1.2.2.zip)
+* [腾讯YSDK-v1.2.4版本下载地址](http://docs.mztgame.com/files/Android/ysdk4-v1.2.4.zip)
 * [百度-v3.7.2版本下载地址](http://docs.mztgame.com/files/Android/BDGameSDKV3.7.2.zip)
 
 ### 常见问题
