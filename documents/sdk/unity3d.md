@@ -45,6 +45,25 @@ public delegate void GALoginCallback(int retCode,string json);
 //支付回调 retCode 0 成功 1 失败
 public delegate void PayCallback(int retCode);
 
+登录返回json格式
+{
+  "account" : "4f*****sm",
+  "pt_id" : 2,
+  "sign" : "a\/wE7oX8hx6TEjCfsTm4ziqQjkV51WmRoNOLmud0W5XDohsiL\/WHpcOoMKE72yTrD+mADgUTD31Bfmnthb83AZmCcNcnGU4zg5eWbH3lNEMYwTsIDUxYrm9L6GBf18BaRdWNDSVSo20Qd2ckoer0dUzsSDbCKAXw48UyjX5kgEY\/dBW5PwwWWs+nM7vCJqiFMHKtx3RdJAvhDsIeJpL7xdQo5gzdXRi4qRqzAUyDnAvB1QdpcEwoZ3R\/XbKmiWIBbFBhZTqztLc65s8sD5ZBSVMrkSfuuxXNO2TiyV8LvomCZNwqcE2ks5wCLGUAmIX87ZW5vmgn5deUYsxcoGHSxg==",
+  "entity" : {
+    "time" : 1482983893,
+    "account" : "_q_4ff8apgsm",
+    "openid" : "1-1990027331"
+  },
+  "accid" : "1-1990027331",
+  "mac" : "",
+  "token" : "uc18c22521fde898a92e7fcb20oixhp1",
+  "device_type" : "iPhone4,1",
+  "imei" : "F320902B-B071-4224-AAB5-F51B1E027AB5",
+  "ip" : "192.168.240.239"
+}
+
+
 支付类参数：
 public class GAPayInfo{
 
@@ -57,6 +76,9 @@ public class GAPayInfo{
 	public string extra ;// 拓展信息 （可为空）
 	
 	}	
+	
+	
+	
 ```
 
 #### [可参考testLogin.cs](/docs/sdk/cs)
