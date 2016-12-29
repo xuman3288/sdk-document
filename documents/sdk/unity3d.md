@@ -45,7 +45,7 @@ public delegate void GALoginCallback(int retCode,string json);
 //支付回调 retCode 0 成功 1 失败
 public delegate void PayCallback(int retCode);
 
-登录返回json格式
+//登录返回json格式
 {
   "account" : "4f*****sm",
   "pt_id" : 2,
