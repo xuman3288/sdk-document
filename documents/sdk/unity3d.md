@@ -20,7 +20,7 @@
 #### 统一接口
 
 ```
- //初始化
+ //初始化 【游戏ID[需要向巨人平台申请]，游戏名字,true横屏 false 竖屏) 】
 
  GASDKManager.Instance.InitGASDK("5014","testGameName",false);
 
@@ -30,7 +30,7 @@
 //用户中心
 GASDKManager.Instance.UserCenter();
 
-//登录
+//登录【是否自动登录（true自动登录，false不自动登录），登录回调】
 GASDKManager.Instance.Login(bool,Callback);
  
 
