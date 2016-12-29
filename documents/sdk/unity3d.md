@@ -13,10 +13,6 @@
  
 ------------------------------------------------------------------
 
-####  导入 GASDKUnity.unitypackage 全部（\Assets\import package\custom package）
-
-![](http://docs.mztgame.com/files/assets/unityimg/giantsdk_unity_import.png)
-
 #### 统一接口
 
 ```
