@@ -34,7 +34,7 @@ GASDKManager.Instance.UserCenter();
 GASDKManager.Instance.Login(bool,Callback);
  
 
-//支付
+//支付（参考支付参数，支付回调）
 GASDKManager.Instance.Pay(GAPayInfo,callback);
  
 
