@@ -5,6 +5,7 @@
 - [巨人官方插件_2.0.4](http://docs.mztgame.com/files/unity3d/GASDKUnity_2.0.4.zip)
 
   ***GASDK2.0.4 更新如下:***
+  
     >增加异常捕捉
     
 - [渠道母包插件_1.0.1](http://docs.mztgame.com/files/unity3d/GASDKUnity_Android_母包_1.0.1.zip)
