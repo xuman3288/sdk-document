@@ -13,6 +13,7 @@
 ### 3.x SDK(征途用)
 
 * [巨人官方SDK-4.3.27版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_GA_4.3.27.tar.gz)
+* [巨人官方SDK-4.3.28 Https测试版本下载地址](http://docs.mztgame.com/files/iOS/3.0/ztsdkv3_GA_4.3.28.tar.gz)
 * [I苹果渠道SDK-1.3.0版本下载地址](http://docs.mztgame.com/files/iOS/3.0/iaSDK1.3.0.zip)
 * [同步推渠道SDK-4.2.0版本下载地址](http://docs.mztgame.com/files/iOS/3.0/tbSDK4.2.0.zip)
 * [XY渠道SDK-2.1.1版本下载地址](http://docs.mztgame.com/files/iOS/3.0/xySDK2.1.1.zip) ######XY此版本工程内需要手动添加XYPlatform.framework
@@ -84,6 +85,7 @@
 * [腾讯应用宝SDK-v2.8.1版本下载地址](http://docs.mztgame.com/files/Android/tencent_v2.8.1.zip)
 * [腾讯YSDK-v1.1.1版本下载地址](http://docs.mztgame.com/files/Android/ysdk4-v1.1.1.zip)
 * [腾讯YSDK-v1.2.2版本下载地址](http://docs.mztgame.com/files/Android/ysdk4-v1.2.2.zip)
+* [腾讯YSDK-v1.2.4版本下载地址](http://docs.mztgame.com/files/Android/ysdk4-v1.2.4.zip)
 * [巨人官方渠道接口sdk-v1.1.0版本下载地址](http://docs.mztgame.com/files/Android/GiantSDKIF-v1.0.0.zip)
 
 ##### 插件SDK
@@ -97,9 +99,9 @@
 
 ### 5.x SDK（新游戏接入）
 
-* [巨人母包SDK-5.1.1版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK5.1.1.zip)
-* [巨人官方SDK-5.2.1版本下载地址](http://docs.mztgame.com/files/Android/giantSDK5.2.1.zip)
-* [腾讯YSDK-v1.2.2版本下载地址](http://docs.mztgame.com/files/Android/ysdk5-v1.2.2.zip)
+* [巨人母包SDK-5.2.2版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK5.2.2.zip)
+* [巨人官方SDK-5.2.2版本下载地址](http://docs.mztgame.com/files/Android/giantSDK5.2.2.zip)
+* [腾讯YSDK-v1.2.4版本下载地址](http://docs.mztgame.com/files/Android/ysdk4-v1.2.4.zip)
 * [百度-v3.7.2版本下载地址](http://docs.mztgame.com/files/Android/BDGameSDKV3.7.2.zip)
 
 ### 常见问题

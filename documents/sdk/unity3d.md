@@ -2,40 +2,35 @@
 
 ## Unity插件下载
 
-- [巨人官方插件_2.0.3](http://docs.mztgame.com/files/unity3d/GASDKUnity_2.0.3.zip)
+- [巨人官方插件_2.0.4](http://docs.mztgame.com/files/unity3d/GASDKUnity_2.0.4.zip)
 
-  ***GASDK2.0.3 更新如下:***
-    >增加离线登录
-
-    >更新资源文件
-
+  ***GASDK2.0.4 更新如下:***
+  
+    >增加异常捕捉
+    
 - [渠道母包插件_1.0.1](http://docs.mztgame.com/files/unity3d/GASDKUnity_Android_母包_1.0.1.zip)
  
 ------------------------------------------------------------------
 
-####  导入 GASDKUnity.unitypackage 全部（\Assets\import package\custom package）
-
-![](http://docs.mztgame.com/files/assets/unityimg/giantsdk_unity_import.png)
-
 #### 统一接口
 
 ```
- //初始化
+ //初始化 【游戏ID[需要向巨人平台申请]，游戏名字,true横屏 false 竖屏) 】
 
- GASDKManager.Instance.initGASDK("5014","testGameName",false);
+ GASDKManager.Instance.InitGASDK("5014","testGameName",false);
 
 //切换账号
- GASDKManager.Instance.switchUser();
+ GASDKManager.Instance.SwitchUser();
 
 //用户中心
-GASDKManager.Instance.userCenter();
+GASDKManager.Instance.UserCenter();
 
-//登录
-GASDKManager.Instance.login(bool,Callback);
+//登录【是否自动登录（true自动登录，false不自动登录），登录回调】
+GASDKManager.Instance.Login(bool,Callback);
  
 
-//支付
-GASDKManager.Instance.pay(GAPayInfo,callback);
+//支付（参考支付参数，支付回调）
+GASDKManager.Instance.Pay(GAPayInfo,callback);
  
 
 //登录回调  retCode 0 成功，1 失败  -1 错误。
@@ -44,6 +39,25 @@ public delegate void GALoginCallback(int retCode,string json);
 
 //支付回调 retCode 0 成功 1 失败
 public delegate void PayCallback(int retCode);
+
+//登录返回json格式
+{
+  "account" : "4f*****sm",
+  "pt_id" : 2,
+  "sign" : "a\/wE7oX8hx6TEjCfsTm4ziqQjkV51WmRoNOLmud0W5XDohsiL\/WHpcOoMKE72yTrD+mADgUTD31Bfmnthb83AZmCcNcnGU4zg5eWbH3lNEMYwTsIDUxYrm9L6GBf18BaRdWNDSVSo20Qd2ckoer0dUzsSDbCKAXw48UyjX5kgEY\/dBW5PwwWWs+nM7vCJqiFMHKtx3RdJAvhDsIeJpL7xdQo5gzdXRi4qRqzAUyDnAvB1QdpcEwoZ3R\/XbKmiWIBbFBhZTqztLc65s8sD5ZBSVMrkSfuuxXNO2TiyV8LvomCZNwqcE2ks5wCLGUAmIX87ZW5vmgn5deUYsxcoGHSxg==",
+  "entity" : {
+    "time" : 1482983893,
+    "account" : "_q_4ff8apgsm",
+    "openid" : "1-1990027331"
+  },
+  "accid" : "1-1990027331",
+  "mac" : "",
+  "token" : "uc18c22521fde898a92e7fcb20oixhp1",
+  "device_type" : "iPhone4,1",
+  "imei" : "F320902B-B071-4224-AAB5-F51B1E027AB5",
+  "ip" : "192.168.240.239"
+}
+
 
 支付类参数：
 public class GAPayInfo{
@@ -57,6 +71,9 @@ public class GAPayInfo{
 	public string extra ;// 拓展信息 （可为空）
 	
 	}	
+	
+	
+	
 ```
 
 #### [可参考testLogin.cs](/docs/sdk/cs)
