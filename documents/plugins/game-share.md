@@ -161,6 +161,8 @@ public void onResult(int code,String errmsg,String shortUrl,Bitmap codeBitmap);
 
 ### 设置IP(身份标识者)的id
 
+说明：当客户端接口 `openid` 改用其它唯一性ID（角色ID）时，这边系统无法对登录的用户分析关系，需要游戏服务端触发我们接口（设置IP的openid），我们就会分析判断绑定关系。 
+
 请求地址: `http://share.plugin.mobileztgame.com/games/{game_id}/channels/{channel_id}/identifies/{client_ip}` 
 
 请求方式: `PATCH`
@@ -172,6 +174,13 @@ public void onResult(int code,String errmsg,String shortUrl,Bitmap codeBitmap);
 | game_id    | 游戏ID        |
 | channel_id | 渠道ID        |
 | client_ip  | 客户端IP      |
+
+#### 内容参数说明
+
+| 参数名     | 说明          |
+|------------|---------------|
+| invitee_id | 被邀请人ID/游戏定义的唯一ID/openid |
+
 
 #### 响应说明
 
