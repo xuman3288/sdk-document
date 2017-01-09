@@ -241,7 +241,6 @@ public interface IZTListener {
 	"mobile_type":"xxxxxx",
     "imei":"xxxxxx",
     "action":"login",
-    "account":"xxxxxx",
     "mac":"xxxxxx",
     "channel":1,
     "ip":"xxxxxx"
