@@ -42,20 +42,24 @@
         ]
     },
     {
-        "label": "其它文档",
+        "label": "其它文档/工具",
         "uri": "#",
         "pages": [
             {
                 "label": "GM工具接入",
                 "uri": "/docs/gmt/gmt_guide"
             },
-	    {
+            {
                 "label": "游戏在线人数统计",
                 "uri": "/docs/stat/game_online"
             },
-	    {
+            {
                 "label": "游戏步骤点统计接口",
                 "uri": "/docs/stat/game_step"
+            },
+            {
+                "label": "RSA支付验证工具",
+                "uri": "/tools/payment-rsa"
             }
         ]
     }
