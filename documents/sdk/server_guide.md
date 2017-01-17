@@ -115,7 +115,11 @@ OPENSSL_ALGO_SHA1
 //其中公钥(public_key)由巨人移动服务端对接人员提供
 ```
 
-##### 2.2.4.2. 范例下载
+##### 2.2.4.2. RSA调试工具
+
+[RSA 支付调试工具](http://docs.mztgame.com/tools/payment-rsa)
+
+##### 2.2.4.3. 范例下载
 
 [RSA 范例下载(PHP, JAVA, C++, C#, Python3)](http://docs.mztgame.com/files/rsa_examples.zip)
 
