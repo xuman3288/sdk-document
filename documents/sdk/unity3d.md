@@ -21,19 +21,31 @@
 - [合体插件_1.0.0（包括IOS官方,Android渠道）](http://docs.mztgame.com/files/unity3d/GASDKAll_1.0.0_20161229.zip)
 
  ***GASDKAll_1.0.0说明:***
- 
+
  >ios 含巨人官方渠道资源，有UI界面，导出工程可以直接使用
 
  >android 不含巨人官方资源，导出无UI界面，需要用平台打包工具，出各渠道包。
-  
+
  >适合上国内渠道的游戏
-  
+
 ------------------------------------------------------------------
 
 ## 开发前准备
 
+  *注意事项*
 
-#### [可参考testLogin.cs](/docs/sdk/cs)
+ > 复制下面的目录
+
+     AppendFile/
+     SDKFile/
+
+>拷贝全部到 u3d  Assert 同级目录
+
+ >如果 开通微信支付 ，可以导出源码后，手动拷贝源码文件名必须为WXPayEntryActivity.java，目录必须为wxapi。
+
+![](http://docs.mztgame.com/files/assets/unityimg/android_wxapi.png)
+
+
 
 
 
@@ -41,6 +53,7 @@
 
 ------------------------------------------------------------------
 
+#### [可参考testLogin.cs](/docs/sdk/cs)
 
 ###### `初始化接口`  (必接)
 
@@ -177,7 +190,7 @@ GASDKManager.Instance.SwitchUser();
   GASDKManager.Instance.EnableDebugGA();
 ```
 
-##  渠道母包通用接口
+## 渠道母包通用接口
 ![](http://docs.mztgame.com/files/assets/unityimg/unity_gasdk_android_parent.png)
 
 ###### `初始化接口(必接)`
@@ -380,7 +393,7 @@ GASDKManager.Instance.SwitchUser();
 ##### 2.接入生命周期
 [ UnityActivity ](/docs/sdk/csAndroidLife)
 
-## Unity3d 官方SDK(IOS)
+## 官方SDK(IOS详细配置)
 
 
 ------------------------------------------------------------------

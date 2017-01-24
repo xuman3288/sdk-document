@@ -9,220 +9,153 @@ public class TestGaParentPackage : MonoBehaviour {
     void Start()
     {
 
-		GASDKManager.Instance.initGASDK("5151","testGameName",false);
-
-        #if UNITY_ANDROID
-               // GASDKManager.Instance.enableDebugModeAndroid();
-        #endif
+      GASDKManager.Instance.InitGASDK("5151","testGameName",false);
+    		GASDKManager.Instance.EnableDebugGA ();
     }
 
 
     public void testLogin(){
 
-		#if UNITY_ANDROID
-
-		GASDKManager.Instance.loginAndroid("1","zoneName",loginResult);
-
-		#elif UNITY_IOS || UNITY_IPHONE
-
-		#endif
+	     GASDKManager.Instance.Login (true,LoginResult);
 	}
 
     public void testPay()
     {
-		#if UNITY_ANDROID
-
-        GASDKManager.Instance.payAndroid("1",10,"1","金币",logPayResult);
-
-		#elif UNITY_IOS || UNITY_IPHONE
-
-		#endif
+      GASDKManager.Instance.Pay (new GAPayInfo("zonId","productId","productName",100,1,1,""),
+  			LogPayResult);
 
 	}
 
     public void testSwitchUser()
     {
 
-		GASDKManager.Instance.switchUser ();
+		GASDKManager.Instance.SwitchUser ();
 
     }
     public void testUserCenter()
     {
-		GASDKManager.Instance.userCenter ();
+		GASDKManager.Instance.UserCenter ();
 	}
 
     public void testHasUserCenter()
     {
-        #if UNITY_ANDROID
-
-                GASDKManager.Instance.hasUserCenterAndroid(logHasUserCenter);
-        #endif
+      GASDKManager.Instance.HasUserCenter(logHasUserCenter);
 
     }
 
     public void testHasSwitchUser()
-    {
-        #if UNITY_ANDROID
+  	{
 
-                GASDKManager.Instance.hasSwitchUserAndroid(logHasSwitchUserCenter);
-        #endif
+  		GASDKManager.Instance.HasSwitchUser(logHasSwitchUserCenter);
 
-    }
-    public void testHasQuitDialog()
-    {
-        #if UNITY_ANDROID
+  	}
+  	public void testHasQuitDialog()
+  	{
 
-                GASDKManager.Instance.hasQuitDialogAndroid(logHasQuitDialog);
-        #endif
+  		GASDKManager.Instance.HasQuitDialog(logHasQuitDialog);
 
-    }
-    public void testQuitDialog()
-    {
-        #if UNITY_ANDROID
+  	}
+  	public void testQuitDialog()
+  	{
 
-                GASDKManager.Instance.quitZTGameAndroid(logQuitDialog);
-        #endif
+  		GASDKManager.Instance.QuitGameDialog(logQuitDialog);
 
-    }
+  	}
 
-    public void testGetPlatformId()
-    {
-        #if UNITY_ANDROID
+  	public void testGetPlatformId()
+  	{
 
-                GASDKManager.Instance.getPlatFormIdAndroid(logGetPlatFormId);
-        #endif
-    }
+  		GASDKManager.Instance.GetPlatformId(logGetPlatFormId);
+  	}
 
-    public void testSetZoneId()
-    {
-        #if UNITY_ANDROID
+  	public void testSetZoneId()
+  	{
 
-                GASDKManager.Instance.setZoneIdAndroid("11");
-        #endif
-    }
-    public void testSetActivity()
-    {
-        #if UNITY_ANDROID
+  		GASDKManager.Instance.SetZoneId("11");
+  	}
+  	public void testSetActivity()
+  	{
 
-        GASDKManager.Instance.setActivityAndroid();
-        #endif
-    }
+  		GASDKManager.Instance.SetActivity();
+  	}
 
 
-    public void testIsLogined()
-    {
-        #if UNITY_ANDROID
+  	public void testIsLogined()
+  	{
 
-                GASDKManager.Instance.getIsLoginedAndroid(logisLogined);
-        #endif
-    }
-    public void testloginOkZTGame()
-    {
-        #if UNITY_ANDROID
+  		GASDKManager.Instance.IsLogined(logisLogined);
 
-                GASDKManager.Instance.loginOkZTGameAndroid("1","角色名","角色等级","11","区名");
-        #endif
-    }
-    public void testcreateRoleZTGame()
-    {
-        #if UNITY_ANDROID
+  	}
+  	public void testloginOkZTGame()
+  	{
 
-                GASDKManager.Instance.createRoleZTGameAndroid("1", "角色名", "角色等级", "11", "区名");
-        #endif
-    }
-    public void testroleLevelUpZTGame()
-    {
-        #if UNITY_ANDROID
+  		GASDKManager.Instance.LoginOkZTGame("1","角色名","角色等级","11","区名");
 
-                GASDKManager.Instance.roleLevelUpZTGameAndroid("1", "角色名",  "11", "区名",11);
-        #endif
-    }
+  	}
+  	public void testcreateRoleZTGame()
+  	{
+
+  		GASDKManager.Instance.CreateRoleZTGame("1", "角色名", "角色等级", "11", "区名");
+
+  	}
+  	public void testroleLevelUpZTGame()
+  	{
+
+  		GASDKManager.Instance.RoleLevelUpZTGame("1", "角色名",  "11", "区名",11);
+  	}
 
 
 
+      //####################### 返回结果 ############################
 
 
+  	public void LoginResult(int ret,string json){
 
-    //####################### 返回结果 ############################
+  		Debug.Log( " 登录成功  In C# Client ret = "+ret +
+              ",json = " +json
+              );
+  	}
 
+      public void LogPayResult(int ret)
+      {
+          Debug.Log("  支付  In C# Client ret = " + ret  );
+      }
 
+  	public void logHasUserCenter(bool ishasUserCenter)
+  	{
+  		Debug.Log("  用户中心  In C# Client ret = " + ishasUserCenter);
+  		GASDKManager.Instance.ToastAnd("用户中心是否需要 ： "+ishasUserCenter);
 
+  	}
+  	public void logHasSwitchUserCenter(bool ishasUserCenter)
+  	{
+  		Debug.Log("  切换账号 In C# Client ret = " + ishasUserCenter);
+  		GASDKManager.Instance.ToastAnd("切换账号是否需要 ： " + ishasUserCenter);
 
+  	}
+  	public void logHasQuitDialog(bool ishasUserCenter)
+  	{
+  		Debug.Log("  第三方退出弹出框 In C# Client ret = " + ishasUserCenter);
+  		GASDKManager.Instance.ToastAnd(" 第三方退出弹出框 是否需要 ： " + ishasUserCenter);
 
+  	}
+  	public void logQuitDialog(int retcode)
+  	{
+  		Debug.Log("  第三方弹出框  确认按钮In C# Client ret = " + retcode);
+  		GASDKManager.Instance.ToastAnd("第三方弹出框  确认按钮 ： " + retcode);
 
-    public void loginResult(int ret, string usr, string token,string json){
+  	}
+  	public void logGetPlatFormId(int  retcode)
+  	{
+  		Debug.Log("  渠道ID In C# Client ret = " + retcode);
+  		GASDKManager.Instance.ToastAnd(" 渠道ID ： " + retcode);
 
-		Debug.Log( " 登录成功  In C# Client ret = "+ret + " ,user ="+usr + " token = "+token+",json = "+json);
-		#if UNITY_ANDROID
-        GASDKManager.Instance.AndroidToat("登录成功");
-		#endif
+  	}
 
-	}
-
-    public void logPayResult(int ret)
-    {
-        Debug.Log("  支付  In C# Client ret = " + ret  );
-
-		#if UNITY_ANDROID
-		if(ret == 0)
-        {
-            GASDKManager.Instance.AndroidToat("支付成功");
-        }
-        else
-        {
-            GASDKManager.Instance.AndroidToat("支付失败");
-        }
-		#endif
-    }
-
-    public void logHasUserCenter(bool ishasUserCenter)
-    {
-        #if UNITY_ANDROID
-               Debug.Log("  用户中心  In C# Client ret = " + ishasUserCenter);
-               GASDKManager.Instance.AndroidToat("用户中心是否需要 ： "+ishasUserCenter);
-        #endif
-
-    }
-    public void logHasSwitchUserCenter(bool ishasUserCenter)
-    {
-    #if UNITY_ANDROID
-            Debug.Log("  切换账号 In C# Client ret = " + ishasUserCenter);
-            GASDKManager.Instance.AndroidToat("切换账号是否需要 ： " + ishasUserCenter);
-    #endif
-
-    }
-    public void logHasQuitDialog(bool ishasUserCenter)
-    {
-#if UNITY_ANDROID
-        Debug.Log("  第三方退出弹出框 In C# Client ret = " + ishasUserCenter);
-        GASDKManager.Instance.AndroidToat(" 第三方退出弹出框 是否需要 ： " + ishasUserCenter);
-#endif
-
-    }
-    public void logQuitDialog(int retcode)
-    {
-#if UNITY_ANDROID
-        Debug.Log("  第三方弹出框  确认按钮In C# Client ret = " + retcode);
-        GASDKManager.Instance.AndroidToat("第三方弹出框  确认按钮 ： " + retcode);
-#endif
-
-    }
-    public void logGetPlatFormId(int  retcode)
-    {
-    #if UNITY_ANDROID
-            Debug.Log("  渠道ID In C# Client ret = " + retcode);
-            GASDKManager.Instance.AndroidToat(" 渠道ID ： " + retcode);
-    #endif
-
-    }
-    public void logisLogined(bool retcode)
-    {
-        #if UNITY_ANDROID
-                Debug.Log("   是否登录In C# Client ret = " + retcode);
-                GASDKManager.Instance.AndroidToat(" 是否登录 ： " + retcode);
-        #endif
-
-    }
+  	public void logisLogined(bool retcode)
+  	{
+  		GASDKManager.Instance.ToastAnd(" 是否登录 ： " + retcode);
+  	}
     //#######################################################
 
 }
