@@ -21,9 +21,11 @@
 - [合体渠道母包插件（包括IOS官方,Android渠道）_1.0.0](http://docs.mztgame.com/files/unity3d/GASDKAll_1.0.0_20161229.zip)
 
  ***GASDKAll_1.0.0说明:***
+ 
   >ios 含巨人官方渠道资源，有UI界面，导出工程可以直接使用
 
   >android 不含巨人官方资源，导出无UI界面，需要用平台打包工具，出各渠道包。
+  
 ------------------------------------------------------------------
 
 ## 开发前准备
@@ -173,7 +175,7 @@ GASDKManager.Instance.SwitchUser();
   GASDKManager.Instance.EnableDebugGA();
 ```
 
-##  渠道母包SDK(只有Android)
+##  渠道母包通用接口
 ![](http://docs.mztgame.com/files/assets/unityimg/unity_gasdk_android_parent.png)
 
 ###### `初始化接口(必接)`
