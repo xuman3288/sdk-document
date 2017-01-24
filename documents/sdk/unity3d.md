@@ -17,7 +17,7 @@
 
   >避免和官方插件在一个分支。
 
-- [合体插件_1.0.0（包括IOS官方,Android渠道）](http://docs.mztgame.com/files/unity3d/GASDKAll_1.0.0_20161229.zip)
+- [合体插件_1.0.0（包括IOS官方,Android渠道）](http://docs.mztgame.com/files/unity3d/GASDKAll_1.0.0_20170124.zip)
 
  ***GASDKAll_1.0.0说明:***
 
