@@ -115,7 +115,7 @@
 GASDKManager.Instance.Pay(GAPayInfo,callback);
 
 //支付回调 retCode 0 成功 1 失败
-public delegate void PayCallback(int retCode);
+public delegate void GAPayCallback(int retCode);
 
 ```
 
