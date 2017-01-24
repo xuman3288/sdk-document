@@ -5,9 +5,8 @@
 - [巨人官方插件_2.0.4(Android和ios)](http://docs.mztgame.com/files/unity3d/GASDKUnity_2.0.4.zip)
 
   ***GASDK2.0.4 说明:***
-
-     >android,ios都有界面,适用于巨人官方渠道出包 和公司游戏测试使用.
-
+    
+    >android,ios都有界面,适用于巨人官方渠道出包 和公司游戏测试使用.
 
 - [渠道母包插件_1.0.1(Android)](http://docs.mztgame.com/files/unity3d/GASDKUnity_Android_母包_1.0.1.zip)
 
