@@ -11,7 +11,7 @@
 
 - [渠道母包插件_1.0.1(Android)](http://docs.mztgame.com/files/unity3d/GASDKUnity_Android_母包_1.0.1.zip)
 
- ***GASDK_Aroid_1.0.1说明:***
+ ***GASDK_Android_1.0.1说明:***
   >纯android母包接口。
 
   >无界面，需要打包工具，出各渠道包。
