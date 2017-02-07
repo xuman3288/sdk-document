@@ -90,7 +90,7 @@
 
 ##### 插件SDK
 
-* [激活插件SDK-1.0.3版本下载地址](http://docs.mztgame.com/files/Android/plugin/ActivePluginSDKv1.0.3.zip)
+* [激活插件SDK-1.0.7版本下载地址](http://docs.mztgame.com/files/Android/plugin/ActivePluginSDKv1.0.7.zip)
 * [二维码分享插件SDK-1.0.4版本下载](http://docs.mztgame.com/files/Android/plugin/ztpromotecode_v1.0.4.zip)
 * [通知栏推送插件SDK-1.0.1版本下载](http://docs.mztgame.com/files/Android/plugin/push_on_barSDK_v1.0.1.zip)
 * [游戏内公告插件SDK-1.0版本下载](http://docs.mztgame.com/files/Android/plugin/inapppushSDK1.0.zip)
