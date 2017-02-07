@@ -36,7 +36,7 @@
 | sign    | `string` | 由 `Rsa-Sha1` 生成的签名, <br> 其中 PublicKey 由, 巨人移动服务端对接人员提供 |
 
 
-##### 1.2.3. 登录签名示例
+#### 1.2.3. 登录签名示例
 
 * [PHP](https://github.com/mztgame/sdk-document/tree/master/examples/server/php)
 * [Java](https://github.com/mztgame/sdk-document/tree/master/examples/server/java)
