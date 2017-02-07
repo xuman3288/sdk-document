@@ -4,34 +4,39 @@
 ## 1. 登录接口
 
 ### 1.1. 流程说明
-![渠道登录流程图](http://i.imgur.com/dm1aUBd.jpg)
 
-### 1.2. 游戏服务端登录验证方式说明
+![渠道登录流程图](http://i.imgur.com/56rXq3m.jpg)
 
-#### 1.2.1. 签名方式验证(离线验证，需客户端 Android&IOS 5.2 以上支持)
+### 1.2. 游戏服务端登录验证说明
 
-##### 1.2.1.1. 验签需要参数(JSON类型)
+#### 1.2.1. 签名说明
 
-| 参数    | 类型   | 说明 |
-| --------|--------| --- |
-| entity  | object | 由客户端中取得, 该对象下所有键值都参与验签字符串的拼接  |
-| entity.openid  | string | 用户账号唯一标识(账号唯一性标识) |
-| entity.time  | int | 生成签名的服务器时间，单位秒。  |
-| entity.account  | string\|null | 用户账号，可能为null。|
-| entity.???      | ... | 第三方平台其它信息。|
-| sign    | string | 由Rsa\Sha1 生成的签名, <br> 其中 PublicKey 由, 巨人移动服务端对接人员提供 |
+账号登录后客户端提供 `entity` 和 `sign` 两参数，请按以下说明规范把 `entity` 拼接后，使用 `RSA-SHA1` 方式进行签名验证。
 
-##### 1.2.1.2. RSA 签名说明
-
-需签名验证的字符串生成规范：
+需签名验证的字符串生成规范及验证流程：
 
 1. 从客户端取得 `entity` 和 `sign` 两个值.
 2. 对entity 下的键进行字母正序排序.
 3. 按 `aKey1=val1&bKey1=val2&cKeyN=valN` 格式进行拼接(**如果val1为null类型请转成空字符串进行拼接**) 得到一个 String
-4. 使用该 String 进行RSA-SHA1 验证.
-5. 对 `entity.time` 进行有效时间验证 (验证 `entity.time` 是否超过建议时间 86400s(一天)).
+4. 使用该 String 进行 `RSA-SHA1` 验证.
+5. 对 `entity.time` 进行有效时间验证, 验证 `entity.time` 是否超过时间 3600s(1小时).
 
-##### 1.2.1.3. 登录签名示例
+
+#### 1.2.2. 验签需要参数(JSON类型)说明
+
+以下参数都由客户端中获得.
+
+| 参数    | 类型   | 说明 |
+| --------|--------| --- |
+| entity  | `object` | 由客户端中取得, 该对象下所有键值都参与验签字符串的拼接  |
+| entity.openid  | `string` | 用户账号唯一标识(账号唯一性标识) |
+| entity.time  | `int` | 生成签名的服务器时间，单位秒。  |
+| entity.account  | `string`\|`null` | 用户账号，可能为 `null`。|
+| entity.???      | ... | 第三方平台其它信息。|
+| sign    | `string` | 由 `Rsa-Sha1` 生成的签名, <br> 其中 PublicKey 由, 巨人移动服务端对接人员提供 |
+
+
+##### 1.2.3. 登录签名示例
 
 * [PHP](https://github.com/mztgame/sdk-document/tree/master/examples/server/php)
 * [Java](https://github.com/mztgame/sdk-document/tree/master/examples/server/java)
@@ -93,7 +98,7 @@
 
 #### 2.2.4. 签名示例
 
-##### 2.2.4.1. 简例
+##### 2.2.4.1. 支付验证签名简例
 
 ```javascript
 data = account + amount + channel + extra + game_id + openid + order_id + product_id + time + transaction_id + version + zone_id;
@@ -113,9 +118,14 @@ OPENSSL_ALGO_SHA1
 
 [RSA 支付调试工具](http://docs.mztgame.com/tools/payment-rsa)
 
-##### 2.2.4.3. 范例下载
+##### 2.2.4.3. 范例
 
-[RSA 范例下载(PHP, JAVA, C++, C#, Python3)](http://docs.mztgame.com/files/rsa_examples.zip)
+* [PHP](https://github.com/mztgame/sdk-document/tree/master/examples/server/php)
+* [Java](https://github.com/mztgame/sdk-document/tree/master/examples/server/java)
+* [Python](https://github.com/mztgame/sdk-document/tree/master/examples/server/python)
+* [C++](https://github.com/mztgame/sdk-document/tree/master/examples/server/c++)
+* [C-Sharp](https://github.com/mztgame/sdk-document/tree/master/examples/server/cs)
+
 
 ####  2.2.5. 请求示例
 
