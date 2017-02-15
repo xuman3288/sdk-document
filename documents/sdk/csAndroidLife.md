@@ -6,6 +6,13 @@ import com.ztgame.mobileappsdk.common.IZTLibBase;
 
 public class UnityActivity extends Activity {
     @Override
+    protected void onCreate() {
+        super.onCreate();
+
+        IZTLibBase.newInstance(this);
+    }
+   IZTLibBase.newInstance(this);
+    @Override
     protected void onPause() {
         super.onPause();
 
