@@ -154,8 +154,17 @@ version： 4.1.0
     	super.onDestroy();
     	IZTLibBase.getInstance().destroyZTGame();
     }
+### 是否已经登录
+   
+    public boolean isLogined();
 
-
+### 返回已登录用户信息
+	public GiantUserInfo getLoginUserInfo();
+	  	例：
+	  	GiantUserInfo mGiantUserInfo = getLoginUserInfo();
+	  	String accid  = mGiantUserInfo.getAccid();
+	  	String sign   = mGiantUserInfo.getSign();
+	  	String entity = mGiantUserInfo.getEntity();
 
 ### 登录接口
 
