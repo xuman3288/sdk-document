@@ -105,8 +105,7 @@
 * [腾讯YSDK-v1.2.4版本下载地址](http://docs.mztgame.com/files/Android/ysdk4-v1.2.4.zip)
 * [百度-v3.7.2版本下载地址](http://docs.mztgame.com/files/Android/BDGameSDKV3.7.2.zip)
 
-### 常见问题
-
+### 常见问题和工具下载
 * [5.2打包工具下载地址](http://docs.mztgame.com/files/Android/sdktool/SDKTool5.2.msi)
 * [cps打包工具下载地址](http://docs.mztgame.com/files/Android/cpsTools_all.zip)
 * [ Java 环境sdk 接入](/docs/channels/commonProblem)
