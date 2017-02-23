@@ -130,7 +130,7 @@ http://docs.mztgame.com/docs/download
 </tr>
 <tr>
 <td>ZTConsts.ZTGAME_QUIT</td>
-<td>是游戏进行销毁操作的地方，玩家在第三方退出框点击确认后会收到此回调</td>
+<td>是游戏进行销毁操作的地方，在第三方退出框点击确认后会收到此回调</td>
 </tr>
 <tr>
 <td>ZTConsts.ZTGAME_LOGOUT</td>
@@ -204,10 +204,7 @@ http://docs.mztgame.com/docs/download
                 }
                 break;
             case ZTConsts.ZTGAME_LOGOUT:
-                //玩家退出处理
-                if(!IZTLibBase.getInstance().isLogined()){
-                    IZTLibBase.getInstance().loginZTGame("1", "Game area", true);
-                }
+              
                 break;
             case ZTConsts.ZTGAME_QQGROUP: //腾讯QQ一键加群
                 if(errcode == 0){
@@ -552,10 +549,8 @@ roleLevelUpZTGame(String roleId,String roleName,String zoneId,String zoneName,in
 
             switch (what) {
             case ZTConsts.ZTGAME_LOGOUT:
-        	//玩家退出处理
-            if(!IZTLibBase.getInstance().isLogined()){
-                 IZTLibBase.getInstance().loginZTGame("1", "Game area", true);
-            }
+        	//切换账号处理
+       
 			}}}
 
 ####注意事项
