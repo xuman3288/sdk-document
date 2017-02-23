@@ -2,31 +2,23 @@
 
 ## Unity插件下载
 
-- [巨人官方插件_2.0.4(Android和ios)](http://docs.mztgame.com/files/unity3d/GASDKUnity_2.0.4.zip)
+- [母包插件（包括IOS官方,Android渠道）](http://docs.mztgame.com/files/unity3d/GASDKAll_1.0.0_20170209.zip)
 
-  ***GASDK2.0.4 说明:***
-    
-    >android,ios都有界面,适用于巨人官方渠道出包 和公司游戏测试使用.
-
-- [渠道母包插件_1.0.1(Android)](http://docs.mztgame.com/files/unity3d/GASDKUnity_Android_母包_1.0.1.zip)
-
- ***GASDK_Android_1.0.1说明:***
-  >纯android母包接口。
-
-  >无界面，需要打包工具，出各渠道包。
-
-  >避免和官方插件在一个分支。
-
-- [合体插件_1.0.0（包括IOS官方,Android渠道）](http://docs.mztgame.com/files/unity3d/GASDKAll_1.0.0_20170209.zip)
-
- ***GASDKAll_1.0.0说明:***
+ ***母包插件说明:***
 
  >ios 含巨人官方渠道资源，有UI界面，导出工程可以直接使用
 
  >android 不含巨人官方资源，导出无UI界面，需要用平台打包工具，出各渠道包。
 
  >适合上国内渠道的游戏
+ 
+- [巨人官方插件(Android和ios)](http://docs.mztgame.com/files/unity3d/GASDKUnity_2.0.4.zip)
 
+  ***巨人官方说明:***
+    
+    >android,ios都有界面,适用于巨人官方渠道出包 和公司游戏测试使用.
+
+ 
 ------------------------------------------------------------------
 
 ## 开发前准备
