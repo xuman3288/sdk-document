@@ -673,3 +673,50 @@ GASDKManager.gaPlatFormIdCB += (platFormId) => {
 		};
 
 ```
+## 4 生命周期配置(母包)
+  *4.1 在游戏的主Activity加入下面生命周期
+  
+```java
+package com.example;
+
+import android.app.Activity;
+import com.ztgame.mobileappsdk.common.IZTLibBase;
+
+public class MainActivity extends Activity {
+    @Override
+    protected void onCreate() {
+        super.onCreate();
+
+        IZTLibBase.newInstance(this);//实例化
+ }
+   IZTLibBase.newInstance(this);
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        IZTLibBase.getInstance().onPauseZTGame();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        IZTLibBase.getInstance().onStopZTGame();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        IZTLibBase.getInstance().onResumeZTGame();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        IZTLibBase.getInstance().destroyZTGame();
+        IZTLibBase.delInstance();
+    }
+```
+## 5 AndroidMainfest配置（母包）
+```
+
+```
