@@ -80,7 +80,7 @@
 ```
 
 
-#### 3.2 登录接口
+### 3.2 登录接口
 
 *1.接口说明*
 
@@ -105,7 +105,7 @@
 ```
 
 
-###### 3.3 支付接口
+### 3.3 支付接口
 
 *1.接口说明*
 
@@ -145,7 +145,7 @@ public class GAPayInfo{
  }
 ```
 
-###### 3.4 切换账号
+### 3.4 切换账号
 
 *1.接口说明*
 
@@ -168,7 +168,7 @@ public class GAPayInfo{
 ```
 GASDKManager.basePlatform.SwitchUser();
 ```
-###### 3.5 用户中心
+### 3.5 用户中心
 *1.接口说明*
 
   请求支付接口
@@ -187,7 +187,7 @@ GASDKManager.basePlatform.SwitchUser();
   GASDKManager.basePlatform.UserCenter();
 ```
 
-######  3.6 开启日志输出接口
+###  3.6 开启日志输出接口
 
 *1.接口说明*
 
@@ -208,7 +208,7 @@ GASDKManager.basePlatform.SwitchUser();
 ```
 
 
-###### 3.7 是否需要用户中心按钮接口
+### 3.7 是否需要用户中心按钮接口
 *1.接口说明*
 
   渠道是否有用户中心
@@ -227,7 +227,7 @@ GASDKManager.basePlatform.SwitchUser();
 ```
   GASDKManager.basePlatform.HasUserCenter();
 ```
-###### 3.8 是否需要切换账号按钮接口
+### 3.8 是否需要切换账号按钮接口
 *1.接口说明*
 
   渠道是否需要切换账号按钮接口
@@ -247,7 +247,7 @@ GASDKManager.basePlatform.SwitchUser();
    GASDKManager.basePlatform.HasSwitchUser();
 ```
 
-######  3.9 是否有第三方渠道的退出确认弹出框
+###  3.9 是否有第三方渠道的退出确认弹出框
 *1.接口说明*
 
   渠道是否有第三方渠道的退出确认弹出框
@@ -267,7 +267,7 @@ GASDKManager.basePlatform.SwitchUser();
   GASDKManager.basePlatform.HasQuitDialog();
 ```
 
-###### 3.10 弹出第三方退出弹出框 确认按钮接口
+### 3.10 弹出第三方退出弹出框 确认按钮接口
 *1.接口说明*
 
   渠道弹出第三方退出弹出框 确认按钮
@@ -288,7 +288,7 @@ GASDKManager.basePlatform.SwitchUser();
    GASDKManager.basePlatform.QuitGameBtn();
 ```
 
-###### 3.11获取渠道ID
+### 3.11获取渠道ID
 *1.接口说明*
 
   获取渠道id
@@ -307,7 +307,7 @@ GASDKManager.basePlatform.SwitchUser();
 ```
    GASDKManager.basePlatform.GetPlatFormId();
 ```
-###### 3.12更新服务器ID
+### 3.12更新服务器ID
 *1.接口说明*
 
   更新服务器ID
@@ -326,7 +326,7 @@ GASDKManager.basePlatform.SwitchUser();
 ```
   GASDKManager.basePlatform.SetZoneId("11");
 ```
-###### 3.13更新当前活动Activity
+### 3.13更新当前活动Activity
 
 *1.接口说明*
 
@@ -346,7 +346,7 @@ GASDKManager.basePlatform.SwitchUser();
 ```
    GASDKManager.basePlatform.SetActivity();
 ```
-###### 3.14 是否已经登录
+### 3.14 是否已经登录
 *1.接口说明*
 
   是否已经登录
@@ -365,7 +365,7 @@ GASDKManager.basePlatform.SwitchUser();
 ```
    GASDKManager.basePlatform.IsLogined();
 ```
-###### 3.15登录完成数据统计接口
+### 3.15登录完成数据统计接口
 *1.接口说明*
 
   登录完成数据统计接口
@@ -391,7 +391,7 @@ GASDKManager.basePlatform.SwitchUser();
 ```
  GASDKManager.basePlatform.LoginOkZTGame("1","角色名","角色等级","11","区名");
 ```
-###### 3.16创建角色数据统计接口
+### 3.16创建角色数据统计接口
 *1.接口说明*
 
   创建角色数据统计接口
@@ -417,7 +417,7 @@ GASDKManager.basePlatform.SwitchUser();
 ```
   GASDKManager.basePlatform.CreateRoleZTGame("1", "角色名", "角色等级", "11", "区名");
 ```
-###### 3.17角色等级升级信息接口
+### 3.17角色等级升级信息接口
 *1.接口说明*
 
   角色等级升级信息接口
@@ -443,7 +443,7 @@ GASDKManager.basePlatform.SwitchUser();
 ```
    GASDKManager.basePlatform.RoleLevelUpZTGame("1", "角色名",  "11", "区名",11);
 ```
-###### 3.18 登录回调
+### 3.18 登录回调
 *1.接口说明*
 
   登录回调
@@ -493,7 +493,7 @@ GASDKManager.gaLoginCB += (retCode,  json) =>{
   };
 ```
 
-###### 3.19 支付回调
+### 3.19 支付回调
 *1.接口说明*
 
   支付回调
@@ -519,7 +519,7 @@ GASDKManager.gaPayCB += ( retCode) =>{
 		};
 ```
 
-###### 3.20 渠道是否有用户中心回调
+### 3.20 渠道是否有用户中心回调
 *1.接口说明*
 
   是否有用户中心
@@ -544,7 +544,7 @@ GASDKManager.gaIsHasUserCenterCB += (ishas)=> {
 		};
 ```
 
-###### 3.21 渠道是否有切换账号回调
+### 3.21 渠道是否有切换账号回调
 *1.接口说明*
 
   渠道是否有切换账号
@@ -569,7 +569,7 @@ GASDKManager.gaIsHasSwitchUserCB += (ishas)=> {
 		};
 ```
 
-###### 3.22 渠道是否有退出弹出框回调
+### 3.22 渠道是否有退出弹出框回调
 *1.接口说明*
 
   渠道是否有退出弹出框回调
@@ -598,7 +598,7 @@ GASDKManager.gaIsHasQuitDialogCB += (ishas) =>{
 		};
 
 ```
-###### 3.23 渠道是否有退出按钮回调
+### 3.23 渠道是否有退出按钮回调
 *1.接口说明*
 
   渠道是否有退出按钮回调
@@ -624,7 +624,7 @@ GASDKManager.gaQuitGameBtnCB += (retcode)=>{
 
 ```
 
-###### 3.24 渠道是否已经登录回调
+### 3.24 渠道是否已经登录回调
 *1.接口说明*
 
   渠道是否已经登录
@@ -649,7 +649,7 @@ GASDKManager.gaIsLoginedCB += (isLogin) => {
 
 ```
 
-###### 3.25 获取渠道ID回调
+### 3.25 获取渠道ID回调
 *1.接口说明*
 
   获取渠道ID
