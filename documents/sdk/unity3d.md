@@ -30,7 +30,7 @@
    2.初始化接口，注册回调事件接口，只能执行一次，使用状态值判定 或 是放至单例脚本的Awake或Start函数中.
    示例
    
-   ```CSharp
+```java
    public static bool isStart = false;
    void Start()
    {
@@ -44,7 +44,7 @@
        }
    }
    
-   ```
+```
    
    3.如果替换官方资源后，而且需要开通微信支付  可以导出源码后，手动拷贝，wxapi源码文件名必须为WXPayEntryActivity.java，目录必须为wxapi。
 
