@@ -1,6 +1,6 @@
 ## Unity3D GASDK文档
 
-##### 1.下载SDK
+## 1.下载SDK
 
  1.1 [渠道母包](http://docs.mztgame.com/files/unity3d/GASDK_1.0.0_20170227.zip)
 
@@ -21,7 +21,7 @@
 > 替换android资源，iOS不用修改，可以出巨人官方渠道 .
 
 
-##### 2.系统配置
+## 2.系统配置
    1.复制下面的目录
     AppendFile/
     SDKFile/
@@ -29,7 +29,8 @@
 
    2.初始化接口，注册回调事件接口，只能执行一次，使用状态值判定 或 是放至单例脚本的Awake或Start函数中.
    示例
-   ```
+   
+   ```CSharp
    public static bool isStart = false;
    void Start()
    {
@@ -42,11 +43,13 @@
                   });
        }
    }
+   
    ```
+   
    3.如果替换官方资源后，而且需要开通微信支付  可以导出源码后，手动拷贝，wxapi源码文件名必须为WXPayEntryActivity.java，目录必须为wxapi。
 
 
-##### 3.基本API
+## 3.基本API
 
 ###### 3.1初始化接口
 
