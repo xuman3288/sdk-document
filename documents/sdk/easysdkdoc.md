@@ -31,8 +31,7 @@
 #快速集成指南
 客户端技术Java接口文档，详细说明接入EasySDK所需要的资料和开发。通过本文的介绍可以了解客户端接入的整个流程。在接入之前请认真阅读本文档,以减少接入过程中遇到的问题。
 ##EasySDK下载地址 
-http://docs.mztgame.com/docs/download
-
+<a href="http://docs.mztgame.com/docs/download" >http://docs.mztgame.com/docs/download</a>
 
 ##接入流程
 ##一. EasySDK_Framework(Java)开发包
