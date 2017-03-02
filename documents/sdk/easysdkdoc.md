@@ -35,7 +35,7 @@ http://docs.mztgame.com/docs/download
 
 
 ##接入流程
-###EasySDK_Framework(Java)开发包
+###一. EasySDK_Framework(Java)开发包
 #####资源包括 libs 目录下的 SDK 主架包 base.jar、acra.jar、ztgameframework.jar
 
 #####配置AndroidManifest.xml添加框架需要的权限
@@ -60,8 +60,8 @@ http://docs.mztgame.com/docs/download
   	 ` config.sdk.class=com.ztgame.ztgameframework.ZTgameFramework`
 
 
-###客户端接入代码
-####1.SDK初始化接口（必选接口）
+###二. 客户端接入代码
+####2.1 *SDK初始化接口（必选接口）*
 
 在主Activity的onCreate方法中对EasySDK进行初始化。
 
@@ -216,7 +216,7 @@ http://docs.mztgame.com/docs/download
     };
 }
 
-####2.Activity生命周期相关方法（必选接口）
+####2.2 *Activity生命周期相关方法（必选接口）*
 
     @Override
     protected void onDestroy() {
@@ -276,7 +276,7 @@ http://docs.mztgame.com/docs/download
         IZTLibBase.getInstance().onSaveInstanceState(outState);
     }
 
-####3.登录接入（必选接口）
+####2.3 *登录接入（必选接口）*
 loginZTGame(String zoneId, String zoneName, boolean isAutoLogin)
 <table border=”1″>
 <tr>
@@ -369,7 +369,7 @@ ZTConsts.ZTGAME_LOGIN,errcode为0成功时， json_obj 出现值:
                 break;
 			}}}
 
-####4.支付接入（必选接口）
+####2.4 *支付接入（必选接口）*
 payZTGame(ZTPayInfo payInfo)
 
 #####ZTPayInfo说明
@@ -433,7 +433,7 @@ IZTLibBase.getInstance().setZoneId("1");
     IZTLibBase.getInstance().payZTGame(payInfo);
 
 
-####5.统计接口（必选接口）
+####2.5 *统计接口（必选接口）*
 #####登录完成数据统
 loginOkZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName)
 #####创建角色数据统计接口接口
@@ -473,7 +473,7 @@ roleLevelUpZTGame(String roleId,String roleName,String zoneId,String zoneName,in
 
 </table>
 
-####6.退出界面（必选接口）
+####2.6 *退出界面（必选接口）*
 - 是否有第三方渠道的退出确认弹出框
 
 	isHasQuitDialog（）
@@ -507,7 +507,7 @@ roleLevelUpZTGame(String roleId,String roleName,String zoneId,String zoneName,in
                 break;
 			}}}
 
-####7.用户中心
+####2.7 *用户中心*
 - 是否需要用户中心按钮接口
 
 	isHasCenterZTGame（）
@@ -523,7 +523,7 @@ roleLevelUpZTGame(String roleId,String roleName,String zoneId,String zoneName,in
     	IZTLibBase.getInstance().enterCenterZTGame();//
     }
 
-####8.切换账号
+####2.8 *切换账号*
 - 是否需要切换账号按钮接口
 
 	isHasSwitchAccountZTGame（）
