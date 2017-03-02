@@ -60,6 +60,10 @@
             {
                 "label": "RSA支付验证工具",
                 "uri": "/tools/payment-rsa"
+            },
+            {
+                "label":"广告商合作接入",
+                "uri": "/docs/stat/ad-hits"
             }
         ]
     }
