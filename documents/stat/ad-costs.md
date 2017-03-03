@@ -5,7 +5,7 @@
  本广告计费对接接口使用HTTP协议，GET方法。
  
 * 点击接口地址
- `Http://ad.stat.mztgame.com/ad/costs`
+ `http://ad.stat.mztgame.com/ad/costs`
  
  * 接口参数
  
