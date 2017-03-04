@@ -19,13 +19,13 @@
  | ua | 用户若是通过网页点击的， 为浏览器的 User-Agent 信息 | 否 |
  | ip | 用户IP |  是 |
  
- * 对接地址范例
+* 对接地址范例
  
  ```
  http://ad.stat.mztgame.com/ad/hits?ad_id=2000001&game_id=5012&idfa=(idfa)&ip=1.1.1.1&ua=(ua)
  ```
  
- * 响应说明
+* 响应说明
  
  HTTP 响应状态码为 204，无响应内容
  
