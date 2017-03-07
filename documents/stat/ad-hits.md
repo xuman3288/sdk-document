@@ -19,7 +19,7 @@
 | imei | 设备IMEI(Android)  | 否 |
 | mac | IOS 或Android Mac | 否 |
 | ua | 用户若是通过网页点击的， 为浏览器的 User-Agent 信息 | 否 |
-| ip | 用户IP |  是 |
+| ip | 用户IP | 否 |
 | redirect_url | 跳转URL（客户端点击 302 跳转方式，S2S 无需传此参数）（限制域名：`*.[m]ztgame.com`, `itunes.apple.com`) |  否 |
  
 ### 对接地址范例
