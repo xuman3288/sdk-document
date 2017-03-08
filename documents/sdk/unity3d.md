@@ -508,7 +508,7 @@ GASDKManager.gaLoginCB += (retCode,  json) =>{
 ```    
 | 参数        | 类型           | 意义   |
 | ------------- |:-------------:| -----:|
-| retCode      | int | 0 成功，1 失败  |
+| retCode      | int | 0 成功，其他状态默认失败  |
 
 *3调用举例*
 
