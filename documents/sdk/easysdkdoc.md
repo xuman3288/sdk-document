@@ -430,7 +430,20 @@ IZTLibBase.getInstance().setZoneId("1");
     payInfo.setProductId("1001"); // 设置商品ID *必传参数
     payInfo.setExtra("1"); //设置游戏订单扩展信息
     IZTLibBase.getInstance().payZTGame(payInfo);
+	     //事件监听
+	private IZTListener mListener = new IZTListener() {
+    @Override
+    public void onFinished(int what, int errcode, JSONObject json_obj) {
 
+        switch (what) {
+        case ZTConsts.ZTGAME_PAY:
+            if (errcode == 0) {
+                //支付成功
+            }else {
+				//支付失败
+            }
+            break;
+        }}}
 
 ###2.5 *统计接口（必选接口）*
 #####登录完成数据统
