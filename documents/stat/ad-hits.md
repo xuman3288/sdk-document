@@ -27,7 +27,7 @@
 ### 对接地址范例
 
 ```
-http://ad.stat.mztgame.com/ad/hits?ad_id=2000001&game_id=5012&idfa=(idfa)&ip=1.1.1.1&ua=(ua)
+http://ad.stat.mztgame.com/ad/s2s-hits?ad_id=2000001&game_id=5012&idfa=(idfa)&ip=1.1.1.1&ua=(ua)
 ```
 
 ### 响应说明
@@ -60,7 +60,7 @@ HTTP 响应状态码为 204，无响应内容
 * 客户端跳转方式
 
 ```
-http://ad.stat.mztgame.com/ad/hits?ad_id=2000001&game_id=5012&idfa=(idfa)&default_url=https://itunes.apple.com&ios_url=&android_url=
+http://ad.stat.mztgame.com/ad/client-hits?ad_id=2000001&game_id=5012&idfa=(idfa)&default_url=https://itunes.apple.com&ios_url=&android_url=
 ```
  
 ### 响应说明
