@@ -100,7 +100,7 @@ bool CryptHelper::verifySignWithRsa(const std::string &data, const std::string &
     {
         printf("sign base64Decode failed\n");
         OPENSSL_free(signSrc);
-        return -1;
+        return false;//return -1;
     }
 
     EVP_VerifyInit(&mdCtx, type);
