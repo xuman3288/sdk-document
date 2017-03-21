@@ -37,7 +37,7 @@
        if (!isStart)
        {
            isStart = true;
-           GASDKManager.gaLoginCB += (retCode,  json) =>{
+           GiantSDKPlatformManager.OnLoginComplete += (retCode,  json) =>{
  			          Debug.Log( " 登录成功  In C# Client ret = "+retCode + ",json = " +json
 
                   });
@@ -75,7 +75,7 @@
 *3调用例子*
 
 ```
-  GASDKManager.basePlatform.InitGASDK("5014","testGameName",false);
+  GiantSDKPlatformManager.basePlatform.InitGASDK("5014","testGameName",false);
 
 ```
 
@@ -100,7 +100,7 @@
  *3调用举例*
 
 ```
-  GASDKManager.basePlatform.Login(true);
+  GiantSDKPlatformManager.basePlatform.Login(true);
 
 ```
 
@@ -125,7 +125,7 @@
  *3调用举例*
 ```
 
-GASDKManager.basePlatform.Pay (new GAPayInfo("zonId","productId","productName",100,1,1,""));
+GiantSDKPlatformManager.basePlatform.Pay (new GAPayInfo("zonId","productId","productName",100,1,1,""));
 
 ```
 
@@ -166,7 +166,7 @@ public class GAPayInfo{
 调用实例：可参考demo
 
 ```
-GASDKManager.basePlatform.SwitchUser();
+GiantSDKPlatformManager.basePlatform.SwitchUser();
 ```
 ### 3.5 用户中心
 *1.接口说明*
@@ -184,7 +184,7 @@ GASDKManager.basePlatform.SwitchUser();
  *3调用举例*
 
 ```
-  GASDKManager.basePlatform.UserCenter();
+  GiantSDKPlatformManager.basePlatform.UserCenter();
 ```
 
 ###  3.6 开启日志输出接口
@@ -204,7 +204,7 @@ GASDKManager.basePlatform.SwitchUser();
  *3调用举例*
 
 ```
-  GASDKManager.basePlatform.EnableDebugGA();
+  GiantSDKPlatformManager.basePlatform.EnableDebugGA();
 ```
 
 
@@ -218,14 +218,18 @@ GASDKManager.basePlatform.SwitchUser();
 ```
 
  //渠道是否有用户中心
- void HasUserCenter()
+ bool HasUserCenter()
 
 ```    
+  
+| 类型           | 意义   |
+|:-------------:| -----:|
+| bool | true需要显示*用户中心按钮,false 不做处理|
 
  *3调用举例*
 
 ```
-  GASDKManager.basePlatform.HasUserCenter();
+  GiantSDKChannelManager.baseChannel.HasUserCenter();
 ```
 ### 3.8 是否需要切换账号按钮接口
 *1.接口说明*
@@ -237,14 +241,17 @@ GASDKManager.basePlatform.SwitchUser();
 ```
 
  //是否需要切换账号按钮接口
- void HasSwitchUser()
+ bool HasSwitchUser()
 
-```    
+``` 
+| 类型           | 意义   |
+|:-------------:| -----:|
+| bool | true则游戏需要添加一个切换账号按钮,false 不做处理|
 
  *3调用举例*
 
 ```
-   GASDKManager.basePlatform.HasSwitchUser();
+   GiantSDKPlatformManager.baseChannel.HasSwitchUser();
 ```
 
 ###  3.9 是否有第三方渠道的退出确认弹出框
@@ -257,14 +264,14 @@ GASDKManager.basePlatform.SwitchUser();
 ```
 
  //是否有第三方渠道的退出确认弹出框
- void HasQuitDialog();
+ bool HasQuitDialog();
 
 ```    
 
  *3调用举例*
 
 ```
-  GASDKManager.basePlatform.HasQuitDialog();
+  GiantSDKChannelManager.baseChannel.HasQuitDialog();
 ```
 
 ### 3.10 弹出第三方退出弹出框 确认按钮接口
@@ -285,7 +292,7 @@ GASDKManager.basePlatform.SwitchUser();
 
 
 ```
-   GASDKManager.basePlatform.QuitGameBtn();
+   GiantSDKChannelManager.baseChannel.QuitGameBtn();
 ```
 
 ### 3.11获取渠道ID
@@ -298,14 +305,17 @@ GASDKManager.basePlatform.SwitchUser();
 ```
 
  //获取渠道id
- void GetPlatFormId();
+ int GetPlatFormId();
 
 ```    
+ | 类型           | 意义   |
+ |:-------------:| -----:|
+  int | 渠道的id|
 
  *3调用举例*
 
 ```
-   GASDKManager.basePlatform.GetPlatFormId();
+   GiantSDKChannelManager.baseChannel.GetPlatFormId();
 ```
 ### 3.12更新服务器ID
 *1.接口说明*
@@ -324,7 +334,7 @@ GASDKManager.basePlatform.SwitchUser();
  *3调用举例*
 
 ```
-  GASDKManager.basePlatform.SetZoneId("11");
+  GiantSDKChannelManager.basePlatform.SetZoneId("11");
 ```
 ### 3.13更新当前活动Activity
 
@@ -344,7 +354,7 @@ GASDKManager.basePlatform.SwitchUser();
  *3调用举例*
 
 ```
-   GASDKManager.basePlatform.SetActivity();
+   GiantSDKChannelManager.baseChannel.SetActivity();
 ```
 ### 3.14 是否已经登录
 *1.接口说明*
@@ -356,14 +366,16 @@ GASDKManager.basePlatform.SwitchUser();
 ```
 
  //更新当前活动Activity,如果游戏当前Activity变更，需要更新activity到SDK
- void IsLogined();
+ bool IsLogined();
 
 ```    
-
+ | 类型           | 意义   |
+ |:-------------:| -----:|
+ | bool | true :已经登录，false 没有登录|
  *3调用举例*
 
 ```
-   GASDKManager.basePlatform.IsLogined();
+   GiantSDKChannelManager.baseChannel.IsLogined();
 ```
 ### 3.15登录完成数据统计接口
 *1.接口说明*
@@ -389,7 +401,7 @@ GASDKManager.basePlatform.SwitchUser();
  *3调用举例*
 
 ```
- GASDKManager.basePlatform.LoginOkZTGame("1","角色名","角色等级","11","区名");
+ GiantSDKChannelManager.baseChannel.LoginOkZTGame("1","角色名","角色等级","11","区名");
 ```
 ### 3.16创建角色数据统计接口
 *1.接口说明*
@@ -415,7 +427,7 @@ GASDKManager.basePlatform.SwitchUser();
  *3调用举例*
 
 ```
-  GASDKManager.basePlatform.CreateRoleZTGame("1", "角色名", "角色等级", "11", "区名");
+  GiantSDKChannelManager.baseChannel.CreateRoleZTGame("1", "角色名", "角色等级", "11", "区名");
 ```
 ### 3.17角色等级升级信息接口
 *1.接口说明*
@@ -441,7 +453,7 @@ GASDKManager.basePlatform.SwitchUser();
 
 
 ```
-   GASDKManager.basePlatform.RoleLevelUpZTGame("1", "角色名",  "11", "区名",11);
+   GiantSDKChannelManager.baseChannel.RoleLevelUpZTGame("1", "角色名",  "11", "区名",11);
 ```
 ### 3.18 登录回调
 *1.接口说明*
@@ -453,7 +465,7 @@ GASDKManager.basePlatform.SwitchUser();
 ```
 
  //登录回调
- public delegate void GALoginCallback (int retCode, string json);
+ public delegate void LoginCompleteHandler (int retCode, string json);
 
 ```    
 | 参数        | 类型           | 意义   |
@@ -486,7 +498,7 @@ GASDKManager.basePlatform.SwitchUser();
  *3调用举例*
 
 ```
-GASDKManager.gaLoginCB += (retCode,  json) =>{
+GiantSDKPlatformManager.OnLoginComplete += (retCode,  json) =>{
     Debug.Log( " 登录  In C# Client ret = "+retCode + ",json = " +json
     );
 
@@ -503,7 +515,7 @@ GASDKManager.gaLoginCB += (retCode,  json) =>{
 ```
 
    //支付回调
-   public delegate void GAPayCallback (int retCode);
+   public delegate void PayCompleteHanlder (int retCode);
 
 ```    
 | 参数        | 类型           | 意义   |
@@ -513,102 +525,25 @@ GASDKManager.gaLoginCB += (retCode,  json) =>{
 *3调用举例*
 
 ```
-GASDKManager.gaPayCB += ( retCode) =>{
+GiantSDKPlatformManager.OnPayComplete += ( retCode) =>{
 			Debug.Log("  支付  In C# Client ret = " + retCode  );
 
 		};
 ```
 
-### 3.20 渠道是否有用户中心回调
+
+
+### 3.20 渠道退出消息
 *1.接口说明*
 
-  是否有用户中心
-
-*2.函数原型*
-
-```
-
-//是否有用户中心
- public delegate void GAIsHasUserCenterCallback (bool ishas);
-
-```    
-| 参数        | 类型           | 意义   |
-| ------------- |:-------------:| -----:|
-| ishas      | bool | true需要显示*用户中心按钮,false 不做处理|
-
-*3调用举例*
-
-```
-GASDKManager.gaIsHasUserCenterCB += (ishas)=> {
-			Debug.Log("  是否有用户中心  In C# Client ret = " + ishas);
-		};
-```
-
-### 3.21 渠道是否有切换账号回调
-*1.接口说明*
-
-  渠道是否有切换账号
-
-*2.函数原型*
-
-```
-//是否有切换账号
-//true则游戏需要添加一个切换账号按钮以方便用户切换账号.点击此按钮后调用SwitchAccount(),false 不做处理
-public delegate void GAIsHasSwitchUserCallback (bool ishas);
-
-```    
-| 参数        | 类型           | 意义   |
-| ------------- |:-------------:| -----:|
-| ishas      | bool | true则游戏需要添加一个切换账号按钮,false 不做处理|
-
-*3调用举例*
-
-```
-GASDKManager.gaIsHasSwitchUserCB += (ishas)=> {
-			Debug.Log("  是否有切换账号 In C# Client ret = " + ishas);
-		};
-```
-
-### 3.22 渠道是否有退出弹出框回调
-*1.接口说明*
-
-  渠道是否有退出弹出框回调
-
-*2.函数原型*
-
-```
-//是否有退出弹出框
-//如果此函数返回true，请游戏不要弹出游戏自身的退出确认弹出框
-//   而是直接调用quitZTGameAndroid来弹出第三方的退出弹出框，
-//   在回调返回状态码:4 ,处理游戏的退出操作
-//（销毁代码，而不是再次弹出退出确认对话框。返回false则按照游戏自己的退出流程处理即可。)
-public delegate void GAIsHasQuitDialogCallback (bool ishas);
-
-```    
-| 参数        | 类型           | 意义   |
-| ------------- |:-------------:| -----:|
-| ishas      | bool | true则游戏需要,false 不做处理|
-
-*3调用举例*
-
-```
-GASDKManager.gaIsHasQuitDialogCB += (ishas) =>{
-
-			Debug.Log("  渠道退出弹出框 In C# Client ret = " + ishas);
-		};
-
-```
-### 3.23 渠道是否有退出按钮回调
-*1.接口说明*
-
-  渠道是否有退出按钮回调
+  渠道退出消息
 
 *2.函数原型*
 
 ```
 
 //确认退出按钮
-public delegate void GAQuitGameZTCallback (int retcode);
+public delegate void QuitGameButtonCompleteHandler (int retcode);
 
 ```    
 | 参数        | 类型           | 意义   |
@@ -618,103 +553,30 @@ public delegate void GAQuitGameZTCallback (int retcode);
 *3调用举例*
 
 ```
-GASDKManager.gaQuitGameBtnCB += (retcode)=>{
+GiantSDKChannelManager.OnQuitGameButtonComplete += (retcode)=>{
 			Debug.Log("  第三方弹出框  确认按钮In C# Client ret = " + retcode);
 		};
 
 ```
 
-### 3.24 渠道是否已经登录回调
-*1.接口说明*
 
-  渠道是否已经登录
 
-*2.函数原型*
-
-```
-//渠道是否已经登录
-public delegate void GAIsLoginedCallback (bool isLogin);
-
-```    
-| 参数        | 类型           | 意义   |
-| ------------- |:-------------:| -----:|
-| isLogin      | bool | true :已经登录，false 没有登录|
-
-*3调用举例*
-
-```
-GASDKManager.gaIsLoginedCB += (isLogin) => {
-			Debug.Log("   是否登录 In C# Client ret = " + isLogin);
-		};
-
-```
-
-### 3.25 获取渠道ID回调
-*1.接口说明*
-
-  获取渠道ID
-
-*2.函数原型*
-
-```
-//获取渠道ID
-public delegate void GAGetPlatFormIdCallback (int platFormId);
-
-```    
-| 参数        | 类型           | 意义   |
-| ------------- |:-------------:| -----:|
-| platFormId      | int | 渠道的id|
-
-*3调用举例*
-
-```
-GASDKManager.gaPlatFormIdCB += (platFormId) => {
-			Debug.Log("  渠道ID In C# Client ret = " + platFormId);
-		};
-
-```
-## 4 生命周期配置(母包)
+ 
+## 4 生命周期配置(渠道母包)
   *4.1 在游戏的主Activity加入下面生命周期
   
-```java
-package com.example;
+```
+<activity
+        android:name="com.giant.sdk.unity.GiantSDKActivity"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+        android:configChanges="orientation|keyboardHidden|screenSize"
+        android:screenOrientation=" 填写相应方向portrait(竖屏) or landscape(横屏)">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+</activity>
 
-import android.app.Activity;
-import com.ztgame.mobileappsdk.common.IZTLibBase;
-
-public class MainActivity extends Activity {
-    @Override
-    protected void onCreate() {
-        super.onCreate();
-
-        IZTLibBase.newInstance(this);//实例化
- }
-   IZTLibBase.newInstance(this);
-    @Override
-    protected void onPause() {
-        super.onPause();
-
-        IZTLibBase.getInstance().onPauseZTGame();
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        IZTLibBase.getInstance().onStopZTGame();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        IZTLibBase.getInstance().onResumeZTGame();
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        IZTLibBase.getInstance().destroyZTGame();
-        IZTLibBase.delInstance();
-    }
 ```
 ## 5 AndroidMainfest配置（母包）
 ```xml
@@ -727,22 +589,7 @@ public class MainActivity extends Activity {
         android:minSdkVersion="8"
         android:targetSdkVersion="24" />
 
-        <!-- GASDK  需要的权限 start -->
-		<uses-permission android:name="android.permission.WRITE_SETTINGS" />
-		<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-		<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-		<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-		<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-		<uses-permission android:name="android.permission.INTERNET" />
-		<uses-permission android:name="android.permission.SEND_SMS" />
-		<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-		<uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-		<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-		<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-		<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
-		 <!-- GASDK  需要的权限 end -->
-
+       
 	 <!--  如果工程不存在Application   必须这样写android:name="com.ztgame.ztgameframework.ZTApplication"   -->
 
 	 <!--  如果工程 存在Application   必须继承ZTApplication 并且在 onCreate() 函数中添加 super.onCreate(),
