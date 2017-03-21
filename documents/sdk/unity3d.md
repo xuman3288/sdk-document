@@ -2,7 +2,7 @@
 
 ## 1.下载SDK
 
- 1.1 [渠道母包](http://docs.mztgame.com/files/unity3d/GASDK_1.0.0_20170227.zip)
+ 1.1 [渠道母包](http://docs.mztgame.com/files/unity3d/GiantSDK_1.0.0_20170321.zip)
 
  ***母包插件说明:***
 
@@ -370,7 +370,7 @@ GiantSDKPlatformManager.basePlatform.SwitchUser();
 
 ```    
  | 类型           | 意义   |
- |:-------------:| -----:|
+ |-------------:| -----:|
  | bool | true :已经登录，false 没有登录|
  *3调用举例*
 
