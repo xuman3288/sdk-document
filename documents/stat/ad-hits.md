@@ -23,6 +23,7 @@
 | mac | IOS 或Android Mac | 否 |
 | ua | 用户若是通过网页点击的， 为浏览器的 User-Agent 信息 | 否 |
 | ip | 用户IP | 否 |
+| callback_url |  广告商追踪使用url，启动时会回调 |  是 |
  
 ### 对接地址范例
 
