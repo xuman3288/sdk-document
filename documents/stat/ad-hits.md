@@ -23,7 +23,7 @@
 | mac | IOS 或Android Mac | 否 |
 | ua | 用户若是通过网页点击的， 为浏览器的 User-Agent 信息 | 否 |
 | ip | 用户IP | 否 |
-| callback_url |  广告商追踪使用url，启动时会回调 |  否 |
+| callback |  广告商追踪使用url，启动时会回调 |  否 |
  
 ### 对接地址范例
 
@@ -53,7 +53,7 @@ HTTP 响应状态码为 204，无响应内容
 | default_url | 默认跳转URL|  是 |
 | ios_url | 程序识别 IOS UA 跳转URL|  否 |
 | android_url | 程序识别 Android UA跳转URL |  否 |
-| callback_url |  广告商追踪使用url，启动时会回调 |  否 |
+| callback |  广告商追踪使用url，启动时会回调 |  否 |
 
 > 注：以上参数 `default_url`, `ios_url`, `android_url` 限制域名：`*.[m]ztgame.com`, `itunes.apple.com`,`*.[m]ztgame.com.cn`
  
