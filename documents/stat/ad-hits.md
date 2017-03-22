@@ -52,15 +52,16 @@ HTTP 响应状态码为 204，无响应内容
 | default_url | 默认跳转URL|  是 |
 | ios_url | 程序识别 IOS UA 跳转URL|  否 |
 | android_url | 程序识别 Android UA跳转URL |  否 |
+| callback_url |  广告商追踪使用url，启动时会回调 |  是 |
 
-> 注：以上参数 `default_url`, `ios_url`, `android_url` 限制域名：`*.[m]ztgame.com`, `itunes.apple.com`
+> 注：以上参数 `default_url`, `ios_url`, `android_url` 限制域名：`*.[m]ztgame.com`, `itunes.apple.com`,`*.[m]ztgame.com.cn`
  
 ### 对接地址范例
 
 * 客户端跳转方式
 
 ```
-http://ad.stat.mztgame.com/ad/client-hits?ad_id=2000001&game_id=5012&idfa=(idfa)&default_url=https://itunes.apple.com&ios_url=&android_url=
+http://ad.stat.mztgame.com/ad/client-hits?ad_id=2000001&game_id=5012&idfa=(idfa)&default_url=https://itunes.apple.com&ios_url=&android_url=&callback_url=http://XXXX
 ```
  
 ### 响应说明
