@@ -28,7 +28,7 @@
 ### 对接地址范例
 
 ```
-http://ad.stat.mztgame.com/ad/s2s-hits?ad_id=2000001&game_id=5012&idfa=(idfa)&ip=1.1.1.1&ua=(ua)
+http://ad.stat.mztgame.com/ad/s2s-hits?ad_id=2000001&game_id=5012&idfa=(idfa)&ip=1.1.1.1&ua=(ua)&callback_url=http://XXXX
 ```
 
 ### 响应说明
