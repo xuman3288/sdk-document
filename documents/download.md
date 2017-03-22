@@ -111,4 +111,6 @@
 * [cps打包工具下载地址](http://docs.mztgame.com/files/Android/cpsTools_all.zip)
 * [ Java 环境sdk 接入](/docs/channels/commonProblem)
 * [ 打包工具使用文档 ](http://docs.mztgame.com/files/Android/doc/dbgj.doc)
-* 
+
+### Android新版SDK
+* [新版SDK测试APK V1.0](http://docs.mztgame.com/files/Android/GiantNewSdk-V1.0.apk)
