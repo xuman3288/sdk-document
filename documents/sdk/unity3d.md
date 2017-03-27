@@ -25,7 +25,9 @@
    1.复制下面的目录
     AppendFile/
     SDKFile/
-    拷贝全部到  Assert 同级目录
+    拷贝全部到  Assets 同级目录
+    ![配置说明](http://docs.mztgame.com/files//assets/unityimg/giant_sdk_config.png)
+
 
    2.初始化接口，注册回调事件接口，只能执行一次，使用状态值判定 或 是放至单例脚本的Awake或Start函数中.
    示例
