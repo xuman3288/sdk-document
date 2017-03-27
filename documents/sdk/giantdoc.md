@@ -5,7 +5,12 @@ version： 5.2.2
 
 ## 接入前准备工作  
 
-- 将工程依赖sdk中的giant工程
+- 将工程依赖sdk中的NewGiant工程
+	
+	或者拷贝资源：
+ 
+	- NewGiant/libs目录下的jar包： base.jar、acra.jar、ztgameframework.jar、libammsdk.jar、newgiant.jar、alipaySdk-20160809.jar、giantpaysdklib.jar
+	- NewGiant/res目录下的所有资源文件
 - 在游戏工程的Androidmenifest.xml中添加如下权限：
 
     	<uses-permission android:name="android.permission.WRITE_SETTINGS" />
