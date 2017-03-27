@@ -2,7 +2,7 @@
 
 ## 1.下载SDK
 
- 1.1 [渠道母包](http://docs.mztgame.com/files/unity3d/GiantSDK_1.0.0_20170321.zip)
+ 1.1 [渠道母包](http://docs.mztgame.com/files/unity3d/GiantSDK_1.0.0_170321.zip)
 
  ***母包插件说明:***
 
