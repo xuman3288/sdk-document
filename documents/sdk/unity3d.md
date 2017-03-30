@@ -2,7 +2,7 @@
 
 ## 1.下载SDK
 
- 1.1 [渠道母包](http://docs.mztgame.com/files/unity3d/GiantSDK_1.0.0_20170321.zip)
+ 1.1 [渠道母包](http://docs.mztgame.com/files/unity3d/GiantSDK_1.0.0_170321.zip)
 
  ***母包插件说明:***
 
@@ -25,7 +25,9 @@
    1.复制下面的目录
     AppendFile/
     SDKFile/
-    拷贝全部到  Assert 同级目录
+    拷贝全部到  Assets 同级目录
+    ![配置说明](http://docs.mztgame.com/files//assets/unityimg/giant_sdk_config.png)
+
 
    2.初始化接口，注册回调事件接口，只能执行一次，使用状态值判定 或 是放至单例脚本的Awake或Start函数中.
    示例
@@ -476,7 +478,7 @@ GiantSDKPlatformManager.basePlatform.SwitchUser();
 ```json
 {
     "account" : "4f*****sm",
-    "pt_id" : 2,
+     
     "sign" : "a\/wE7oX8hx6TEjCfsTm4ziqQjkV51WmRoNOLmud0W5XDohsiL\/WHpcOoMKE72yTrD+mADgUTD31Bfmnthb83AZmCcNcnGU4zg5eWbH3lNEMYwTsIDUxYrm9L6GBf18BaRdWNDSVSo20Qd2ckoer0dUzsSDbCKAXw48UyjX5kgEY\/dBW5PwwWWs+nM7vCJqiFMHKtx3RdJAvhDsIeJpL7xdQo5gzdXRi4qRqzAUyDnAvB1QdpcEwoZ3R\/XbKmiWIBbFBhZTqztLc65s8sD5ZBSVMrkSfuuxXNO2TiyV8LvomCZNwqcE2ks5wCLGUAmIX87ZW5vmgn5deUYsxcoGHSxg==",
     "entity" : {
       "time" : 1482983893,
@@ -484,11 +486,8 @@ GiantSDKPlatformManager.basePlatform.SwitchUser();
       "openid" : "1-1990027331"
     },
     "accid" : "1-1990027331",
-    "mac" : "",
     "token" : "uc18c22521fde898a92e7fcb20oixhp1",
-    "device_type" : "iPhone4,1",
-    "imei" : "F320902B-B071-4224-AAB5-F51B1E027AB5",
-    "ip" : "192.168.240.239"
+    .....
   }
 
 ```
