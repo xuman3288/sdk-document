@@ -171,18 +171,24 @@ version： 5.2.3
 <table border=”1″>
 <tr>
 <td>参数</td>
+<td>参数类型</td>
 <td>参数说明</td>
 </tr>
 <tr>
 <td>accid</td>
+<td>String</td>
 <td>账号ID</td>
 </tr>
 <tr>
 <td>sign</td>
+
+<td>String</td>
 <td>验签需要参数由entity生成，规则见<a href="http://docs.mztgame.com/docs/sdk/server_guide#__2" >服务端文档1.2</a></td>
 </tr>
 <tr>
 <td>entity</td>
+
+<td>String</td>
 <td>验签需要参数</td>
 </tr>
 </table>
