@@ -112,7 +112,7 @@ version： 5.2.2
     	IZTLibBase.getInstance().initZTGame("5010","乱炖英雄", true, mListener);
 
 
-#####用来初始化sdk的信息
+### 1.初始化
 
 #####其中参数原型为：`IZTLibBase.newInstance(Activity act);`
 
@@ -133,7 +133,7 @@ version： 5.2.2
     public void initZTGame(String gameId,String appName, boolean isLandScape, IZTListener listener)
     
     	
-### 绑定生命周期  
+### 2.绑定生命周期  
 
     
     @Override
@@ -159,19 +159,45 @@ version： 5.2.2
     	super.onDestroy();
     	IZTLibBase.getInstance().destroyZTGame();
     }
-### 是否已经登录
+### 3.是否已经登录
    
     public boolean isLogined();
 
-### 返回已登录用户信息
-	public GiantUserInfo getLoginUserInfo();
-	  	例：
-	  	GiantUserInfo mGiantUserInfo = getLoginUserInfo();
-	  	String accid  = mGiantUserInfo.getAccid();
-	  	String sign   = mGiantUserInfo.getSign();
-	  	String entity = mGiantUserInfo.getEntity();
+### 4.返回已登录用户信息
 
-### 登录接口
+	public GiantUserInfo getLoginUserInfo();
+
+	  	
+<table border=”1″>
+<tr>
+<td>参数</td>
+<td>参数说明</td>
+</tr>
+<tr>
+<td>accid</td>
+<td>账号ID</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>验签需要参数由entity生成，规则见<a href="http://docs.mztgame.com/docs/sdk/server_guide#__2" >服务端文档1.2</a></td>
+</tr>
+<tr>
+<td>entity</td>
+<td>验签需要参数</td>
+</tr>
+</table>
+
+例：
+	  	
+	GiantUserInfo mGiantUserInfo = IZTLibBase.getInstance().getLoginUserInfo();
+	String accid  = mGiantUserInfo.getAccid();
+	String sign   = mGiantUserInfo.getSign();
+	String entity = mGiantUserInfo.getEntity();
+
+
+
+
+### 5.登录接口
 
     /**
      *
@@ -197,7 +223,7 @@ version： 5.2.2
 
 游戏客户端拿到此登录返回数据需要拿entity中的openid和token去巨人平台服务端登录验证。具体参见服务端文档。
 
-### 事件回调监听器：
+### 6.事件回调监听器：
 
 
 	private IZTListener mListener = new IZTListener() {
@@ -256,7 +282,7 @@ version： 5.2.2
     public static final int ZTGAME_INIT = 0x08;  //初始化消息 errocode非零为失败
 
 
-### 支付接口：
+### 7.支付接口：
     
     
     if (IZTLibBase.getInstance().isLogined()) {
@@ -269,18 +295,18 @@ version： 5.2.2
     }
 
 
-### 退出接口：
+### 8.退出接口：
 
 	IZTLibBase.getInstance().quitZTGame();
 
 	
-### 用户中心接口：
+### 9.用户中心接口：
 
 
 	IZTLibBase.getInstance().enterCenterZTGame();
 
 
-### 切换账号接口
+### 10.切换账号接口
 
 
 	IZTLibBase.getInstance().switchAccountZTGame();
