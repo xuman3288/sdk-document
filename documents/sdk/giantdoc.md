@@ -104,35 +104,140 @@ version： 5.2.3
     	</activity>
     
 
-- 在活动Activity中的`onCreate()`的方法中添加如下代码
-
-
-    	IZTLibBase.newInstance(MainActivity.this);
-    	IZTLibBase.getInstance().enableDebugMode();
-    	IZTLibBase.getInstance().initZTGame("5010","乱炖英雄", true, mListener);
-
-
 ### 1.初始化
 
-#####其中参数原型为：`IZTLibBase.newInstance(Activity act);`
+- newInstance(Activity ac)
+<table border=”1″>
+<tr>
+<td>参数</td>
+<td>参数说明</td>
+</tr>
+<tr>
+<td>ac</td>
+<td>Activity类的一个实例</td>
+</tr>
+</table>
 
-#####`Activity act`:为游戏的活跃Activity
+- initZTGame(String gameId, String appName, boolean isLandScape, IZTListener listener)
 
-#####`IZTLibBase.getInstance().enableDebugMode();`
-##### 此方法为激活SDK的调试模式 注意上线之后必须注释掉此行代码。
+<table border=”1″>
+<tr>
+<td>参数</td>
+<td>参数说明</td>
+</tr>
+<tr>
+<td>gameId</td>
+<td>游戏ID</td>
+</tr>
+<tr>
+<td>appName</td>
+<td>游戏名称</td>
+</tr>
+<tr>
+<td>isLandScape</td>
+<td>游戏横竖屏（true  : 横版，false : 竖版）</td>
+</tr>
+<tr>
+<td>listener</td>
+<td>用于响应回调事件的监听接口</td>
+</tr>
+</table>
+
+#####IZTListener 说明
+
+	new IZTListener() {
+        @Override
+        public void onFinished(int what, int errcode, JSONObject json_obj){
+		}
+	}
+
+##### 参数 `what` 说明
+<table border=”1″>
+<tr>
+<td>出现值  </td>
+<td>描述</td>
+</tr>
+<tr>
+<td>ZTConsts.ZTGAME_INIT</td>
+<td>是SDK初始化完成的通知，所有接口都需要在INIT成功完成之后才能开始调用</td>
+</tr>
+<tr>
+<td>ZTConsts.ZTGAME_LOGIN</td>
+<td>需要处理登录返回的json_obj参数，交给游戏服务器<a href="http://docs.mztgame.com/docs/sdk/server_guide#__2" >进行效验</a></td>
+</tr>
+<tr>
+<td>ZTConsts.ZTGAME_PAY</td>
+<td>只需要判断errcode为0成功还是-1失败，但是是否到账要以<a href="http://docs.mztgame.com/docs/sdk/server_guide#__7" >服务器通知为准</a></td>
+</tr>
+<tr>
+<td>ZTConsts.ZTGAME_QUIT</td>
+<td>是游戏进行销毁操作的地方，在第三方退出框点击确认后会收到此回调</td>
+</tr>
+<tr>
+<td>ZTConsts.ZTGAME_LOGOUT</td>
+<td>是游戏进行登出操作/切换账号操作的地方，需要返回到游戏登录界面等待用户再次登录</td>
+</tr>
+</table>
 
 
-    
-    /**
-     *
-     * @param gameId   为巨人平台申请到GameID;
-     * @param appName  为游戏名称  
-     * @param isLandScape  sdk横竖版
-     * @param listener 事件回调监听器
-     */
-    public void initZTGame(String gameId,String appName, boolean isLandScape, IZTListener listener)
-    
-    	
+
+#####调用用例:
+
+注意：只需调用一次  
+
+    IZTLibBase.newInstance(MainActivity.this);
+    IZTLibBase.getInstance().initZTGame("5012","Game Name", false, mListener);
+	 //事件监听
+    private IZTListener mListener = new IZTListener() {
+        @Override
+        public void onFinished(int what, int errcode, JSONObject json_obj) {
+
+            switch (what) {
+            case ZTConsts.ZTGAME_LOGIN:
+                if (errcode == 0) {
+                    //游戏完成事件, 设置角色信息
+                    IZTLibBase.getInstance().loginOkZTGame("roleId", "roleName", "roleLevel", "zoneId", "zoneName");
+                    try {
+                        String openid = json_obj.getString("accid");
+                        String sign = json_obj.getString("sign");
+                        JSONObject entity = json_obj.getJSONObject("entity");
+                    } catch (JSONException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                }else if（errcode == -2）{
+                     //用户取消登录，关闭登录框
+                }else {
+                    //登录失败
+                }
+                break;
+            case ZTConsts.ZTGAME_INIT:
+                if (errcode == 0) {
+                    //初始化完成
+                } else {
+                    //初始化失败
+                }
+                break;
+            case ZTConsts.ZTGAME_PAY:
+                if(errcode == 0){
+                    //支付完成
+                }else{
+                    //支付失败
+                }
+                break;
+            case ZTConsts.ZTGAME_QUIT:
+                if(errcode == 0){
+                    //游戏退出
+                } else {
+                }
+                break;
+            case ZTConsts.ZTGAME_LOGOUT:
+              
+                break;
+            }
+        }
+    };
+}
 ### 2.绑定生命周期  
 
     
@@ -204,118 +309,224 @@ version： 5.2.3
 
 
 ### 5.登录接口
+loginZTGame(String zoneId, String zoneName, boolean isAutoLogin)
+<table border=”1″>
+<tr>
+<td>参数</td>
+<td>参数说明</td>
+</tr>
+<tr>
+<td>zoneId</td>
+<td>游戏区ID（Int, 大于0）</td>
+</tr>
+<tr>
+<td>zoneName</td>
+<td>游戏区名称</td>
+</tr>
+<tr>
+<td>isAutoLogin</td>
+<td>是否自动登录，传true即可</td>
+</tr>
 
-    /**
-     *
-     * @param zoneId   登录的区服号码
-     * @param zoneName 登录的区服名称  
-     * @param isAutoLogin  是否自动登录
-     */
-    public void loginZTGame(final String zoneId, final String zoneName, final boolean isAutoLogin)
-    
-    
-    - 登录接口返回：
+</table>
+
+#####回调函数返回值详细说明
+ZTConsts.ZTGAME_LOGIN,errcode为0成功时， json_obj 出现值:
+
     {
-    	"entity": {
-    		"openid":"1-123456",
-    		"account":"XXXXXXXX"
-			......
-    	},
-    	"accid":"1-123456",
-    	"token":"bbe7e46de2c7d3ace036cea155b23978",
-    	"sign":"xxxxxx"
+    "entity": {
+    "openid":"1-123456",
+    "account":"XXXXXXXX"
+    ......
+    },
+    "accid":"1-123456",
+    "token":"bbe7e46de2c7d3ace036cea155b23978",
+    "sign":"xxxxxx"
     }
 
+<table border=”1″>
+<tr>
+<td>参数</td>
+<td>参数说明</td>
+</tr>
+<tr>
+<td>entity</td>
+<td>服务端验签需要参数</td>
+</tr>
+<tr>
+<td>accid</td>
+<td>账号ID</td>
+</tr>
+<tr>
+<td>token</td>
+<td>服务端验签需要参数</td>
+</tr>
+<tr>
+<td>sign</td>
+<td>服务端验签需要参数</td>
+</tr>
 
-游戏客户端拿到此登录返回数据需要拿entity中的openid和token去巨人平台服务端登录验证。具体参见服务端文档。
+</table>
+   
+#####调用用例:
 
-### 6.事件回调监听器：
+     YourActivity.runOnUiThread(new Runnable() {
+            public void run() {            
+                     IZTLibBase.getInstance().loginZTGame("1", "zoneName"", true);
+            }
+    });
+	 //事件监听
+    private IZTListener mListener = new IZTListener() {
+        @Override
+        public void onFinished(int what, int errcode, JSONObject json_obj) {
+
+            switch (what) {
+            case ZTConsts.ZTGAME_LOGIN:
+                if (errcode == 0) {
+                    //游戏完成事件, 设置角色信息
+                    IZTLibBase.getInstance().loginOkZTGame("roleId", "roleName", "roleLevel", "zoneId", "zoneName");
+                    try {
+                        String openid = json_obj.getString("accid");
+                        String sign = json_obj.getString("sign");
+                        JSONObject entity = json_obj.getJSONObject("entity");
+                    } catch (JSONException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                }else if（errcode == -2）{
+                     //用户取消登录，关闭登录框
+                }else {
+                    //登录失败
+                }
+                break;
+			}}}
+
+### 6.支付接口：
+    
+    
+payZTGame(ZTPayInfo payInfo)
+
+#####ZTPayInfo说明
+<table border=”1″>
+<tr>
+<td>Method</td>
+<td>Required / Optional / Deprecated</td>
+<td>Description</td>
+</tr>
+<tr>
+<td>setAmount</td>
+<td>必填</td>
+<td>设置商品金额(RMB). 单位(分)</td>
+</tr>
+
+<tr>
+<td>setExtra</td>
+<td>可选设置</td>
+<td>设置游戏订单扩展信息(游戏订单号等等)</td>
+</tr>
+
+<tr>
+<td>setMoneyName</td>
+<td>必填</td>
+<td>设置货币单位名称</td>
+</tr>
+
+<tr>
+<td>setProductName</td>
+<td>必填</td>
+<td>设置商品名称</td>
+</tr>
+
+<tr>
+<td>setProductId</td>
+<td>必填</td>
+<td>设置商品ID</td>
+</tr>
+
+<tr>
+<td>setExchangeRatio</td>
+<td>可选设置</td>
+<td>设置价格比率</td>
+</tr>
 
 
+</table>
+
+#####注意事项:
+调用支付接口之前设置一下区服号码
+IZTLibBase.getInstance().setZoneId("1");
+
+#####调用用例:
+
+	IZTLibBase.getInstance().setZoneId("1");    //支付需要提供区服号码 不可写死
+    ZTPayInfo payInfo = new ZTPayInfo();
+    payInfo.setAmount(100);  //设置金额, 单位(分) *必传参数
+    payInfo.setProductName("test item"); //设置商品名称 *必传参数
+    payInfo.setProductId("1001"); // 设置商品ID *必传参数
+    payInfo.setExtra("1"); //设置游戏订单扩展信息
+    IZTLibBase.getInstance().payZTGame(payInfo);
+	     //事件监听
 	private IZTListener mListener = new IZTListener() {
-	@Override
-	public void onFinished(int what, int errcode, JSONObject json_obj) {
-    switch (what) {
-    	case ZTConsts.ZTGAME_LOGIN:
-    		// Do your Login logic here
-    		if (0 == errcode) {
-    			// 客户端登录成功，登录流程下一步，把返回的信息发送到服务器进行验证
-    			Toast.makeText(MainActivity.this, json_obj.toString(), Toast.LENGTH_SHORT).show();
-    			Log.d("login_json", json_obj.toString());
-    			try {
-    				String openid = json_obj.getString("accid");
-    				String sign = json_obj.getString("sign");
-    				JSONObject entity = json_obj.getJSONObject("entity");
-    			} catch (JSONException e) {
-    				// TODO Auto-generated catch block
-    				e.printStackTrace();
-    			}
-    
-    		}else if(2 == errcode){
-    			//平台服务器连接异常，返回上次账号信息
-    			try {
-    				String openid = json_obj.getString("accid");
-    				String sign = json_obj.getString("sign");
-    				JSONObject entity = json_obj.getJSONObject("entity");
-    			} catch (JSONException e) {
-    				// TODO Auto-generated catch block
-    				e.printStackTrace();
-    			}
-    		}else {
-    			Toast.makeText(MainActivity.this, json_obj.toString(), Toast.LENGTH_SHORT).show();
-    		}
-    		break;
-    	case ZTConsts.ZTGAME_INIT:
-    		// Do your init logic here
-    		break;
-    	case ZTConsts.ZTGAME_PAY:
-    		// handle the post payment event here.
-    		break;
-    	case ZTConsts.ZTGAME_QUIT:
-    		// quit your game here				
-    		System.exit(0);
-    		break;
-    	}
-    }
+    @Override
+    public void onFinished(int what, int errcode, JSONObject json_obj) {
 
-其中 what为消息的类型：
+        switch (what) {
+        case ZTConsts.ZTGAME_PAY:
+            if (errcode == 0) {
+                //支付成功
+            }else {
+				//支付失败
+            }
+            break;
+        }}}
 
 
-    public static final int ZTGAME_LOGIN = 0x01;	//登录消息 errocode非零为失败
-    public static final int ZTGAME_PAY = 0x03;  //支付消息 errocode非零为失败
-    public static final int ZTGAME_QUIT = 0x04;  //退出消息 errocode非零为失败
-    public static final int ZTGAME_LOGOUT = 0x07;  //切换账号消息 errocode非零为失败
-    public static final int ZTGAME_INIT = 0x08;  //初始化消息 errocode非零为失败
 
+###7 用户中心
+- 是否需要用户中心按钮接口
 
-### 7.支付接口：
-    
-    
-    if (IZTLibBase.getInstance().isLogined()) {
-    	// 订单信息
-    	IZTLibBase.getInstance().setZoneId("1");	//支付需要提供区服号码 不可写死
-    	ZTPayInfo payInfo = new ZTPayInfo();
-    	payInfo.setAmount(100);		//金额 单位为分
-    	payInfo.setExtra("");  // 扩展信息，需要回传游戏服务器的请设置这个字段
-    	IZTLibBase.getInstance().payZTGame(payInfo);	//调用支付接口
-    }
+	isHasCenterZTGame（）
 
+	以上为某些渠道判断是否存在用户中心按钮倘若返回false不作处理，倘若返回true需要显示用户中心按钮，点击此按钮后调用enterCenterZTGame()
+- 用户中心操作, 调用此接口弹去渠道方的用户中心界面
 
-### 8.退出接口：
-
-	IZTLibBase.getInstance().quitZTGame();
-
+    enterCenterZTGame()
+#####调用实例
 	
-### 9.用户中心接口：
+	 //玩家点击退出
+    if(IZTLibBase.getInstance().isHasCenterZTGame()){ //渠道是否有退出框确认
+    	IZTLibBase.getInstance().enterCenterZTGame();//
+    }
+
+###8 切换账号
+- 是否需要切换账号按钮接口
+
+	isHasSwitchAccountZTGame（）
 
 
-	IZTLibBase.getInstance().enterCenterZTGame();
+    以上接口返回true则游戏需要添加一个切换账号按钮以方便用户切换账号.点击此按钮后调用switchAccountZTGame()
 
+- 切换账号
 
-### 10.切换账号接口
+    switchAccountZTGame()
+	以上为切换账号接口功能，调用此接口执行切换账号操作，调用此接口后，会发送ZTGAME_LOGOUT消息。
+#####调用实例
+	
+	 //玩家点击退出
+    if(IZTLibBase.getInstance().isHasSwitchAccountZTGame()){ //渠道是否有退出框确认
+    	IZTLibBase.getInstance().switchAccountZTGame();//
+    }
 
+		 //事件监听
+    private IZTListener mListener = new IZTListener() {
+        @Override
+        public void onFinished(int what, int errcode, JSONObject json_obj) {
 
-	IZTLibBase.getInstance().switchAccountZTGame();
+            switch (what) {
+            case ZTConsts.ZTGAME_LOGOUT:
+        	//切换账号处理
+       
+			}}}
 
 ### 开通微信支付须知
 #### （1）需提供签名md5值和包名给我们平台，申请微信支付相关参数
