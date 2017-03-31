@@ -3,37 +3,7 @@
 
 **SDK版本：** Ver 5.0.0   
 **时间：** 2017/2/23
-
-#接入必读
-
-#####目前国内有大大小小上百家手游渠道，每一个渠道都会要求开发者在游戏中正确接入相应渠道的登录及支付SDK，能让玩家使用在渠道注册的账户来登录游戏，并发起支付在游戏内充值。也就是说只有接入了渠道SDK的游戏才能通过渠道审核并上架。在接入SDK的过程中会有以下一些问题：
-
-- 由于每一家渠道SDK的设计不同，SDK里自带的资源文件，代码jar包，功能接口数量等都是完全不一样。
-- 不能在同一份游戏代码中同时嵌入多家SDK的内容，因此开发者必须维护多套游戏代码项目来分别接入各家渠道SDK。
-- 服务端的开发者也需要去研究每家渠道设计的不同加密算法及数据校验方式，来开发订单数据校验和用户登录安全认证接口。
-	
-#####EasySDK的出现就是为了替广大开发者解决这些问题，EasySDK是一款为开发者加速接入第三方SDK的工具。
-
-- 可以帮开发者实现只接入一次就可以批量打出所有渠道包，并且不再需要关心SDK的版本更新和处理因为渠道服务端接口变化造成的紧急重复更新工作。
-- 大量减少接入时间，根据EasySDK的文档操作接入一次，花费的时间跟手工接入一个渠道SDK的时间相同，然后就可以通过EasySDK提供的打包工具打出包含了不同SDK的渠道包。
-
-#####EasySDK如何实现一次接入，批量打包
-
-- 简单的来说，就是四个字——”统一接口”。开发者只需要根据自己的需求来调用相应的函数，比如想要打出的渠道包能登录，能支付。那么就只需要根据EasySDK的文档调用loginZTGame，payZTGame等函数，传入相应的参数就可以，真正调用相应SDK函数的工作由EasySDK来完成。	
--   同样的，在服务端，开发者也不用关心某家渠道的文档规定了开发者需要以什么样的加密方式和校验算法来校验渠道服务器推送到游戏服务器的订单数据，开发者需要做的，只是根据EasySDK提供的文档来对接收到的数据做一次安全性校验就可以确认当前订单是来自哪个渠道，是否支付成功等。各渠道间不同的协议和规范由EasySDK去帮开发者完成统一。
-
-#####接入EasySDK的流程是什么？如何理解母包及渠道包的概念？
-开发者首先要做的就是参照EasySDK的文档来将EasySDK framework集成到游戏项目当中。然后直接运行项目，观察是否成功调用了初始化，登录，支付等函数。 
-当开发者直接运行接入了EasySDK framework的项目测试调用相应函数没有问题之后，就意味着接入EasySDK Framework已经成功，这时候运行项目所编译出的apk包称之为”母包”。
-顾名思义，这个APK包用于生成包含渠道SDK的”渠道包”，”渠道包”就是用于提交给各渠道审核，审核通过之后分发给最终玩家的APK包。简单来说，”母包”就是 游戏代码 + EasySDK Framework；”渠道包”就是 游戏代码 + EasySDK Framework + 渠道SDK(包括代码+资源)。
-那么如何生成渠道包呢？EasySDK提供了一个功能强大的界面化打包工具，可以把“母包”生成“渠道包”。
-
-#快速集成指南
-客户端技术Java接口文档，详细说明接入EasySDK所需要的资料和开发。通过本文的介绍可以了解客户端接入的整个流程。在接入之前请认真阅读本文档,以减少接入过程中遇到的问题。
-##EasySDK下载地址 
-<a href="http://docs.mztgame.com/docs/download" >http://docs.mztgame.com/docs/download</a>
-
-##接入流程
+#接入流程
 ##一. EasySDK_Framework(Java)开发包
 ####资源包括 libs 目录下的 SDK 主架包 base.jar、acra.jar、ztgameframework.jar
 
@@ -276,7 +246,7 @@
     }
 
 ###2.3 *登录接入（必选接口）*
-loginZTGame(String zoneId, String zoneName, boolean isAutoLogin)
+- loginZTGame(String zoneId, String zoneName, boolean isAutoLogin)
 <table border=”1″>
 <tr>
 <td>参数</td>
@@ -292,13 +262,43 @@ loginZTGame(String zoneId, String zoneName, boolean isAutoLogin)
 </tr>
 <tr>
 <td>isAutoLogin</td>
-<td>是否自动登录，传true即可</td>
+<td>是否自动登录</td>
 </tr>
 
 </table>
 
-#####回调函数返回值详细说明
-ZTConsts.ZTGAME_LOGIN,errcode为0成功时， json_obj 出现值:
+####IZTListener回调接口类型(what)为:
+
+<table border=”1″>
+<tr>
+<td>类型 </td>
+<td>描述</td>
+</tr>
+<tr>
+<td>ZTConsts.ZTGAME_LOGIN</td>
+<td>需要处理登录返回的json_obj参数，交给游戏服务器<a href="http://docs.mztgame.com/docs/sdk/server_guide#__2" >进行效验</a></td>
+</tr>
+</table>
+
+####IZTListener回调接口状态吗(errcode)为:
+<table border=”1″>
+<tr>
+<td>状态码 </td>
+<td>描述</td>
+</tr>
+<tr>
+<td>0</td>
+<td>登录成功</td>
+</tr>
+<tr>
+<td>其它</td>
+<td>登录失败</td>
+</tr>
+</table>
+
+
+####IZTListener回调接口数据(json_obj)为:
+ZTConsts.ZTGAME_LOGIN,errcode为0成功时，json_obj出现值:
 
     {
     "entity": {
@@ -334,7 +334,7 @@ ZTConsts.ZTGAME_LOGIN,errcode为0成功时， json_obj 出现值:
 </tr>
 
 </table>
-   
+  
 #####调用用例:
 
      YourActivity.runOnUiThread(new Runnable() {
@@ -360,8 +360,6 @@ ZTConsts.ZTGAME_LOGIN,errcode为0成功时， json_obj 出现值:
                         // TODO Auto-generated catch block
                         e.printStackTrace();
                     }
-                }else if（errcode == -2）{
-                     //用户取消登录，关闭登录框
                 }else {
                     //登录失败
                 }
@@ -369,9 +367,10 @@ ZTConsts.ZTGAME_LOGIN,errcode为0成功时， json_obj 出现值:
 			}}}
 
 ###2.4 *支付接入（必选接口）*
-payZTGame(ZTPayInfo payInfo)
+- payZTGame(ZTPayInfo payInfo)
 
-#####ZTPayInfo说明
+依赖登录接口。
+####ZTPayInfo：支付订单信息。有以下属性：
 <table border=”1″>
 <tr>
 <td>Method</td>
@@ -407,28 +406,59 @@ payZTGame(ZTPayInfo payInfo)
 <td>必填</td>
 <td>设置商品ID</td>
 </tr>
+<tr>
+<td>setZoneId</td>
+<td>必填</td>
+<td>设置区服</td>
+</tr>
+
 
 <tr>
 <td>setExchangeRatio</td>
 <td>可选设置</td>
 <td>设置价格比率</td>
 </tr>
-
-
 </table>
 
-#####注意事项:
-调用支付接口之前设置一下区服号码
-IZTLibBase.getInstance().setZoneId("1");
 
-#####调用用例:
 
-	IZTLibBase.getInstance().setZoneId("1");    //支付需要提供区服号码 不可写死
+####IZTListener回调接口类型(what)为:
+
+<table border=”1″>
+<tr>
+<td>类型 </td>
+<td>描述</td>
+</tr>
+<tr>
+<td>ZTConsts.ZTGAME_PAY</td>
+<td>只需要判断errcode为0成功还是-1失败，但是是否到账要以<a href="http://docs.mztgame.com/docs/sdk/server_guide#__7" >服务器通知为准</a></td>
+</tr>
+</table>
+####IZTListener回调接口状态吗(errcode)为:
+<table border=”1″>
+<tr>
+<td>状态码 </td>
+<td>描述</td>
+</tr>
+<tr>
+<td>0</td>
+<td>支付成功</td>
+</tr>
+<tr>
+<td>其它</td>
+<td>支付失败</td>
+</tr>
+</table>
+
+调用用例:
+
+	
     ZTPayInfo payInfo = new ZTPayInfo();
     payInfo.setAmount(100);  //设置金额, 单位(分) *必传参数
     payInfo.setProductName("test item"); //设置商品名称 *必传参数
     payInfo.setProductId("1001"); // 设置商品ID *必传参数
     payInfo.setExtra("1"); //设置游戏订单扩展信息
+	payInfo.setZoneId("1");//设置区服
     IZTLibBase.getInstance().payZTGame(payInfo);
 	     //事件监听
 	private IZTListener mListener = new IZTListener() {
@@ -444,6 +474,7 @@ IZTLibBase.getInstance().setZoneId("1");
             }
             break;
         }}}
+
 
 ###2.5 *统计接口（必选接口）*
 #####登录完成数据统
