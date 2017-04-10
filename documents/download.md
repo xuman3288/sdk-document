@@ -108,7 +108,7 @@
 * [360网游SDK-v1.5.0(516)版本下载地址](http://docs.mztgame.com/files/Android/360SDK_v1.5.0_03_29.zip)
 
 ### 常见问题和工具下载
-* [5.2打包工具下载地址](http://docs.mztgame.com/files/Android/sdktool/SDKTool5.2.msi)
+* [5.2打包工具下载地址](http://docs.mztgame.com/files/Android/sdktool/sdktoolSetup.exe)
 * [cps打包工具下载地址](http://docs.mztgame.com/files/Android/cpsTools_all.zip)
 * [ Java 环境sdk 接入](/docs/channels/commonProblem)
 * [ 打包工具使用文档 ](http://docs.mztgame.com/files/Android/doc/dbgj.doc)
