@@ -113,5 +113,6 @@
 * [ Java 环境sdk 接入](/docs/channels/commonProblem)
 * [ 打包工具使用文档 ](http://docs.mztgame.com/files/Android/doc/dbgj.doc)
 
-### Android新版SDK
-* [新版SDK测试APK V1.0](http://docs.mztgame.com/files/Android/GiantNewSdk-V1.0.apk)
+### GASDK-Android版
+* [GASDK-V1.0.0版本下载地址](http://docs.mztgame.com/files/Android/gasdk/GASDK-Android-1.0.0.zip)
+* [GASDK-V1.0.0测试APK下载地址](http://docs.mztgame.com/files/Android/gasdk/GiantNewSdk-V1.0.apk)
