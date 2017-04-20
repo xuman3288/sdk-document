@@ -2,7 +2,7 @@
 ================================
 
 **SDK版本：** Ver 5.0.0   
-**时间：** 2017/2/23
+**时间：** 2017/4/20
 #接入流程
 ##一. EasySDK_Framework(Java)开发包
 ####资源包括 libs 目录下的 SDK 主架包 base.jar、acra.jar、ztgameframework.jar
@@ -13,11 +13,14 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-####添加属性至你的 <application /> 标签中
+####添加下面属性至项目工程AndroidManifest.xml文件的 <application /> 标签中
 
 	android:name="com.ztgame.ztgameframework.ZTApplication"
 
-	
+####配置下面组件至项目工程AndroidManifest.xml文件中
+
+	<service android:name="com.ztgame.mobileappsdk.sdk.logserver.LogHTTPService"></service>
+
 如果你的工程里存在 Application 需要继承ZTApplication 并且在 onCreate() 函数中添加 super.onCreate()
 ####复制 asserts 文件夹到你的游戏项目. ztsdk_config.properties 文件范例:
 
@@ -186,6 +189,8 @@
 }
 
 ###2.2 *Activity生命周期相关方法（必选接口）*
+	
+
 
     @Override
     protected void onDestroy() {
