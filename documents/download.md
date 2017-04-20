@@ -64,7 +64,7 @@
 
 * [iOS激活插件SDK下载地址](http://docs.mztgame.com/files/iOS/plugin/iOSActivePluginSDK.zip)
 * [iOS设备激活插件SDK下载地址](http://docs.mztgame.com/files/iOS/plugin/iOSDeviceActivePluginSDK.zip)
-
+* [数据统计SDK-1.1.6版本下载](http://docs.mztgame.com/files/ios/plugin/ZTDataLib.zip)
 ## Android相关下载
 
 ### 3.x SDK(征途用)
@@ -97,21 +97,22 @@
 * [游戏内公告插件SDK-1.0版本下载](http://docs.mztgame.com/files/Android/plugin/inapppushSDK1.0.zip)
 * [支付sdk-1.0.5版本下载](http://docs.mztgame.com/files/Android/plugin/giantpaysdk_1.0.5.zip)
 * [网页版支付SDK-1.0.4版本下载](http://docs.mztgame.com/files/Android/plugin/giantpaywebsdk_1.0.4.zip)
-* [数据统计SDK-1.1.5版本下载](http://docs.mztgame.com/files/Android/plugin/DataPluginSdk1.1.5.zip)
+* [数据统计SDK-1.1.6版本下载](http://docs.mztgame.com/files/Android/plugin/DataPluginSdk1.1.6.zip)
 
 ### 5.x SDK（新游戏接入）
 
-* [巨人母包SDK-5.2.2版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK5.2.2.zip)
+* [巨人母包SDK-5.3.0版本下载地址](http://docs.mztgame.com/files/Android/frameworkSDK5.3.0.zip)
 * [巨人官方SDK-5.2.3版本下载地址](http://docs.mztgame.com/files/Android/giantSDK5.2.3.zip)
 * [腾讯YSDK-v1.2.4版本下载地址](http://docs.mztgame.com/files/Android/ysdk4-v1.2.4.zip)
 * [百度-v3.7.4版本下载地址](http://docs.mztgame.com/files/Android/sdk/BDGameSDK3.7.4.zip)
 * [360网游SDK-v1.5.0(516)版本下载地址](http://docs.mztgame.com/files/Android/360SDK_v1.5.0_03_29.zip)
 
 ### 常见问题和工具下载
-* [5.2打包工具下载地址](http://docs.mztgame.com/files/Android/sdktool/SDKTool5.2.msi)
-* [cps打包工具下载地址](http://docs.mztgame.com/files/Android/cpsTools_all.zip)
+* [5.2打包工具下载地址](http://docs.mztgame.com/files/Android/sdktool/sdktoolSetup.exe)
+* [cps-v1.0.1打包工具下载地址](http://docs.mztgame.com/files/Android/cps1.0.1.zip)
 * [ Java 环境sdk 接入](/docs/channels/commonProblem)
 * [ 打包工具使用文档 ](http://docs.mztgame.com/files/Android/doc/dbgj.doc)
 
-### Android新版SDK
-* [新版SDK测试APK V1.0](http://docs.mztgame.com/files/Android/GiantNewSdk-V1.0.apk)
+### GASDK-Android版
+* [GASDK-V1.0.0版本下载地址](http://docs.mztgame.com/files/Android/gasdk/GASDK-Android-1.0.0.zip)
+* [GASDK-V1.0.0测试APK下载地址](http://docs.mztgame.com/files/Android/gasdk/GiantNewSdk-V1.0.apk)

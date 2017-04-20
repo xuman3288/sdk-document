@@ -28,7 +28,7 @@
    - 添加ZTActiveNPluginTest/assets目录下的文件到工程assets中 
    - 如果需要替换背景图片：替换 ZTActiveNPlugin/res/drawable/ztgame_act_img_bg.jpg 文件
    - 在AndroidManifest.xml中添加如下：
-   		
+	
          <activity
             android:name="com.mztgame.ztactiveplugin.ZTActiveView"
             android:configChanges="orientation|keyboardHidden|screenSize"
@@ -36,9 +36,11 @@
             android:theme="@style/Ztgame_Act_Theme" >
         </activity>
         
+
    - 添加权限：
-   	
+   - 
    			<uses-permission android:name="android.permission.INTERNET" />
+
         
 ###2. 调用接口： 
 ####2.1 初始化接口：			
@@ -50,7 +52,6 @@
 	
 public void isActived() 
 
-		
 	以上为判断是否激活的接口，会在IMZTActiveTListener中返回是否需要显示激活页面的结果：
 	1. 返回ZTGAME_NEED_ACTIVE则表示需要显示激活
 	2. 返回ZTGAME_NONEED_ACTIVE则表示不需要显示激活页面
@@ -64,9 +65,9 @@ public void closeActiveWindow()
 
 	
 ####2.5 实现回调接口接受插件的消息：
-	
+
 		private IMZTActiveTListener mImztListener = new IMZTActiveTListener() {
-		
+
 		@Override
 		public void onFinished(int what, String response) {
 
@@ -110,4 +111,3 @@ what消息种类：
 	public static final int ZTGAME_ACTIVE_CLOSED = 6; //表示手动关闭激活页面， 发送此消息.
 
 	当what为ZTGAME_ACTIVE_FAILED时， response为失败原因。
-	
