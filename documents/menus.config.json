@@ -38,6 +38,10 @@
             {
                 "label": "游戏分享链接插件",
                 "uri": "/docs/plugins\/game-share"
+            },
+            {
+                "label": "Android激活插件",
+                "uri": "/docs/sdk\/ztactiveplugin"
             }
         ]
     },
