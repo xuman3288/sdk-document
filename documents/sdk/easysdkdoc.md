@@ -483,11 +483,11 @@ ZTConsts.ZTGAME_LOGIN,errcode为0成功时，json_obj出现值:
 
 ###2.5 *统计接口（必选接口）*
 #####登录完成数据统
-loginOkZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName)
+loginOkZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName,Map<String, Object> map)
 #####创建角色数据统计接口接口
-createRoleZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName)
+createRoleZTGame(String roleId,String roleName,String roleLevel,String zoneId,String zoneName,Map<String, Object> map)
 #####角色等级升级信息接口
-roleLevelUpZTGame(String roleId,String roleName,String zoneId,String zoneName,int level)
+roleLevelUpZTGame(String roleId,String roleName,String zoneId,String zoneName,int level,Map<String, Object> map)
 
 <table border=”1″>
 <tr>
@@ -519,7 +519,15 @@ roleLevelUpZTGame(String roleId,String roleName,String zoneId,String zoneName,in
 <td>角色等级</td>
 </tr>
 
+<tr>
+<td>map</td>
+<td>扩展参数</td>
+</tr>
 </table>
+
+注意： 角色创建时间(单位：秒)，获取服务器存储的角色创建时间，不可用本地手机时间，同一角色创建时间不可变，长度10(UC渠道)
+	
+	map.put("login_ok_create_roletime","角色创建时间");
 
 ###2.6 *退出界面（必选接口）*
 - 是否有第三方渠道的退出确认弹出框
