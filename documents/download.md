@@ -64,7 +64,7 @@
 
 * [iOS激活插件SDK下载地址](http://docs.mztgame.com/files/iOS/plugin/iOSActivePluginSDK.zip)
 * [iOS设备激活插件SDK下载地址](http://docs.mztgame.com/files/iOS/plugin/iOSDeviceActivePluginSDK.zip)
-* [数据统计SDK-1.1.6版本下载](http://docs.mztgame.com/files/ios/plugin/ZTDataLib.zip)
+* [数据统计SDK-1.1.6版本下载](http://docs.mztgame.com/files/iOS/plugin/ZTDataLib.zip)
 ## Android相关下载
 
 ### 3.x SDK(征途用)
