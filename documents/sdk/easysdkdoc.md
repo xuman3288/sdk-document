@@ -13,7 +13,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
-####添加下面属性至项目工程AndroidManifest.xml文件的 <application /> 标签中
+####添加下面属性至项目工程AndroidManifest.xml文件的 `<application />` 标签中
 
 	android:name="com.ztgame.ztgameframework.ZTApplication"
 
@@ -108,18 +108,6 @@
 <td>ZTConsts.ZTGAME_LOGOUT</td>
 <td>是游戏进行登出操作/切换账号操作的地方，需要返回到游戏登录界面等待用户再次登录</td>
 </tr>
-<tr>
-<td>ZTConsts.ZTGAME_QQGROUP</td>
-<td>是游戏中一键增加QQ群的消息，游戏收到该消息后，当errcode为0表示有一键加QQ功能，其他表示没有该功能</td>
-</tr>
-<tr>
-<td>ZTConsts.ZTGAME_TENCENT_QUERY</td>
-<td>是腾讯游戏点查询接口的消息，游戏收到该消息后，当errcode为0表示有查询成功，需要游戏端根据查询金额判断是否补</td>
-</tr>
-<tr>
-<td>ZTConsts.ZTGAME_CREATE_ORDER</td>
-<td>是创建订单成功的消息，返回的order_id参数</td>
-</tr>
 
 </table>
 
@@ -178,11 +166,7 @@
             case ZTConsts.ZTGAME_LOGOUT:
               
                 break;
-            case ZTConsts.ZTGAME_QQGROUP: //腾讯QQ一键加群
-                if(errcode == 0){
-                    joinQQButton.setVisibility(View.VISIBLE);
-                }
-                break;
+
             }
         }
     };
