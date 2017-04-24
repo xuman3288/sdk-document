@@ -73,7 +73,7 @@ HTTP 响应状态码为 302，跳转地址是 `default_url`, `ios_url`, `android
 
 ## 附录
 
-##### IOS获取User-Agent示例
+* IOS获取User-Agent示例
 
 ```
 +(NSString *)getUserAgent {
@@ -82,7 +82,7 @@ HTTP 响应状态码为 302，跳转地址是 `default_url`, `ios_url`, `android
 }
 ```
 
-##### Android获取User-Agent示例
+* Android获取User-Agent示例
 
 ```
 WebView webView = new WebView(ctx);
