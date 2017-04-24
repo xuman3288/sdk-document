@@ -57,7 +57,8 @@ HTTP 响应状态码为 204，无响应内容
 | android_url | 程序识别 Android UA跳转URL |  否 |
 | callback |  广告商追踪使用url，启动(激活）时会回调 |  否 |
 
-> 注：以上参数 `default_url`, `ios_url`, `android_url` 限制域名：`*.[m]ztgame.com`, `itunes.apple.com`,`*.[m]ztgame.com.cn`,`[m]ztgame.com.cn`
+> 注：以上参数 `default_url`, `ios_url`, `android_url` 
+限制域名：`*.[m]ztgame.com`, `itunes.apple.com`,`*.[m]ztgame.com.cn`,`[m]ztgame.com.cn`
  
 ### 对接地址范例
 
