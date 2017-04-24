@@ -22,8 +22,8 @@
 | idfa | IOS IDFA | 否 |
 | imei | 设备IMEI(Android)  | 否 |
 | mac | IOS 或Android Mac | 否 |
-| ua | 用户若是通过网页点击的， 为浏览器的 User-Agent 信息 | 否 |
-| ip | 用户IP | 否 |
+| ua | 用户若是通过网页点击的， 为浏览器的 User-Agent 信息 | 是 |
+| ip | 用户IP(请求方是服务器则需让媒体的客户端传过来) | 是 |
 | callback |  广告商追踪使用url，启动(激活）时会回调 | 否 |
  
 ### 对接地址范例
