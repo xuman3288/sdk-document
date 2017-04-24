@@ -29,7 +29,7 @@
 ### 对接地址范例
 
 ```
-http://ad.stat.mztgame.com/ad/s2s-hits?ad_id=2000001&m_id=1&game_id=5012&idfa=(idfa)&ip=1.1.1.1&ua=(ua)
+http://ad.stat.mztgame.com/ad/s2s-hits?ad_id=2000001&m_id=1&game_id=5012&idfa=(idfa)&ip=1.1.1.1&ua=(ua)&callback=
 ```
 
 ### 响应说明
@@ -57,14 +57,14 @@ HTTP 响应状态码为 204，无响应内容
 | android_url | 程序识别 Android UA跳转URL |  否 |
 | callback |  广告商追踪使用url，启动(激活）时会回调 |  否 |
 
-> 注：以上参数 `default_url`, `ios_url`, `android_url` 限制域名：`*.[m]ztgame.com`, `itunes.apple.com`,`*.[m]ztgame.com.cn`
+> 注：以上参数 `default_url`, `ios_url`, `android_url` 限制域名：`*.[m]ztgame.com`, `itunes.apple.com`,`*.[m]ztgame.com.cn`,`[m]ztgame.com.cn`
  
 ### 对接地址范例
 
 * 客户端跳转方式
 
 ```
-http://ad.stat.mztgame.com/ad/client-hits?ad_id=2000001&m_id=1&game_id=5012&idfa=(idfa)&default_url=https://itunes.apple.com&ios_url=&android_url=
+http://ad.stat.mztgame.com/ad/client-hits?ad_id=2000001&m_id=1&game_id=5012&idfa=(idfa)&default_url=https://itunes.apple.com&ios_url=&android_url=&callback=
 ```
  
 ### 响应说明
