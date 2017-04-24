@@ -70,3 +70,22 @@ http://ad.stat.mztgame.com/ad/client-hits?ad_id=2000001&m_id=1&game_id=5012&idfa
 ### 响应说明
 
 HTTP 响应状态码为 302，跳转地址是 `default_url`, `ios_url`, `android_url` 参数传入值。
+
+## 附录
+
+### IOS获取User-Agent示例
+
+```
++(NSString *)getUserAgent {
+    NSMutableString *userAgent = [NSMutableString stringWithString:[[UIWebView new] stringByEvaluatingJavaScriptFromString:@"navigator.userAgent"]];
+    return userAgent;
+}
+```
+
+### Android获取User-Agent示例
+
+```
+WebView webView = new WebView(ctx);
+	WebSettings settings = webView.getSettings();
+String ua = settings.getUserAgentString()；
+```
