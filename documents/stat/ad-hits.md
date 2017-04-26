@@ -55,6 +55,7 @@ HTTP 响应状态码为 204，无响应内容
 | default_url | 默认跳转URL|  是 |
 | ios_url | 程序识别 IOS UA 跳转URL|  否 |
 | android_url | 程序识别 Android UA跳转URL |  否 |
+| ua | 为浏览器的 User-Agent 信息 | 是 |
 | callback |  广告商追踪使用url，启动(激活）时会回调 |  否 |
 
 > 注：以上参数 `default_url`, `ios_url`, `android_url` 
